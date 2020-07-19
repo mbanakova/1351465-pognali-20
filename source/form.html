@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -201,75 +202,65 @@
               <fieldset class="step__fieldset fieldset-dates">
                 <!-- Если получится - в идеале в эти инпуты приходят даты поездки из календаря, а самы инпуты всё время скрыты  -->
                 <label class="fieldset-dates__label">Начало
-                  <input class="fieldset-dates__input" type="text" name="start-date" value=""></label>
+                  <input class="fieldset-dates__input" type="text" name="start-date" value="" id="start-date"></label>
                 <label class="fieldset-dates__label">Конец
-                  <input class="fieldset-dates__input" type="text" name="end-date" value=""></label>
+                  <input class="fieldset-dates__input" type="text" name="end-date" value="" id="end-date"></label>
               </fieldset>
 
               <div class="step__calendar calendar">
                 <div class="calendar__month">
                   <div class="calendar__top">
                     <span class="calendar__previous">&#60;</span>
-                    <p class="calendar__head">Июль</p>
-                    <p class="calendar__head">2020</p>
+                    <p class="calendar__head js-month">Июль</p>
+                    <p class="calendar__head js-year">2020</p>
                     <span class="calendar__next">&#62;</span>
                   </div>
-                  <table class="calendar__table">
-                    <tr class="calendar__row">
-                      <th class="calendar__head-cell">П</th>
-                      <th class="calendar__head-cell">В</th>
-                      <th class="calendar__head-cell">С</th>
-                      <th class="calendar__head-cell">Ч</th>
-                      <th class="calendar__head-cell">П</th>
-                      <th class="calendar__head-cell calendar__head-cell--weekend">С</th>
-                      <th class="calendar__head-cell calendar__head-cell--weekend">В</th>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__cell calendar__cell--prev-day">29</td>
-                      <td class="calendar__cell calendar__cell--prev-day">30</td>
-                      <td class="calendar__cell">1</td>
-                      <td class="calendar__cell">2</td>
-                      <td class="calendar__cell">3</td>
-                      <td class="calendar__cell">4</td>
-                      <td class="calendar__cell">5</td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__cell">6</td>
-                      <td class="calendar__cell">7</td>
-                      <td class="calendar__cell">8</td>
-                      <td class="calendar__cell">9</td>
-                      <td class="calendar__cell">10</td>
-                      <td class="calendar__cell">11</td>
-                      <td class="calendar__cell">12</td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__cell">13</td>
-                      <td class="calendar__cell">14</td>
-                      <td class="calendar__cell">15</td>
-                      <td class="calendar__cell">16</td>
-                      <td class="calendar__cell">17</td>
-                      <td class="calendar__cell">18</td>
-                      <td class="calendar__cell">19</td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__cell">20</td>
-                      <td class="calendar__cell">21</td>
-                      <td class="calendar__cell">22</td>
-                      <td class="calendar__cell">23</td>
-                      <td class="calendar__cell">24</td>
-                      <td class="calendar__cell">25</td>
-                      <td class="calendar__cell">26</td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__cell">27</td>
-                      <td class="calendar__cell">28</td>
-                      <td class="calendar__cell">29</td>
-                      <td class="calendar__cell">30</td>
-                      <td class="calendar__cell">31</td>
-                      <td class="calendar__cell calendar__cell--next-day">1</td>
-                      <td class="calendar__cell calendar__cell--next-day">2</td>
-                    </tr>
-                  </table>
+                  <div class="calendar__weekdays">
+                    <div class="calendar__weekday">П</div>
+                    <div class="calendar__weekday">В</div>
+                    <div class="calendar__weekday">С</div>
+                    <div class="calendar__weekday">Ч</div>
+                    <div class="calendar__weekday">П</div>
+                    <div class="calendar__weekday calendar__weekday--day-off">С</div>
+                    <div class="calendar__weekday calendar__weekday--day-off">В</div>
+                  </div>
+                  <div class="calendar__days">
+                    <div class="calendar__prev-date">29</div>
+                    <div class="calendar__prev-date">30</div>
+                    <div class="calendar__date">1</div>
+                    <div class="calendar__date">2</div>
+                    <div class="calendar__date">3</div>
+                    <div class="calendar__date">4</div>
+                    <div class="calendar__date">5</div>
+                    <div class="calendar__date">6</div>
+                    <div class="calendar__date">7</div>
+                    <div class="calendar__date">8</div>
+                    <div class="calendar__date">9</div>
+                    <div class="calendar__date">10</div>
+                    <div class="calendar__date">11</div>
+                    <div class="calendar__date">12</div>
+                    <div class="calendar__date">13</div>
+                    <div class="calendar__date">14</div>
+                    <div class="calendar__date">15</div>
+                    <div class="calendar__date">16</div>
+                    <div class="calendar__date">17</div>
+                    <div class="calendar__date">18</div>
+                    <div class="calendar__date">19</div>
+                    <div class="calendar__date">20</div>
+                    <div class="calendar__date">21</div>
+                    <div class="calendar__date">22</div>
+                    <div class="calendar__date">23</div>
+                    <div class="calendar__date">24</div>
+                    <div class="calendar__date">25</div>
+                    <div class="calendar__date">26</div>
+                    <div class="calendar__date">27</div>
+                    <div class="calendar__date">28</div>
+                    <div class="calendar__date">29</div>
+                    <div class="calendar__date">30</div>
+                    <div class="calendar__date">31</div>
+                    <div class="calendar__next-date">1</div>
+                    <div class="calendar__next-date">2</div>
+                  </div>
                 </div>
               </div>
               <a class="step__button button button--bright" href="#step--second">Следующий шаг</a>
@@ -440,6 +431,7 @@
       </div>
     </div>
   </footer>
+  <script src="../source/js/calendar.js"></script>
 </body>
 
 </html>
