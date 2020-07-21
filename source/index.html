@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -12,16 +13,17 @@
 
   <header class="header">
     <div class="header__wrapper">
-      <a href="#" class="header__logo logo logo--white">
-        <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
-      </a>
 
       <nav class="main-nav">
-        <button class="main-nav__burger" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__top">
+          <a href="#" class="header__logo logo logo--white">
+            <img src="../source/img/logo-mobile-white@1x.png" width="96" height="15" alt="logo">
+          </a>
+          <button class="main-nav__burger" type="button" aria-label="Открыть меню">
+          </button>
+        </div>
 
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--wrapped">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link">О сервисе</a>
@@ -71,37 +73,38 @@
 
     <section class="intro">
       <div class="intro__wrapper">
-        <h2 class="intro__title section-title">В путешествие с крутыми попутчиками!</h2>
+        <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
 
         <ul class="intro__list contacts-list">
           <li class="contacts-list__item">
-            <a class="contacts-list__link phone-icon" href="tel:88005558628">8 800 555-86-28</a>
+            <a class="contacts-list__link contacts-list__link--phone-icon" href="tel:88005558628">8 800 555-86-28</a>
           </li>
           <li class="contacts-list__item">
-            <a class="contacts-list__link mail-icon" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts-list__link contacts-list__link--mail-icon"
+              href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts-list__item">
-            <a class="contacts-list__auth button button--bright js-login" href="#">Авторизация</a>
+            <a class="contacts-list__auth js-login" href="#">Авторизация</a>
           </li>
         </ul>
 
-        <blockquote class="intro__blockquote blockquote">
-          <p class="blockquote__text">
+        <blockquote class="intro__blockquote">
+          <p class="intro__quote">
             "Лучшее приложение,
             что я видел в жизни!"
           </p>
-          <cite class="blockquote__author">
+          <cite class="intro__cite">
             Мурат Эльтазин
             главный редактор
             газеты «гаджетлайф»
           </cite>
         </blockquote>
 
-        <ol class="intro__steps steps">
-          <li class="steps__item steps__item--first">Выберите направление</li>
-          <li class="steps__item steps__item--second">Изучите идеи путешественников</li>
-          <li class="steps__item steps__item--third">Находите тех, кто похож на вас</li>
-          <li class="steps__item steps__item--fourth">Путешествуйте вместе!</li>
+        <ol class="intro__steps">
+          <li class="intro__step">Выберите направление</li>
+          <li class="intro__step">Изучите идеи путешественников</li>
+          <li class="intro__step">Находите тех, кто похож на вас</li>
+          <li class="intro__step">Путешествуйте вместе!</li>
         </ol>
       </div>
     </section>
@@ -110,7 +113,7 @@
 
     <section class="about">
       <div class="about__wrapper">
-        <h2 class="about__title section-title">О сервисе</h2>
+        <h2 class="about__title section-title section-title--index">О сервисе</h2>
         <p class="about__text">
           Любое путешествие веселее
           с попутчиками, которые на
@@ -130,7 +133,7 @@
 
     <section class="destinations">
       <div class="destinations__wrapper">
-        <h2 class="destinations__title section-title">Направления</h2>
+        <h2 class="destinations__title section-title section-title--index">Направления</h2>
         <p class="destinations__text">
           Мы не продаем туры
           и ничего не рекламируем.
@@ -141,35 +144,42 @@
 
         <ul class="destinations__list">
           <li class="destinations__item country">
-            <img class="country__img" src="https://via.placeholder.com/270x110" width="270" height="110"
+            <img class="country__img" src="../source/img/thailand-mobile@1x.jpg" width="270" height="110"
               alt="Острова и пляж">
-            <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
-              alt="Флаг Таиланда">
             <div class="country__text">
-              <h3 class="country__name">Таиланд</h3>
+              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
+                alt="Флаг Таиланда">
+              <div class="country__text-top">
+                <h3 class="country__name">Таиланд</h3>
+                <span class="country__visitors">18321</span>
+              </div>
               <p class="country__slogan">Джунгли зовут!</p>
-              <span class="country__visitors">18321</span>
             </div>
           </li>
           <li class="destinations__item country">
-            <img class="country__img" src="https://via.placeholder.com/270x110" width="270" height="110"
+            <img class="country__img" src="../source/img/france-mobile@1x.jpg" width="270" height="110"
               alt="Городская улица">
-            <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
-              alt="Флаг Франции">
             <div class="country__text">
-              <h3 class="country__name">Франция</h3>
+              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
+                alt="Флаг Франции">
+              <div class="country__text-top">
+                <h3 class="country__name">Франция</h3>
+                <span class="country__visitors">12518</span>
+              </div>
               <p class="country__slogan">Трэ бьен, манифик!</p>
-              <span class="country__visitors">12518</span>
             </div>
           </li>
           <li class="destinations__item country">
-            <img class="country__img" src="https://via.placeholder.com/270x110" width="270" height="110"
+            <img class="country__img" src="../source/img/czech-mobile@1x.jpg" width="270" height="110"
               alt="Карлов мост">
-            <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
             <div class="country__text">
-              <h3 class="country__name">Чехия</h3>
+              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
+                alt="Флаг Чехии">
+              <div class="country__text-top">
+                <h3 class="country__name">Чехия</h3>
+                <span class="country__visitors">5326</span>
+              </div>
               <p class="country__slogan">Закоулки старой Европы</p>
-              <span class="country__visitors">5326</span>
             </div>
           </li>
         </ul>
@@ -182,7 +192,7 @@
 
     <section class="fellows">
       <div class="fellows__wrapper">
-        <h2 class="fellows__title section-title">Попутчики</h2>
+        <h2 class="fellows__title section-title section-title--index">Попутчики</h2>
         <p class="fellows__text">
           Все мы индивидуальны и у
           каждого свой взгляд на
@@ -200,7 +210,7 @@
           <!-- Фирсова -->
           <li class="fellows__card fellow">
             <div class="fellow__top">
-              <img class="fellow__img" src="https://via.placeholder.com/270x270" width="270" height="270"
+              <img class="fellow__img" src="../source/img/firsova-tablet@1x.jpg" width="270" height="270"
                 alt="Таня Фирсова ныряет">
 
               <div class="fellow__skill skill-circle">
@@ -209,23 +219,23 @@
               </div>
             </div>
 
-            <ul class="fellow__wish-list desired-countries">
-              <li class="desired-countries__item">
-                <img class="desired-countries__flag" src="https://via.placeholder.com/35x25" width="35" height="25"
-                  alt="Флаг Шри-Ланки">
-              </li>
-              <li class="desired-countries__item">
-                <img class="desired-countries__flag" src="https://via.placeholder.com/35x25" width="35" height="25"
-                  alt="Флаг Таиланда">
-              </li>
-              <li class="desired-countries__item">
-                <img class="desired-countries__flag" src="https://via.placeholder.com/35x25" width="35" height="25"
-                  alt="Флаг Сейшелл">
-              </li>
-            </ul>
-
             <div class="fellow__bottom">
               <h3 class="fellow__name fellow__name--offline">Таня Фирсова</h3>
+
+              <ul class="fellow__desired-countries">
+                <li class="fellow__country">
+                  <img class="fellow__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25"
+                    alt="Флаг Шри-Ланки">
+                </li>
+                <li class="fellow__country">
+                  <img class="fellow__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25"
+                    alt="Флаг Таиланда">
+                </li>
+                <li class="fellow__country">
+                  <img class="fellow__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25"
+                    alt="Флаг Сейшелл">
+                </li>
+              </ul>
 
               <ul class="fellow__tags-list tags">
                 <li class="tags__item">#ЗОЖ</li>
@@ -238,20 +248,17 @@
 
               <ul class="fellow__transport-list">
                 <li class="fellow__transport">
-                  <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/21x21" width="21"
+                  <img class="transport-icon transport-icon--active" src="../source/img/plane.svg" width="21"
                     height="21" alt="Самолёт">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon" src="https://via.placeholder.com/21x21" width="21" height="21"
-                    alt="Автобус">
+                  <img class="transport-icon" src="../source/img/bus.svg" width="21" height="21" alt="Автобус">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon" src="https://via.placeholder.com/21x21" width="21" height="21"
-                    alt="Велосипед">
+                  <img class="transport-icon" src="../source/img/bike.svg" width="21" height="21" alt="Велосипед">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon" src="https://via.placeholder.com/21x21" width="21" height="21"
-                    alt="На своих двоих">
+                  <img class="transport-icon" src="../source/img/run.svg" width="21" height="21" alt="На своих двоих">
                 </li>
               </ul>
             </div>
@@ -260,7 +267,7 @@
           <!-- Дёмин -->
           <li class="fellows__card fellow">
             <div class="fellow__top">
-              <img class="fellow__img" src="https://via.placeholder.com/270x270" width="270" height="270"
+              <img class="fellow__img" src="../source/img/demin-tablet@1x.jpg" width="270" height="270"
                 alt="Петя Демин субботним утром">
 
               <div class="fellow__skill skill-circle">
@@ -269,19 +276,19 @@
               </div>
             </div>
 
-            <ul class="fellow__wish-list desired-countries">
-              <li class="desired-countries__item">
-                <img class="desired-countries__flag" src="https://via.placeholder.com/35x25" width="35" height="25"
-                  alt="Флаг Германии">
-              </li>
-              <li class="desired-countries__item">
-                <img class="desired-countries__flag" src="https://via.placeholder.com/35x25" width="35" height="25"
-                  alt="Флаг Чехии">
-              </li>
-            </ul>
-
             <div class="fellow__bottom">
               <h3 class="fellow__name fellow__name--online">Петя Демин</h3>
+
+              <ul class="fellow__desired-countries">
+                <li class="fellow__country">
+                  <img class="fellow__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25"
+                    alt="Флаг Германии">
+                </li>
+                <li class="fellow__country">
+                  <img class="fellow__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25"
+                    alt="Флаг Чехии">
+                </li>
+              </ul>
 
               <ul class="fellow__tags-list tags">
                 <li class="tags__item">#бургер</li>
@@ -293,20 +300,19 @@
 
               <ul class="fellow__transport-list">
                 <li class="fellow__transport">
-                  <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/21x21" width="21"
+                  <img class="transport-icon transport-icon--active" src="../source/img/plane.svg" width="21"
                     height="21" alt="Самолёт">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/21x21" width="21"
-                    height="21" alt="Автобус">
+                  <img class="transport-icon transport-icon--active" src="../source/img/bus.svg" width="21" height="21"
+                    alt="Автобус">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon" src="https://via.placeholder.com/21x21" width="21" height="21"
-                    alt="Велосипед">
+                  <img class="transport-icon" src="../source/img/bike.svg" width="21" height="21" alt="Велосипед">
                 </li>
                 <li class="fellow__transport">
-                  <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/21x21" width="21"
-                    height="21" alt="На своих двоих">
+                  <img class="transport-icon transport-icon--active" src="../source/img/run.svg" width="21" height="21"
+                    alt="На своих двоих">
                 </li>
               </ul>
             </div>
@@ -321,18 +327,18 @@
 
     <section class="tariffs">
       <div class="tariffs__wrapper">
-        <h2 class="tariffs__title section-title">Добавьте свой профиль</h2>
+        <h2 class="tariffs__title section-title section-title--index">Добавьте свой профиль</h2>
 
         <ol class="tariffs__list">
-          <li class="tariffs__item tariffs__item--first">
+          <li class="tariffs__item">
             <p class="tariffs__feature">Базовое размещение</p>
             <p class="tariffs__cost">Бесплатно</p>
           </li>
-          <li class="tariffs__item tariffs__item--second">
+          <li class="tariffs__item">
             <p class="tariffs__feature">Вывод на первых позициях</p>
             <p class="tariffs__cost">99 руб./мес</p>
           </li>
-          <li class="tariffs__item tariffs__item--third">
+          <li class="tariffs__item">
             <p class="tariffs__feature">Кастомный цвет карточки</p>
             <p class="tariffs__cost">59 руб./мес</p>
           </li>
@@ -346,7 +352,7 @@
 
     <section class="form">
       <div class="form__wrapper">
-        <h2 class="form__title section-title">Заинтересовались?</h2>
+        <h2 class="form__title section-title section-title--index">Заинтересовались?</h2>
         <p class="form__text">
           Зарегистрируйтесь,
           это быстро и бесплатно!
@@ -355,9 +361,9 @@
         </p>
 
         <form class="form__index-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" id="user-email" placeholder="E-mail">
+          <input class="form__index-input" type="email" id="user-email" placeholder="E-mail">
           <label class="visually-hidden" for="user-email"></label>
-          <button class="form__auth-submit rect-button" type="submit">></button>
+          <button class="form__auth-submit rect-button" type="submit"></button>
         </form>
 
         <p class="form__text">
@@ -375,11 +381,11 @@
     <section class="address">
       <div class="address__wrapper">
         <h2 class="visually-hidden">Адрес и схема проезда</h2>
-        <a class="address__link icon-map-marker" href="https://goo.gl/maps/WS5zStupjKadiZWC7">
+        <a class="address__map-marker" href="https://goo.gl/maps/WS5zStupjKadiZWC7">
           <address class="address__text">ул. Большая
             Конюшенная, 19/8</address>
         </a>
-        <a class="address__route" href="https://goo.gl/maps/FzoFDDmMbqpFMkwM7">Проложить маршрут</a>
+        <a class="address__route rect-button" href="https://goo.gl/maps/FzoFDDmMbqpFMkwM7">Проложить маршрут</a>
       </div>
     </section>
 
@@ -389,7 +395,7 @@
       <h2 class="visually-hidden">Адрес на карте</h2>
       <iframe class="map__body"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1668.6365112686128!2d30.322569986590928!3d59.936558449796756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595154244078!5m2!1sru!2sru"
-        width="320" height="424" style="border:0;" allowfullscreen="" tabindex="0"></iframe>
+        style="border:0;" allowfullscreen="" tabindex="0"></iframe>
       <span class="map__marker"></span>
     </section>
 
@@ -401,25 +407,26 @@
     <div class="footer__wrapper">
       <div class="footer__top">
         <a class="footer__logo logo logo--blue" href="#">
-          <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
+          <img src="../source/img/logo-mobile-blue@1x.png" width="96" height="15" alt="logo">
         </a>
 
         <ul class="footer__social social">
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="facebook"></a>
           </li>
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--vk" href="#" aria-label="vk"></a>
           </li>
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--instagram" href="#" aria-label="instagram"></a>
           </li>
         </ul>
       </div>
 
-      <div class="footer__copyright copyright">
-        <span class="copyright__text">Разработано:</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
+      <div class="footer__copyright">
+        <span class="footer__copyright-text">Разработано:</span>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="HTML Academy"></a>
       </div>
     </div>
   </footer>
@@ -427,27 +434,29 @@
   <!-- Модальное окно -->
 
   <section class="page__modal business-rates">
-    <h2 class="business-rates__title section-title">Бизнес-тарифы</h2>
 
-    <ul class="business-rates__list">
-      <li class="business-rates__item">
-        <p class="business-rates__service">Реклама у блоггера</p>
-        <p class="business-rates__cost">300 000 руб./пост</p>
-      </li>
-      <li class="business-rates__item">
-        <p class="business-rates__service">Накрутка подписчиков</p>
-        <p class="business-rates__cost">от 1 руб./шт.</p>
-      </li>
-      <li class="business-rates__item">
-        <p class="business-rates__service">Лайки от ботов</p>
-        <p class="business-rates__cost">от 20 коп./лайк</p>
-      </li>
-      <li class="business-rates__item">
-        <p class="business-rates__service">Ваш продакт-плейсмент</p>
-        <p class="business-rates__cost">Индивидуально</p>
-      </li>
-    </ul>
+    <div class="business-rates__wrapper">
+      <h2 class="business-rates__title section-title section-title--index">Бизнес-тарифы</h2>
 
+      <ul class="business-rates__list">
+        <li class="business-rates__item">
+          <p class="business-rates__service">Реклама у блоггера</p>
+          <p class="business-rates__cost">300 000 руб./пост</p>
+        </li>
+        <li class="business-rates__item">
+          <p class="business-rates__service">Накрутка подписчиков</p>
+          <p class="business-rates__cost">от 1 руб./шт.</p>
+        </li>
+        <li class="business-rates__item">
+          <p class="business-rates__service">Лайки от ботов</p>
+          <p class="business-rates__cost">от 20 коп./лайк</p>
+        </li>
+        <li class="business-rates__item">
+          <p class="business-rates__service">Ваш продакт-плейсмент</p>
+          <p class="business-rates__cost">Индивидуально</p>
+        </li>
+      </ul>
+    </div>
     <button class="business-rates__close" type="button">Закрыть окно</button>
   </section>
 </body>

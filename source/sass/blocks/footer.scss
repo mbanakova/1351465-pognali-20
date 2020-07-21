@@ -1,0 +1,75 @@
+.footer {
+  background-color: $white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.footer__wrapper {
+  @include wrapper();
+  padding-top: 37px;
+  padding-bottom: 19px;
+}
+
+.footer__top {
+  border-bottom: 1px solid $footer-grey-line;
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+}
+
+.footer__social {
+  margin-bottom: 37px;
+}
+
+.footer__social-item {
+  margin-right: 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $basic-yellow;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $special_yellow_dark;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.footer__copyright {
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.footer__copyright-text {
+  @include no-fields();
+  @include font(16px, 33px, 400);
+  color: $special-grey;
+}
+
+.footer__copyright-link {
+  @include a();
+  width: 27px;
+  height: 33px;
+  background-image: url(../../img/htmlacademy.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

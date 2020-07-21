@@ -1,0 +1,42 @@
+.main-nav__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 270px;
+}
+
+.main-nav__burger {
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  min-width: 25px;
+  min-height: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 5px;
+    left: 0;
+    background-color: $white;
+    border-radius: 1px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 16px;
+    left: 0;
+    background-color: $white;
+    border-radius: 1px;
+  }
+}
+
+.main-nav__wrapper {
+  padding-top: 76px;
+  // display: none;
+  }

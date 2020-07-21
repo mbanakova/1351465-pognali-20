@@ -1,0 +1,5 @@
+.user-list {
+  @include ul();
+  padding-bottom: 41px;
+  background-color: $white;
+}

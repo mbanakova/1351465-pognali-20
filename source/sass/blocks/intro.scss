@@ -1,0 +1,78 @@
+.intro {
+  background-color: $basic-blue;
+  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: 50% 128px;
+}
+
+.intro__wrapper {
+  @include wrapper();
+  padding-bottom: 39px;
+}
+
+.intro__title {
+  @include no-fields();
+  margin-bottom: 245px;
+  @include font(36px, 40px, 700);
+  text-align: center;
+  color: $white;
+}
+
+.intro__blockquote {
+  @include no-fields();
+  margin-bottom: 38px;
+  color: $white;
+}
+
+.intro__quote {
+  @include no-fields();
+  margin-bottom: 18px;
+}
+
+.intro__cite {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.intro__steps {
+  @include font(18px, 18px, 700);
+  @include no-fields();
+  counter-reset: myCounter;
+  color: $basic-blue;
+}
+
+.intro__step {
+  position: relative;
+  padding:  22px 96px 24px 24px;
+  margin-top: -9px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-color: $basic-yellow;
+
+  &::after {
+    position: absolute;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    top: 22px;
+    right: 21px;
+    color: $white;
+  }
+
+  &:first-child{
+    background-color: $special-orange;
+  }
+
+  &:nth-child(2) {
+    background-color: $special_orange-light;
+  }
+
+  &:nth-child(3) {
+    background-color: $special_yellow_dark;
+  }
+
+  &:last-child{
+    background-color: $basic-yellow;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+}

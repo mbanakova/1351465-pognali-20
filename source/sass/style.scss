@@ -1,1 +1,77 @@
-// Начните писать стили здесь
+@import "variables.scss";
+@import "mixins.scss";
+
+@font-face {
+font-family: "Blogger Sans";
+font-display: swap;
+font-weight: 300;
+font-style: normal;
+src: local("Blogger Sans Light"),
+  url("../fonts/bloggersans-light.woff") format("woff"),
+  url("../fonts/bloggersans-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Blogger Sans"),
+    url("../fonts/bloggersans.woff") format("woff"),
+    url("../fonts/bloggersans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Blogger Sans Medium"),
+    url("../fonts/bloggersans-medium.woff") format("woff"),
+    url("../fonts/bloggersans-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Blogger Sans Bold"),
+    url("../fonts/bloggersans-bold.woff") format("woff"),
+    url("../fonts/bloggersans-bold.woff2") format("woff2");
+}
+
+@import "blocks/visually-hidden.scss";
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/logo.scss";
+@import "blocks/button.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";
+@import "blocks/icon-phone.scss";
+@import "blocks/icon-email.scss";
+@import "blocks/social.scss";
+@import "blocks/intro.scss";
+@import "blocks/contacts-list.scss";
+@import "blocks/section-title.scss";
+@import "blocks/about.scss";
+@import "blocks/destinations.scss";
+@import "blocks/country.scss";
+@import "blocks/rect-button.scss";
+@import "blocks/fellows.scss";
+@import "blocks/fellow.scss";
+@import "blocks/skill-circle.scss";
+@import "blocks/tags.scss";
+@import "blocks/transport-icon.scss";
+@import "blocks/tariffs.scss";
+@import "blocks/form.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/business-rates.scss";
+@import "blocks/destinations.scss";
+@import "blocks/destinations.scss";
+@import "blocks/destinations.scss";
+@import "blocks/destinations.scss";
+@import "blocks/address.scss";
+

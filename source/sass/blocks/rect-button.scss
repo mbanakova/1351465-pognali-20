@@ -1,0 +1,35 @@
+.rect-button {
+  position: relative;
+  @include font(18px, 18px, 700);
+  @include a();
+  padding: 22px 50px 22px 22px;
+  color: $basic-blue-h2;
+  text-transform: inherit;
+  background-color: $basic-yellow;
+  border-radius: 10px;
+  width: auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    width: 1px;
+    height: 1px;
+    border: 10px solid $basic-blue-h2;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: $special_yellow_dark;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+
+    transition: 0.3s ease-in-out;
+  }
+}
