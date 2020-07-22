@@ -40,7 +40,7 @@
 
 .business-rates__close {
   margin: 0 auto;
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-family: $the-only-one;
   @include font(24px, 24px, 700);
   padding: 21px;
   width: 100%;
