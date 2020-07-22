@@ -2,4 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.logo__white {
+  display: block;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.logo__blue {
+  display: block;
+
+  &--hidden {
+    display: none;
+  }
 }

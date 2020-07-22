@@ -12,56 +12,62 @@
   <!-- Хедер -->
 
   <header class="header">
-    <div class="header__wrapper">
 
-      <nav class="main-nav">
-        <div class="main-nav__top">
-          <a href="#" class="header__logo logo logo--white">
-            <img src="../source/img/logo-mobile-white@1x.png" width="96" height="15" alt="logo">
-          </a>
-          <button class="main-nav__burger" type="button" aria-label="Открыть меню">
-          </button>
-        </div>
+    <nav class="main-nav">
+      <div class="main-nav__top">
+        <a href="#" class="header__logo logo">
+          <img class="logo__white" src="../source/img/logo-mobile-white@1x.png" width="96" height="15" alt="logo">
+          <img class="logo__blue logo__blue--hidden" src="../source/img/logo-mobile-blue@1x.png" width="96" height="15"
+            alt="logo">
+        </a>
+        <button class="main-nav__burger" type="button" aria-label="Открыть меню">
+        </button>
+      </div>
 
-        <div class="main-nav__wrapper main-nav__wrapper--wrapped">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
+      <div class="main-nav__wrapper main-nav__wrapper--wrapped">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">О сервисе</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Направления</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
 
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__auth button button--bright js-login" href="#">Авторизация</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__link icon-phone" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__link icon-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__auth button button--bright js-login" href="#">Авторизация</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="tel:88005558628">
+              <div class="user-list__icon"></div>
+              <div class="user-list__contact">8 800 555-86-28</div>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
+              <div class="user-list__icon"></div>
+              <div class="user-list__contact">mail@htmlacademy.ru</div>
+            </a>
+          </li>
+        </ul>
 
-          <ul class="main-nav__list social">
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+        <ul class="main-nav__list social">
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- Основное -->
@@ -371,8 +377,14 @@
           Мы с радостью на них ответим!
         </p>
 
-        <a class="form__link icon-phone icon-phone--bright" href="tel:88005558628">8 800 555-86-28</a>
-        <a class="form__link icon-email icon-email--bright" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a class="form__link" href="tel:88005558628">
+          <div class="form__icon"></div>
+          <div class="form__contact">8 800 555-86-28</div>
+        </a>
+        <a class="form__link" href="mailto:mail@htmlacademy.ru">
+          <div class="form__icon"></div>
+          <div class="form__contact">mail@htmlacademy.ru</div>
+        </a>
       </div>
     </section>
 
@@ -385,7 +397,7 @@
           <address class="address__text">ул. Большая
             Конюшенная, 19/8</address>
         </a>
-        <a class="address__route rect-button" href="https://goo.gl/maps/FzoFDDmMbqpFMkwM7">Проложить маршрут</a>
+        <a class="address__route" href="https://goo.gl/maps/FzoFDDmMbqpFMkwM7">Проложить маршрут</a>
       </div>
     </section>
 
@@ -459,6 +471,7 @@
     </div>
     <button class="business-rates__close" type="button">Закрыть окно</button>
   </section>
+  <script src="../source/js/navigation.js"></script>
 </body>
 
 </html>

@@ -2,11 +2,12 @@
   background-color: $basic-blue;
   background-image: url(../../img/traveller-illustration-mobile@1x.png);
   background-repeat: no-repeat;
-  background-position: 50% 128px;
+  background-position: 50% 180px;
 }
 
 .intro__wrapper {
   @include wrapper();
+  padding-top: 52px;
   padding-bottom: 39px;
 }
 
