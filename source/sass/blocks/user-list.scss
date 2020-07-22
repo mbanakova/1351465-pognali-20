@@ -1,0 +1,44 @@
+.user-list {
+  @include ul();
+  padding-bottom: 41px;
+  background-color: $white;
+}
+
+.user-list__item {
+  &:first-child {
+    margin-bottom: 51px;
+  }
+}
+
+.user-list__auth {
+  padding: 12px 0 8px;
+
+  &:hover {
+    background-color: $special_yellow_dark;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.user-list__link {
+  @include a();
+  display: flex;
+  @include font(16px, 45px, 700);
+  color: $basic-blue-medium;
+}
+
+.user-list__icon {
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $basic-blue-icon;
+  background-image: url(../../img/contacts-phone.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+

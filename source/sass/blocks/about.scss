@@ -1,0 +1,33 @@
+.about {
+  background-color: $basic-blue-about;
+  background-image: url(../../img/about-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.about__wrapper {
+  @include  wrapper();
+  padding-top: 33px;
+  padding-bottom: 82px;
+  padding-right: 60px;
+  padding-left: 49px;
+  max-width: 210px;
+}
+
+.about__title {
+  @include no-fields();
+  margin-bottom: 19px;
+}
+
+.about__text {
+  @include no-fields();
+  margin-bottom: 20px;
+  color: $white;
+
+  &--bold {
+    @include no-fields();
+    font-weight: 700;
+  }
+}

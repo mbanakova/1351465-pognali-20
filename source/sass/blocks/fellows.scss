@@ -1,0 +1,56 @@
+.fellows {
+  background-color: $basic-blue-medium;
+  color: $white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.fellows__wrapper {
+  position: relative;
+  @include  wrapper();
+  padding-top: 68px;
+  padding-bottom: 31px;
+  background-image: url(../../img/smolov-back-desktop@1x.png);
+  background-repeat: no-repeat;
+  background-position: 150px 68px;
+
+  &::before {
+  position: absolute;
+  content: "";
+  left: -25px;
+  width: 113px;
+  height: 132px;
+  background-color: $basic-blue-elem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: -1;
+  }
+}
+
+.fellows__title {
+  @include  no-fields();
+  margin-top: 34px;
+  margin-bottom: 19px;
+  padding-left: 25px;
+}
+
+.fellows__text {
+  @include  no-fields();
+  margin-bottom: 25px;
+  padding-left: 25px;
+  max-width: 215px;
+
+  &--bold {
+    margin-bottom: 54px;
+    font-weight: 700;
+    max-width: 195px;
+  }
+}
+
+.fellows__list {
+  @include  ul();
+}
+
+.fellows__card {
+  margin-bottom: 9px;
+}

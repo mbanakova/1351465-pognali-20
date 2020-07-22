@@ -1,0 +1,20 @@
+.button {
+  @include a();
+  @include font(17px, 30px, 700);
+  padding: 2px 75px 0 75px;
+  color: $basic-blue;
+  text-align: center;
+  border-radius: 25px;
+
+&--bright {
+  background-color: $basic-yellow;
+}
+
+&--basic {
+  background-color: $basic-blue-button;
+}
+
+&--pale {
+  background-color: $white;
+}
+}

@@ -12,61 +12,72 @@
   <!-- Хедер -->
 
   <header class="header">
-    <div class="header__wrapper">
-      <a href="index.html" class="header__logo logo logo--white">
-        <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
-      </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__burger" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+    <nav class="main-nav">
+      <div class="main-nav__top">
+        <a href="index.html" class="header__logo logo">
+          <img class="logo__white" src="../source/img/logo-mobile-white@1x.png" width="96" height="15" alt="logo">
+          <img class="logo__blue logo__blue--hidden" src="../source/img/logo-mobile-blue@1x.png" width="96" height="15"
+            alt="logo">
+        </a>
+        <button class="main-nav__burger" type="button" aria-label="Открыть меню">
         </button>
+      </div>
 
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">О сервисе</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
+      <div class="main-nav__wrapper main-nav__wrapper--wrapped">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link" href="index.html">О сервисе</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link">Направления</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
 
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__auth button js-login" href="#">Авторизация</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__auth button button--bright js-login" href="#">Авторизация</a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="tel:88005558628">
+              <div class="user-list__icon"></div>
+              <div class="user-list__contact">8 800 555-86-28</div>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
+              <div class="user-list__icon"></div>
+              <div class="user-list__contact">mail@htmlacademy.ru</div>
+            </a>
+          </li>
+        </ul>
 
-          <ul class="main-nav__list social">
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+        <ul class="main-nav__list social">
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- Основное -->
 
   <main class="main">
-    <h1 class="main__title">Направления</h1>
+    <div class="main__top">
+      <div class="main__wrapper">
+        <h1 class="main__title">Направления</h1>
+      </div>
+    </div>
 
     <!-- Вся страница - это форма -->
     <form class="main__form" action="https://echo.htmlacademy.ru" method="post">
@@ -127,7 +138,7 @@
 
       <section class="user-plans">
         <div class="user-plans__wrapper">
-          <h2 class="user-plans__title section-title">Мои планы:</h2>
+          <h2 class="user-plans__title section-title section-title--form">Мои планы:</h2>
 
           <ol class="user-plans__list trip-card">
             <li class="trip-card__item">
@@ -151,7 +162,7 @@
       <section class="create-plan">
         <div class="create-plan__wrapper">
           <div class="create-plan__top-wrapper">
-            <h2 class="create-plan__title section-title">Добавить план:</h2>
+            <h2 class="create-plan__title section-title section-title--form">Добавить план:</h2>
             <div class="bullets">
               <span class="bullets__bullet bullets__bullet--progress">&#8226;</span>
               <span class="bullets__bullet">&#8226;</span>
@@ -348,16 +359,20 @@
                     <ul class="list-a">
                       <li class="list-a__country"><a class="list-a__link" href="/australia">Австралия</a></li>
                       <li class="list-a__country"><a class="list-a__link" href="/europe/austria">Австрия</a></li>
-                      <li class="list-a__country"><a class="list-a__link" href="/asia/azerbaijan">Азербайджан</a></li>
+                      <li class="list-a__country"><a class="list-a__link" href="/asia/azerbaijan">Азербайджан</a>
+                      </li>
                       <li class="list-a__country"><a class="list-a__link" href="/europe/albania">Албания</a></li>
                       <li class="list-a__country"><a class="list-a__link" href="/africa/algeria">Алжир</a></li>
                       <li class="list-a__country"><a class="list-a__link" href="/africa/albania">Ангола</a></li>
                       <li class="list-a__country"><a class="list-a__link" href="/europe/andorra">Андорра</a></li>
-                      <li class="list-a__country"><a class="list-a__link" href="/islands/antigua">Антигуа и Барбуда</a>
+                      <li class="list-a__country"><a class="list-a__link" href="/islands/antigua">Антигуа и
+                          Барбуда</a>
                       </li>
-                      <li class="list-a__country"><a class="list-a__link" href="/america/argentina">Аргентина</a></li>
+                      <li class="list-a__country"><a class="list-a__link" href="/america/argentina">Аргентина</a>
+                      </li>
                       <li class="list-a__country"><a class="list-a__link" href="/asia/armenia">Армения</a></li>
-                      <li class="list-a__country"><a class="list-a__link" href="/asia/afganistan">Афганистан</a></li>
+                      <li class="list-a__country"><a class="list-a__link" href="/asia/afganistan">Афганистан</a>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -408,29 +423,32 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__top">
-        <a class="footer__logo logo logo--blue" href="index.html">
-          <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
+        <a class="footer__logo logo logo--blue" href="#">
+          <img src="../source/img/logo-mobile-blue@1x.png" width="96" height="15" alt="logo">
         </a>
 
         <ul class="footer__social social">
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="facebook"></a>
           </li>
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--vk" href="#" aria-label="vk"></a>
           </li>
-          <li class="social__item">
+          <li class="footer__social-item social__item">
             <a class="social__link social__link--instagram" href="#" aria-label="instagram"></a>
           </li>
         </ul>
       </div>
 
-      <div class="footer__copyright copyright">
-        <span class="copyright__text">Разработано:</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
+      <div class="footer__copyright">
+        <span class="footer__copyright-text">Разработано:</span>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="HTML Academy"></a>
       </div>
     </div>
   </footer>
+
+  <script src="../source/js/navigation.js"></script>
   <script src="../source/js/calendar.js"></script>
 </body>
 

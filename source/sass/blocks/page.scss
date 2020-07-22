@@ -1,0 +1,24 @@
+.page {
+  position: relative;
+  min-width: 320px;
+  @include no-fields();
+  font-family: $the-only-one;
+  @include font();
+  color: $special-grey;
+  background-color: $basic-blue-light;
+  background-image: url(../../img/globe-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.page__body {
+  @include no-fields();
+}
+
+.page__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}

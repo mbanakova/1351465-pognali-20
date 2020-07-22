@@ -1,0 +1,86 @@
+.main-nav {
+  padding-top: 27px;
+  background-color: $basic-blue;
+
+  &--unwrapped {
+    background-color: $white;
+  }
+}
+
+.main-nav__top {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0 25px 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 270px;
+}
+
+.main-nav__burger {
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  min-width: 25px;
+  min-height: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 5px;
+    left: 0;
+    background-color: $white;
+    border-radius: 1px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 16px;
+    left: 0;
+    background-color: $white;
+    border-radius: 1px;
+  }
+
+
+  &--opened::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 11px;
+    left: 0;
+    background-color: #CCCCCC;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    transition: 0.2s ease-in-out;
+  }
+
+  &--opened::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: 11px;
+    left: 0;
+    background-color: #CCCCCC;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.main-nav__wrapper {
+  @include wrapper;
+  padding: 55px 25px 41px;
+
+  &--wrapped {
+  display: none;
+  }
+}
+

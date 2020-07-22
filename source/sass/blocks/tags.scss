@@ -1,0 +1,9 @@
+.tags {
+  color: $special-grey;
+  max-width: 188px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include font(16px, 18px, 400);
+}

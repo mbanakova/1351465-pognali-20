@@ -1,0 +1,11 @@
+.section-title {
+  @include font(24px, 24px, 700);
+
+  &--index {
+    color: $special_orange;
+  }
+
+  &--form {
+    color: $basic-blue-h2;
+  }
+}

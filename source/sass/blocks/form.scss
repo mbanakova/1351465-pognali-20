@@ -1,0 +1,111 @@
+.form {
+  background-color: $basic-blue-about;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.form__wrapper {
+  @include wrapper();
+  padding-top: 72px;
+  padding-bottom: 30px;
+}
+
+.form__title {
+  @include no-fields();
+  margin-bottom: 19px;
+  text-align: center;
+}
+
+.form__text {
+  @include no-fields();
+  margin: 0 auto;
+  max-width: 215px;
+  color: $white;
+  margin-bottom: 29px;
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 17px;
+  }
+}
+
+.form__text-link {
+  color: $basic-yellow;
+
+  &:hover {
+    color: $special_orange;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    color: $special_orange;
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.form__index-form {
+position: relative;
+}
+
+.form__index-input {
+  margin-bottom: 29px;
+  padding: 20px 75px 20px 25px;
+  @include font(18px, 20px, 700);
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    @include font(18px, 20x, 700);
+    opacity: 0.3;
+  }
+
+  &:hover::placeholder {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:focus {
+    color: $white;
+    box-shadow: inset 0 0 0 4px $white;
+    background-color: $basic-blue-about;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.form__auth-submit {
+  position: absolute;
+  padding: 0 30px;
+  top: 0;
+  right: 0;
+  height: 60px;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+.form__link {
+  @include a();
+  display: flex;
+  @include font(16px, 45px, 700);
+  color: $basic-blue-medium;
+}
+
+.form__icon {
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $basic-blue-icon;
+  background-image: url(../../img/contacts-phone.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.form__contact {
+    color: $basic-yellow;
+}

@@ -1,0 +1,8 @@
+.transport-icon {
+  opacity: 0.15;
+  cursor: pointer;
+
+  &--active {
+    opacity: 1;
+  }
+}
