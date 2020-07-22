@@ -41,8 +41,10 @@ src: local("Blogger Sans Light"),
     url("../fonts/bloggersans-bold.woff2") format("woff2");
 }
 
+// Index
 @import "blocks/visually-hidden.scss";
 @import "blocks/page.scss";
+@import "blocks/main.scss";
 @import "blocks/header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/logo.scss";
@@ -75,3 +77,13 @@ src: local("Blogger Sans Light"),
 @import "blocks/destinations.scss";
 @import "blocks/address.scss";
 
+// Catalog
+@import "blocks/country-filter.scss";
+@import "blocks/area-list.scss";
+@import "blocks/alphabet.scss";
+@import "blocks/list-a.scss";
+@import "blocks/tourists-filter.scss";
+@import "blocks/range-cells.scss";
+@import "blocks/travellers.scss";
+@import "blocks/traveller.scss";
+@import "blocks/pagination.scss";

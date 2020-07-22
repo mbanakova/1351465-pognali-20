@@ -1,0 +1,67 @@
+.travellers__wrapper {
+  @include wrapper();
+}
+
+.travellers__card {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 13px;
+  }
+}
+
+.travellers__link-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.travellers__show-link {
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 33px;
+  @include font(17px, 30px, 700);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $basic-blue-h2;
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 8px;
+    width: 2px;
+    height: 18px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+  }
+}
+
+.travellers__pagination {
+  margin-bottom: 46px;
+}
