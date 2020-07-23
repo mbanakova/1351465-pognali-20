@@ -1,0 +1,63 @@
+.create-plan {
+  background-color: $create-plan;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.create-plan__wrapper {
+  @include wrapper();
+  padding-top: 30px;
+  padding-bottom: 43px;
+}
+
+.create-plan__top-wrapper {
+  margin-bottom: 29px;
+  display: flex;
+  justify-content: space-between;
+  color: $basic-blue-h2;
+  @include font(24px, 24px, 700);
+}
+
+.create-plan__title {
+  @include no-fields();
+}
+
+.create-plan__step {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.step__plans-textarea {
+  @include wrapper();
+  padding: 0;
+  margin-bottom: 23px;
+}
+
+.step__location-name {
+  @include no-fields();
+  padding-left: 10px;
+  margin-bottom: 18px;
+  color: $basic-blue-h2;
+  @include font(18px, 18px, 500);
+}
+
+.step__plan-description {
+  padding: 13px;
+  width: auto;
+  resize: none;
+  font-family: $the-only-one;
+  @include font(16px, 22px, 400);
+  color: $special-grey;
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    padding: 0 10px;
+    color: $special-grey;
+    opacity: 0.3;
+  }
+}

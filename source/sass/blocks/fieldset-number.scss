@@ -1,0 +1,80 @@
+.fieldset-number {
+
+}
+
+.fieldset-number__label {
+  margin-bottom: 8px;
+  &--mates,
+  &--days {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.fieldset-number__span {
+  color: $basic-blue-h2;
+  @include font(16px, 16px, 500);
+  text-transform: uppercase;
+
+  &--pale {
+    opacity: 0.3;
+  }
+}
+
+.fieldset-number__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.fieldset-number__less--mates,
+.fieldset-number__more--mates,
+.fieldset-number__less--days,
+.fieldset-number__more--days {
+  position: relative;
+  padding: 0;
+  width: 43px;
+  height: 43px;
+  border: none;
+  background-color: $white;
+}
+
+.fieldset-number__less--mates::before,
+.fieldset-number__more--mates::before,
+.fieldset-number__less--days::before,
+.fieldset-number__more--days::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 12px;
+  width: 15px;
+  height: 3px;
+  background-color: $plus;
+}
+
+.fieldset-number__more--mates::after,
+.fieldset-number__more--days::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 18px;
+  height: 15px;
+  width: 3px;
+  background-color: $plus;
+}
+
+.fieldset-number__input {
+  padding: 0;
+  font-family: $the-only-one;
+  @include font(14px, 14px, 500);
+  flex-grow: 1;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  width: 43px;
+  height: 43px;
+  padding-left: 0;
+}

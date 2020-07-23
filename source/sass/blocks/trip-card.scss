@@ -1,0 +1,54 @@
+.trip-card {
+  counter-reset: myCounter;
+}
+
+.trip-card__item {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 23px;
+  color: $basic-blue-h2;
+  background-color: $white;
+  border-radius: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    top: 23px;
+    left: 25px;
+    @include font(16px, 16px, 700);
+    color: $basic-blue-h2;
+  }
+}
+
+.trip-card__header {
+  @include no-fields();
+  margin-bottom: 20px;
+  padding-left: 11px;
+  @include font(16px, 16px, 700);
+}
+
+.trip-card__travellers {
+  @include no-fields();
+  margin-bottom: 5px;
+  @include font(14px, 14px, 500);
+  text-transform: uppercase;
+}
+
+.trip-card__dates {
+  @include no-fields();
+  margin-bottom: 24px;
+  @include font(14px, 14px, 500);
+  text-transform: uppercase;
+}
+
+.trip-card__change-button {
+  @include a();
+  @include font(14px, 14px, 500);
+  color: $black;
+  opacity: 0.3;
+}
