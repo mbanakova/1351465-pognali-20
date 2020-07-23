@@ -1,0 +1,16 @@
+.area-list__link {
+  margin-bottom: 9px;
+  @include a();
+  @include font(16px, 18px, 700);
+  color: $basic-blue-about;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+  }
+}

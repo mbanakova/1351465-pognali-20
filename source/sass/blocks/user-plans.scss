@@ -1,0 +1,20 @@
+.user-plans {
+  background-color: $user-background;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.user-plans__wrapper {
+  @include wrapper();
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.user-plans__title {
+  @include no-fields();
+  margin-bottom: 29px;
+}
+
+.user-plans__list {
+  @include ul();
+}

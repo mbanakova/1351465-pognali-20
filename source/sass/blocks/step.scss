@@ -1,0 +1,108 @@
+.step {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 24px 25px 23px;
+
+  &--second,
+  &--third {
+    padding-bottom: 10px;
+  }
+}
+
+.step__title {
+  @include no-fields();
+  margin-bottom: 16px;
+  color: $basic-blue-h2;
+  @include font(20px, 20px, 700);
+}
+
+.step__text {
+  @include no-fields();
+  margin-bottom: 20px;
+  padding-right: 4px;
+  font-weight: 400;
+}
+
+.step__fieldset {
+  @include no-fields();
+  margin-bottom: 21px;
+  border: none;
+}
+
+.step__calendar {
+  margin-bottom: 10px;
+}
+
+.step__button {
+  padding: 7px 20px;
+}
+
+.step__countries-list {
+  @include ul();
+}
+
+.step__country-picked {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.step__country-choice {
+  width: 168px;
+  @include no-fields();
+  padding: 13px;
+  color: $basic-blue-h2;
+  @include font(14px, 18px, 500);
+  text-transform: uppercase;
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.step__country-flag {
+  @include no-fields();
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.step__dropdown-select {
+  display: flex;
+  justify-content: stretch;
+}
+
+.step__dropdown-list {
+  @include no-fields();
+  padding: 13px;
+  color: $basic-blue-h2;
+  @include font(14px, 18px, 500);
+  text-transform: uppercase;
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &--active {
+    background-color: $basic-blue-h2;
+    color: $white;
+  }
+}
+.step__alphabet {
+  margin-bottom: 22px;
+}
+
+.step__submit-country {
+  margin-bottom: 25px;
+  @include a();
+  @include button();
+  padding: 13px;
+  color: $basic-blue-h2;
+  @include font(14px, 18px, 500);
+  text-transform: uppercase;
+  font-family: $the-only-one;
+  background-color: $modal-close-light;
+  border: 1px solid $alphabet-table;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

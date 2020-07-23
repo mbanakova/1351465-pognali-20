@@ -1,0 +1,50 @@
+.fieldset-kids {
+  margin-bottom: 27px;
+}
+
+.fieldset-kids__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.fieldset-kids__label {
+  position: relative;
+  padding-left: 39px;
+  color: $basic-blue-h2;
+  @include font(15px, 15px, 400);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -7px;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background-color: $white;
+    border: 1px solid $alphabet-table;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 9px;
+    height: 6px;
+    width: 9px;
+    box-sizing: border-box;
+    border-left: 2px solid $basic-blue;
+    border-bottom: 2px solid $basic-blue;
+    box-shadow: 0 2px 0 0 $white, inset 0 -2px 0 0 $white;
+    transform: rotate(-45deg);
+    display: none;
+    transition: 0.2s ease-in-out;
+  }
+}
+.fieldset-kids__input:checked + .fieldset-kids__label::after {
+  display: block;
+  transition: 0.2s ease-in-out;
+}

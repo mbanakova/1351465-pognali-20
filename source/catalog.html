@@ -82,91 +82,119 @@
     <!-- Фильтр по странам-->
 
     <section class="country-filter">
+      <h2 class="visually-hidden">Фильтр по странам</h2>
       <div class="country-filter__wrapper">
-        <h2 class="country-filter__title">Фильтрация по странам:</h2>
-        <button class="country-filter__wrap country-filter__wrap--wrap" type="button"
-          aria-label="Свернуть/Развернуть">Свернуть/Развернуть</button>
 
-        <ul class="country-filter__area-list area-list">
-          <li class="area-list__item"><a class="area-list__link" href="#">Европа</a></li>
-          <li class="area-list__item"><a class="area-list__link" href="#">Азия</a></li>
-          <li class="area-list__item"><a class="area-list__link" href="#">Америка</a></li>
-          <li class="area-list__item"><a class="area-list__link" href="#">Острова</a></li>
-        </ul>
+        <label class="country-filter__title" for="close-filter" tabindex="0">&#8756; Фильтрация по странам:</label>
+        <input class="country-filter__wrap" type="checkbox" name="close" id="close-filter" checked>
 
-        <div class="country-filter__alphabet alphabet">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-a" checked>
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-b">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-v">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-g">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-d">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-e">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-z">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-i">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-k">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-l">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-m">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-n">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-o">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-p">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-r">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-s">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-t">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-u">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-f">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-h">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-ch">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-sh">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-ae">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-yu">
-          <input class="alphabet__tab" type="radio" name="tab" id="tab-ya">
-
-          <label class="alphabet__tab-label" for="tab-a" tabindex="0">А</label>
-          <label class="alphabet__tab-label" for="tab-b" tabindex="1">Б</label>
-          <label class="alphabet__tab-label" for="tab-v" tabindex="2">В</label>
-          <label class="alphabet__tab-label" for="tab-g" tabindex="3">Г</label>
-          <label class="alphabet__tab-label" for="tab-d" tabindex="4">Д</label>
-          <label class="alphabet__tab-label" for="tab-e" tabindex="5">Е</label>
-          <label class="alphabet__tab-label" for="tab-z" tabindex="6">З</label>
-          <label class="alphabet__tab-label" for="tab-i" tabindex="7">И</label>
-          <label class="alphabet__tab-label" for="tab-k" tabindex="8">К</label>
-          <label class="alphabet__tab-label" for="tab-l" tabindex="9">Л</label>
-          <label class="alphabet__tab-label" for="tab-m" tabindex="10">М</label>
-          <label class="alphabet__tab-label" for="tab-n" tabindex="11">Н</label>
-          <label class="alphabet__tab-label" for="tab-o" tabindex="12">О</label>
-          <label class="alphabet__tab-label" for="tab-p" tabindex="13">П</label>
-          <label class="alphabet__tab-label" for="tab-r" tabindex="14">Р</label>
-          <label class="alphabet__tab-label" for="tab-s" tabindex="15">С</label>
-          <label class="alphabet__tab-label" for="tab-t" tabindex="16">Т</label>
-          <label class="alphabet__tab-label" for="tab-u" tabindex="17">У</label>
-          <label class="alphabet__tab-label" for="tab-f" tabindex="18">Ф</label>
-          <label class="alphabet__tab-label" for="tab-h" tabindex="19">Х</label>
-          <label class="alphabet__tab-label" for="tab-ch" tabindex="20">Ч</label>
-          <label class="alphabet__tab-label" for="tab-sh" tabindex="21">Ш</label>
-          <label class="alphabet__tab-label" for="tab-ae" tabindex="22">Э</label>
-          <label class="alphabet__tab-label" for="tab-yu" tabindex="23">Ю</label>
-          <label class="alphabet__tab-label" for="tab-ya" tabindex="24">Я</label>
-
-          <ul class="alphabet__list">
-            <li class="alphabet__list-a">
-              <ul class="list-a">
-                <li class="list-a__country"><a class="list-a__link" href="/australia">Австралия</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/europe/austria">Австрия</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/asia/azerbaijan">Азербайджан</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/europe/albania">Албания</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/africa/algeria">Алжир</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/africa/albania">Ангола</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/europe/andorra">Андорра</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/islands/antigua">Антигуа и Барбуда</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/america/argentina">Аргентина</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/asia/armenia">Армения</a></li>
-                <li class="list-a__country"><a class="list-a__link" href="/asia/afganistan">Афганистан</a></li>
-              </ul>
-            </li>
+        <div class="country-filter__hidden">
+          <ul class="country-filter__area-list area-list">
+            <li class="area-list__item"><a class="area-list__link area-list__link--active" href="#">Европа</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#">Азия</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#">Америка</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#">Острова</a></li>
           </ul>
-        </div>
 
-        <button class="country-filter__unwrap button button--basic">Свернуть</button>
+          <div class="country-filter__alphabet alphabet">
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-a" checked>
+            <label class="alphabet__tab-label" for="tab-a" tabindex="0">А</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-b">
+            <label class="alphabet__tab-label" for="tab-b" tabindex="1">Б</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-v">
+            <label class="alphabet__tab-label" for="tab-v" tabindex="2">В</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-g">
+            <label class="alphabet__tab-label" for="tab-g" tabindex="3">Г</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-d">
+            <label class="alphabet__tab-label" for="tab-d" tabindex="4">Д</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-e">
+            <label class="alphabet__tab-label" for="tab-e" tabindex="5">Е</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-z">
+            <label class="alphabet__tab-label" for="tab-z" tabindex="6">З</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-i">
+            <label class="alphabet__tab-label" for="tab-i" tabindex="7">И</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-k">
+            <label class="alphabet__tab-label" for="tab-k" tabindex="8">К</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-l">
+            <label class="alphabet__tab-label" for="tab-l" tabindex="9">Л</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-m">
+            <label class="alphabet__tab-label" for="tab-m" tabindex="10">М</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-n">
+            <label class="alphabet__tab-label" for="tab-n" tabindex="3">Н</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-o">
+            <label class="alphabet__tab-label" for="tab-o" tabindex="3">О</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-p">
+            <label class="alphabet__tab-label" for="tab-p" tabindex="3">П</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-r">
+            <label class="alphabet__tab-label" for="tab-r" tabindex="3">Р</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-s">
+            <label class="alphabet__tab-label" for="tab-s" tabindex="3">С</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-t">
+            <label class="alphabet__tab-label" for="tab-t" tabindex="3">Т</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-u">
+            <label class="alphabet__tab-label" for="tab-u" tabindex="3">У</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-f">
+            <label class="alphabet__tab-label" for="tab-f" tabindex="3">Ф</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-h">
+            <label class="alphabet__tab-label" for="tab-h" tabindex="3">Х</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-ch">
+            <label class="alphabet__tab-label" for="tab-ch" tabindex="3">Ч</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-sh">
+            <label class="alphabet__tab-label" for="tab-sh" tabindex="3">Ш</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-ae">
+            <label class="alphabet__tab-label" for="tab-ae" tabindex="3">Э</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-yu">
+            <label class="alphabet__tab-label" for="tab-yu" tabindex="3">Ю</label>
+
+            <input class="alphabet__tab" type="radio" name="tab" id="tab-ya">
+            <label class="alphabet__tab-label" for="tab-ya" tabindex="3">Я</label>
+
+
+            <ul class="alphabet__list">
+              <li class="alphabet__list-a">
+                <ul class="list-a">
+                  <li class="list-a__country"><a class="list-a__link" href="/australia">Австралия</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/europe/austria">Австрия</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/asia/azerbaijan">Азербайджан</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/europe/albania">Албания</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/africa/algeria">Алжир</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/africa/albania">Ангола</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/europe/andorra">Андорра</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/islands/antigua">Антигуа и Барбуда</a>
+                  </li>
+                  <li class="list-a__country"><a class="list-a__link" href="/america/argentina">Аргентина</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/asia/armenia">Армения</a></li>
+                  <li class="list-a__country"><a class="list-a__link" href="/asia/afganistan">Афганистан</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <button class="country-filter__unwrap button button--basic">Свернуть</button>
+        </div>
       </div>
     </section>
 
@@ -174,7 +202,7 @@
 
     <section class="tourists-filter">
       <div class="tourists-filter__wrapper">
-        <h2 class="tourists-filter__title section-title">Подберите идеального попутчика</h2>
+        <h2 class="tourists-filter__title section-title">Подберитe идеального попутчика</h2>
 
         <form class="tourists-filter__form" action="https://echo.htmlacademy.ru" method="get">
 
@@ -196,19 +224,19 @@
 
           <!-- Музыка -->
           <fieldset class="tourists-filter__fieldset">
-            <input class="tourists-filter__accordion" type="checkbox" id="accordion-music">
+            <input class="tourists-filter__accordion" type="checkbox" id="accordion-music" checked>
             <label class="tourists-filter__legend" for="accordion-music">Музыка</label>
             <ul class="tourists-filter__group">
               <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="hardrock" checked>
+                <input class="tourists-filter__input" type="checkbox" name="hardrock" id="hardrock" checked>
                 <label class="tourists-filter__label" for="hardrock">Тяжелый рок</label>
               </li>
               <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="russianrap" checked>
+                <input class="tourists-filter__input" type="checkbox" name="russianrap" id="russianrap" checked>
                 <label class="tourists-filter__label" for="russianrap">Русский рэп</label>
               </li>
               <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="eurodance">
+                <input class="tourists-filter__input" type="checkbox" name="eurodance" id="eurodance">
                 <label class="tourists-filter__label" for="eurodance">Евроденс</label>
               </li>
             </ul>
@@ -232,35 +260,35 @@
 
           <!-- Транспорт -->
           <fieldset class="tourists-filter__fieldset">
-            <input class="tourists-filter__accordion" type="checkbox" id="accordion-transport">
+            <input class="tourists-filter__accordion" type="checkbox" id="accordion-transport" checked>
             <label class="tourists-filter__legend" for="accordion-transport">Транспорт</label>
-            <ul class="tourists-filter__group">
-              <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="avia">
-                <label class="tourists-filter__label" for="avia"><img class="transport-icon"
-                    src="https://via.placeholder.com/21x21" width="21" height="21" alt="Самолёт"></label>
+            <ul class="tourists-filter__group tourists-filter__group--horizontal">
+              <li class="tourists-filter__item tourists-filter__item--img">
+                <input class="tourists-filter__input" type="checkbox" name="avia" id="avia">
+                <label class="tourists-filter__transport-label" for="avia"><img class="transport-icon"
+                    src="../source/img/plane.svg" width="16" height="16" alt="Самолёт"></label>
               </li>
-              <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="bus">
-                <label class="tourists-filter__label" for="bus"><img class="transport-icon"
-                    src="https://via.placeholder.com/21x21" width="21" height="21" alt="Автобус"></label>
+              <li class="tourists-filter__item tourists-filter__item--img">
+                <input class="tourists-filter__input" type="checkbox" name="bus" id="bus">
+                <label class="tourists-filter__transport-label" for="bus"><img class="transport-icon"
+                    src="../source/img/bus.svg" width="19" height="19" alt="Автобус"></label>
               </li>
-              <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="bicycle">
-                <label class="tourists-filter__label" for="bicycle"> <img class="transport-icon"
-                    src="https://via.placeholder.com/21x21" width="21" height="21" alt="Велосипед"></label>
+              <li class="tourists-filter__item tourists-filter__item--img">
+                <input class="tourists-filter__input" type="checkbox" name="bicycle" id="bicycle">
+                <label class="tourists-filter__transport-label" for="bicycle"><img class="transport-icon"
+                    src="../source/img/bike.svg" width="15" height="13" alt="Велосипед"></label>
               </li>
-              <li class="tourists-filter__item">
-                <input class="tourists-filter__input" type="checkbox" id="feet">
-                <label class="tourists-filter__label" for="feet"><img class="transport-icon"
-                    src="https://via.placeholder.com/21x21" width="21" height="21" alt="На своих двоих"></label>
+              <li class="tourists-filter__item tourists-filter__item--img">
+                <input class="tourists-filter__input" type="checkbox" name="feet" id="feet">
+                <label class="tourists-filter__transport-label" for="feet"><img class="transport-icon"
+                    src="../source/img/run.svg" width="15" height="15" alt="На своих двоих"></label>
               </li>
             </ul>
           </fieldset>
 
           <!-- Уровень -->
           <fieldset class="tourists-filter__fieldset">
-            <input class="tourists-filter__accordion" type="checkbox" id="accordion-level">
+            <input class="tourists-filter__accordion" type="checkbox" id="accordion-level" checked>
             <label class="tourists-filter__legend" for="accordion-level">Левел</label>
             <div class="tourists-filter__range-cells range-cells">
               <input class="range-cells__input-left" type="number" min="0" max="100" name="min-lvl" id="range-left-cell"
@@ -279,7 +307,9 @@
             </div>
           </fieldset>
 
-          <button class="tourists-filter__submit button button--pale" type="submit">Показать</button>
+          <div class="tourists-filter__submit-wrapper">
+            <button class="tourists-filter__submit button button--pale" type="submit">Показать</button>
+          </div>
         </form>
       </div>
     </section>

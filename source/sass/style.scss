@@ -13,8 +13,6 @@
 @import "blocks/button.scss";
 @import "blocks/site-list.scss";
 @import "blocks/user-list.scss";
-@import "blocks/icon-phone.scss";
-@import "blocks/icon-email.scss";
 @import "blocks/social.scss";
 @import "blocks/intro.scss";
 @import "blocks/contacts-list.scss";
@@ -49,3 +47,14 @@
 @import "blocks/travellers.scss";
 @import "blocks/traveller.scss";
 @import "blocks/pagination.scss";
+
+// Form
+@import "blocks/profile.scss";
+@import "blocks/user-plans.scss";
+@import "blocks/trip-card.scss";
+@import "blocks/create-plan.scss";
+@import "blocks/step.scss";
+@import "blocks/fieldset-number.scss";
+@import "blocks/fieldset-kids.scss";
+@import "blocks/fieldset-dates.scss";
+@import "blocks/calendar.scss";
