@@ -1,3 +1,123 @@
+.country-filter {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: $heart-pale;
+  margin-bottom: 28px;
+}
+
 .country-filter__wrapper {
   @include wrapper();
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+
+// .country-filter__header {
+//   margin-bottom: 35px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+.country-filter__title {
+  position: relative;
+  margin: 0;
+  @include font(16px, 18px, 700);
+  color: $basic-blue-about;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -58px;
+    width: 18px;
+    height: 2px;
+    background-color: $basic-blue-about;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: -50px;
+    width: 2px;
+    height: 18px;
+    background-color: $basic-blue-about;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+}
+
+.country-filter__wrap {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.country-filter__hidden {
+  padding-bottom: 11px;
+  display: none;
+}
+
+.country-filter__wrap:checked + .country-filter__hidden {
+  display: block;
+}
+
+.country-filter__area-list {
+  @include ul();
+  padding-top: 35px;
+  padding-left: 25px;
+  margin-bottom: 21px;
+}
+
+.country-filter__alphabet {
+margin-bottom: 28px;
+padding-left: 25px;
+}
+
+.country-filter__unwrap {
+  position: relative;
+  padding: 12px 10px 10px 30px;
+  border: none;
+  font-family: $the-only-one;
+  @include font(16px, 20px, 700);
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 100%;
+  color: $basic-blue-medium;
+  background-color: $alphabet-button;
+
+  &:hover {
+    background-color: $alphabet-button-hover;
+    transition: 0.2s ease-in-out;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 78px;
+    width: 18px;
+    height: 2px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 85px;
+    width: 2px;
+    height: 18px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
 }

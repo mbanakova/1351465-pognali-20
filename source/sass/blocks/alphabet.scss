@@ -1,0 +1,42 @@
+.alphabet {
+  display: grid;
+  grid-template-columns: 44px 44px 44px 44px 44px;
+  grid-template-rows: 41px 41px 41px 41px 41px;
+}
+
+.alphabet__tab {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.alphabet__tab-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font(14px, 14px, 500);
+  color: $basic-blue-h2;
+  text-transform: uppercase;
+  background-color: $white;
+  border: 1px solid $alphabet-table;
+
+  &:hover {
+    border-color: $alphabet-border-hover;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.alphabet__tab:checked + .alphabet__tab-label {
+  color: $white;
+  background-color: $basic-blue-h2;
+  border: 1px solid $basic-blue-h2;
+  transition: 0.2s ease-in-out;
+}
+
+.alphabet__list {
+  @include ul();
+  margin-top: 14px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}

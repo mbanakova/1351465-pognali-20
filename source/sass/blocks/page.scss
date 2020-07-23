@@ -15,6 +15,11 @@
   @include no-fields();
 }
 
+::selection {
+  background-color: $basic-yellow;
+  color: $basic-blue;
+}
+
 .page__modal {
   position: fixed;
   top: 50%;
