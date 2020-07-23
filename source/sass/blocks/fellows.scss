@@ -1,8 +1,11 @@
 .fellows {
+  position: relative;
+  margin-top: -30px;
   background-color: $basic-blue-medium;
   color: $white;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 7;
 }
 
 .fellows__wrapper {

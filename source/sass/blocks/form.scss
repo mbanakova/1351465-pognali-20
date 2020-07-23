@@ -1,12 +1,15 @@
 .form {
+  position: relative;
+  margin-top: -30px;
   background-color: $basic-blue-about;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 5;
 }
 
 .form__wrapper {
   @include wrapper();
-  padding-top: 72px;
+  padding-top: 102px;
   padding-bottom: 30px;
 }
 

@@ -1,7 +1,10 @@
 .destinations {
+  position: relative;
   background-color: $basic-blue-light;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 8
+  ;
 }
 
 .destinations__wrapper {
