@@ -1,14 +1,18 @@
 .intro {
   background-color: $basic-blue;
-  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-image: url(../../img/globe-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 180px;
+  // box-sizing: content-box;
+  background-position: 50% -130px;
 }
 
 .intro__wrapper {
   @include wrapper();
   padding-top: 52px;
   padding-bottom: 39px;
+  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: 50% 180px;
 }
 
 .intro__title {
