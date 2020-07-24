@@ -23,6 +23,7 @@
         </a>
         <button class="main-nav__burger" type="button" aria-label="Открыть меню">
         </button>
+        <a class="main-nav__auth button button--bright js-login" href="#">Авторизация</a>
       </div>
 
       <div class="main-nav__wrapper main-nav__wrapper--wrapped">
@@ -96,15 +97,8 @@
         </ul>
 
         <blockquote class="intro__blockquote">
-          <p class="intro__quote">
-            "Лучшее приложение,
-            что я видел в жизни!"
-          </p>
-          <cite class="intro__cite">
-            Мурат Эльтазин
-            главный редактор
-            газеты «гаджетлайф»
-          </cite>
+          <p class="intro__quote">"Лучшее приложение, что я видел в жизни!"</p>
+          <cite class="intro__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
 
         <ol class="intro__steps">
@@ -120,25 +114,32 @@
 
     <section class="about">
       <div class="about__wrapper">
-        <h2 class="about__title section-title section-title--index">О сервисе</h2>
-        <p class="about__text">
-          Любое путешествие веселее
-          с попутчиками, которые на
-          одной волне с тобой! Делитесь
-          своими идеями путешествий и
-          черпайте вдохновение в чужих.
-        </p>
-        <p class="about__text about__text--bold">
-          А если найдете кого-то
-          близкого по духу — скорее
-          зовите в совместный трип!
-        </p>
+        <div class="about_left">
+          <h2 class="about__title section-title section-title--index">О сервисе</h2>
+          <p class="about__text">
+            Любое путешествие веселее
+            с попутчиками, которые на
+            одной волне с тобой! Делитесь
+            своими идеями путешествий и
+            черпайте вдохновение в чужих.
+          </p>
+          <p class="about__text about__text--bold">
+            А если найдете кого-то
+            близкого по духу — скорее
+            зовите в совместный трип!
+          </p>
+          <a class="about__button rect-button" href="#">Подробнее</a>
+        </div>
+        <div class="about__right">
+          <img class="about__img" src="/img/about-mobile@1x.png" width="292" height="353" alt="about">
+        </div>
+
       </div>
     </section>
 
     <!-- Направления -->
 
-    <section class="destinations">
+    <section class=" destinations">
       <div class="destinations__wrapper">
         <h2 class="destinations__title section-title section-title--index">Направления</h2>
         <p class="destinations__text">
@@ -188,7 +189,7 @@
           </li>
         </ul>
 
-        <a class="rect-button" href="form.html">Показать всё</a>
+        <a class="country__button rect-button" href="form.html">Показать всё</a>
       </div>
     </section>
 
@@ -323,7 +324,7 @@
           </li>
         </ul>
 
-        <a class="rect-button" href="catalog.html">Показать всех</a>
+        <a class="fellows__button rect-button" href="catalog.html">Показать всех</a>
       </div>
     </section>
 

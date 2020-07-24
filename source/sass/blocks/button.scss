@@ -1,10 +1,17 @@
 .button {
-  @include a();
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
   @include font(17px, 30px, 700);
-  padding: 2px 75px 0 75px;
+  padding: 2px 33px 0 33px;
   color: $basic-blue;
   text-align: center;
   border-radius: 25px;
+
+  @media (min-width: $tablet) {
+    padding: 17px 32px 13px 30px;
+    @include font(20px, 20px, 400);
+  }
 
 &--bright {
   background-color: $basic-yellow;

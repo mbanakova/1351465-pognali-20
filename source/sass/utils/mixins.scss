@@ -28,6 +28,12 @@
   padding: 0 25px;
 }
 
+@mixin tablet() {
+  width: 690px;
+  padding-right: 40px;
+  padding-left: 38px;
+}
+
 @mixin button() {
   display: block;
   padding: 0;
@@ -36,3 +42,4 @@
   background-color: inherit;
   text-transform: uppercase;
 }
+

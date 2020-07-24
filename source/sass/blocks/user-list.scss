@@ -12,6 +12,11 @@
 
 .user-list__auth {
   padding: 12px 0 8px;
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 
   &:hover {
     background-color: $special_yellow_dark;
@@ -39,6 +44,21 @@
   background-image: url(../../img/contacts-phone.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @media (min-width: $tablet) {
+    margin-right: 23px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: $basic-blue-icon;
+  }
+}
+
+.user-list__contact {
+
+  @media (min-width: $tablet) {
+    @include font(28px, 68px, 700);
+  }
 }
 
 

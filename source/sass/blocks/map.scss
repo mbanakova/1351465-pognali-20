@@ -1,8 +1,16 @@
 .map {
-min-height: 424px;
+  min-height: 424px;
+
+  @media (min-width: $tablet) {
+    min-height: 581px;
+  }
 }
 
 .map__body {
   width: 100%;
   min-height: 424px;
+
+  @media (min-width: $tablet) {
+    min-height: 581px;
+  }
 }

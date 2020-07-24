@@ -1,10 +1,24 @@
 .country {
-  border-radius: 8px;
+
+  @media (min-width: $tablet) {
+    margin: 0 36px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .country__img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+
+  @media (min-width: $tablet) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 185px;
+    height: 141px;
+  }
 }
 
 .country__text {
@@ -15,6 +29,19 @@
   background-color: $white;
   border-radius: 8px;
   overflow: visible;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+    max-height: 141px;
+    margin-top: 0;
+    padding-top: 29px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .country__flag {
@@ -22,19 +49,38 @@
   top: -12px;
   left: 25px;
   border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 17px;
+    left: 397px;
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
   }
+}
 
 .country__text-top {
   margin-bottom: 2px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    flex-direction: column;
+  }
 }
 
 .country__name {
   @include  no-fields();
   @include font(21px, 21px, 700);
   color: $black;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 47px;
+    @include font(24px, 24px, 700);
+  }
 }
 
 .country__slogan {
@@ -42,6 +88,13 @@
   @include font(16px, 18px, 500);
   max-width: 150px;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 59px;
+    @include font(20px, 20px, 500);
+    max-width: 320px;
+  }
 }
 
 .country__visitors {
@@ -50,6 +103,11 @@
   padding-left: 19px;
   color: $basic-blue;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
+    padding-left: 32px;
+  }
 
     &::before {
       position: absolute;
@@ -61,5 +119,18 @@
       background-image: url(../../img/user.svg);
       background-repeat: no-repeat;
       opacity: 0.3;
+
+      @media (min-width: $tablet) {
+        top: -2px;
+        width: 20px;
+        height: 20px;
+      }
     }
+}
+.country__button {
+  @include a();
+  @media (min-width: $tablet) {
+
+    margin: 0 30px;
+  }
 }

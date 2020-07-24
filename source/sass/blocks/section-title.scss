@@ -1,6 +1,10 @@
 .section-title {
   @include font(24px, 24px, 700);
 
+  @media (min-width: $tablet) {
+    @include font(45px, 45px, 700);
+  }
+
   &--index {
     color: $special_orange;
   }

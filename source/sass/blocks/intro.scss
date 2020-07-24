@@ -2,8 +2,16 @@
   background-color: $basic-blue;
   background-image: url(../../img/globe-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  // box-sizing: content-box;
+  background-size: auto;
   background-position: 50% -130px;
+
+  @media (min-width: $tablet) {
+    background-color: $basic-tablet;
+    background-image: url(../../img/globe-back-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 40% 100px;
+  }
 }
 
 .intro__wrapper {
@@ -13,6 +21,17 @@
   background-image: url(../../img/traveller-illustration-mobile@1x.png);
   background-repeat: no-repeat;
   background-position: 50% 180px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    width: auto;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 96px;
+    background-image: url(../../img/traveller-illustration-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: 50% 272px;
+  }
 }
 
 .intro__title {
@@ -21,22 +40,56 @@
   @include font(36px, 40px, 700);
   text-align: center;
   color: $white;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 86px;
+    max-width: 400px;
+    @include font(60px, 70px, 700);
+    text-align: center;
+  }
+}
+
+.intro__list {
+  @include ul();
+  margin-bottom: 28px;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .intro__blockquote {
   @include no-fields();
   margin-bottom: 38px;
   color: $white;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    margin: 0 auto 211px;
+  }
 }
 
 .intro__quote {
   @include no-fields();
   margin-bottom: 18px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 45px;
+    max-width: 264px;
+    @include font(28px, 33px, 300);
+  }
 }
 
 .intro__cite {
   font-weight: 700;
   font-style: normal;
+
+  @media (min-width: $tablet) {
+    display: block;
+    @include font(21px, 25px, 700);
+    max-width: 240px;
+  }
 }
 
 .intro__steps {
@@ -44,6 +97,14 @@
   @include no-fields();
   counter-reset: myCounter;
   color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    @include font(24px, 24px, 700);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .intro__step {
@@ -54,6 +115,13 @@
   border-top-right-radius: 9px;
   background-color: $basic-yellow;
 
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    min-height: 140px;
+    box-sizing: border-box;
+    flex-basis: 344px;
+  }
+
   &::after {
     position: absolute;
     counter-increment: myCounter;
@@ -61,23 +129,54 @@
     top: 22px;
     right: 21px;
     color: $white;
+
+    @media (min-width: $tablet) {
+      @include font(30px, 30px, 700);
+      top: 85px;
+      right: 300px;
+    }
   }
 
   &:first-child{
     background-color: $special-orange;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      flex-basis: 344px;
+    }
   }
 
   &:nth-child(2) {
     background-color: $special_orange-light;
+
+    @media (min-width: $tablet) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin-left: -21px;
+    }
   }
 
   &:nth-child(3) {
     background-color: $special_yellow_dark;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+      flex-basis: 344px;
+    }
   }
 
   &:last-child{
     background-color: $basic-yellow;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: -21px;
+    }
   }
 }

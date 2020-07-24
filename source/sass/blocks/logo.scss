@@ -2,11 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .logo__white {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 164px;
+    height: 42px;
+  }
 
   &--hidden {
     display: none;
@@ -15,6 +19,11 @@
 
 .logo__blue {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 164px;
+    height: 42px;
+  }
 
   &--hidden {
     display: none;
