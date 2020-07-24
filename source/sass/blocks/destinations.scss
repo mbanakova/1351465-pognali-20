@@ -22,7 +22,7 @@
     content: "";
 
     @media (min-width: $tablet) {
-      top: 482px;
+      top: 406px;
       left: 40px;
       width: 141px;
       height: 141px;
@@ -36,7 +36,7 @@
     content: "";
 
     @media (min-width: $tablet) {
-      top: 149px;
+      top: 73px;
       right: 40px;
       width: 288px;
       height: 574px;
@@ -48,7 +48,7 @@
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 149px;
+    padding-top: 73px;
     padding-bottom: 80px;
   }
 }

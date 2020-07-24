@@ -1,11 +1,7 @@
 .about {
   background-color: $basic-blue-medium;
-  // background-image: url(../../img/about-mobile@1x.png);
-  // background-repeat: no-repeat;
-  // background-position: 50% 0;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  min-height: 355px;
 
   @media (min-width: $tablet) {
     background-color: $basic-tablet;
@@ -18,54 +14,81 @@
   position: relative;
   @include  wrapper();
   padding-top: 33px;
-  padding-bottom: 82px;
-  padding-right: 60px;
-  padding-left: 49px;
-  outline: 2px solid rgba(255, 0, 0, 0.8);
+  padding-bottom: 33px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/about-mobile@1x.png);
+  background-size: 292px auto;
+  background-position: 50% 0;
 
+  @media (min-width: $tablet) {
+    @include  tablet();
+    padding-top: 41px;
+    background-image: url(../img/about-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 48px;
+    background-size: 376px auto;
+  }
+
+
+// Эту штуку на мобильном не видно, а надо --->
   &::before {
     position: absolute;
     content: "";
     top: 0;
-    left: -25px;
+    left: -7px;
     width: 113px;
     height: 132px;
     background-color: $basic-blue-elem;
     border-radius: 20px;
     z-index: -1;
-  }
-}
 
-.about__left {
-  position: relative;
-  outline: 2px solid rgba(255, 120, 120, 0.8);
+    @media (min-width: $tablet) {
+      top: -40px;
+      left: -7px;
+      width: 688px;
+      height: 213px;
+      background-color: $basic-blue-elem;
+      border-radius: 20px;
+    }
+  }
 }
 
 .about__title {
   @include no-fields();
-  padding-left: 24px;
+  margin-left: 24px;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-bottom: 40px;
+  }
 }
 
 .about__text {
   @include no-fields();
   margin-bottom: 20px;
-  padding-left: 24px;
+  margin-left: 24px;
   color: $white;
-  max-width: 211px;
 
-  // @media (min-width: $tablet) {
-  //   @include font(28px, 35px, 300);
-  // }
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-bottom: 31px;
+    @include font(28px, 35px, 300);
+    min-width: 308px;
+  }
 
   &--bold {
     @include no-fields();
-    padding-left: 24px;
+    margin-left: 24px;
+    margin-bottom: 49px;
     font-weight: 700;
 
-  // @media (min-width: $tablet) {
-  //   @include font(21px, 25px, 700);
-  // }
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-bottom: 44px;
+    @include font(21px, 25px, 700);
+  }
   }
 }
 
@@ -75,9 +98,13 @@
   text-transform: uppercase;
   display: none;
 
-  // @media (min-width: $tablet) {
-  //   @include font(28px, 35px, 300);
-  // }
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    display: flex;
+    margin-right: 380px;
+    margin-bottom: 56px;
+    @include font(28px, 35px, 300);
+  }
 }
 
 .about__right {

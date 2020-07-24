@@ -58,9 +58,22 @@
 }
 
 .tariffs__list {
+  position: relative;
   @include ul();
   margin-bottom: 21px;
   counter-reset: myCounter;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -36px;
+    right: 6px;
+    width: 198px;
+    height: 285px;
+    background-color: $heart-pale;
+    border-radius: 20px;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet) {
     padding-left: 91px;
