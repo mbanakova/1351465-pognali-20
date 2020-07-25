@@ -2,9 +2,9 @@
   background-color: $basic-blue;
 }
 
-.header__wrapper {
-  @include wrapper();
-  display: flex;
-  justify-content: space-between;
-  padding: 28px 0 0 0;
+.header__logo {
+
+  @media (min-width: $tablet) {
+  margin-left: 60px;
+  }
 }

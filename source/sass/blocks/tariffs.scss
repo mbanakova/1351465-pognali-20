@@ -63,6 +63,10 @@
   margin-bottom: 21px;
   counter-reset: myCounter;
 
+  @media (min-width: $tablet) {
+    padding-left: 91px;
+    margin-bottom: 32px;
+
   &::after {
     position: absolute;
     content: "";
@@ -74,10 +78,6 @@
     border-radius: 20px;
     z-index: -1;
   }
-
-  @media (min-width: $tablet) {
-    padding-left: 91px;
-    margin-bottom: 32px;
   }
 }
 

@@ -1,7 +1,6 @@
 .site-list {
   @include font(30px, 35px, 500);
-  @include ul();
-  padding-bottom: 51px;
+  list-style: none;
   color: $basic-blue-medium;
   text-align: center;
   background-color: $white;
