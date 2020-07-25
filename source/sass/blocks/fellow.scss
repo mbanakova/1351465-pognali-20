@@ -82,8 +82,8 @@
   position: relative;
   @include  no-fields();
   @include font(21px, 21px, 700);
-  padding-top: 27px;
-  padding-left: 16px;
+  margin-top: 27px;
+  margin-left: 16px;
   margin-bottom: 15px;
   color: $basic-blue-h2;
   cursor: pointer;

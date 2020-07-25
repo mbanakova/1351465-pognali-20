@@ -55,8 +55,7 @@
 
 .destinations__title {
   @include  no-fields();
-  margin-bottom: 19px;
-  padding-left: 28px;
+  margin: 0 0 19px 28px;
 
   @media (min-width: $tablet) {
     margin-bottom: 57px;
@@ -66,8 +65,7 @@
 
 .destinations__text {
   @include  no-fields();
-  margin-bottom: 60px;
-  padding-left: 26px;
+  margin: 0 0 60px 26px;
   max-width: 195px;
 
   @media (min-width: $tablet) {
@@ -80,6 +78,7 @@
 
 .destinations__list {
   @include  ul();
+  margin-bottom: 9px;
 
   @media (min-width: $tablet) {
     margin-bottom: 44px;
@@ -88,6 +87,10 @@
 
 .destinations__item {
   margin-bottom: 9px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 11px;

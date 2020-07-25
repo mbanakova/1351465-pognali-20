@@ -22,7 +22,7 @@
   }
 
   &:last-child {
-    width: auto;
+    flex-grow: 1;
     border-radius: 25px;
     background-color: $basic-yellow;
 

@@ -6,10 +6,12 @@
   @include font();
   color: $special-grey;
   background-color: $basic-blue-light;
+  overflow-x: hidden;
 }
 
 .page__body {
   @include no-fields();
+  overflow-x: hidden;
 }
 
 ::selection {
