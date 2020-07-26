@@ -1,6 +1,3 @@
-.tourists-filter {
-
-}
 
 .tourists-filter__wrapper {
   @include wrapper();
@@ -78,6 +75,7 @@
 .tourists-filter__group {
   @include ul();
   display: none;
+
   &--horizontal {
   display: none;
   }

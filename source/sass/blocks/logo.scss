@@ -2,6 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  @media (min-width: $desktop) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      top: 46%;
+      right: -100px;
+      background-color: $white;
+    }
+  }
 }
 
 .logo__white {
@@ -10,6 +25,11 @@
   @media (min-width: $tablet) {
     width: 164px;
     height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 52px;
   }
 
   &--hidden {
@@ -23,6 +43,11 @@
   @media (min-width: $tablet) {
     width: 164px;
     height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 52px;
   }
 
   &--hidden {

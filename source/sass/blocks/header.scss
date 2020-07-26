@@ -7,4 +7,9 @@
   @media (min-width: $tablet) {
     width: 164px;
   }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 52px;
+  }
 }

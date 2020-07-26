@@ -1,6 +1,10 @@
 .user-list {
   list-style: none;
   background-color: $white;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .user-list__item {

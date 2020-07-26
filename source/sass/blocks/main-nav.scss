@@ -5,6 +5,13 @@
     background-color: $basic-tablet
   }
 
+  @media (min-width: $desktop) {
+    position: relative;
+    @include desktop();
+    display: flex;
+    background-color: $basic-blue;
+  }
+
   &--unwrapped {
     background-color: $white;
   }
@@ -25,6 +32,12 @@
     width: 690px;
     padding: 0 40px 0 38px;
   }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .main-nav__burger {
@@ -36,6 +49,10 @@
   min-width: 25px;
   min-height: 25px;
 
+  @media (min-width: $desktop) {
+    display: none;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -46,6 +63,7 @@
     background-color: $white;
     border-radius: 1px;
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -56,7 +74,6 @@
     background-color: $white;
     border-radius: 1px;
   }
-
 
   &--opened::before {
     position: absolute;
@@ -99,7 +116,58 @@
     width: 620px;
     padding-top: 53px;
     padding-bottom: 91px;
-    margin-right:auto ;
+    margin-right: auto ;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 50%;
+    left: 405px;
+    transform: translate(0, -50%);
+    @include no-fields();
+  }
+}
+
+.main-nav__dekstop {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    font-size: 0;
+
+    &--phone-icon {
+      margin-left: auto;
+      background-image: url(../../img/topmenu-phone.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 18px 18px;
+      background-color: $special_orange;
+
+      &:hover {
+        background-color: $special_orange-saturate;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    &--mail-icon {
+      background-image: url(../../img/topmenu-mail.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 18px 18px;
+      background-color: $special_yellow_dark;
+
+      &:hover {
+        background-color: $special_orange;
+        transition: 0.3s ease-in-out;
+      }
+    }
   }
 }
 
@@ -110,6 +178,10 @@
   @media (min-width: $tablet) {
     display: block;
     font-weight: 700;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
   }
 
   &:hover {
@@ -131,6 +203,11 @@
     padding-bottom: 0;
     margin-bottom: 144px;
   }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    @include no-fields();
+  }
 }
 .main-nav__list:nth-of-type(2) {
   margin-bottom: 41px;
@@ -151,6 +228,10 @@
   @media (min-width: $tablet) {
     margin-left: 23px;
     justify-content: start;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 

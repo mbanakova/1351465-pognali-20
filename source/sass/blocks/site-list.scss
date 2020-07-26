@@ -6,15 +6,33 @@
   background-color: $white;
 
   @media (min-width: $tablet) {
+    @include font(60px, 71px, 500);
+    color: $basic-blue-about;
     text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    @include font(20px, 40px, 500);
+    color: $white;
+    background-color: transparent;
+    max-width: 630px;
   }
 }
 
 .site-list__item {
 
   @media (min-width: $tablet) {
-    @include font(60px, 71px, 500);
-    color: $basic-blue-about;
+
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 34px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 

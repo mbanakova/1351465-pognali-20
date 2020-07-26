@@ -34,6 +34,12 @@
   padding: 0 40px 0 38px;
 }
 
+@mixin desktop() {
+  width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px 0 60px;
+}
+
 @mixin button() {
   display: block;
   padding: 0;
