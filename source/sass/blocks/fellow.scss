@@ -53,6 +53,7 @@
 
 .fellow__bottom {
   position: relative;
+  padding: 27px 40px 20px;
   background-color: $white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -62,6 +63,7 @@
   align-items: center;
 
   @media (min-width: $tablet) {
+    padding: 31px 25px 27px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     max-width: 285px;
@@ -76,13 +78,13 @@
   @include  ul();
   display: flex;
   justify-content: center;
+  line-height: 0;
 }
 
 .fellow__name {
   position: relative;
   @include  no-fields();
   @include font(21px, 21px, 700);
-  margin-top: 27px;
   margin-left: 16px;
   margin-bottom: 15px;
   color: $basic-blue-h2;
@@ -90,8 +92,8 @@
 
   @media (min-width: $tablet) {
     @include font(24px, 22px, 700);
-    padding-top: 31px;
-    padding-left: 22px;
+    margin-top: 0;
+    margin-left: 28px;
     margin-bottom: 23px;
   }
 
@@ -100,16 +102,16 @@
     content: "";
     width: 6px;
     height: 6px;
-    top: 33px;
-    left: 0;
+    top: 6px;
+    left: -13px;
     border-radius: 50%;
     background-color: $red;
 
     @media (min-width: $tablet) {
       width: 8px;
       height: 8px;
-      top: 36px;
-      left: 0;
+      top: 5px;
+      left: -20px;
     }
   }
 
@@ -118,16 +120,16 @@
     content: "";
     width: 6px;
     height: 6px;
-    top: 33px;
-    left: 0;
+    top: 6px;
+    left: -13px;
     border-radius: 50%;
     background-color: $green;
 
     @media (min-width: $tablet) {
       width: 8px;
       height: 8px;
-      top: 36px;
-      left: 0;
+      top: 5px;
+      left: -20px;
     }
   }
 
@@ -153,13 +155,13 @@
 
 .fellow__transport-list {
   @include  ul();
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   width: 120px;
+  line-height: 0;;
 
   @media (min-width: $tablet) {
-    margin-bottom: 27px;
+    margin-bottom: 0;
     width: 123px;
   }
 }

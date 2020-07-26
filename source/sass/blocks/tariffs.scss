@@ -14,12 +14,14 @@
 .tariffs__wrapper {
   position: relative;
   @include wrapper();
+  width: 220px;
   padding-top: 52px;
   padding-left: 50px;
   padding-bottom: 28px;
 
   @media (min-width: $tablet) {
     @include tablet();
+    padding-top: 74px;
     padding-bottom: 63px;
   }
 
@@ -38,7 +40,7 @@
     overflow: visible;
 
     @media (min-width: $tablet) {
-      top: 358px;
+      top: 450px;
       bottom: 0;
       right: 90px;
     }
@@ -51,7 +53,7 @@
   max-width: 120px;
 
   @media (min-width: $tablet) {
-    margin: 74px auto;
+    margin: 0 auto 113px;
     max-width: 600px;
     text-align: center;
   }
@@ -103,7 +105,7 @@
     counter-increment: myCounter;
     content: counter(myCounter);
     top: 2px;
-    right: -44px;
+    right: -10px;
     width: 34px;
     height: 34px;
     @include font(16px, 34px, 400);

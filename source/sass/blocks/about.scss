@@ -13,14 +13,15 @@
 .about__wrapper {
   position: relative;
   @include  wrapper();
-  padding-top: 33px;
-  padding-left: 49px;
-  padding-bottom: 33px;
+  padding: 33px 25px;
   display: flex;
   flex-direction: column;
   background-image: url(../img/about-mobile@1x.png);
-  background-size: 292px auto;
+  background-size: 292px 100%;
+  background-repeat: no-repeat;
   background-position: 50% 0;
+  border-bottom-left-radius: 30px;
+
 
   @media (min-width: $tablet) {
     @include  tablet();
@@ -58,6 +59,7 @@
 .about__title {
   @include no-fields();
   margin-bottom: 19px;
+  margin-left: 24px;
 
   @media (min-width: $tablet) {
     margin-left: 34px;
@@ -68,6 +70,7 @@
 .about__text {
   @include no-fields();
   margin-bottom: 20px;
+  margin-left: 24px;
   color: $white;
 
   @media (min-width: $tablet) {
@@ -80,6 +83,7 @@
   &--bold {
     @include no-fields();
     margin-bottom: 49px;
+    margin-left: 24px;
     font-weight: 700;
 
   @media (min-width: $tablet) {
@@ -91,6 +95,7 @@
 }
 
 .about__button {
+  margin-left: 24px;
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;

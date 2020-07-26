@@ -63,7 +63,7 @@
   color: $white;
 
   @media (min-width: $tablet) {
-    padding: 0 40px 0 38px;
+    padding: 0 0 0 38px;
     margin: 0 auto 211px;
   }
 }
@@ -93,12 +93,13 @@
 .intro__steps {
   @include font(18px, 18px, 700);
   @include ul();
+  margin: 0 auto;
   counter-reset: myCounter;
   color: $basic-blue;
 
   @media (min-width: $tablet) {
     margin: 0 auto;
-    width: 688px;
+    max-width: 690px;
     @include font(24px, 24px, 700);
     display: flex;
     justify-content: center;
@@ -108,7 +109,7 @@
 
 .intro__step {
   position: relative;
-  padding:  22px 96px 24px 24px;
+  padding:  22px 80px 24px 24px;
   margin-top: -9px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;

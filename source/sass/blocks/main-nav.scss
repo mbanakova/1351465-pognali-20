@@ -87,7 +87,7 @@
 
 .main-nav__wrapper {
   @include wrapper;
-  padding: 55px 25px 41px;
+  padding: 55px 0 41px;
   box-sizing: border-box;
 
   &--wrapped {
@@ -99,7 +99,6 @@
     width: 620px;
     padding-top: 53px;
     padding-bottom: 91px;
-    padding-left: 98px;
     margin-right:auto ;
   }
 }
