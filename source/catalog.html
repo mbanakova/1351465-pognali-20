@@ -78,6 +78,7 @@
     <div class="main__top">
       <div class="main__wrapper">
         <h1 class="main__title">Попутчики</h1>
+        <a class="main__link-return" href="index.html">На главную</a>
       </div>
     </div>
 
@@ -88,7 +89,7 @@
       <div class="country-filter__wrapper">
 
         <label class="country-filter__title" for="close-filter" tabindex="0">&#8756; Фильтрация по странам:</label>
-        <input class="country-filter__wrap" type="checkbox" name="close" id="close-filter" checked>
+        <input class="country-filter__wrap" type="checkbox" name="close" id="close-filter">
 
         <div class="country-filter__hidden">
           <ul class="country-filter__area-list area-list">
@@ -324,20 +325,20 @@
       <div class="travellers__wrapper">
 
         <!-- Таня Фирсова -->
-        <article class="travellers__card traveller">
-          <div class="traveller__header traveller__header--offline">
+        <article class="travellers__card traveller traveller--offline">
 
-            <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic" src="/img/firsova-mobile@1x.jpg" width="70" height="70"
-                alt="Таня Фирсова">
-              <h3 class="traveller__name">Таня Фирсова</h3>
-            </a>
+          <a class="traveller__profile-link" href="#">
+            <img class="traveller__profile-pic" src="https://via.placeholder.com/70x70" width="70" height="70"
+              alt="Таня Фирсова">
+          </a>
+          <a class="traveller__profile-link" href="#">
+            <h3 class="traveller__name traveller__name--offline">Таня Фирсова</h3>
+          </a>
 
-            <div class="traveller__popularity">
-              <div class="traveller__heart">
-              </div>
-              <div class="traveller__counter">1,5 м</div>
+          <div class="traveller__popularity">
+            <div class="traveller__heart">
             </div>
+            <div class="traveller__counter">1,5 м</div>
           </div>
 
           <ul class="traveller__tags-list tags tags--shadow">
@@ -356,48 +357,54 @@
             <li class="traveller__country-item">Сейшелы</li>
           </ul>
 
-          <div class="traveller__wrapper">
-            <p class="traveller__choice">транспорт:</p>
-            <ul class="traveller__transport-list">
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
-                  alt="Самолёт">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/bus.svg" width="17" height="17" alt="Автобус">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
-              </li>
-            </ul>
+          <p class="traveller__choice traveller__choice--large">транспорт:</p>
+          <ul class="traveller__transport-list">
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
+                alt="Самолёт">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/bus.svg" width="17" height="17" alt="Автобус">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
+            </li>
+          </ul>
 
-            <p class="traveller__choice">левел:</p>
-            <div class="traveller__skill">
-              <span class="traveller__points">99</span>
-            </div>
+          <p class="traveller__choice traveller__choice--large">левел:</p>
+          <div class="traveller__skill skill-circle skill-circle--transparent">
+            <span class="skill-circle__points skill-circle__points--transparent">99</span>
+            <span class="skill-circle__lvl skill-circle__lvl--transparent">level</span>
           </div>
 
-          <a class="traveller__button button button--bright" href="#">Позвать!</a>
+          <div class="traveller__wrap">
+            <a class="traveller__button button button--bright" href="#">Позвать!</a>
+            <div class="traveller__popularity traveller__popularity--large">
+              <div class="traveller__heart">
+              </div>
+              <div class="traveller__counter">1,5 м</div>
+            </div>
+          </div>
         </article>
 
         <!-- Петя Демин -->
-        <article class="travellers__card traveller">
-          <div class="traveller__header traveller__header--offline">
+        <article class="travellers__card traveller traveller--offline">
 
-            <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="/img/demin-mobile@1x.jpg" width="70" height="70"
-                alt="Петя Демин">
-              <h3 class="traveller__name">Петя Демин</h3>
-            </a>
+          <a class="traveller__profile-link" href="#">
+            <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
+              height="70" alt="Петя Демин">
+          </a>
+          <a class="traveller__profile-link" href="#">
+            <h3 class="traveller__name traveller__name--offline">Петя Демин</h3>
+          </a>
 
-            <div class="traveller__popularity">
-              <div class="traveller__heart traveller__heart--dark">
-              </div>
-              <div class="traveller__counter">1500</div>
+          <div class="traveller__popularity">
+            <div class="traveller__heart traveller__heart--dark">
             </div>
+            <div class="traveller__counter">1500</div>
           </div>
 
           <ul class="traveller__tags-list tags">
@@ -414,50 +421,55 @@
             <li class="traveller__country-item">Чехия</li>
           </ul>
 
-          <div class="traveller__wrapper">
-            <p class="traveller__choice">транспорт:</p>
-            <ul class="traveller__transport-list">
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
-                  alt="Самолёт">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/bus.svg" width="17" height="17"
-                  alt="Автобус">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/run.svg" width="17" height="17"
-                  alt="На своих двоих">
-              </li>
-            </ul>
+          <p class="traveller__choice traveller__choice--large">транспорт:</p>
+          <ul class="traveller__transport-list">
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
+                alt="Самолёт">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/bus.svg" width="17" height="17"
+                alt="Автобус">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/run.svg" width="17" height="17"
+                alt="На своих двоих">
+            </li>
+          </ul>
 
-            <p class="traveller__choice">левел:</p>
-            <div class="traveller__skill">
-              <span class="traveller__points">80</span>
-            </div>
+          <p class="traveller__choice traveller__choice--large">левел:</p>
+          <div class="traveller__skill skill-circle skill-circle--transparent">
+            <span class="skill-circle__points skill-circle__points--transparent">80</span>
+            <span class="skill-circle__lvl skill-circle__lvl--transparent">level</span>
           </div>
 
-          <a class="traveller__button button button--bright" href="#">Позвать!</a>
+          <div class="traveller__wrap">
+            <a class="traveller__button button button--bright" href="#">Позвать!</a>
+            <div class="traveller__popularity traveller__popularity--large">
+              <div class="traveller__heart traveller__heart--dark">
+              </div>
+              <div class="traveller__counter">1500</div>
+            </div>
+          </div>
         </article>
 
         <!-- Марк Смолов -->
-        <article class="travellers__card traveller">
-          <div class="traveller__header traveller__header--offline">
+        <article class="travellers__card traveller traveller--offline">
 
-            <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="/img/smolov-mobile@1x.jpg" width="70" height="70"
-                alt="Марк Смолов">
-              <h3 class="traveller__name">Марк Смолов</h3>
-            </a>
+          <a class="traveller__profile-link" href="#">
+            <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
+              height="70" alt="Марк Смолов"></a>
+          <a class="traveller__profile-link" href="#">
+            <h3 class="traveller__name traveller__name--offline">Марк Смолов</h3>
+          </a>
 
-            <div class="traveller__popularity">
-              <div class="traveller__heart traveller__heart--dark">
-              </div>
-              <div class="traveller__counter">170</div>
+          <div class="traveller__popularity">
+            <div class="traveller__heart traveller__heart--dark">
             </div>
+            <div class="traveller__counter">170</div>
           </div>
 
           <ul class="traveller__tags-list tags tags--shadow">
@@ -475,49 +487,54 @@
             <li class="traveller__country-item">Доминика</li>
           </ul>
 
-          <div class="traveller__wrapper">
-            <p class="traveller__choice">транспорт:</p>
-            <ul class="traveller__transport-list">
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
-                  alt="Самолёт">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/bus.svg" width="17" height="17" alt="Автобус">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/bike.svg" width="17" height="17"
-                  alt="Велосипед">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
-              </li>
-            </ul>
+          <p class="traveller__choice traveller__choice--large">транспорт:</p>
+          <ul class="traveller__transport-list">
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
+                alt="Самолёт">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/bus.svg" width="17" height="17" alt="Автобус">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/bike.svg" width="17" height="17"
+                alt="Велосипед">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
+            </li>
+          </ul>
 
-            <p class="traveller__choice">левел:</p>
-            <div class="traveller__skill">
-              <span class="traveller__points">25</span>
-            </div>
+          <p class="traveller__choice traveller__choice--large">левел:</p>
+          <div class="traveller__skill skill-circle skill-circle--transparent">
+            <span class="skill-circle__points skill-circle__points--transparent">25</span>
+            <span class="skill-circle__lvl skill-circle__lvl--transparent">level</span>
           </div>
 
-          <a class="traveller__button button button--bright" href="#">Позвать!</a>
+          <div class="traveller__wrap">
+            <a class="traveller__button button button--bright" href="#">Позвать!</a>
+            <div class="traveller__popularity traveller__popularity--large">
+              <div class="traveller__heart traveller__heart--dark">
+              </div>
+              <div class="traveller__counter">170</div>
+            </div>
+          </div>
         </article>
 
         <!-- Лариса Роговая -->
-        <article class="travellers__card traveller">
-          <div class="traveller__header traveller__header--online">
+        <article class="travellers__card traveller traveller--online">
 
-            <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="/img/rogovaya-mobile@1x.jpg" width="70" height="70"
-                alt="Лариса Роговая">
-              <h3 class="traveller__name">Лариса Роговая</h3>
-            </a>
+          <a class="traveller__profile-link" href="#">
+            <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
+              height="70" alt="Лариса Роговая"></a>
+          <a class="traveller__profile-link" href="#">
+            <h3 class="traveller__name traveller__name--online">Лариса Роговая</h3>
+          </a>
 
-            <div class="traveller__popularity">
-              <div class="traveller__heart traveller__heart--dark">
-              </div>
-              <div class="traveller__counter">23</div>
+          <div class="traveller__popularity">
+            <div class="traveller__heart traveller__heart--dark">
             </div>
+            <div class="traveller__counter">23</div>
           </div>
 
           <ul class="traveller__tags-list tags tags--shadow">
@@ -533,32 +550,38 @@
             <li class="traveller__country-item">Германия</li>
           </ul>
 
-          <div class="traveller__wrapper">
-            <p class="traveller__choice traveller__text">транспорт:</p>
-            <ul class="traveller__transport-list">
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
-                  alt="Самолёт">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="/img/bus.svg" width="17" height="17"
-                  alt="Автобус">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
-              </li>
-              <li class="traveller__transport">
-                <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
-              </li>
-            </ul>
+          <p class="traveller__choice traveller__choice--large">транспорт:</p>
+          <ul class="traveller__transport-list">
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/plane.svg" width="17" height="17"
+                alt="Самолёт">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon transport-icon--active" src="/img/bus.svg" width="17" height="17"
+                alt="Автобус">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/bike.svg" width="17" height="17" alt="Велосипед">
+            </li>
+            <li class="traveller__transport">
+              <img class="transport-icon" src="/img/run.svg" width="17" height="17" alt="На своих двоих">
+            </li>
+          </ul>
 
-            <p class="traveller__choice">левел:</p>
-            <div class="traveller__skill">
-              <span class="traveller__points">50</span>
-            </div>
+          <p class="traveller__choice traveller__choice--large">левел:</p>
+          <div class="traveller__skill skill-circle skill-circle--transparent">
+            <span class="skill-circle__points skill-circle__points--transparent">50</span>
+            <span class="skill-circle__lvl skill-circle__lvl--transparent">level</span>
           </div>
 
-          <a class="traveller__button button button--bright" href="#">Позвать!</a>
+          <div class="traveller__wrap">
+            <a class="traveller__button button button--bright" href="#">Позвать!</a>
+            <div class="traveller__popularity traveller__popularity--large">
+              <div class="traveller__heart traveller__heart--dark">
+              </div>
+              <div class="traveller__counter">23</div>
+            </div>
+          </div>
         </article>
 
         <div class="travellers__link-wrap">
@@ -566,8 +589,16 @@
         </div>
 
         <div class="travellers__pagination pagination">
-          <a class="pagination__back" href="#" aria-label="Назад"></a>
-          <a class="pagination__forward" href="#" aria-label="Вперёд"></a>
+          <div class="pagination__numbers">
+            <a class="pagination__link pagination__link--active" href="#">1</a>
+            <a class="pagination__link" href="#">2</a>
+            <a class="pagination__link" href="#">3</a>
+            <a class="pagination__link" href="#">4</a>
+          </div>
+          <div class="pagination__arrows">
+            <a class="pagination__back" href="#" aria-label="Назад"></a>
+            <a class="pagination__forward" href="#" aria-label="Вперёд"></a>
+          </div>
         </div>
       </div>
     </section>

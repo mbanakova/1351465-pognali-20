@@ -8,12 +8,20 @@
   background-color: rgba(0, 0, 0, 0.6);
   border: 4px solid $special_orange;
   box-sizing: border-box;
+
+  &--transparent {
+    background-color: transparent;
+  }
 }
 
 .skill-circle__points {
   display: block;
   @include font(24px, 24px, 700);
   text-align: center;
+
+  &--transparent {
+    padding-top: 4px;
+  }
 }
 
 .skill-circle__lvl {
@@ -21,6 +29,10 @@
   display: block;
   @include font(14px, 14px, 400);
   text-align: center;
+
+  &--transparent {
+    display: none;
+  }
 
   &::before {
     position: absolute;

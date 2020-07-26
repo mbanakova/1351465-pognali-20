@@ -1,19 +1,82 @@
 .pagination {
-  padding: 17px;
-  display: flex;
-  justify-content: space-around;
+  position: relative;
   background-color: $white;
   border-radius: 20px;
+  min-height: 51px;
+  color: $basic-blue-h2;
+  @include font(20px, 20px, 700);
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background-color: $modal-close-light;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 100px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.pagination__numbers {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-left: 28px;
+  }
+}
+
+.pagination__link {
+  display: inline-block;
+  height: 50px;
+  min-width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  line-height: 50px;
+
+  &--active {
+    background-color: $basic_yellow;
+  }
+}
+
+.pagination__arrows {
+  padding: 17px;
+  display: flex;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    margin-right: 35px;
+  }
 }
 
 .pagination__back {
   display: block;
+  margin-right: 62px;
   width: 1px;
   height: 1px;
   border: 10px solid $basic-blue-h2;
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
   border-left: none;
+
+  @media (min-width: $tablet) {
+    margin-right: 16px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -28,12 +91,17 @@
 
 .pagination__forward {
   display: block;
+  margin-left: 62px;
   width: 1px;
   height: 1px;
   border: 10px solid $basic-blue-h2;
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
   border-right: none;
+
+  @media (min-width: $tablet) {
+    margin-left: 16px;
+  }
 
   &:hover {
     opacity: 0.6;

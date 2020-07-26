@@ -19,9 +19,10 @@
   padding-left: 50px;
   padding-bottom: 28px;
 
+
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 74px;
+    padding-top: 75px;
     padding-bottom: 63px;
   }
 
@@ -29,7 +30,7 @@
     position: absolute;
     content: "";
     top: 38px;
-    right: 50px;
+    right: 35px;
     width: 100px;
     height: 100px;
     background-image: url(../../img/rates@1x.png);

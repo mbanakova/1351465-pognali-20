@@ -147,9 +147,15 @@
 .fellow__tags-list {
   @include  ul();
   margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet) {
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 

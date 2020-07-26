@@ -10,18 +10,37 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 2;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    padding: 110px 0 88px 0;
+    background-color: $basic-tablet;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .main__wrapper {
   display: flex;
   @include wrapper();
+  color: $white;
+
+  @media (min-width: $tablet) {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 74px;
+    justify-content: space-between;
+  }
 }
 
 .main__title {
   position: relative;
   @include no-fields();
   @include font(36px, 36px, 700);
-  color: $white;
+
+  @media (min-width: $tablet) {
+    @include font(60px, 20px, 700);
+  }
 
   &::after {
     position: absolute;
@@ -32,9 +51,34 @@
     height: 5px;
     background-color: $special_orange;
     border-radius: 2px;
+
+  @media (min-width: $tablet) {
+    bottom: -90px;
+  }
   }
 }
 
+.main__link-return {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    @include a();
+    padding-right: 60px;
+    @include font(20px, 20px, 700);
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -1px;
+      right: 0;
+      width: 35px;
+      height: 17px;
+      background-color: $white;
+    }
+  }
+
+}
 .main__form-submit {
   @include button();
   margin: 0;
