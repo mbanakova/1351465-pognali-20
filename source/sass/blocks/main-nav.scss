@@ -109,6 +109,10 @@
 
   &--wrapped {
   display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
   }
 
   @media (min-width: $tablet) {
