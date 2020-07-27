@@ -8,6 +8,12 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
+  @media (min-width: $desktop) {
+    background-color: $basic-blue-about;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .about__wrapper {
@@ -30,6 +36,19 @@
     background-repeat: no-repeat;
     background-position: right 8px top 48px;
     background-size: 376px auto;
+  }
+
+  @media (min-width: $desktop) {
+    @include  desktop();
+    padding-top: 90px;
+    padding-bottom: 162px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    background-image: url(../img/about-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-position: right 60px bottom 0;
+    background-size: 630px auto;
   }
 
 
@@ -65,6 +84,12 @@
     margin-left: 34px;
     margin-bottom: 40px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 43px auto 57px 93px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .about__text {
@@ -77,7 +102,14 @@
     margin-left: 34px;
     margin-bottom: 31px;
     @include font(28px, 35px, 300);
-    min-width: 308px;
+    max-width: 308px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 38px 93px;
+    max-width: 619px;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   &--bold {
@@ -86,11 +118,18 @@
     margin-left: 24px;
     font-weight: 700;
 
-  @media (min-width: $tablet) {
-    margin-left: 34px;
-    margin-bottom: 44px;
-    @include font(21px, 25px, 700);
-  }
+    @media (min-width: $tablet) {
+      margin-left: 34px;
+      margin-bottom: 44px;
+      @include font(21px, 25px, 700);
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0 auto 85px 93px;
+      @include font(21px, 24px, 700);
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
   }
 }
 
@@ -107,6 +146,12 @@
     margin-right: 380px;
     margin-bottom: 56px;
     @include font(28px, 35px, 300);
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 0 93px;
+    grid-row-start: 4;
+    grid-row-end: 5;
   }
 }
 
