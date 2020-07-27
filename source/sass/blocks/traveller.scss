@@ -40,7 +40,12 @@
     &--online::before {
       display: none;
     }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 285px 348px 170px 105px;
+    grid-template-rows: min-content;
   }
+}
 }
 
 .traveller__profile-link {
@@ -54,6 +59,12 @@
       margin-bottom: 0;
       grid-row-start: 1;
       grid-row-end: 4;
+    }
+
+    @media (min-width: $desktop) {
+      border-radius: 15px;
+      width: 285px;
+      height: 285px;
     }
   }
 
@@ -70,6 +81,12 @@
     border-radius: 20px;
     width: 190px;
     height: 190px;
+  }
+
+  @media (min-width: $desktop) {
+    border-radius: 15px;
+    width: 285px;
+    height: 285px;
   }
 }
 
@@ -93,7 +110,8 @@
     max-width: 300px;
     @include font(30px, 30px, 700);
 
-    &--offline::after {
+    &--offline::after,
+    &--online::after {
       position: absolute;
       display: block;
       content: "";
@@ -105,19 +123,23 @@
       background-color: $red;
     }
 
-
     &--online::after {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 8px;
-      height: 8px;
-      top: 10px;
-      right: -30px;
-      border-radius: 50%;
       background-color: $green;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin: 46px auto 20px 62px;
+
+    &--offline::after,
+    &--online::after {
+      width: 8px;
+      height: 8px;
+      top: 9px;
+      right: 0;
+      left: -25px;
+  }
+}
 
   &:hover {
     opacity: 0.7;
@@ -202,7 +224,12 @@
     color: $black;
     justify-content: flex-start;
     grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 2;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 20px 45px 62px;
   }
 }
 
@@ -222,6 +249,10 @@
       grid-column-end: 4;
       grid-row-start: 4;
       grid-row-end: 5;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
     }
   }
 
@@ -263,6 +294,17 @@
     display: flex;
     @include font(20px, 20px, 500);
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 49px;
+    margin-left: 0;
+    margin-bottom: 0;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    flex-direction: column;
+  }
 }
 
 .traveller__country-item {
@@ -277,6 +319,15 @@
 
     &:last-of-type {
       margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 0 0 54px;
+    margin-bottom: 13px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
@@ -326,6 +377,15 @@
     grid-row-start: 1;
     grid-row-end: 3;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    margin-right: 62px;
+    flex-direction: row;
+    align-items: baseline;
+    grid-column-start: 3;
+    grid-row-start: 3;
+  }
 }
 
 .traveller__transport {
@@ -362,6 +422,16 @@
     width: 60px;
     height: 60px;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 43px;
+    margin-bottom: 0;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .traveller__points {
@@ -383,6 +453,18 @@
     grid-row-end: 4;
     display: flex;
     align-items: flex-end;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    margin-left: 54px;
+    margin-bottom: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    align-items: flex-start;
   }
 }
 

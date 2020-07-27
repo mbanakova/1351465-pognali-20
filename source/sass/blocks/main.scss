@@ -20,6 +20,8 @@
   }
 
   @media (min-width: $desktop) {
+    margin: 0 auto;
+    padding: 110px 125px 84px;
     background-color: $basic-blue;
   }
 }
@@ -35,12 +37,22 @@
     padding: 0 74px;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    width: 1190px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .main__title {
   position: relative;
   @include no-fields();
   @include font(36px, 36px, 700);
+
+  @media (min-width: $tablet) {
+    @include font(60px, 20px, 700);
+  }
 
   @media (min-width: $tablet) {
     @include font(60px, 20px, 700);
@@ -56,9 +68,14 @@
     background-color: $special_orange;
     border-radius: 2px;
 
-  @media (min-width: $tablet) {
-    bottom: -90px;
-  }
+    @media (min-width: $tablet) {
+      bottom: -90px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 8px;
+      bottom: -87px;
+    }
   }
 }
 
@@ -92,4 +109,52 @@
   color: $basic-blue-h2;
   @include font(17px, 30px, 700);
   box-sizing: border-box;
+}
+
+.main__catalog-page {
+margin-bottom: 150px;
+}
+
+.main__catalog-grid {
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    display: grid;
+    grid-template-columns: 951px 285px;
+    grid-column-gap: 83px;
+    grid-template-rows: min-content 26px 100px;
+    grid-row-gap: 65px;
+  }
+}
+
+.main__tourists-filter {
+
+  @media (min-width: $desktop) {
+   grid-column-start: 2;
+  }
+}
+
+.main__travellers {
+
+  @media (min-width: $desktop) {
+    grid-row-start: 1;
+  }
+}
+
+.main__show-travellers {
+
+  @media (min-width: $desktop) {
+    margin-bottom: 71px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 26px;
+  }
+}
+
+.main__pagination {
+
+  @media (min-width: $desktop) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }

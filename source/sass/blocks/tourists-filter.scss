@@ -1,7 +1,12 @@
 
 .tourists-filter__wrapper {
   @include wrapper();
-  margin-bottom: 28px;
+
+  @media (min-width: $desktop) {
+    width: 285px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .tourists-filter__title {
@@ -11,6 +16,10 @@
   border-top-right-radius: 20px;
   color: $basic-blue-h2;
   background-color: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    @include font(30px, 30px, 700);
+  }
 }
 
 .tourists-filter__form {

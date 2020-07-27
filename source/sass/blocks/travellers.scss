@@ -6,6 +6,13 @@
     @include tablet();
     padding-bottom: 122px;
   }
+
+  @media (min-width: $desktop) {
+    @include no-fields();
+    width: 951px;
+    display: grid;
+    grid-gap: 30px;
+  }
 }
 
 .travellers__card {
@@ -17,12 +24,21 @@
     padding: 35px 25px 25px 35px;
   }
 
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
   &:last-of-type {
     margin-bottom: 13px;
 
     @media (min-width: $tablet) {
       margin-bottom: 51px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
+  }
   }
 }
 
@@ -47,6 +63,10 @@
     margin-bottom: 52px;
     padding-left: 51px;
     @include font(20px, 20px, 700);
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
   }
 
   &:hover::before,

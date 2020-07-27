@@ -8,7 +8,6 @@
   @media (min-width: $tablet) {
     background-color: $basic-tablet;
     background-image: url(../../img/globe-back-tablet@1x.jpg);
-    background-repeat: no-repeat;
     background-size: auto;
     background-position: 50% 248px;
   }
@@ -16,8 +15,7 @@
   @media (min-width: $desktop) {
     background-color: $basic-blue;
     background-image: url(../../img/globe-back-desktop@1x.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: 0 0;
   }
 }

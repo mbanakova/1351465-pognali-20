@@ -150,6 +150,7 @@
 
   @media (min-width: $desktop) {
     margin: 0 auto 0 93px;
+    min-width: 274px;
     grid-row-start: 4;
     grid-row-end: 5;
   }
