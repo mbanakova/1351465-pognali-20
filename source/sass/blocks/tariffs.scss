@@ -9,6 +9,11 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
+  @media (min-width: $desktop) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .tariffs__wrapper {
@@ -24,6 +29,13 @@
     @include tablet();
     padding-top: 75px;
     padding-bottom: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    padding-left: 135px;
+    padding-top: 107px;
+    padding-bottom: 165px;
   }
 
   &::after {
@@ -45,6 +57,13 @@
       bottom: 0;
       right: 90px;
     }
+
+    @media (min-width: $desktop) {
+      width: 198px;
+      height: 198px;
+      top: 290px;
+      right: 140px;
+    }
   }
 }
 
@@ -58,6 +77,10 @@
     max-width: 600px;
     text-align: center;
   }
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 134px;
+  }
 }
 
 .tariffs__list {
@@ -70,17 +93,32 @@
     padding-left: 91px;
     margin-bottom: 32px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: -36px;
-    right: 6px;
-    width: 198px;
-    height: 285px;
-    background-color: $heart-pale;
-    border-radius: 20px;
-    z-index: -1;
+    &::after {
+      position: absolute;
+      content: "";
+      top: -36px;
+      right: 6px;
+      width: 198px;
+      height: 285px;
+      background-color: $heart-pale;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 33px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -45px;
+      right: 184px;
+      width: 446px;
+      height: 300px;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 }
 
@@ -99,6 +137,11 @@
     justify-content: space-between;
     @include font(28px, 28px, 300);
     width: 560px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 20px 0 18px;
+    width: 900px;
   }
 
   &::after {

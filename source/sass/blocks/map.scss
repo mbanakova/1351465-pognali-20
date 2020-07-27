@@ -4,6 +4,10 @@
   @media (min-width: $tablet) {
     min-height: 581px;
   }
+
+  @media (min-width: $desktop) {
+    min-height: 584px;
+  }
 }
 
 .map__body {
@@ -12,5 +16,9 @@
 
   @media (min-width: $tablet) {
     min-height: 581px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 584px;
   }
 }

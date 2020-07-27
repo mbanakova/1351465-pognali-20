@@ -11,6 +11,12 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: -50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .form__wrapper {
@@ -23,6 +29,12 @@
     padding-top: 133px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: $desktop) {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 159px 132px 102px 132px;
+  }
 }
 
 .form__title {
@@ -32,6 +44,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
   }
 }
 
@@ -49,12 +65,22 @@
     @include font(28px, 32px, 300);
   }
 
+  @media (min-width: $desktop) {
+    max-width: 655px;
+    margin-bottom: 60px;
+    @include font(28px, 31px, 300);
+  }
+
   &:last-of-type {
     margin-bottom: 17px;
 
-  @media (min-width: $tablet) {
-    margin-bottom: 40px;
-  }
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -79,10 +105,19 @@
 
 .form__index-form {
   position: relative;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 70px;
+  }
 }
 
 .form__index-input {
-  margin-bottom: 29px;
+  margin-bottom: 0;
   padding: 20px 75px 20px 25px;
   @include font(18px, 20px, 700);
   border-radius: 10px;
@@ -92,7 +127,6 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    margin-bottom: 60px;
     padding: 28px 90px 28px 36px;
     @include font(24px, 24px, 700);
     border-radius: 20px;
@@ -130,13 +164,28 @@
   height: 60px;
   box-sizing: border-box;
   border: none;
+  font-size: 0;
 
   @media (min-width: $tablet) {
     padding: 0 40px;
     height: 80px;
   }
+
+  @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
+    padding-right: 150px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
+.form__link-wrap {
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 .form__link {
   @include a();
@@ -158,11 +207,13 @@
   background-image: url(../../img/contacts-phone.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 16px 16px;
 
   @media (min-width: $tablet) {
     margin-right: 22px;
     width: 68px;
     height: 68px;
+    background-size: 30px 30px;
   }
 }
 

@@ -58,6 +58,15 @@
     height: 47px;
     border-radius: 5px;
   }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 23px;
+    left: 270px;
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
+  }
 }
 
 .country__text-top {
@@ -126,11 +135,4 @@
         height: 20px;
       }
     }
-}
-.country__button {
-  @include a();
-  @media (min-width: $tablet) {
-
-    margin: 0 30px;
-  }
 }

@@ -9,6 +9,11 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
+  @media (min-width: $desktop) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .destinations__wrapper {
@@ -30,7 +35,18 @@
       border-radius: 20px;
       z-index: -1;
     }
+
+    @media (min-width: $desktop) {
+      top: 100px;
+      left: 70px;
+      width: 140px;
+      height: 140px;
+      background-color: $heart-pale;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -38,8 +54,18 @@
     @media (min-width: $tablet) {
       top: 73px;
       right: 40px;
-      width: 288px;
-      height: 574px;
+      width: 287px;
+      height: 575px;
+      background-image: url(../../img/flags-back@1x.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop) {
+      top: 90px;
+      right: 120px;
+      width: 287px;
+      height: 575px;
       background-image: url(../../img/flags-back@1x.png);
       background-repeat: no-repeat;
       z-index: -1;
@@ -51,6 +77,16 @@
     padding-top: 73px;
     padding-bottom: 80px;
   }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    padding-top: 161px;
+    padding-bottom: 138px;
+    display: grid;
+    grid-template-columns: 560px 378px;
+    grid-column-gap: 171px;
+    grid-template-rows: min-content;
+  }
 }
 
 .destinations__title {
@@ -60,6 +96,13 @@
   @media (min-width: $tablet) {
     margin-bottom: 57px;
     margin-left: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 58px;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 }
 
@@ -74,6 +117,15 @@
     max-width: 345px;
     @include  font(28px, 33px, 300);
   }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 98px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
 
 .destinations__list {
@@ -82,6 +134,15 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 0 70px;
+    max-width: 560px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
   }
 }
 
@@ -94,5 +155,29 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 10px 0;
+  }
+}
+
+.destinations__button {
+  @include a();
+  text-transform: none;
+  color: $basic-blue-h2;
+
+  @media (min-width: $tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    max-width: 275px;
+    box-sizing: border-box;
   }
 }

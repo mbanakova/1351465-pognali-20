@@ -14,7 +14,6 @@
   }
 
   @media (min-width: $desktop) {
-
     margin-top: -50px;
   }
 }
@@ -25,7 +24,6 @@
   padding-bottom: 19px;
 
   @media (min-width: $tablet) {
-
     padding-top: 46px;
     padding-right: 40px;
     padding-bottom: 32px;
@@ -39,8 +37,6 @@
   }
 
   @media (min-width: $desktop) {
-
-  .footer__wrapper {
     padding-top: 47px;
     padding-right: 60px;
     padding-bottom: 43px;
@@ -62,7 +58,6 @@
   }
 
   @media (min-width: $desktop) {
-
     margin: 0;
   }
 }
@@ -76,7 +71,6 @@
   align-items: center;
 
   @media (min-width: $tablet) {
-
     padding: 0;
     border: none;
   }
@@ -153,4 +147,4 @@
   background-position: 50% 50%;
   background-color: $special-grey;
 }
-}
+
