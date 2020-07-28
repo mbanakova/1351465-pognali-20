@@ -1,12 +1,44 @@
 .travellers__wrapper {
   @include wrapper();
+  padding-bottom: 46px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+  }
+
+  @media (min-width: $desktop) {
+    @include no-fields();
+    padding-bottom: 122px;
+    width: 951px;
+    display: grid;
+    grid-gap: 30px;
+  }
 }
 
 .travellers__card {
   margin-bottom: 10px;
+  padding: 15px 20px 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 39px;
+    padding: 35px 25px 25px 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    padding: 0;
+  }
 
   &:last-of-type {
     margin-bottom: 13px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 51px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
   }
 }
 
@@ -15,6 +47,17 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-bottom: 71px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 26px;
+  }
 }
 
 .travellers__show-link {
@@ -26,6 +69,16 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $basic-blue-h2;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 52px;
+    padding-left: 51px;
+    @include font(20px, 20px, 700);
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 
   &:hover::before,
   &:hover::after {
@@ -48,6 +101,11 @@
     height: 2px;
     background-color: $basic-blue-h2;
     border-radius: 2px;
+
+    @media (min-width: $tablet) {
+      top: 8px;
+      width: 26px;
+    }
   }
 
   &::after {
@@ -59,9 +117,32 @@
     height: 18px;
     background-color: $basic-blue-h2;
     border-radius: 2px;
+
+    @media (min-width: $tablet) {
+      top: -3px;
+      left: 12px;
+      height: 26px;
+    }
   }
 }
 
 .travellers__pagination {
-  margin-bottom: 46px;
+  @include wrapper();
+  margin-bottom: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+    box-sizing: border-box;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }

@@ -1,32 +1,176 @@
 .destinations {
+  position: relative;
   background-color: $basic-blue-light;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 8;
+
+  @media (min-width: $tablet) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .destinations__wrapper {
+  position: relative;
   @include  wrapper();
   padding-top: 71px;
   padding-bottom: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    @media (min-width: $tablet) {
+      top: 406px;
+      left: 40px;
+      width: 141px;
+      height: 141px;
+      background-color: $heart-pale;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop) {
+      top: 100px;
+      left: 70px;
+      width: 140px;
+      height: 140px;
+      background-color: $heart-pale;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    @media (min-width: $tablet) {
+      top: 73px;
+      right: 40px;
+      width: 287px;
+      height: 575px;
+      background-image: url(../../img/flags-back@1x.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop) {
+      top: 90px;
+      right: 120px;
+      width: 287px;
+      height: 575px;
+      background-image: url(../../img/flags-back@1x.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    padding-top: 73px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    padding-top: 161px;
+    padding-bottom: 138px;
+    display: grid;
+    grid-template-columns: 560px 378px;
+    grid-column-gap: 171px;
+    grid-template-rows: min-content;
+  }
 }
 
 .destinations__title {
   @include  no-fields();
-  margin-bottom: 19px;
-  padding-left: 28px;
+  margin: 0 0 19px 28px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 57px;
+    margin-left: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 58px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }
 
 .destinations__text {
   @include  no-fields();
-  margin-bottom: 60px;
-  padding-left: 26px;
+  margin: 0 0 60px 26px;
   max-width: 195px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 104px;
+    margin-left: 61px;
+    max-width: 345px;
+    @include  font(28px, 33px, 300);
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 98px;
+  }
 }
 
 .destinations__list {
   @include  ul();
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 0 70px;
+    max-width: 560px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
 }
 
 .destinations__item {
   margin-bottom: 9px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 10px 0;
+  }
+}
+
+.destinations__button {
+  @include a();
+  text-transform: none;
+  color: $basic-blue-h2;
+
+  @media (min-width: $tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    height: 80px;
+    max-width: 275px;
+    box-sizing: border-box;
+  }
 }

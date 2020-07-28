@@ -1,14 +1,53 @@
 .intro {
   background-color: $basic-blue;
-  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-image: url(../../img/globe-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 180px;
+  background-size: auto;
+  background-position: 50% -130px;
+
+  @media (min-width: $tablet) {
+    background-color: $basic-tablet;
+    background-image: url(../../img/globe-back-tablet@1x.jpg);
+    background-size: auto;
+    background-position: 50% 248px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $basic-blue;
+    background-image: url(../../img/globe-back-desktop@1x.jpg);
+    background-size: cover;
+    background-position: 0 0;
+  }
 }
 
 .intro__wrapper {
   @include wrapper();
   padding-top: 52px;
   padding-bottom: 39px;
+  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: 50% 180px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    padding-top: 30px;
+    padding-bottom: 96px;
+    background-image: url(../../img/traveller-illustration-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: 50% 272px;
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    padding-bottom: 0;
+    background-image: url(../../img/traveller-illustration-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-position: 600px 0;
+    background-size: 430px 620px;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 390px min-content;
+  }
 }
 
 .intro__title {
@@ -17,38 +56,126 @@
   @include font(36px, 40px, 700);
   text-align: center;
   color: $white;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 86px;
+    max-width: 400px;
+    @include font(60px, 70px, 700);
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 110px auto 101px 67px;
+    max-width: 400px;
+    @include font(60px, 70px, 700);
+    text-align: left;
+  }
+}
+
+.intro__list {
+  @include ul();
+  margin-bottom: 28px;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .intro__blockquote {
   @include no-fields();
-  margin-bottom: 38px;
+  margin-bottom: 47px;
   color: $white;
+
+  @media (min-width: $tablet) {
+    padding: 0 0 0 38px;
+    margin: 0 auto 211px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 111px;
+    margin-bottom: 116px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    max-width: 1320px;
+    flex-wrap: nowrap;
+  }
 }
 
 .intro__quote {
   @include no-fields();
   margin-bottom: 18px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 45px;
+    max-width: 264px;
+    @include font(28px, 33px, 300);
+  }
+
+  @media (min-width: $desktop) {
+    @include font(28px, 32px, 300);
+  }
 }
 
 .intro__cite {
   font-weight: 700;
   font-style: normal;
+
+  @media (min-width: $tablet) {
+    display: block;
+    @include font(21px, 25px, 700);
+    max-width: 240px;
+  }
+
+  @media (min-width: $desktop) {
+    @include font(21px, 24px, 700);
+  }
 }
 
 .intro__steps {
   @include font(18px, 18px, 700);
-  @include no-fields();
+  @include ul();
+  margin: 0 auto;
   counter-reset: myCounter;
   color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    max-width: 690px;
+    @include font(24px, 24px, 700);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 123px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    max-width: 1320px;
+    flex-wrap: nowrap;
+  }
 }
 
 .intro__step {
   position: relative;
-  padding:  22px 96px 24px 24px;
+  padding:  22px 80px 24px 24px;
   margin-top: -9px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    min-height: 140px;
+    box-sizing: border-box;
+    flex-basis: 344px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 107px;
+    margin-left: -30px;
+  }
 
   &::after {
     position: absolute;
@@ -57,23 +184,83 @@
     top: 22px;
     right: 21px;
     color: $white;
+
+    @media (min-width: $tablet) {
+      @include font(30px, 30px, 700);
+      top: 85px;
+      right: 300px;
+    }
+
+    @media (min-width: $desktop) {
+      @include font(24px, 24px, 700);
+      top: 29px;
+      right: 60px;
+    }
   }
 
   &:first-child{
     background-color: $special-orange;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      flex-basis: 344px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 0;
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
   }
 
   &:nth-child(2) {
     background-color: $special_orange-light;
+
+    @media (min-width: $tablet) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin-left: -21px;
+    }
+
+    @media (min-width: $desktop) {
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
   }
 
   &:nth-child(3) {
     background-color: $special_yellow_dark;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+      flex-basis: 344px;
+    }
+
+    @media (min-width: $desktop) {
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
   }
 
   &:last-child{
     background-color: $basic-yellow;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
+
+    @media (min-width: $tablet) {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: -21px;
+    }
+
+    @media (min-width: $desktop) {
+      border-radius: 20px;
+    }
   }
 }

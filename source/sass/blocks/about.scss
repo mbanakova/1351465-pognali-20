@@ -1,33 +1,165 @@
 .about {
-  background-color: $basic-blue-about;
-  background-image: url(../../img/about-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-color: $basic-blue-medium;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet) {
+    background-color: $basic-tablet;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $basic-blue-about;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .about__wrapper {
+  position: relative;
   @include  wrapper();
-  padding-top: 33px;
-  padding-bottom: 82px;
-  padding-right: 60px;
-  padding-left: 49px;
-  max-width: 210px;
+  padding: 33px 25px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/about-mobile@1x.png);
+  background-size: 292px 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border-bottom-left-radius: 30px;
+
+
+  @media (min-width: $tablet) {
+    @include  tablet();
+    padding-top: 41px;
+    background-image: url(../img/about-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 48px;
+    background-size: 376px auto;
+  }
+
+  @media (min-width: $desktop) {
+    @include  desktop();
+    padding-top: 90px;
+    padding-bottom: 162px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    background-image: url(../img/about-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-position: right 60px bottom 0;
+    background-size: 630px auto;
+  }
+
+
+// Эту штуку на мобильном не видно, а надо --->
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -7px;
+    width: 113px;
+    height: 132px;
+    background-color: $basic-blue-elem;
+    border-radius: 20px;
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      top: -40px;
+      left: -7px;
+      width: 688px;
+      height: 213px;
+      background-color: $basic-blue-elem;
+      border-radius: 20px;
+    }
+  }
 }
 
 .about__title {
   @include no-fields();
   margin-bottom: 19px;
+  margin-left: 24px;
+
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 43px auto 57px 93px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .about__text {
   @include no-fields();
   margin-bottom: 20px;
+  margin-left: 24px;
   color: $white;
+
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-bottom: 31px;
+    @include font(28px, 35px, 300);
+    max-width: 308px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 38px 93px;
+    max-width: 619px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 
   &--bold {
     @include no-fields();
+    margin-bottom: 49px;
+    margin-left: 24px;
     font-weight: 700;
+
+    @media (min-width: $tablet) {
+      margin-left: 34px;
+      margin-bottom: 44px;
+      @include font(21px, 25px, 700);
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0 auto 85px 93px;
+      @include font(21px, 24px, 700);
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
   }
+}
+
+.about__button {
+  margin-left: 24px;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  display: none;
+
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    display: flex;
+    margin-right: 380px;
+    margin-bottom: 56px;
+    @include font(28px, 35px, 300);
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 0 93px;
+    min-width: 274px;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+.about__right {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 1;
+  outline: 2px solid rgba(255, 255, 0, 0.8);
 }

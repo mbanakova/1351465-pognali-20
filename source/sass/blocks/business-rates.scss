@@ -3,6 +3,10 @@
   background-color: $white;
   border-radius: 20px;
   box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+
+  &--opened {
+    display: block;
+  }
 }
 
 .business-rates__wrapper {

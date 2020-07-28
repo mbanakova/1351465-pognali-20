@@ -1,29 +1,84 @@
 .footer {
+  position: relative;
+  margin-top: -30px;
   background-color: $white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+
+    margin-top: -40px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -50px;
+  }
 }
 
 .footer__wrapper {
   @include wrapper();
   padding-top: 37px;
   padding-bottom: 19px;
-}
 
-.footer__top {
-  border-bottom: 1px solid $footer-grey-line;
+  @media (min-width: $tablet) {
+    padding-top: 46px;
+    padding-right: 40px;
+    padding-bottom: 32px;
+    padding-left: 38px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 47px;
+    padding-right: 60px;
+    padding-bottom: 43px;
+    padding-left: 58px;
+    margin: 0 auto;
+    width: 1320px;
+  }
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
+  text-align: center;
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 164px;
+    height: 42px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .footer__social {
-  margin-bottom: 37px;
+  padding-bottom: 37px;
+  border-bottom: 1px solid $footer-grey-line;
+  @include ul();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .footer__social-item {
   margin-right: 0;
+  margin-bottom: 37px;
   width: 45px;
   height: 45px;
   display: flex;
@@ -40,6 +95,12 @@
   &:active {
     transition: 0.3s ease-in-out;
   }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .footer__copyright {
@@ -47,6 +108,10 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin-right: 23px;
+    margin-top: 0;}
 
   &:hover {
     opacity: 0.6;
@@ -63,6 +128,15 @@
   @include no-fields();
   @include font(16px, 33px, 400);
   color: $special-grey;
+
+  @media (min-width: $tablet) {
+    margin-right: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 24px;
+    @include font(20px, 33px, 400);
+  }
 }
 
 .footer__copyright-link {
@@ -72,4 +146,6 @@
   background-image: url(../../img/htmlacademy.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-color: $special-grey;
 }
+

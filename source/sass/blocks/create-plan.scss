@@ -1,13 +1,16 @@
 .create-plan {
+  position: relative;
+  margin-top: -30px;
   background-color: $create-plan;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  z-index: 1;
 }
 
 .create-plan__wrapper {
   @include wrapper();
   padding-top: 30px;
-  padding-bottom: 43px;
+  padding-bottom: 73px;
 }
 
 .create-plan__top-wrapper {

@@ -6,13 +6,12 @@
   @include font();
   color: $special-grey;
   background-color: $basic-blue-light;
-  background-image: url(../../img/globe-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .page__body {
   @include no-fields();
+  overflow-x: hidden;
 }
 
 ::selection {

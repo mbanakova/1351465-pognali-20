@@ -2,11 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .logo__white {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 164px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 52px;
+  }
 
   &--hidden {
     display: none;
@@ -15,6 +24,16 @@
 
 .logo__blue {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 164px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 52px;
+  }
 
   &--hidden {
     display: none;

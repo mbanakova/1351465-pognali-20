@@ -1,19 +1,54 @@
 .form {
+  position: relative;
+  margin-top: -30px;
   background-color: $basic-blue-about;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 5;
+
+  @media (min-width: $tablet) {
+    margin-top: -60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .form__wrapper {
   @include wrapper();
-  padding-top: 72px;
+  padding-top: 102px;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    padding-top: 133px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 159px 132px 102px 132px;
+  }
 }
 
 .form__title {
   @include no-fields();
   margin-bottom: 19px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+  }
 }
 
 .form__text {
@@ -24,13 +59,37 @@
   margin-bottom: 29px;
   text-align: center;
 
+  @media (min-width: $tablet) {
+    max-width: 638px;
+    margin-bottom: 65px;
+    @include font(28px, 32px, 300);
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 655px;
+    margin-bottom: 60px;
+    @include font(28px, 31px, 300);
+  }
+
   &:last-of-type {
     margin-bottom: 17px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 42px;
+    }
   }
 }
 
 .form__text-link {
   color: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    @include font(28px, 32px, 300);
+  }
 
   &:hover {
     color: $special_orange;
@@ -46,21 +105,41 @@
 
 .form__index-form {
   position: relative;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 70px;
+  }
 }
 
 .form__index-input {
-  margin-bottom: 29px;
+  margin-bottom: 0;
   padding: 20px 75px 20px 25px;
   @include font(18px, 20px, 700);
   border-radius: 10px;
   border: none;
   width: 100%;
+  max-height: 80px;
   box-sizing: border-box;
 
+  @media (min-width: $tablet) {
+    padding: 28px 90px 28px 36px;
+    @include font(24px, 24px, 700);
+    border-radius: 20px;
+  }
+
   &::placeholder {
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    @include font(18px, 20x, 700);
+    font-family: $the-only-one;
+    @include font(18px, 20px, 700);
     opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      @include font(24px, 24px, 700);
+    }
   }
 
   &:hover::placeholder {
@@ -85,14 +164,38 @@
   height: 60px;
   box-sizing: border-box;
   border: none;
+  font-size: 0;
+
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+    height: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    @include font(24px, 24px, 700);
+    padding-right: 150px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
+.form__link-wrap {
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 .form__link {
   @include a();
   display: flex;
   @include font(16px, 45px, 700);
   color: $basic-blue-medium;
+
+  @media (min-width: $tablet) {
+    @include font(28px, 68px, 700);
+  }
 }
 
 .form__icon {
@@ -104,6 +207,14 @@
   background-image: url(../../img/contacts-phone.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 16px 16px;
+
+  @media (min-width: $tablet) {
+    margin-right: 22px;
+    width: 68px;
+    height: 68px;
+    background-size: 30px 30px;
+  }
 }
 
 .form__contact {

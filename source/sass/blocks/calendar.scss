@@ -8,12 +8,14 @@
   border-bottom: 1px solid $calendar-month;
 }
 
-.calendar__previous {
+.calendar__previous,
+.calendar__next {
   @include no-fields();
   margin-right: auto;
   color: $basic-blue-h2;
   @include font(20px, 20px, 700);
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .calendar__head {
@@ -24,11 +26,8 @@
 }
 
 .calendar__next {
-  @include no-fields();
+  margin-right: 0;
   margin-left: auto;
-  color: $basic-blue-h2;
-  @include font(20px, 20px, 700);
-  opacity: 0.3;
 }
 
 .calendar__weekdays {
@@ -65,18 +64,18 @@
   justify-content: center;
   align-items: center;
 }
-.calendar__prev-date {
+// .calendar__prev-date {
 
-}
+// }
 
-.calendar__date {
+// .calendar__date {
 
-}
+// }
 
-.calendar__today {
+// .calendar__today {
 
-}
+// }
 
-.calendar__next-date {
+// .calendar__next-date {
 
-}
+// }
