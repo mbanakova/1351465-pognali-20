@@ -12,63 +12,57 @@
 
   <!-- Хедер -->
 
-  <header class="header">
+  <header class="header header--no-js">
 
-    <nav class="main-nav">
-      <div class="main-nav__top">
-        <a href="#" class="header__logo logo">
-          <img class="logo__white" src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
-          <img class="logo__blue logo__blue--hidden" src="https://via.placeholder.com/96x15" width="96" height="15"
-            alt="logo">
-        </a>
-        <button class="main-nav__burger" type="button" aria-label="Открыть меню">
-        </button>
-        <a class="main-nav__auth button button--bright js-login" href="#">Авторизация</a>
-      </div>
+    <nav class="header__main-nav main-nav">
+      <a href="index.html" class="header__logo logo">
+        <img class="logo__white" src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
+        <img class="logo__blue logo__blue--hidden" src="https://via.placeholder.com/96x15" width="96" height="15"
+          alt="logo">
+      </a>
+      <button class="main-nav__burger" type="button" aria-label="Открыть меню">
+      </button>
 
-      <div class="main-nav__wrapper main-nav__wrapper--wrapped">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link" href="index.html">О сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Направления</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">Попутчики</a>
-          </li>
-        </ul>
+      <a class="main-nav__auth js-login" href="#">Авторизация</a>
 
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__auth button button--bright js-login" href="#">Авторизация</a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="tel:88005558628">
-              <div class="user-list__icon"></div>
-              <div class="user-list__contact">8 800 555-86-28</div>
-            </a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
-              <div class="user-list__icon"></div>
-              <div class="user-list__contact">mail@htmlacademy.ru</div>
-            </a>
-          </li>
-        </ul>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__link" href="index.html">О сервисе</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Направления</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link">Попутчики</a>
+        </li>
+      </ul>
 
-        <ul class="main-nav__list social">
-          <li class="social__item">
-            <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link" href="tel:88005558628">
+            <div class="user-list__icon"></div>
+            <div class="user-list__contact">8 800 555-86-28</div>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
+            <div class="user-list__icon"></div>
+            <div class="user-list__contact">mail@htmlacademy.ru</div>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list social">
+        <li class="social__item">
+          <a class="social__link social__link--header social__link--facebook" href="#" aria-label="facebook"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--header social__link--vk" href="#" aria-label="vk"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--header social__link--instagram" href="#" aria-label="instagram"></a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -600,6 +594,7 @@
               </div>
             </div>
           </article>
+        </div>
       </section>
 
       <div class="main__show-travellers travellers__link-wrap">
@@ -618,7 +613,6 @@
           <a class="pagination__forward" href="#" aria-label="Вперёд"></a>
         </div>
       </div>
-    </div>
     </div>
   </main>
 

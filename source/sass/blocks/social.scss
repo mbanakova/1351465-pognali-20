@@ -1,5 +1,14 @@
 .social {
+  display: none;
+  justify-content: center;
+  align-items: center;
 
+&--opened {
+  display: flex;
+}
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .social__item {

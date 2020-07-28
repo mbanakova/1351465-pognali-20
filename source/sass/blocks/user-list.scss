@@ -3,13 +3,18 @@
   background-color: $white;
 
   @media (min-width: $desktop) {
-    display: none;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .user-list__item {
+position: relative;
+
   &:first-child {
-    margin-bottom: 51px;
+    margin-bottom: 0;
   }
 }
 
@@ -18,7 +23,11 @@
   display: block;
 
   @media (min-width: $tablet) {
-    display: none;
+    display: block;
+    position: absolute;
+    top: -196px;
+    right: -55px;
+    padding: 16px 28px 14px;
   }
 
   &:hover {
@@ -55,12 +64,26 @@
     border-radius: 50%;
     background-color: $basic-blue-icon;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $special_yellow_dark;
+    background-size: 20px 20px;
+
+  }
 }
 
 .user-list__contact {
 
   @media (min-width: $tablet) {
     @include font(28px, 68px, 700);
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 

@@ -2,21 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-  @media (min-width: $desktop) {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 60px;
-      height: 2px;
-      top: 46%;
-      right: -100px;
-      background-color: $white;
-    }
-  }
 }
 
 .logo__white {
