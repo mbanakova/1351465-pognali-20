@@ -171,7 +171,7 @@
     height: 80px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     @include font(24px, 24px, 700);
     padding-right: 150px;
     border-top-left-radius: 0;

@@ -112,7 +112,13 @@
 }
 
 .main__catalog-page {
-margin-bottom: 150px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 95px;
+  }
+  @media (min-width: $desktop) {
+    margin-bottom: 150px;
+  }
 }
 
 .main__catalog-grid {
@@ -136,25 +142,12 @@ margin-bottom: 150px;
 
 .main__travellers {
 
+  @media (min-width: $tablet) {
+    padding-bottom: 46px;
+   }
+
   @media (min-width: $desktop) {
     grid-row-start: 1;
-  }
-}
-
-.main__show-travellers {
-
-  @media (min-width: $desktop) {
-    margin-bottom: 71px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    height: 26px;
-  }
-}
-
-.main__pagination {
-
-  @media (min-width: $desktop) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    padding-bottom: 0;
   }
 }

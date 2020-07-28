@@ -4,11 +4,11 @@
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-bottom: 122px;
   }
 
   @media (min-width: $desktop) {
     @include no-fields();
+    padding-bottom: 122px;
     width: 951px;
     display: grid;
     grid-gap: 30px;
@@ -47,6 +47,17 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-bottom: 71px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 26px;
+  }
 }
 
 .travellers__show-link {
@@ -116,8 +127,22 @@
 }
 
 .travellers__pagination {
-  margin-bottom: 0;
+  @include wrapper();
+  margin-bottom: 76px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+    box-sizing: border-box;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }

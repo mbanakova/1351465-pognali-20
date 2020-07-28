@@ -1,5 +1,5 @@
 .user-list {
-  list-style: none;
+  @include ul();
   background-color: $white;
 
   @media (min-width: $desktop) {
