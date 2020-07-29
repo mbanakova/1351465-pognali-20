@@ -11,5 +11,9 @@
 
   &--form {
     color: $basic-blue-h2;
+
+    @media (min-width: $tablet) {
+      @include font(36px, 36px, 700);
+    }
   }
 }

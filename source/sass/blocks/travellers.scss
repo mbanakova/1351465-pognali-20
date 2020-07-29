@@ -1,6 +1,5 @@
 .travellers__wrapper {
   @include wrapper();
-  padding-bottom: 46px;
 
   @media (min-width: $tablet) {
     @include tablet();
@@ -8,8 +7,6 @@
 
   @media (min-width: $desktop) {
     @include no-fields();
-    padding-bottom: 122px;
-    width: 951px;
     display: grid;
     grid-gap: 30px;
   }

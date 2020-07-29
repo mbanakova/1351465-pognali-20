@@ -58,6 +58,13 @@
     @include font(60px, 20px, 700);
   }
 
+  &--form {
+
+    @media (min-width: $tablet) {
+      line-height: 60px;
+    }
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -69,11 +76,11 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
+      height: 8px;
       bottom: -90px;
     }
 
     @media (min-width: $desktop) {
-      height: 8px;
       bottom: -87px;
     }
   }
@@ -97,9 +104,13 @@
       height: 17px;
       background-color: $white;
     }
-  }
 
+    &--form {
+      display: none;
+    }
+  }
 }
+
 .main__form-submit {
   @include button();
   margin: 0;
