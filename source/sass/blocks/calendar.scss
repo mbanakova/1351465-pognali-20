@@ -6,6 +6,11 @@
   align-items: center;
   border-top: 1px solid $calendar-month;
   border-bottom: 1px solid $calendar-month;
+
+  @media (min-width: $tablet) {
+    padding: 25px 14px;
+    max-height: 86px;
+  }
 }
 
 .calendar__previous,
@@ -23,6 +28,10 @@
   padding: 0 3px;
   color: $basic-blue-h2;
   @include font(20px, 20px, 700);
+
+  @media (min-width: $tablet) {
+    @include font(36px, 36px, 400);
+  }
 }
 
 .calendar__next {
@@ -33,7 +42,7 @@
 .calendar__weekdays {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .calendar__weekday {
@@ -46,14 +55,40 @@
   &--day-off {
     color: $weekend;
   }
+
+  @media (min-width: $tablet) {
+    @include font(18px, 18px, 400);
+  }
+}
+
+.calendar__letter {
+  display: none;
+
+  &--day-off {
+    color: $weekend;
+  }
+
+  @media (min-width: $tablet) {
+    display: inline;
+    @include font(14px, 18px, 400);
+    text-align: center;
+  }
 }
 
 .calendar__days {
   display: grid;
-  grid-template-columns: 32px 32px 32px 32px 32px 32px 32px;
-  grid-template-rows: 32px 32px 32px 32px 32px 32px;
+  grid-template-columns: repeat(7, 32px);
   color: $basic-blue-h2;
   @include font(14px, 18px, 400);
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(7, 76px);
+    @include font(18px, 18px, 400);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(7, 148px);
+  }
 }
 
 .calendar__prev-date,
@@ -63,19 +98,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 32px;
+  border: 1px solid $calendar-month;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    min-height: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 15px;
+    min-height: 76px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
-// .calendar__prev-date {
 
-// }
+.calendar__prev-date {
+  opacity: 0.3;
+}
 
-// .calendar__date {
+.calendar__date {
+  opacity: 0.3;
+}
 
-// }
+.calendar__today {
+  border: 2px solid $calendar-orange;
+  box-sizing: border-box;
+  background-color: $basic-blue-h2;
+  color: $white;
+  font-weight: 500;
 
-// .calendar__today {
+  @media (min-width: $tablet) {
+    border: 4px solid $calendar-orange;
+  }
+}
 
-// }
+.calendar__next-date {
+  color: $basic-blue-h2;
+  font-weight: 500;
+  background-color: $modal-close-light;
+}
 
-// .calendar__next-date {
-
-// }
+.calendar__picked-date {
+  border: 1px solid $calendar-month;
+  box-sizing: border-box;
+  background-color: $basic-blue-h2;
+  color: $white;
+  font-weight: 500;
+  opacity: 1;
+}

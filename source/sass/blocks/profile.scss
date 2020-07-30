@@ -46,11 +46,15 @@
   border: 3px solid $special_orange;
   box-sizing: border-box;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $desktop) {
     position: absolute;
     margin-bottom: 0;
     top: -150px;
-    right: 30%;
+    right: 28%;
     width: 95px;
     height: 95px;
     z-index: 50;
@@ -96,6 +100,10 @@
   margin-bottom: 18px;
   border-radius: 50%;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $desktop) {
     position: absolute;
     margin-bottom: 0;
@@ -104,6 +112,8 @@
     height: 190px;
     top: -190px;
     right: 157px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     z-index: 50;
   }
 }
@@ -184,8 +194,14 @@
 
       @media (min-width: $desktop) {
         margin-bottom: 0;
+        max-width: 100%;
+        box-sizing: border-box;
       }
     }
+}
+
+.profile__legend {
+  text-transform: uppercase;
 }
 
 .profile__textarea {
