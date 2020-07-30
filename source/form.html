@@ -183,7 +183,7 @@
 
           <!-- Шаг 1 -->
           <section class="create-plan__step step step--first" id="step--first">
-            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+            <h3 class="step__title">Шаг 1. <br>Даты пребывания</h3>
             <p class="step__text">
               Укажите предпочтительное
               количество попутчиков, которых
@@ -299,7 +299,7 @@
 
           <!-- Шаг 2 -->
           <section class="create-plan__step step step--second" id="step--second">
-            <h3 class="step__title">Шаг 2. Маршрут</h3>
+            <h3 class="step__title">Шаг 2. <br>Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы
               хотели посетить. Это может быть
               одна или сразу несколько.</p>
@@ -318,7 +318,7 @@
             </ul>
 
             <div class="step__dropdown-select">
-              <span class="step__dropdown-list step__dropdown-list--active">Выберите страну</span>
+              <span class="step__dropdown-list">Выберите страну</span>
             </div>
 
             <div class="step__alphabet alphabet">
@@ -419,37 +419,40 @@
             </div>
 
             <button class="step__submit-country" type="button">Добавить страну</button>
-            <a class="step__button button button--bright" href="#step--third">Следующий шаг</a>
-            <a class="step__button button button--pale" href="#step--first">На шаг назад</a>
-          </section>
-
-          <!-- Шаг 3 -->
-          <section class="create-plan__step step step--third" id="step--third">
-            <h3 class="step__title">Шаг 3. Развлечения</h3>
-            <p class="step__text">Наконец, расскажите о своих
-              планахвремяпровождения.
-              Можно писать в свободной
-              форме и ставить тэги.
-            </p>
-
-            <div class="step__plans-textarea">
-              <p class="step__location-name">Босния и Герцеговина</p>
-              <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
-                alt="Флаг Боснии и Герцеговины"> -->
-              <textarea class="step__plan-description" name="1st plan" cols="25" rows="8"
-                placeholder="План действий"></textarea>
+            <div class="step__buttons-wrap">
+              <a class="step__button button button--bright" href="#step--third">Следующий шаг</a>
+              <a class="step__button step__button--back button button--pale" href="#step--first">На шаг назад</a>
             </div>
-
-            <div class="step__plans-textarea">
-              <p class="step__location-name">Чехия</p>
-              <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии"> -->
-              <textarea class="step__plan-description" name="2nd plan" cols="25"
-                rows="8">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            </div>
-            <button class="main__form-submit button button--bright" type="submit">Отправить</button>
-            <a class="step__button button button--pale" href="#step--second">На шаг назад</a>
-          </section>
         </div>
+      </section>
+
+      <!-- Шаг 3 -->
+      <section class="create-plan__step step step--third" id="step--third">
+        <h3 class="step__title">Шаг 3. <br>Развлечения</h3>
+        <p class="step__text">Наконец, расскажите о своих
+          планахвремяпровождения.
+          Можно писать в свободной
+          форме и ставить тэги.
+        </p>
+
+        <div class="step__plans-textarea">
+          <p class="step__location-name">Босния и Герцеговина</p>
+          <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
+                alt="Флаг Боснии и Герцеговины"> -->
+          <textarea class="step__plan-description" name="1st plan" cols="25" rows="8"
+            placeholder="План действий"></textarea>
+        </div>
+
+        <div class="step__plans-textarea">
+          <p class="step__location-name">Чехия</p>
+          <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии"> -->
+          <textarea class="step__plan-description" name="2nd plan" cols="25"
+            rows="8">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+        </div>
+        <button class="main__form-submit button button--bright" type="submit">Отправить</button>
+        <a class="step__button button button--pale" href="#step--second">На шаг назад</a>
+      </section>
+      </div>
       </section>
     </form>
   </main>

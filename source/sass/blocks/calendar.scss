@@ -101,6 +101,7 @@
   min-height: 32px;
   border: 1px solid $calendar-month;
   box-sizing: border-box;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     min-height: 70px;
