@@ -61,10 +61,12 @@
   margin-bottom: 20px;
   padding-right: 4px;
   font-weight: 400;
+  br {
+    display: none;
+  }
 
   @media (min-width: $tablet) {
     @include font(20px, 24px, 400);
-    max-width: 400px;
     margin-bottom: 62px;
 
     &::before {
@@ -81,8 +83,10 @@
   @media (min-width: $desktop) {
     grid-area: text;
     @include font(20px, 24px, 400);
-    max-width: 577px;
-    margin-bottom: 117px;
+    margin-bottom: 135px;
+    br {
+      display: block;
+    }
 
     &::before {
       position: absolute;
@@ -100,14 +104,86 @@
   @include wrapper();
   padding: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    padding: 0;
+    width: 500px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
 }
 
 .step__location-name {
+  position: relative;
   @include no-fields();
   padding-left: 10px;
   margin-bottom: 18px;
   color: $basic-blue-h2;
   @include font(18px, 18px, 500);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $basic-blue-h2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -4px;
+    left: 170px;
+    width: 35px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: $red;
+  }
+
+  @media (min-width: $tablet) {
+    @include font(30px, 30px, 700);
+    margin-bottom: 38px;
+    padding-left: 0;
+
+    &::before {
+      top: 8px;
+      left: 520px;
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      top: -10px;
+      left: 420px;
+      width: 70px;
+      height: 47px;
+    }
+  }
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+
+    &::before {
+      top: 8px;
+      left: 770px;
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      top: -10px;
+      left: 830px;
+      width: 70px;
+      height: 47px;
+    }
+  }
 }
 
 .step__plan-description {
@@ -125,6 +201,20 @@
     padding: 0 10px;
     color: $special-grey;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 53px;
+    @include font(20px, 20px, 400);
+    width: 500px;
+    height: 140px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+    width: 730px;
+    min-height: 140px;
   }
 }
 
@@ -214,9 +304,17 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
+  border: none;
+  font-family: $the-only-one;
 
   &:first-of-type {
     margin-bottom: 8px;
+
+    @media (min-width: $desktop) {
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
   }
 
   &:last-of-type {
@@ -224,6 +322,16 @@
     @media (min-width: $desktop) {
       margin-left: auto;
       margin-right: 5px;
+    }
+  }
+
+  &:only-of-type {
+    margin-bottom: 8px;
+
+    @media (min-width: $desktop) {
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: 0;
     }
   }
 

@@ -24,6 +24,17 @@
       margin-bottom: 0;
     }
   }
+
+  &--days {
+
+    @media (min-width: $tablet) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .fieldset-number__span {

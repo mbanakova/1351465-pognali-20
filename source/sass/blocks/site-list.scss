@@ -56,12 +56,12 @@
     &::before {
     position: absolute;
     content: attr(data-hover);
-    top: 110%;
+    top: 100%;
     @include font(20px, 20px, 500);
     }
 
     &:hover {
-      transform: translateY(-110%);
+      transform: translateY(-100%);
       color: $basic-yellow;
     }
 

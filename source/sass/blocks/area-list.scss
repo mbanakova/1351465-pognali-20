@@ -13,4 +13,17 @@
     opacity: 0.6;
     transition: 0.3s ease-in-out;
   }
+
+
+  @media (min-width: $tablet) {
+    @include font(20px, 20px, 700);
+  }
+}
+
+.area-list__item {
+  margin-right: 25px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
