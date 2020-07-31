@@ -42,7 +42,7 @@
     }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 285px 348px 170px 105px;
+    grid-template-columns: 285px 390px 170px auto;
     grid-template-rows: min-content;
   }
 }
@@ -107,7 +107,7 @@
   @media (min-width: $tablet) {
     padding-left: 0;
     margin-left: 33px;
-    max-width: 300px;
+    min-width: 300px;
     @include font(30px, 30px, 700);
 
     &--offline::after,
@@ -229,7 +229,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 20px 45px 62px;
+    margin: 0 20px 20px 62px;
   }
 }
 

@@ -41,7 +41,7 @@ const renderCalendar = () => {
 
   for (let i = 1; i <= lastDay; i++) {
     if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-      days += `<div class="calendar__today" style="background-color:#1d2e5b;color:#ffffff;">${i}</div>`;
+      days += `<div class="calendar__today">${i}</div>`;
     } else {
       days += `<div class="calendar__date">${i}</div>`;
     }
@@ -68,5 +68,14 @@ renderCalendar();
 
 document.getElementById('start-date').value = +document.querySelector('.calendar__today').textContent + ' ' + document.querySelector('.js-month').textContent;
 
-// 34 июля :D
-document.getElementById('end-date').value = +document.querySelector('.calendar__today').textContent + 3 + ' ' + document.querySelector('.js-month').textContent;
+
+let picks = document.querySelectorAll('.calendar__date, .calendar__today, .calendar__next-date').forEach(pick => {
+  pick.addEventListener('click', event => {
+
+    pick.classList.toggle('calendar__picked-date');
+    console.log(pick.textContent);
+    document.getElementById('end-date').value = pick.textContent + ' ' + document.querySelector('.js-month').textContent;
+
+  });
+});
+

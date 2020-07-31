@@ -1,3 +1,34 @@
 .bullets {
   color: $basic-blue-h2;
+  display: flex;
+  justify-content: space-between;
+  min-width: 47px;
+
+  @media (min-width: $tablet) {
+    @include font(28px, 28px, 700);
+    min-width: 76px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 6px 1fr;
+    grid-column-gap: 36px;
+    grid-row-gap: 20px;
+  }
+}
+
+.bullets__text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    @include font(20px, 24px, 400);
+    text-transform: uppercase;
+    opacity: 0.6;
+    color: $black;
+
+    &--progress {
+      opacity: 1;
+    }
+  }
 }

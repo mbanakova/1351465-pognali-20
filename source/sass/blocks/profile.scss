@@ -1,16 +1,42 @@
 .profile__wrapper {
+  position: relative;
   @include wrapper();
+  padding-top: 20px;
   padding-bottom: 34px;
-}
+  display: grid;
+  grid-template-columns: 135px 135px;
+  grid-template-areas:
+  "skill photo"
+  "link link"
+  "tags tags"
+  "transport transport";
+  justify-items: center;
 
-.profile__top-wrapper {
-  margin-top: 20px;
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-around;
+  @media (min-width: $tablet) {
+    @include tablet();
+    padding: 65px 75px 48px;
+    width: 618px;
+    grid-template-columns: 135px 1fr 135px;
+    grid-template-areas:
+    "skill transport photo"
+    "link link link"
+    "tags tags tags";
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    width: 1254px;
+    padding: 73px 60px 55px 124px;
+    grid-template-columns: 1fr 384px ;
+    grid-column-gap: 140px;
+    grid-template-areas:
+    "tags transport";
+  }
 }
 
 .profile__skill {
+  grid-area: skill;
+  margin-bottom: 18px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -19,6 +45,20 @@
   justify-content: center;
   border: 3px solid $special_orange;
   box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    margin-bottom: 0;
+    top: -150px;
+    right: 28%;
+    width: 95px;
+    height: 95px;
+    z-index: 50;
+  }
 }
 
 .profile__skill-points {
@@ -26,6 +66,10 @@
   @include font(38px, 38px, 700);
   text-align: center;
   color: $basic-blue;
+
+  @media (min-width: $desktop) {
+    color: $white;
+  }
 }
 
 .profile__skill-lvl {
@@ -45,18 +89,74 @@
     background-color: $special-grey;
     opacity: 0.3;
   }
+
+  @media (min-width: $desktop) {
+    color: $white;
+  }
 }
 
 .profile__profile-pic {
+  grid-area: photo;
+  margin-bottom: 18px;
   border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    margin-bottom: 0;
+    border-radius: 12px;
+    width: 190px;
+    height: 190px;
+    top: -190px;
+    right: 157px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 50;
+  }
 }
 
 .profile__change-pic {
+  grid-area: link;
   margin-bottom: 25px;
+  padding: 13px 30px 11px;
   display: block;
+  width: 100%;
+  box-sizing: border-box;
+  @include font(20px, 18px, 500);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 52px;
+    padding: 22px 30px 20px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    margin-bottom: 0;
+    padding-top: 16px;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 190px;
+    height: 47px;
+    top: 0;
+    right: 157px;
+    z-index: 50;
+  }
+}
+
+.profile__span {
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .profile__fieldset {
+  grid-area: tags;
   margin: 0 0 18px 0;
   padding: 25px;
   @include font(16px, 18px, 700);
@@ -64,11 +164,44 @@
   color: $basic-blue-h2;
   border: 1px solid $alphabet-table;
   border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+    &:first-of-type {
+      @media (min-width: $tablet) {
+        margin-bottom: 0;
+        padding: 36px 40px 47px;
+        @include font(20px, 20px, 500);
+        max-height: 100px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-bottom: 0;
+      }
+    }
 
     &:last-of-type {
+      grid-area: transport;
       margin-bottom: 0;
       padding: 15px;
+      max-width: 308px;
+
+      @media (min-width: $tablet) {
+        @include font(20px, 20px, 500);
+        max-height: 100px;
+        margin-bottom: 41px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-bottom: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
     }
+}
+
+.profile__legend {
+  text-transform: uppercase;
 }
 
 .profile__textarea {
@@ -81,18 +214,20 @@
   background-color: $basic-blue-light;
   border: none;
   resize: none;
+
+  @media (min-width: $tablet) {
+    @include font(20px, 22px, 400);
+  }
 }
 
 .profile__transport-list {
   @include ul();
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .profile__transport-img {
-  width: 32px;
-  height: 32px;
   background-color: $white;
   border-radius: 50%;
 }
@@ -114,5 +249,9 @@
   height: 32px;
   background-color: $white;
   border-radius: 50%;
-}
 
+  @media (min-width: $tablet) {
+    width: 44px;
+    height: 44px;
+  }
+}

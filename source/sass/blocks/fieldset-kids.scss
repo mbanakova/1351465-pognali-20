@@ -15,6 +15,12 @@
   color: $basic-blue-h2;
   @include font(15px, 15px, 400);
 
+  @media (min-width: $tablet) {
+    padding-left: 58px;
+    text-transform: uppercase;
+    @include font(20px, 20px, 500);
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -26,6 +32,11 @@
     border: 1px solid $alphabet-table;
     box-sizing: border-box;
     border-radius: 4px;
+
+    @media (min-width: $tablet) {
+      height: 36px;
+      width: 36px;
+    }
   }
 
   &::after {
@@ -42,6 +53,13 @@
     transform: rotate(-45deg);
     display: none;
     transition: 0.2s ease-in-out;
+
+    @media (min-width: $tablet) {
+      top: 4px;
+      left: 13px;
+      height: 8px;
+      width: 13px;
+    }
   }
 }
 .fieldset-kids__input:checked + .fieldset-kids__label::after {

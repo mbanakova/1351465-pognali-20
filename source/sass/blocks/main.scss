@@ -58,6 +58,13 @@
     @include font(60px, 20px, 700);
   }
 
+  &--form {
+
+    @media (min-width: $tablet) {
+      line-height: 60px;
+    }
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -69,11 +76,11 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
+      height: 8px;
       bottom: -90px;
     }
 
     @media (min-width: $desktop) {
-      height: 8px;
       bottom: -87px;
     }
   }
@@ -97,9 +104,13 @@
       height: 17px;
       background-color: $white;
     }
-  }
 
+    &--form {
+      display: none;
+    }
+  }
 }
+
 .main__form-submit {
   @include button();
   margin: 0;
@@ -149,5 +160,109 @@
   @media (min-width: $desktop) {
     grid-row-start: 1;
     padding-bottom: 0;
+  }
+}
+.main__link-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-bottom: 71px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 26px;
+  }
+}
+
+.main__show-link {
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 33px;
+  @include font(17px, 30px, 700);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $basic-blue-h2;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 52px;
+    padding-left: 51px;
+    @include font(20px, 20px, 700);
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+
+    @media (min-width: $tablet) {
+      top: 8px;
+      width: 26px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 8px;
+    width: 2px;
+    height: 18px;
+    background-color: $basic-blue-h2;
+    border-radius: 2px;
+
+    @media (min-width: $tablet) {
+      top: -3px;
+      left: 12px;
+      height: 26px;
+    }
+  }
+}
+
+.main__pagination {
+  @include wrapper();
+  margin-bottom: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+    box-sizing: border-box;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }

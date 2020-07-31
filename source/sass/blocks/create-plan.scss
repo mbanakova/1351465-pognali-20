@@ -11,56 +11,69 @@
   @include wrapper();
   padding-top: 30px;
   padding-bottom: 73px;
+
+  @media (min-width: $tablet) {
+    @include tablet();
+    width: 618px;
+    padding: 53px 75px 123px;
+  }
+
+  @media (min-width: $desktop) {
+    @include desktop();
+    padding: 55px 60px 120px;
+  }
 }
 
 .create-plan__top-wrapper {
   margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: $basic-blue-h2;
   @include font(24px, 24px, 700);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    margin-bottom: 54px;
+  }
 }
 
 .create-plan__title {
   @include no-fields();
 }
 
-.create-plan__step {
-  margin-bottom: 10px;
+.create-plan__bullets {
+  margin-right: 13px;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  @media (min-width: $tablet) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: -266px;
+    left: 932px;
+    z-index: 50;
   }
 }
 
-.step__plans-textarea {
-  @include wrapper();
-  padding: 0;
-  margin-bottom: 23px;
-}
+.create-plan__step {
+  margin-bottom: 10px;
 
-.step__location-name {
-  @include no-fields();
-  padding-left: 10px;
-  margin-bottom: 18px;
-  color: $basic-blue-h2;
-  @include font(18px, 18px, 500);
-}
+  @media (min-width: $tablet) {
+    margin-bottom: 39px;
+  }
 
-.step__plan-description {
-  padding: 13px;
-  width: auto;
-  resize: none;
-  font-family: $the-only-one;
-  @include font(16px, 22px, 400);
-  color: $special-grey;
-  border: 1px solid $alphabet-table;
-  border-radius: 4px;
-  box-sizing: border-box;
+  @media (min-width: $desktop) {
+    position: relative;
+    margin-bottom: 44px;
+  }
 
-  &::placeholder {
-    padding: 0 10px;
-    color: $special-grey;
-    opacity: 0.3;
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }

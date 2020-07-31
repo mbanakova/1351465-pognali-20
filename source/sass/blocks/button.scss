@@ -15,6 +15,15 @@
 
 &--bright {
   background-color: $basic-yellow;
+
+  &:hover {
+    background-color: $special_yellow_dark;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    transition: 0.3s ease-in-out;
+  }
 }
 
 &--basic {

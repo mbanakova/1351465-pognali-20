@@ -71,8 +71,8 @@
   <main class="main">
     <div class="main__top">
       <div class="main__wrapper">
-        <h1 class="main__title">Направления</h1>
-        <a class="main__link-return" href="index.html">На главную</a>
+        <h1 class="main__title main__title--form">Направления</h1>
+        <a class="main__link-return main__link-return--form" href="index.html">На главную</a>
       </div>
     </div>
 
@@ -85,14 +85,14 @@
         <div class="profile__wrapper">
           <h2 class="visually-hidden">Профиль пользователя</h2>
 
-          <div class="profile__top-wrapper">
-            <div class="profile__skill">
-              <span class="profile__skill-points">80</span>
-              <span class="profile__skill-lvl">level</span>
-            </div>
-            <img class="profile__profile-pic" src="/img/demin-mobile@1x.jpg" width="100" height="100" alt="Петя Демин">
+          <div class="profile__skill">
+            <span class="profile__skill-points">80</span>
+            <span class="profile__skill-lvl">level</span>
           </div>
-          <a class="profile__change-pic button button--basic" href="#">Сменить фото</a>
+          <img class="profile__profile-pic" src="https://via.placeholder.com/100x100" width="100" height="100"
+            alt="Петя Демин">
+          <a class="profile__change-pic button button--basic" href="#"><span class="profile__span">Сменить</span>
+            фото</a>
 
           <!-- Тэги -->
           <fieldset class="profile__fieldset">
@@ -108,25 +108,29 @@
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="avia" checked>
-                  <img class="transport-icon" src="/img/plane.svg" width="16" height="16" alt="Самолёт">
+                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="16" height="16"
+                    alt="Самолёт">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="bus" checked>
-                  <img class="transport-icon" src="/img/bus.svg" width="21" height="21" alt="Автобус">
+                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
+                    alt="Автобус">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="bycicle">
-                  <img class="transport-icon" src="/img/bike.svg" width="21" height="21" alt="Велосипед">
+                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
+                    alt="Велосипед">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="on foot" checked>
-                  <img class="transport-icon" src="/img/run.svg" width="21" height="21" alt="На своих двоих">
+                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
+                    alt="На своих двоих">
                 </label>
               </li>
             </ul>
@@ -142,16 +146,20 @@
 
           <ol class="user-plans__list trip-card">
             <li class="trip-card__item">
-              <h3 class="trip-card__header">. Франция, Италия</h3>
-              <p class="trip-card__travellers">3 попутчика</p>
-              <p class="trip-card__dates">26 мар — 29 мар</p>
-              <a class="trip-card__change-button" href="#">Изменить</a>
+              <h3 class="trip-card__header">Франция, Италия</h3>
+              <div class="trip-card__bottom">
+                <p class="trip-card__travellers">3 попутчика</p>
+                <p class="trip-card__dates">26 мар — 29 мар</p>
+                <a class="trip-card__change-button" href="#">Изменить</a>
+              </div>
             </li>
             <li class="trip-card__item">
-              <h3 class="trip-card__header">. Таиланд, Индонезия</h3>
-              <p class="trip-card__travellers">1 попутчик</p>
-              <p class="trip-card__dates">1 июл — 15 июл</p>
-              <a class="trip-card__change-button" href="#">Изменить</a>
+              <h3 class="trip-card__header">Таиланд, Индонезия</h3>
+              <div class="trip-card__bottom">
+                <p class="trip-card__travellers">1 попутчик</p>
+                <p class="trip-card__dates">1 июл — 15 июл</p>
+                <a class="trip-card__change-button" href="#">Изменить</a>
+              </div>
             </li>
           </ol>
         </div>
@@ -165,26 +173,27 @@
             <h2 class="create-plan__title section-title section-title--form">Добавить план:</h2>
             <div class="create-plan__bullets bullets">
               <span class="bullets__bullet bullets__bullet--progress">&#8226;</span>
+              <span class="bullets__text bullets__text--progress">Даты</span>
               <span class="bullets__bullet">&#8226;</span>
+              <span class="bullets__text">Маршрут</span>
               <span class="bullets__bullet">&#8226;</span>
+              <span class="bullets__text">Развлечения</span>
             </div>
           </div>
 
           <!-- Шаг 1 -->
           <section class="create-plan__step step step--first" id="step--first">
-            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+            <h3 class="step__title">Шаг 1. <br>Даты пребывания</h3>
             <p class="step__text">
-              Укажите предпочтительное
-              количество попутчиков, которых
-              вы хотели бы позвать в поездку
-              и ее предполагаемую
-              длительность.</p>
+              Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы позвать
+              в поездку и ее предполагаемую длительность.</p>
 
             <!-- Попутчики, количество  -->
             <fieldset class="step__fieldset fieldset-number">
               <label class="fieldset-number__label fieldset-number__label--mates" for="mates"><span
                   class="fieldset-number__span">Ищу попутчиков:</span><span
-                  class="fieldset-number__span fieldset-number__span--pale">Чел.</span></label>
+                  class="fieldset-number__span fieldset-number__span--pale">Чел.</span>
+              </label>
               <div class="fieldset-number__wrapper">
                 <button class="fieldset-number__less fieldset-number__less--mates" type="button"
                   aria-label="minus"></button>
@@ -198,12 +207,13 @@
             <fieldset class="step__fieldset fieldset-number">
               <label class="fieldset-number__label fieldset-number__label--days" for="days"><span
                   class="fieldset-number__span">Длительность:</span><span
-                  class="fieldset-number__span fieldset-number__span--pale">Дн.</span></label>
+                  class="fieldset-number__span fieldset-number__span--pale">Дн.</span>
+              </label>
               <div class="fieldset-number__wrapper">
                 <button class="fieldset-number__less fieldset-number__less--days" type="button"
                   aria-label="minus"></button>
                 <input class="fieldset-number__input" type="text" name="days" id="days" value="2">
-                <button class="fieldset-number__more fieldset-number__more--days " type="button"
+                <button class="fieldset-number__more fieldset-number__more--days" type="button"
                   aria-label="plus"></button>
               </div>
             </fieldset>
@@ -232,13 +242,15 @@
                   <span class="calendar__next">&#62;</span>
                 </div>
                 <div class="calendar__weekdays">
-                  <div class="calendar__weekday">П</div>
-                  <div class="calendar__weekday">В</div>
-                  <div class="calendar__weekday">С</div>
-                  <div class="calendar__weekday">Ч</div>
-                  <div class="calendar__weekday">П</div>
-                  <div class="calendar__weekday calendar__weekday--day-off">С</div>
-                  <div class="calendar__weekday calendar__weekday--day-off">В</div>
+                  <div class="calendar__weekday">П<span class="calendar__letter">н</span></div>
+                  <div class="calendar__weekday">В<span class="calendar__letter">т</span></div>
+                  <div class="calendar__weekday">С<span class="calendar__letter">р</span></div>
+                  <div class="calendar__weekday">Ч<span class="calendar__letter">т</span></div>
+                  <div class="calendar__weekday">П<span class="calendar__letter">т</span></div>
+                  <div class="calendar__weekday calendar__weekday--day-off">С<span class="calendar__letter">б</span>
+                  </div>
+                  <div class="calendar__weekday calendar__weekday--day-off">В<span class="calendar__letter">с</span>
+                  </div>
                 </div>
                 <div class="calendar__days">
                   <div class="calendar__prev-date">29</div>
@@ -284,9 +296,9 @@
 
           <!-- Шаг 2 -->
           <section class="create-plan__step step step--second" id="step--second">
-            <h3 class="step__title">Шаг 2. Маршрут</h3>
+            <h3 class="step__title">Шаг 2. <br>Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы
-              хотели посетить. Это может быть
+              хотели посетить. <br>Это может быть
               одна или сразу несколько.</p>
 
             <ul class="step__countries-list">
@@ -303,7 +315,7 @@
             </ul>
 
             <div class="step__dropdown-select">
-              <span class="step__dropdown-list step__dropdown-list--active">Выберите страну</span>
+              <span class="step__dropdown-list">Выберите страну</span>
             </div>
 
             <div class="step__alphabet alphabet">
@@ -404,35 +416,35 @@
             </div>
 
             <button class="step__submit-country" type="button">Добавить страну</button>
-            <a class="step__button button button--bright" href="#step--third">Следующий шаг</a>
-            <a class="step__button button button--pale" href="#step--first">На шаг назад</a>
+            <div class="step__buttons-wrap">
+              <a class="step__button button button--bright" href="#step--third">Следующий шаг</a>
+              <a class="step__button step__button--back button button--pale" href="#step--first">На шаг назад</a>
+            </div>
           </section>
 
           <!-- Шаг 3 -->
           <section class="create-plan__step step step--third" id="step--third">
-            <h3 class="step__title">Шаг 3. Развлечения</h3>
-            <p class="step__text">Наконец, расскажите о своих
-              планахвремяпровождения.
-              Можно писать в свободной
-              форме и ставить тэги.
+            <h3 class="step__title">Шаг 3. <br>Развлечения</h3>
+            <p class="step__text">Наконец, расскажите о своих планах времяпровождения.
+              <br>Можно писать в свободной форме и ставить тэги.
             </p>
 
             <div class="step__plans-textarea">
               <p class="step__location-name">Босния и Герцеговина</p>
-              <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24"
-                alt="Флаг Боснии и Герцеговины"> -->
               <textarea class="step__plan-description" name="1st plan" cols="25" rows="8"
                 placeholder="План действий"></textarea>
             </div>
 
             <div class="step__plans-textarea">
               <p class="step__location-name">Чехия</p>
-              <!-- <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии"> -->
               <textarea class="step__plan-description" name="2nd plan" cols="25"
                 rows="8">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
-            <button class="main__form-submit button button--bright" type="submit">Отправить</button>
-            <a class="step__button button button--pale" href="#step--second">На шаг назад</a>
+            <div class="step__buttons-wrap">
+              <button class="step__button button button--bright" type="submit">Отправить</button>
+              <a class="step__button step__button--back button button--pale" href="#step--second">На
+                шаг назад</a>
+            </div>
           </section>
         </div>
       </section>
@@ -444,7 +456,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <a class="footer__logo logo logo--blue" href="#">
-        <img src="/img/logo-mobile-blue@1x.png" width="96" height="15" alt="logo">
+        <img src="https://via.placeholder.com/96x165" width="96" height="15" alt="logo">
       </a>
 
       <ul class="footer__social social">
@@ -469,6 +481,7 @@
 
   <script src="js/navigation.js"></script>
   <script src="js/calendar.js"></script>
+  <script src="js/form-numbers.js"></script>
 </body>
 
 </html>
