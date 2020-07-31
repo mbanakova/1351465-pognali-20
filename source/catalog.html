@@ -403,7 +403,7 @@
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="#">Мальдивы</a></li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link"="#">Мальта</a></li>
+              <a class="country-filter__letter-link" href="#">Мальта</a></li>
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="#">Марокко</a></li>
           </ul>
@@ -603,8 +603,8 @@
           <form class="tourists-filter__form" action="https://echo.htmlacademy.ru" method="get">
 
             <!-- Хобби -->
-            <fieldset class="tourists-filter__fieldset">
-              <input class="tourists-filter__accordion" type="checkbox" id="accordion-hobby">
+            <div class="tourists-filter__fieldset">
+              <input class="tourists-filter__accordion" type="checkbox" id="accordion-hobby" checked>
               <label class="tourists-filter__legend" for="accordion-hobby">Хобби</label>
               <ul class="tourists-filter__group">
                 <li class="tourists-filter__item">
@@ -620,10 +620,10 @@
                   <label class="tourists-filter__label" for="coach">Диван</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
 
             <!-- Музыка -->
-            <fieldset class="tourists-filter__fieldset">
+            <div class="tourists-filter__fieldset">
               <input class="tourists-filter__accordion" type="checkbox" id="accordion-music" checked>
               <label class="tourists-filter__legend" for="accordion-music">Музыка</label>
               <ul class="tourists-filter__group">
@@ -640,11 +640,11 @@
                   <label class="tourists-filter__label" for="eurodance">Евроденс</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
 
             <!-- Еда -->
-            <fieldset class="tourists-filter__fieldset">
-              <input class="tourists-filter__accordion" type="checkbox" id="accordion-food">
+            <div class="tourists-filter__fieldset">
+              <input class="tourists-filter__accordion" type="checkbox" id="accordion-food" checked>
               <label class="tourists-filter__legend" for="accordion-food">Еда</label>
               <ul class="tourists-filter__group">
                 <li class="tourists-filter__item">
@@ -660,10 +660,10 @@
                   <label class="tourists-filter__label" for="herbivorous">Веган-сыроед</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
 
             <!-- Транспорт -->
-            <fieldset class="tourists-filter__fieldset">
+            <div class="tourists-filter__fieldset">
               <input class="tourists-filter__accordion" type="checkbox" id="accordion-transport" checked>
               <label class="tourists-filter__legend" for="accordion-transport">Транспорт</label>
               <ul class="tourists-filter__group tourists-filter__group--horizontal">
@@ -688,10 +688,10 @@
                       src="https://via.placeholder.com/20x20" width="15" height="15" alt="На своих двоих"></label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
 
             <!-- Уровень -->
-            <fieldset class="tourists-filter__fieldset">
+            <div class="tourists-filter__fieldset">
               <input class="tourists-filter__accordion" type="checkbox" id="accordion-level" checked>
               <label class="tourists-filter__legend" for="accordion-level">Левел</label>
               <div class="tourists-filter__range-cells range-cells">
@@ -709,7 +709,7 @@
                   <button class="tourists-filter__button-right" type="button" id="range-right-button"></button>
                 </div>
               </div>
-            </fieldset>
+            </div>
 
             <div class="tourists-filter__submit-wrapper">
               <button class="tourists-filter__submit button button--pale" type="submit">Показать</button>
@@ -995,11 +995,11 @@
         </div>
       </section>
 
-      <div class="travellers__link-wrap">
-        <a class="travellers__show-link" href="#">показать еще</a>
+      <div class="main__link-wrap">
+        <a class="main__show-link" href="#">показать еще</a>
       </div>
 
-      <div class="travellers__pagination pagination">
+      <div class="main__pagination pagination">
         <div class="pagination__numbers">
           <a class="pagination__link pagination__link--active" href="#">1</a>
           <a class="pagination__link" href="#">2</a>
