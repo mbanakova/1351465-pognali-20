@@ -158,6 +158,13 @@
     flex-wrap: wrap;
   }
 }
+.fellow__transport {
+  position: relative;
+
+  &:hover > .tooltip {
+    opacity: 1;
+  }
+}
 
 .fellow__transport-list {
   @include  ul();
@@ -171,3 +178,12 @@
     width: 123px;
   }
 }
+
+// .fellow__tooltip {
+//   position: absolute;
+//   content: "";
+//   top: 100%;
+//   left: 50%;
+//   transform: translate(-50%, 25%);
+//   z-index: 10;
+// }

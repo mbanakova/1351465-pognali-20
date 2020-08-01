@@ -184,7 +184,12 @@
 }
 
 .tourists-filter__item {
+  position: relative;
   margin-bottom: 12px;
+
+  &:hover > .tooltip {
+    opacity: 1;
+  }
 
   &--img {
     width: 32px;

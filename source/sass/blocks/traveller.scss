@@ -389,6 +389,7 @@
 }
 
 .traveller__transport {
+  position: relative;
   margin-right: 1px;
   display: flex;
   justify-content: center;
@@ -398,9 +399,14 @@
   background-color: $modal-close-light;
   border-radius: 50%;
 
+  &:hover > .tooltip {
+    opacity: 1;
+    overflow: visible;
+  }
+
   @media (min-width: $tablet) {
     background-color: transparent;
-    }
+  }
 }
 
 .traveller__skill {

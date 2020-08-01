@@ -224,7 +224,7 @@
     }
 
     &::after {
-      top: 40px;
+      top: 39px;
       left: 232px;
       width: 3px;
       height: 23px;
@@ -314,6 +314,10 @@
   font-weight: 400;
   text-transform: none;
   white-space: nowrap;
+
+  &--hide {
+    display: none;
+  }
 
   &:hover {
     color: $basic-blue-h2;

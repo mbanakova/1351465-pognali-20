@@ -250,8 +250,20 @@
   background-color: $white;
   border-radius: 50%;
 
+  &:hover > .tooltip {
+    opacity: 1;
+  }
+
   @media (min-width: $tablet) {
     width: 44px;
     height: 44px;
   }
 }
+// .profile__tooltip {
+//   position: absolute;
+//   content: "";
+//   top: 100%;
+//   left: 50%;
+//   transform: translate(-50%, 25%);
+//   z-index: 10;
+// }

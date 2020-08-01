@@ -84,10 +84,10 @@
           <h2 class="country-filter__title">Фильтрация по странам:</h2>
 
           <ul class="country-filter__area-list country-filter__area-list--hidden area-list">
-            <li class="area-list__item"><a class="area-list__link area-list__link--active" href="#">Европа</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Азия</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Америка</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Острова</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="europe">Европа</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="asia">Азия</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="america">Америка</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="islands">Острова</a></li>
           </ul>
 
           <div class="country-filter__toggle">
@@ -180,13 +180,13 @@
               <a class="country-filter__letter-link" href="/australia">Австралия</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/austria">Австрия</a>
+              <a class="country-filter__letter-link europe" href="/europe/austria">Австрия</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/azerbaijan">Азербайджан</a>
+              <a class="country-filter__letter-link asia" href="/asia/azerbaijan">Азербайджан</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/albania">Албания</a>
+              <a class="country-filter__letter-link europe" href="/europe/albania">Албания</a>
             </li>
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="/africa/algeria">Алжир</a>
@@ -195,20 +195,20 @@
               <a class="country-filter__letter-link" href="/africa/albania">Ангола</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/andorra">Андорра</a>
+              <a class="country-filter__letter-link europe" href="/europe/andorra">Андорра</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/islands/antigua">Антигуа
+              <a class="country-filter__letter-link islands" href="/islands/antigua">Антигуа
                 и Барбуда</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/america/argentina">Аргентина</a>
+              <a class="country-filter__letter-link america" href="/america/argentina">Аргентина</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/armenia">Армения</a>
+              <a class="country-filter__letter-link asia" href="/asia/armenia">Армения</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/afganistan">Афганистан</a>
+              <a class="country-filter__letter-link asia" href="/asia/afganistan">Афганистан</a>
             </li>
           </ul>
 
@@ -671,21 +671,33 @@
                   <input class="tourists-filter__input" type="checkbox" name="avia" id="avia">
                   <label class="tourists-filter__transport-label" for="avia"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="16" height="16" alt="Самолёт"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Авиаперелёт</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="bus" id="bus" checked>
                   <label class="tourists-filter__transport-label" for="bus"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="19" height="19" alt="Автобус"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Автотранспорт</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="bicycle" id="bicycle">
                   <label class="tourists-filter__transport-label" for="bicycle"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="15" height="13" alt="Велосипед"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Велосипед</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="feet" id="feet" checked>
                   <label class="tourists-filter__transport-label" for="feet"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="15" height="15" alt="На своих двоих"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Пешком</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -766,18 +778,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -833,18 +857,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -900,18 +936,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -965,18 +1013,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 

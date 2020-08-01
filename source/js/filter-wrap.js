@@ -53,3 +53,23 @@ button.addEventListener('click', function (evt) {
   list.classList.toggle('country-filter__large-screen--hidden');
   button.classList.toggle('country-filter__unwrap--hidden');
 });
+
+
+
+let container = document.querySelectorAll('.country-filter__letter-group--active .country-filter__letter-link');
+let locations = document.querySelector('.area-list');
+
+locations.addEventListener('click', event => {
+
+  if (event.target.tagName !== 'A') return false;
+
+  let filterClass = event.target.dataset['area'];
+
+  container.forEach(elem => {
+    elem.classList.remove('country-filter__letter-link--hide');
+
+    if (!elem.classList.contains(filterClass)) {
+      elem.classList.add('country-filter__letter-link--hide');
+    }
+  });
+});
