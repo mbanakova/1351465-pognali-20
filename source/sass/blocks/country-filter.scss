@@ -54,14 +54,15 @@
   "list .";
 
   @media (min-width: $tablet) {
-    margin-bottom: 45px;
+    // margin-bottom: 45px;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 74px;
+    // margin-bottom: 74px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -161,6 +162,7 @@
 
   @media (min-width: $tablet) {
     padding: 0;
+    margin-top: 45px;
     margin-bottom: 5px;
   }
 }
@@ -255,7 +257,12 @@
 .country-filter__large-screen {
   grid-area: countries;
 
+  @media (min-width: $tablet) {
+    margin-top: 45px;
+  }
+
   @media (min-width: $desktop) {
+    margin-top: 74px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-start: 1;

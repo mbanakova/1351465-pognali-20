@@ -40,13 +40,13 @@
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__link" href="tel:88005558628">
-            <div class="user-list__icon"></div>
+            <div class="user-list__icon user-list__icon--phone"></div>
             <div class="user-list__contact">8 800 555-86-28</div>
           </a>
         </li>
         <li class="user-list__item">
           <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
-            <div class="user-list__icon"></div>
+            <div class="user-list__icon user-list__icon--email"></div>
             <div class="user-list__contact">mail@htmlacademy.ru</div>
           </a>
         </li>
@@ -694,19 +694,22 @@
             <div class="tourists-filter__fieldset">
               <input class="tourists-filter__accordion" type="checkbox" id="accordion-level" checked>
               <label class="tourists-filter__legend" for="accordion-level">Левел</label>
-              <div class="tourists-filter__range-cells range-cells">
-                <input class="range-cells__input-left" type="number" min="0" max="100" name="min-lvl"
-                  id="range-left-cell" placeholder="30">
-                <label class="visually-hidden" for="range-left-cell">От</label>
-                <input class="range-cells__input-right" type="number" min="0" max="100" name="max-lvl"
-                  id="range-right-cell" placeholder="100">
-                <label class="visually-hidden" for="range-right-cell">До</label>
-              </div>
-              <div class="tourists-filter__range-bar">
-                <div class="tourists-filter__range" id="range-box">
-                  <div class="tourists-filter__range-between" id="range-ruler"></div>
-                  <button class="tourists-filter__button-left" type="button" id="range-left-button"></button>
-                  <button class="tourists-filter__button-right" type="button" id="range-right-button"></button>
+              <div class="tourists-filter__wrap">
+                <div class="tourists-filter__range-cells range-cells">
+                  <input class="range-cells__input-left" type="number" min="0" max="100" name="min-lvl"
+                    id="range-left-cell" placeholder="30">
+                  <label class="visually-hidden" for="range-left-cell">От</label>
+                  <input class="range-cells__input-right" type="number" min="0" max="100" name="max-lvl"
+                    id="range-right-cell" placeholder="100">
+                  <label class="visually-hidden" for="range-right-cell">До</label>
+                </div>
+
+                <div class="tourists-filter__range-bar">
+                  <div class="tourists-filter__range" id="range-box">
+                    <div class="tourists-filter__range-between" id="range-ruler"></div>
+                    <button class="tourists-filter__button-left" type="button" id="range-left-button"></button>
+                    <button class="tourists-filter__button-right" type="button" id="range-right-button"></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1044,6 +1047,7 @@
 
   <script src="js/navigation.js"></script>
   <script src="js/filter-wrap.js"></script>
+  <script src="js/range.js"></script>
 </body>
 
 </html>
