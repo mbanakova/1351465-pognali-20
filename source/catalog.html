@@ -83,7 +83,7 @@
         <div class="country-filter__top">
           <h2 class="country-filter__title">Фильтрация по странам:</h2>
 
-          <ul class="country-filter__area-list area-list">
+          <ul class="country-filter__area-list country-filter__area-list--hidden area-list">
             <li class="area-list__item"><a class="area-list__link area-list__link--active" href="#">Европа</a></li>
             <li class="area-list__item"><a class="area-list__link" href="#">Азия</a></li>
             <li class="area-list__item"><a class="area-list__link" href="#">Америка</a></li>
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <div class="country-filter__alphabet alphabet">
+        <div class="country-filter__alphabet alphabet alphabet--hidden">
           <input class="alphabet__tab" type="radio" name="tab" id="tab-a" checked>
           <label class="alphabet__tab-label" for="tab-a" tabindex="0">А</label>
 
@@ -173,7 +173,7 @@
           <label class="alphabet__tab-label" for="tab-ya" tabindex="3">Я</label>
         </div>
 
-        <div class="country-filter__large-screen">
+        <div class="country-filter__large-screen country-filter__large-screen--hidden">
 
           <ul class="country-filter__letter-group country-filter__letter-group--active" data-letter="А">
             <li class="country-filter__letter-country">
@@ -589,7 +589,7 @@
           </ul>
         </div>
 
-        <button class="country-filter__unwrap button button--basic">Свернуть</button>
+        <button class="country-filter__unwrap country-filter__unwrap--hidden button button--basic">Свернуть</button>
       </div>
     </section>
 
@@ -1043,6 +1043,7 @@
   </footer>
 
   <script src="js/navigation.js"></script>
+  <script src="js/filter-wrap.js"></script>
 </body>
 
 </html>

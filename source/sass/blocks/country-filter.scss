@@ -103,7 +103,7 @@
   border: none;
   background-color: inherit;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   cursor: pointer;
 
@@ -113,11 +113,9 @@
   }
 }
 
-
 .country-filter__toggle-text {
   @include font(16px, 18px, 700);
   display: none;
-
 
   @media (min-width: $tablet) {
     display: block;
@@ -140,6 +138,9 @@
   padding-left: 25px;
   margin-bottom: 21px;
 
+  &--hidden {
+    display: none;
+  }
 
   @media (min-width: $tablet) {
     @include ul();
@@ -157,7 +158,6 @@
   margin-bottom: 28px;
   padding-left: 25px;
   grid-area: letters;
-
 
   @media (min-width: $tablet) {
     padding: 0;
@@ -246,6 +246,10 @@
       height: 23px;
     }
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .country-filter__large-screen {
@@ -256,6 +260,10 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-start: 1;
     grid-column-end: 6;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
 
