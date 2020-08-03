@@ -60,7 +60,7 @@ let container = document.querySelectorAll('.country-filter__letter-group--active
 let locations = document.querySelector('.area-list');
 
 locations.addEventListener('click', event => {
-
+  evt.preventDefault();
   if (event.target.tagName !== 'A') return false;
 
   let filterClass = event.target.dataset['area'];

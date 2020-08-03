@@ -1,5 +1,9 @@
 .tooltip {
+  display: none;
+
+  @media (min-width: $desktop) {
   position: absolute;
+  display: block;
   content: "";
   top: 100%;
   left: 50%;
@@ -7,6 +11,7 @@
   z-index: 10;
   opacity: 0;
   transition: 0.6 ease-in-out;
+  }
 }
 
 .tooltip__content {

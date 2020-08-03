@@ -25,7 +25,8 @@
   position: relative;
   @include  no-fields();
   padding: 25px;
-  margin-top: -17px;
+  padding-bottom: 22px;
+  margin-top: -18px;
   background-color: $white;
   border-radius: 8px;
   overflow: visible;
@@ -41,6 +42,10 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 25px;
   }
 }
 
@@ -61,8 +66,8 @@
 
   @media (min-width: $desktop) {
     position: absolute;
-    top: 23px;
-    left: 270px;
+    top: 25px;
+    left: 338px;
     width: 70px;
     height: 47px;
     border-radius: 5px;
@@ -70,7 +75,6 @@
 }
 
 .country__text-top {
-  margin-bottom: 2px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -88,14 +92,18 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 47px;
+    margin-left: 3px;
     @include font(24px, 24px, 700);
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 }
 
 .country__slogan {
   @include  no-fields();
   @include font(16px, 18px, 500);
-  max-width: 150px;
   opacity: 0.3;
 
   @media (min-width: $tablet) {
@@ -103,6 +111,11 @@
     top: 59px;
     @include font(20px, 20px, 500);
     max-width: 320px;
+  }
+
+  @media (min-width: $tablet) {
+    top: 55px;
+    left: 30px;
   }
 }
 

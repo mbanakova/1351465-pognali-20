@@ -9,38 +9,36 @@
 
   @media (min-width: $tablet) {
     margin-top: -60px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   @media (min-width: $desktop) {
     margin-top: -50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
   }
 }
 
 .fellows__wrapper {
   position: relative;
   @include  wrapper();
-  padding-top: 68px;
+  padding-top: 65px;
   padding-bottom: 31px;
   background-image: url(../../img/smolov-back-desktop@1x.png);
   background-repeat: no-repeat;
-  background-position: 150px 68px;
+  background-position: 152px 65px;
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 138px;
+    padding-top: 132px;
     padding-bottom: 87px;
-    background-position: 40px 493px;
+    background-position: 40px 486px;
   }
 
   @media (min-width: $desktop) {
     @include desktop();
     padding-top: 180px;
     padding-bottom: 134px;
-    background-position: 540px 180px;
+    background-position: 547px 184px;
     display: grid;
     grid-template-columns: 1fr 630px;
     grid-column-gap: 60px;
@@ -69,26 +67,26 @@
 
     @media (min-width: $desktop) {
       top: 120px;
-      left: 70px;
+      left: 60px;
     }
   }
 
   &::after {
     position: absolute;
     content: "";
-    left: 0px;
+    left: -10px;
     top: 335px;
-    width: 113px;
-    height: 132px;
+    width: 64px;
+    height: 71px;
     background-image: url(../../img/rogovaya-back-mobile@1x.png);
     background-repeat: no-repeat;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     z-index: -1;
 
     @media (min-width: $tablet) {
       left: 409px;
-      top: 147px;
+      top: 140px;
       width: 285px;
       height: 285px;
       background-image: url(../../img/rogovaya-back-desktop@1x.png);
@@ -96,8 +94,8 @@
     }
 
     @media (min-width: $desktop) {
-      left: 170px;
-      top: 420px;
+      left: 190px;
+      top: 436px;
     }
   }
 }
@@ -107,7 +105,7 @@
   margin: 34px 0 19px 25px;
 
   @media (min-width: $tablet) {
-  margin: 70px 0 55px 58px;
+  margin: 70px 0 55px 36px;
   }
 
   @media (min-width: $desktop) {
@@ -117,14 +115,20 @@
 
 .fellows__text {
   @include  no-fields();
-  margin: 0 0 25px 25px;
+  margin: 0 0 24px 25px;
   max-width: 215px;
+  br {
+    display: none;
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 39px;
-    margin-left: 58px;
+    margin-left: 36px;
     max-width: 430px;
     @include  font(28px, 34px, 300);
+    br {
+      display: inline;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -137,12 +141,12 @@
   }
 
   &--bold {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     font-weight: 700;
     max-width: 195px;
 
     @media (min-width: $tablet) {
-      margin-bottom: 59px;
+      margin-bottom: 60px;
       max-width: 260px;
       @include  font(21px, 24px, 700);
     }
@@ -159,16 +163,21 @@
 
 .fellows__list {
   @include  ul();
-  margin-bottom: 9px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
+    margin-left: 35px;
+    margin-right: 35px;
     margin-bottom: 81px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -197,12 +206,15 @@
   text-transform: none;
 
   @media (min-width: $tablet) {
-    margin: 0 30px;
+    margin: 0 36px;
+    padding-left: 32px;
   }
 
   @media (min-width: $desktop) {
-    max-width: 280px;
+    width: 280px;
     max-height: 80px;
+    padding-right: 16px;
+    box-sizing: border-box;
     margin: 0 0 0 70px;
     grid-column-start: 1;
     grid-column-end: 2;

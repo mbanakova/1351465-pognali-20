@@ -22,6 +22,11 @@
   @media (min-width: $desktop) {
     width: auto;
     background-color: $basic-blue;
+
+    &--no-js {
+      height: 90px;
+      background-color: $white;
+    }
   }
 }
 
@@ -39,7 +44,7 @@
 
   @media (min-width: $desktop) {
     @include desktop();
-    min-height: 100px;
+    padding-top: 47px;
     left: 0;
     transform: translate(0);
   }
@@ -54,12 +59,12 @@
   @media (min-width: $tablet) {
     width: 164px;
     height: 42px;
-    margin: 4px 0 45px;
+    margin: 0 0 45px 10px;
   }
 
   @media (min-width: $desktop) {
     width: 200px;
     height: 52px;
-    margin: 0 40px 0 0;
+    margin: 0 86px 0 0;
   }
 }

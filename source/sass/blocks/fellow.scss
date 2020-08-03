@@ -53,7 +53,7 @@
 
 .fellow__bottom {
   position: relative;
-  padding: 27px 40px 20px;
+  padding: 27px 40px 25px;
   background-color: $white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -63,7 +63,7 @@
   align-items: center;
 
   @media (min-width: $tablet) {
-    padding: 31px 25px 27px;
+    padding: 31px 25px 30px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     max-width: 285px;
@@ -72,7 +72,7 @@
 
 .fellow__desired-countries {
   position: absolute;
-  top: -12px;
+  top: -11px;
   left: 50%;
   transform: translatex(-50%);
   @include  ul();
@@ -85,16 +85,16 @@
   position: relative;
   @include  no-fields();
   @include font(21px, 21px, 700);
-  margin-left: 16px;
-  margin-bottom: 15px;
+  text-align: left;
+  margin: 0 auto 15px 28px;
   color: $basic-blue-h2;
   cursor: pointer;
 
   @media (min-width: $tablet) {
     @include font(24px, 22px, 700);
     margin-top: 0;
-    margin-left: 28px;
-    margin-bottom: 23px;
+    margin-left: 43px;
+    margin-bottom: 25px;
   }
 
   &--offline::before {
@@ -171,6 +171,7 @@
   display: flex;
   justify-content: space-between;
   width: 120px;
+  max-height: 25px;
   line-height: 0;;
 
   @media (min-width: $tablet) {
@@ -178,12 +179,3 @@
     width: 123px;
   }
 }
-
-// .fellow__tooltip {
-//   position: absolute;
-//   content: "";
-//   top: 100%;
-//   left: 50%;
-//   transform: translate(-50%, 25%);
-//   z-index: 10;
-// }

@@ -3,6 +3,10 @@
   background-color: $white;
 
   @media (min-width: $desktop) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
     margin: 0;
     background-color: transparent;
     display: flex;
@@ -11,7 +15,7 @@
 }
 
 .user-list__item {
-position: relative;
+  position: relative;
 
   &:first-child {
     margin-bottom: 0;
@@ -58,10 +62,12 @@ position: relative;
 
   &--phone {
     background-image: url(../../img/contacts-phone.svg);
+    background-size: 30px 30px;
   }
 
   &--email {
     background-image: url(../../img/contacts-mail.svg);
+    background-size: 30px 30px;
   }
 
   @media (min-width: $tablet) {
