@@ -1,6 +1,6 @@
 .main__top {
   position: relative;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 11px;
   background-color: $basic-blue;
   border-bottom-left-radius: 30px;
@@ -121,7 +121,7 @@
 .main__catalog-page {
 
   @media (min-width: $tablet) {
-    margin-bottom: 95px;
+    margin-bottom: 113px;
   }
   @media (min-width: $desktop) {
     margin-bottom: 150px;
@@ -141,6 +141,12 @@
 }
 
 .main__tourists-filter {
+  min-height: 652px;
+
+  @media (min-width: $tablet) {
+    min-height: 590px;
+    box-sizing: border-box;
+   }
 
   @media (min-width: $desktop) {
    grid-column-start: 2;
@@ -148,9 +154,10 @@
 }
 
 .main__travellers {
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 46px;
+    margin-bottom: 52px;
    }
 
   @media (min-width: $desktop) {
@@ -187,8 +194,7 @@
   color: $basic-blue-h2;
 
   @media (min-width: $tablet) {
-    margin-bottom: 52px;
-    padding-left: 51px;
+    padding-left: 56px;
     @include font(20px, 20px, 700);
   }
 
@@ -219,7 +225,8 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
-      top: 8px;
+      top: 6px;
+      left: 6px;
       width: 26px;
     }
   }
@@ -235,8 +242,8 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
-      top: -3px;
-      left: 12px;
+      top: -5px;
+      left: 18px;
       height: 26px;
     }
   }
@@ -245,6 +252,8 @@
 .main__pagination {
   @include wrapper();
   margin-bottom: 76px;
+  padding-right: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

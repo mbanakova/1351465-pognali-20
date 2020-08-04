@@ -25,6 +25,14 @@
   &--opened {
     background-color: $white;
   }
+
+  &--catalog {
+    padding-top: 18px;
+    
+    @media (min-width: $tablet) {
+      padding-top: 45px;
+    }
+  }
 }
 
 .main-nav__burger {

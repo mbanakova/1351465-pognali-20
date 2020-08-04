@@ -15,7 +15,6 @@
     transition: 0.2s ease-in-out;
   }
 
-
   @media (min-width: $tablet) {
     @include font(20px, 20px, 700);
   }
@@ -26,5 +25,9 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin-right: 26px;
   }
 }
