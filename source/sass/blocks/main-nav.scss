@@ -28,9 +28,13 @@
 
   &--catalog {
     padding-top: 18px;
-    
+
     @media (min-width: $tablet) {
       padding-top: 45px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 48px;
     }
   }
 }
@@ -182,6 +186,7 @@
 
   @media (min-width: $desktop) {
     display: block;
+    padding: 17px 29px 13px 29px;
     margin: 0;
     order: 3;
   }
