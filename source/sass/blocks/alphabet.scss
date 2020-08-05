@@ -13,6 +13,10 @@
   @media (min-width: $desktop) {
     display: none;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .alphabet__tab {

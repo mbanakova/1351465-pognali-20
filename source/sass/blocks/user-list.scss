@@ -3,6 +3,10 @@
   background-color: $white;
 
   @media (min-width: $desktop) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
     margin: 0;
     background-color: transparent;
     display: flex;
@@ -11,7 +15,7 @@
 }
 
 .user-list__item {
-position: relative;
+  position: relative;
 
   &:first-child {
     margin-bottom: 0;
@@ -53,26 +57,38 @@ position: relative;
   height: 45px;
   border-radius: 50%;
   background-color: $basic-blue-icon;
-  background-image: url(../../img/contacts-phone.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  &--phone {
+    background-image: url(../../img/contacts-phone.svg);
+    background-size: 30px 30px;
+  }
+
+  &--email {
+    background-image: url(../../img/contacts-mail.svg);
+    background-size: 30px 30px;
+  }
 
   @media (min-width: $tablet) {
     margin-right: 23px;
     width: 68px;
     height: 68px;
-    border-radius: 50%;
-    background-color: $basic-blue-icon;
   }
 
   @media (min-width: $desktop) {
     margin-right: 0;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background-color: $special_yellow_dark;
     background-size: 20px 20px;
 
+    &--phone {
+      background-color: $special_orange;
+    }
+
+    &--email {
+      background-color: $special_yellow_dark;
+    }
   }
 }
 
@@ -86,5 +102,3 @@ position: relative;
     display: none;
   }
 }
-
-

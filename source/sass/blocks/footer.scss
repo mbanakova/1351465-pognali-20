@@ -8,7 +8,7 @@
 
   @media (min-width: $tablet) {
 
-    margin-top: -40px;
+    margin-top: -50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
@@ -24,13 +24,9 @@
   padding-bottom: 19px;
 
   @media (min-width: $tablet) {
+    @include tablet();
     padding-top: 46px;
-    padding-right: 40px;
     padding-bottom: 32px;
-    padding-left: 38px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +43,7 @@
 }
 
 .footer__logo {
-  margin: 0 auto 40px;
+  margin: 0 auto 33px;
   text-align: center;
   display: block;
 
@@ -58,7 +54,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
+    width: 200px;
+    height: 55px;
   }
 }
 
@@ -71,8 +68,13 @@
   align-items: center;
 
   @media (min-width: $tablet) {
+    margin-right: 10px;
     padding: 0;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 40px;
   }
 }
 
@@ -107,11 +109,13 @@
   margin-top: 13px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    margin-right: 23px;
-    margin-top: 0;}
+    margin-right: 0;
+    margin-top: 0;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -130,11 +134,12 @@
   color: $special-grey;
 
   @media (min-width: $tablet) {
-    margin-right: 23px;
+    margin-right: 20px;
+    @include font(20px, 20px, 400);
   }
 
   @media (min-width: $desktop) {
-    margin-right: 24px;
+    margin-right: 19px;
     @include font(20px, 33px, 400);
   }
 }
@@ -142,10 +147,9 @@
 .footer__copyright-link {
   @include a();
   width: 27px;
-  height: 33px;
+  height: 34px;
   background-image: url(../../img/htmlacademy.svg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: $special-grey;
+  background-position: right 50%;
 }
 

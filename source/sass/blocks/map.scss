@@ -1,24 +1,24 @@
 .map {
-  min-height: 424px;
+height: 322px;
 
   @media (min-width: $tablet) {
-    min-height: 581px;
+    height: 574px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 584px;
+    height: 500px;
   }
 }
 
 .map__body {
   width: 100%;
-  min-height: 424px;
+  height: 310px;
 
   @media (min-width: $tablet) {
-    min-height: 581px;
+    height: 574px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 584px;
+    height: 500px;
   }
 }

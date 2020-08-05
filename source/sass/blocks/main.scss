@@ -1,10 +1,6 @@
-.main {
-  overflow-x: hidden;
-}
-
 .main__top {
   position: relative;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 11px;
   background-color: $basic-blue;
   border-bottom-left-radius: 30px;
@@ -125,10 +121,10 @@
 .main__catalog-page {
 
   @media (min-width: $tablet) {
-    margin-bottom: 95px;
+    margin-bottom: 113px;
   }
   @media (min-width: $desktop) {
-    margin-bottom: 150px;
+    margin-bottom: 132px;
   }
 }
 
@@ -145,6 +141,12 @@
 }
 
 .main__tourists-filter {
+  min-height: 652px;
+
+  @media (min-width: $tablet) {
+    min-height: 590px;
+    box-sizing: border-box;
+   }
 
   @media (min-width: $desktop) {
    grid-column-start: 2;
@@ -152,16 +154,19 @@
 }
 
 .main__travellers {
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 46px;
+    margin-bottom: 52px;
    }
 
   @media (min-width: $desktop) {
+    margin-bottom: 0;
     grid-row-start: 1;
     padding-bottom: 0;
   }
 }
+
 .main__link-wrap {
   display: flex;
   justify-content: center;
@@ -173,7 +178,9 @@
   }
 
   @media (min-width: $desktop) {
-    // margin-bottom: 71px;
+    margin-bottom: 0;
+    margin-left: 340px;
+    justify-content: flex-start;
     grid-column-start: 1;
     grid-column-end: 2;
     height: 26px;
@@ -191,13 +198,9 @@
   color: $basic-blue-h2;
 
   @media (min-width: $tablet) {
-    margin-bottom: 52px;
-    padding-left: 51px;
-    @include font(20px, 20px, 700);
-  }
-
-  @media (min-width: $tablet) {
     margin-bottom: 0;
+    padding-left: 56px;
+    @include font(20px, 20px, 700);
   }
 
   &:hover::before,
@@ -223,8 +226,13 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
-      top: 8px;
+      top: 6px;
+      left: 6px;
       width: 26px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 9px;
     }
   }
 
@@ -239,9 +247,13 @@
     border-radius: 2px;
 
     @media (min-width: $tablet) {
-      top: -3px;
-      left: 12px;
+      top: -6px;
+      left: 18px;
       height: 26px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -3px;
     }
   }
 }
@@ -249,6 +261,8 @@
 .main__pagination {
   @include wrapper();
   margin-bottom: 76px;
+  padding-right: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,8 +272,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 auto;
-    padding: 0 60px;
+    margin: 5px auto 0;
+    padding: 0;
     width: 100%;
     box-sizing: border-box;
     grid-column-start: 1;

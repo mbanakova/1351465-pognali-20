@@ -14,7 +14,7 @@
 
   <header class="header header--no-js">
 
-    <nav class="header__main-nav main-nav">
+    <nav class="header__main-nav main-nav main-nav--catalog">
       <a href="index.html" class="header__logo logo">
         <img class="logo__white" src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
         <img class="logo__blue logo__blue--hidden" src="https://via.placeholder.com/96x15" width="96" height="15"
@@ -40,13 +40,13 @@
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__link" href="tel:88005558628">
-            <div class="user-list__icon"></div>
+            <div class="user-list__icon user-list__icon--phone"></div>
             <div class="user-list__contact">8 800 555-86-28</div>
           </a>
         </li>
         <li class="user-list__item">
           <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
-            <div class="user-list__icon"></div>
+            <div class="user-list__icon user-list__icon--email"></div>
             <div class="user-list__contact">mail@htmlacademy.ru</div>
           </a>
         </li>
@@ -81,13 +81,13 @@
     <section class="country-filter">
       <div class="country-filter__wrapper">
         <div class="country-filter__top">
-          <h2 class="country-filter__title">Фильтрация по странам:</h2>
+          <h2 class="country-filter__title">Фильтрация по странам</h2>
 
-          <ul class="country-filter__area-list area-list">
-            <li class="area-list__item"><a class="area-list__link area-list__link--active" href="#">Европа</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Азия</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Америка</a></li>
-            <li class="area-list__item"><a class="area-list__link" href="#">Острова</a></li>
+          <ul class="country-filter__area-list country-filter__area-list--hidden area-list">
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="europe">Европа</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="asia">Азия</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="america">Америка</a></li>
+            <li class="area-list__item"><a class="area-list__link" href="#" data-area="islands">Острова</a></li>
           </ul>
 
           <div class="country-filter__toggle">
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <div class="country-filter__alphabet alphabet">
+        <div class="country-filter__alphabet alphabet alphabet--hidden">
           <input class="alphabet__tab" type="radio" name="tab" id="tab-a" checked>
           <label class="alphabet__tab-label" for="tab-a" tabindex="0">А</label>
 
@@ -173,20 +173,20 @@
           <label class="alphabet__tab-label" for="tab-ya" tabindex="3">Я</label>
         </div>
 
-        <div class="country-filter__large-screen">
+        <div class="country-filter__large-screen country-filter__large-screen--hidden">
 
           <ul class="country-filter__letter-group country-filter__letter-group--active" data-letter="А">
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="/australia">Австралия</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/austria">Австрия</a>
+              <a class="country-filter__letter-link europe" href="/europe/austria">Австрия</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/azerbaijan">Азербайджан</a>
+              <a class="country-filter__letter-link asia" href="/asia/azerbaijan">Азербайджан</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/albania">Албания</a>
+              <a class="country-filter__letter-link europe" href="/europe/albania">Албания</a>
             </li>
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="/africa/algeria">Алжир</a>
@@ -195,20 +195,20 @@
               <a class="country-filter__letter-link" href="/africa/albania">Ангола</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/europe/andorra">Андорра</a>
+              <a class="country-filter__letter-link europe" href="/europe/andorra">Андорра</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/islands/antigua">Антигуа
+              <a class="country-filter__letter-link islands" href="/islands/antigua">Антигуа
                 и Барбуда</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/america/argentina">Аргентина</a>
+              <a class="country-filter__letter-link america" href="/america/argentina">Аргентина</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/armenia">Армения</a>
+              <a class="country-filter__letter-link asia" href="/asia/armenia">Армения</a>
             </li>
             <li class="country-filter__letter-country">
-              <a class="country-filter__letter-link" href="/asia/afganistan">Афганистан</a>
+              <a class="country-filter__letter-link asia" href="/asia/afganistan">Афганистан</a>
             </li>
           </ul>
 
@@ -525,7 +525,7 @@
               <a class="country-filter__letter-link" href="#">Уругвай</a></li>
           </ul>
 
-          <ul class="country-filter__letter-group" data-letter="В">
+          <ul class="country-filter__letter-group" data-letter="Ф">
             <li class="country-filter__letter-country">
               <a class="country-filter__letter-link" href="#">Фиджи</a></li>
             <li class="country-filter__letter-country">
@@ -589,7 +589,7 @@
           </ul>
         </div>
 
-        <button class="country-filter__unwrap button button--basic">Свернуть</button>
+        <button class="country-filter__unwrap country-filter__unwrap--hidden button button--basic">Свернуть</button>
       </div>
     </section>
 
@@ -604,7 +604,7 @@
 
             <!-- Хобби -->
             <div class="tourists-filter__fieldset">
-              <input class="tourists-filter__accordion" type="checkbox" id="accordion-hobby" checked>
+              <input class="tourists-filter__accordion" type="checkbox" id="accordion-hobby">
               <label class="tourists-filter__legend" for="accordion-hobby">Хобби</label>
               <ul class="tourists-filter__group">
                 <li class="tourists-filter__item">
@@ -644,7 +644,7 @@
 
             <!-- Еда -->
             <div class="tourists-filter__fieldset">
-              <input class="tourists-filter__accordion" type="checkbox" id="accordion-food" checked>
+              <input class="tourists-filter__accordion" type="checkbox" id="accordion-food">
               <label class="tourists-filter__legend" for="accordion-food">Еда</label>
               <ul class="tourists-filter__group">
                 <li class="tourists-filter__item">
@@ -671,21 +671,33 @@
                   <input class="tourists-filter__input" type="checkbox" name="avia" id="avia">
                   <label class="tourists-filter__transport-label" for="avia"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="16" height="16" alt="Самолёт"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Авиаперелёт</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="bus" id="bus" checked>
                   <label class="tourists-filter__transport-label" for="bus"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="19" height="19" alt="Автобус"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Автотранспорт</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="bicycle" id="bicycle">
                   <label class="tourists-filter__transport-label" for="bicycle"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="15" height="13" alt="Велосипед"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Велосипед</span>
+                  </div>
                 </li>
                 <li class="tourists-filter__item tourists-filter__item--img">
                   <input class="tourists-filter__input" type="checkbox" name="feet" id="feet" checked>
                   <label class="tourists-filter__transport-label" for="feet"><img class="transport-icon"
                       src="https://via.placeholder.com/20x20" width="15" height="15" alt="На своих двоих"></label>
+                  <div class="tooltip">
+                    <span class="tooltip__content">Пешком</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -694,19 +706,22 @@
             <div class="tourists-filter__fieldset">
               <input class="tourists-filter__accordion" type="checkbox" id="accordion-level" checked>
               <label class="tourists-filter__legend" for="accordion-level">Левел</label>
-              <div class="tourists-filter__range-cells range-cells">
-                <input class="range-cells__input-left" type="number" min="0" max="100" name="min-lvl"
-                  id="range-left-cell" placeholder="30">
-                <label class="visually-hidden" for="range-left-cell">От</label>
-                <input class="range-cells__input-right" type="number" min="0" max="100" name="max-lvl"
-                  id="range-right-cell" placeholder="100">
-                <label class="visually-hidden" for="range-right-cell">До</label>
-              </div>
-              <div class="tourists-filter__range-bar">
-                <div class="tourists-filter__range" id="range-box">
-                  <div class="tourists-filter__range-between" id="range-ruler"></div>
-                  <button class="tourists-filter__button-left" type="button" id="range-left-button"></button>
-                  <button class="tourists-filter__button-right" type="button" id="range-right-button"></button>
+              <div class="tourists-filter__wrap">
+                <div class="tourists-filter__range-cells range-cells">
+                  <input class="range-cells__input-left" type="number" min="0" max="100" name="min-lvl"
+                    id="range-left-cell" placeholder="30">
+                  <label class="visually-hidden" for="range-left-cell">От</label>
+                  <input class="range-cells__input-right" type="number" min="0" max="100" name="max-lvl"
+                    id="range-right-cell" placeholder="100">
+                  <label class="visually-hidden" for="range-right-cell">До</label>
+                </div>
+
+                <div class="tourists-filter__range-bar">
+                  <div class="tourists-filter__range" id="range-box">
+                    <div class="tourists-filter__range-between" id="range-ruler"></div>
+                    <button class="tourists-filter__button-left" type="button" id="range-left-button"></button>
+                    <button class="tourists-filter__button-right" type="button" id="range-right-button"></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -763,18 +778,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -830,18 +857,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -897,18 +936,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -962,18 +1013,30 @@
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Самолёт">
+                <div class="tooltip">
+                  <span class="tooltip__content">Авиаперелёт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
                   height="17" alt="Автобус">
+                <div class="tooltip">
+                  <span class="tooltip__content">Автотранспорт</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="Велосипед">
+                <div class="tooltip">
+                  <span class="tooltip__content">Велосипед</span>
+                </div>
               </li>
               <li class="traveller__transport">
                 <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
                   alt="На своих двоих">
+                <div class="tooltip">
+                  <span class="tooltip__content">Пешком</span>
+                </div>
               </li>
             </ul>
 
@@ -1043,6 +1106,8 @@
   </footer>
 
   <script src="js/navigation.js"></script>
+  <script src="js/filter-wrap.js"></script>
+  <script src="js/range.js"></script>
 </body>
 
 </html>

@@ -6,11 +6,6 @@
   z-index: 8;
 
   @media (min-width: $tablet) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
-
-  @media (min-width: $desktop) {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
@@ -19,8 +14,8 @@
 .destinations__wrapper {
   position: relative;
   @include  wrapper();
-  padding-top: 71px;
-  padding-bottom: 34px;
+  padding-top: 70px;
+  padding-bottom: 33px;
 
   &::before {
     position: absolute;
@@ -52,7 +47,7 @@
     content: "";
 
     @media (min-width: $tablet) {
-      top: 73px;
+      top: 80px;
       right: 40px;
       width: 287px;
       height: 575px;
@@ -63,7 +58,7 @@
 
     @media (min-width: $desktop) {
       top: 90px;
-      right: 120px;
+      right: 60px;
       width: 287px;
       height: 575px;
       background-image: url(../../img/flags-back@1x.png);
@@ -74,7 +69,7 @@
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 73px;
+    padding-top: 75px;
     padding-bottom: 80px;
   }
 
@@ -82,25 +77,27 @@
     @include desktop();
     padding-top: 161px;
     padding-bottom: 138px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 560px 378px;
-    grid-column-gap: 171px;
+    grid-template-columns: 630px 520px;
+    grid-column-gap: 170px;
     grid-template-rows: min-content;
   }
 }
 
 .destinations__title {
   @include  no-fields();
-  margin: 0 0 19px 28px;
+  margin: 0 0 20px 26px;
 
   @media (min-width: $tablet) {
     margin-bottom: 57px;
-    margin-left: 63px;
+    margin-left: 34px;
   }
 
   @media (min-width: $desktop) {
+    margin-top: 6px;
     margin-left: 0;
-    margin-bottom: 58px;
+    margin-bottom: 59px;
     grid-column-start: 2;
     grid-column-end: 3;
   }
@@ -108,25 +105,24 @@
 
 .destinations__text {
   @include  no-fields();
-  margin: 0 0 60px 26px;
-  max-width: 195px;
+  margin: 0 0 62px 24px;
 
   @media (min-width: $tablet) {
     margin-bottom: 104px;
-    margin-left: 61px;
+    margin-left: 34px;
     max-width: 345px;
     @include  font(28px, 33px, 300);
   }
 
   @media (min-width: $desktop) {
     margin-left: 0;
-    margin-bottom: 98px;
+    margin-bottom: 99px;
   }
 }
 
 .destinations__list {
   @include  ul();
-  margin-bottom: 9px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet) {
     margin-bottom: 44px;
@@ -143,7 +139,7 @@
 }
 
 .destinations__item {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -164,13 +160,17 @@
   color: $basic-blue-h2;
 
   @media (min-width: $tablet) {
-    margin: 0 30px;
+    margin: 0 36px;
+    padding-right: 80px;
+    padding-left: 32px;
+    width: auto;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
+    margin: 0 auto 0 0;
+    padding-left: 36px;
     height: 80px;
-    max-width: 275px;
     box-sizing: border-box;
   }
 }

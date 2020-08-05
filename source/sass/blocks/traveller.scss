@@ -95,7 +95,7 @@
   max-width: 100px;
   @include  no-fields();
   @include font(20px, 20px, 700);
-  padding-left: 16px;
+  padding-left: 14px;
   color: $basic-blue-h2;
   cursor: pointer;
 
@@ -118,7 +118,7 @@
       width: 8px;
       height: 8px;
       top: 10px;
-      right: -30px;
+      right: 80px;
       border-radius: 50%;
       background-color: $red;
     }
@@ -155,7 +155,7 @@
 .traveller__popularity {
   position: absolute;
   top: 55px;
-  left: 75px;
+  left: 67px;
   display: flex;
   align-items: center;
 
@@ -197,13 +197,19 @@
 }
 
 .traveller__counter {
-  margin-left: 7px;
+  margin-left: 6px;
   @include font(14px, 16px, 700);
   color: $basic-blue;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    margin-top: 2px;
+    margin-left: 4px;
     @include font(20px, 20px, 700);
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 6px;
   }
 }
 
@@ -211,10 +217,9 @@
   grid-column-start: 1;
   grid-column-end: 4;
   @include ul();
-  margin: 0 auto;
+  margin: 0 auto 0 6px;
   margin-bottom: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
@@ -229,21 +234,23 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 20px 20px 62px;
+    margin: -33px 20px auto 62px;
+    align-items: flex-start;
   }
 }
 
 .traveller__choice {
   position: relative;
   @include no-fields();
-  margin-bottom: 9px;
+  margin-bottom: 23px;
+  margin-left: 5px;
   grid-column-start: 1;
   grid-column-end: 4;
   @include font(15px, 16px, 400);
 
   &:first-of-type {
     @media (min-width: $tablet) {
-      margin-top: 22px;
+      margin-top: 24px;
       margin-left: 50px;
       grid-column-start: 1;
       grid-column-end: 4;
@@ -259,9 +266,11 @@
   &:nth-of-type(2) {
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-bottom: 0;
   }
 
   &:last-of-type {
+    margin-bottom: 10px;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 5;
@@ -278,15 +287,23 @@
 
 .traveller__countries-list {
   @include ul();
-  margin-bottom: 12px;
+  margin-bottom: 3px;
   grid-column-start: 1;
   grid-column-end: 4;
   @include font(15px, 16px, 500);
   text-transform: uppercase;
   color: $basic-blue-h2;
 
+  &:nth-of-type(2) {
+    margin-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: $tablet) {
-    margin-top: 24px;
+    margin-top: 0;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 6;
@@ -296,7 +313,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 49px;
+    margin-top: 55px;
     margin-left: 0;
     margin-bottom: 0;
     grid-column-start: 3;
@@ -309,11 +326,11 @@
 
 .traveller__country-item {
   position: relative;
-  padding-left: 40px;
+  padding-left: 44px;
   margin-bottom: 10px;
 
   @media (min-width: $tablet) {
-    padding-left: 45px;
+    padding-left: 48px;
     margin-bottom: 0;
     margin-right: 25px;
 
@@ -324,7 +341,7 @@
 
   @media (min-width: $desktop) {
     padding: 0 0 0 54px;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -335,11 +352,23 @@
     position: absolute;
     content: "";
     top: -3px;
-    left: 0;
-    width: 35px;
-    height: 24px;
+    left: 5px;
+    width: 26px;
+    height: 18px;
     background-color: $special-grey;
     border-radius: 3px;
+
+    @media (min-width: $tablet) {
+      width: 36px;
+      height: 24px;
+      left: 3px;
+      top: -4px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -4px;
+      left: 0;
+    }
   }
 }
 
@@ -379,8 +408,9 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 0;
+    margin-top: auto;
     margin-right: 62px;
+    margin-bottom: 59px;
     flex-direction: row;
     align-items: baseline;
     grid-column-start: 3;
@@ -389,6 +419,7 @@
 }
 
 .traveller__transport {
+  position: relative;
   margin-right: 1px;
   display: flex;
   justify-content: center;
@@ -398,13 +429,18 @@
   background-color: $modal-close-light;
   border-radius: 50%;
 
+  &:hover > .tooltip {
+    opacity: 1;
+    overflow: visible;
+  }
+
   @media (min-width: $tablet) {
     background-color: transparent;
-    }
+  }
 }
 
 .traveller__skill {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   align-items: center;
   border-radius: 50%;
   width: 45px;
@@ -413,7 +449,7 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    margin-bottom: 0;
+    margin-bottom: -5px;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -424,8 +460,9 @@
   }
 
   @media (min-width: $desktop) {
-    margin-right: 43px;
-    margin-bottom: 0;
+    margin-right: 0;
+    margin-bottom: 42px;
+    margin-top: auto;
     grid-column-start: 4;
     grid-row-start: 3;
     align-self: flex-start;
@@ -458,7 +495,8 @@
   @media (min-width: $desktop) {
     position: relative;
     margin-left: 54px;
-    margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: 46px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -470,4 +508,13 @@
 
 .traveller__button {
   display: block;
+  padding: 6px 5px 4px;
+
+  @media (min-width: $tablet) {
+    padding: 16px 35px 13px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 16px 33px 13px;
+  }
 }

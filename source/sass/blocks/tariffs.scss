@@ -6,11 +6,6 @@
   z-index: 6;
 
   @media (min-width: $tablet) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
-
-  @media (min-width: $desktop) {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
@@ -21,7 +16,6 @@
   @include wrapper();
   width: 220px;
   padding-top: 52px;
-  padding-left: 50px;
   padding-bottom: 28px;
 
 
@@ -33,16 +27,15 @@
 
   @media (min-width: $desktop) {
     @include desktop();
-    padding-left: 135px;
-    padding-top: 107px;
-    padding-bottom: 165px;
+    padding-top: 108px;
+    padding-bottom: 163px;
   }
 
   &::after {
     position: absolute;
     content: "";
-    top: 38px;
-    right: 35px;
+    top: 36px;
+    right: 0;
     width: 100px;
     height: 100px;
     background-image: url(../../img/rates@1x.png);
@@ -53,16 +46,16 @@
     overflow: visible;
 
     @media (min-width: $tablet) {
-      top: 450px;
+      top: 410px;
       bottom: 0;
-      right: 90px;
+      right: 86px;
     }
 
     @media (min-width: $desktop) {
       width: 198px;
       height: 198px;
-      top: 290px;
-      right: 140px;
+      top: 288px;
+      right: 134px;
     }
   }
 }
@@ -73,20 +66,20 @@
   max-width: 120px;
 
   @media (min-width: $tablet) {
-    margin: 0 auto 113px;
+    margin: 0 auto 70px;
     max-width: 600px;
     text-align: center;
   }
 
-  @media (min-width: $tablet) {
-    margin: 0 auto 134px;
+  @media (min-width: $desktop) {
+    margin: 0 auto 131px;
   }
 }
 
 .tariffs__list {
   position: relative;
   @include ul();
-  margin-bottom: 21px;
+  margin-bottom: 22px;
   counter-reset: myCounter;
 
   @media (min-width: $tablet) {
@@ -107,7 +100,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 33px;
+    margin-left: 70px;
+    margin-bottom: 32px;
 
     &::after {
       position: absolute;
@@ -132,24 +126,25 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    padding: 20px 0 18px;
+    padding: 21px 0 17px;
     display: flex;
     justify-content: space-between;
     @include font(28px, 28px, 300);
-    width: 560px;
+    width: 565px;
+    height: 68px;
   }
 
   @media (min-width: $desktop) {
-    padding: 20px 0 18px;
-    width: 900px;
+    padding: 19px 0 18px;
+    width: 812px;
   }
 
   &::after {
     position: absolute;
     counter-increment: myCounter;
     content: counter(myCounter);
-    top: 2px;
-    right: -10px;
+    top: 3px;
+    right: -45px;
     width: 34px;
     height: 34px;
     @include font(16px, 34px, 400);
@@ -182,11 +177,19 @@
 
 .tariffs__feature {
   @include no-fields();
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .tariffs__cost {
   @include no-fields();
+
+  @media (min-width: $tablet) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .tariffs__open {
@@ -211,5 +214,9 @@
       background-color: $heart-pale;
       border-radius: 50%;
     }
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 70px;
   }
 }

@@ -2,8 +2,8 @@
   background-color: $basic-blue;
   background-image: url(../../img/globe-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 50% -130px;
+  background-position: center 20px;
+  background-size: 320px 384px;
 
   @media (min-width: $tablet) {
     background-color: $basic-tablet;
@@ -15,18 +15,18 @@
   @media (min-width: $desktop) {
     background-color: $basic-blue;
     background-image: url(../../img/globe-back-desktop@1x.jpg);
-    background-size: cover;
-    background-position: 0 0;
+    background-size: 1440px 750px;
+    background-position: 0 bottom;
   }
 }
 
 .intro__wrapper {
   @include wrapper();
-  padding-top: 52px;
+  padding-top: 20px;
   padding-bottom: 39px;
   background-image: url(../../img/traveller-illustration-mobile@1x.png);
   background-repeat: no-repeat;
-  background-position: 50% 180px;
+  background-position: 80px 150px;
 
   @media (min-width: $tablet) {
     @include tablet();
@@ -34,7 +34,7 @@
     padding-bottom: 96px;
     background-image: url(../../img/traveller-illustration-tablet@1x.png);
     background-repeat: no-repeat;
-    background-position: 50% 272px;
+    background-position: 284px 272px;
   }
 
   @media (min-width: $desktop) {
@@ -42,20 +42,22 @@
     padding-bottom: 0;
     background-image: url(../../img/traveller-illustration-desktop@1x.png);
     background-repeat: no-repeat;
-    background-position: 600px 0;
-    background-size: 430px 620px;
+    background-position: 604px -18px;
+    background-size: 431px 640px;
     display: grid;
     grid-template-columns: 1fr min-content;
-    grid-template-rows: 390px min-content;
+    grid-template-rows: 388px min-content;
+    overflow: visible;
   }
 }
 
 .intro__title {
   @include no-fields();
-  margin-bottom: 245px;
+  margin: 0 auto 244px auto;
   @include font(36px, 40px, 700);
   text-align: center;
   color: $white;
+  max-width: 238px;
 
   @media (min-width: $tablet) {
     margin: 0 auto 86px;
@@ -65,7 +67,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 110px auto 101px 67px;
+    margin: 77px auto 98px 67px;
     max-width: 400px;
     @include font(60px, 70px, 700);
     text-align: left;
@@ -73,46 +75,46 @@
 }
 
 .intro__list {
-  @include ul();
-  margin-bottom: 28px;
-  display: flex;
-
-  @media (min-width: $tablet) {
-    display: none;
-  }
+  margin-bottom: 0;
 }
 
 .intro__blockquote {
   @include no-fields();
-  margin-bottom: 47px;
+  margin: 28px auto 39px 27px;
+  max-width: 162px;
   color: $white;
+  background-color: $basic-blue;
 
   @media (min-width: $tablet) {
-    padding: 0 0 0 38px;
-    margin: 0 auto 211px;
+    padding: 0 0 0 36px;
+    margin: 0 auto 211px 0;
+    max-width: 264px;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 111px;
-    margin-bottom: 116px;
+    margin-top: 90px;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 26px;
     grid-column-start: 3;
     grid-column-end: 4;
-    max-width: 1320px;
     flex-wrap: nowrap;
   }
 }
 
 .intro__quote {
   @include no-fields();
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
     max-width: 264px;
     @include font(28px, 33px, 300);
   }
 
   @media (min-width: $desktop) {
+    margin-bottom: 43px;
     @include font(28px, 32px, 300);
   }
 }
@@ -124,7 +126,7 @@
   @media (min-width: $tablet) {
     display: block;
     @include font(21px, 25px, 700);
-    max-width: 240px;
+    max-width: 260px;
   }
 
   @media (min-width: $desktop) {
@@ -141,7 +143,7 @@
 
   @media (min-width: $tablet) {
     margin: 0 auto;
-    max-width: 690px;
+    width: auto;
     @include font(24px, 24px, 700);
     display: flex;
     justify-content: center;
@@ -159,14 +161,15 @@
 
 .intro__step {
   position: relative;
-  padding:  22px 80px 24px 24px;
-  margin-top: -9px;
+  padding:  24px 80px 27px 24px;
+  margin-top: -8px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: $basic-yellow;
 
   @media (min-width: $tablet) {
     margin-top: 0;
+    padding:  31px 80px 61px 34px;
     min-height: 140px;
     box-sizing: border-box;
     flex-basis: 344px;
@@ -175,6 +178,7 @@
   @media (min-width: $desktop) {
     min-height: 107px;
     margin-left: -30px;
+    padding:  29px 80px 29px 32px;
   }
 
   &::after {
@@ -187,8 +191,9 @@
 
     @media (min-width: $tablet) {
       @include font(30px, 30px, 700);
-      top: 85px;
-      right: 300px;
+      bottom: 21px;
+      top: auto;
+      right: 316px;
     }
 
     @media (min-width: $desktop) {
@@ -204,7 +209,7 @@
     @media (min-width: $tablet) {
       border-radius: 0;
       border-top-left-radius: 20px;
-      flex-basis: 344px;
+      flex-basis: 365px;
     }
 
     @media (min-width: $desktop) {
@@ -212,6 +217,7 @@
       border-radius: 0;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      flex-basis: 345px;
     }
   }
 
@@ -222,12 +228,22 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       margin-left: -21px;
+
+      &::after {
+        right: 290px;
+      }
     }
 
     @media (min-width: $desktop) {
       border-radius: 0;
+      padding-left: 26px;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      flex-basis: 375px;
+
+      &::after {
+        right: 60px;
+      }
     }
   }
 
@@ -237,30 +253,44 @@
     @media (min-width: $tablet) {
       border-radius: 0;
       border-bottom-left-radius: 20px;
-      flex-basis: 344px;
+      flex-basis: 365px;
     }
 
     @media (min-width: $desktop) {
       border-radius: 0;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      flex-basis: 375px;
     }
   }
 
   &:last-child{
+    padding-top: 27px;
+    padding-bottom: 23px;
     background-color: $basic-yellow;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 
     @media (min-width: $tablet) {
+      padding:  31px 80px 30px 34px;
       border-radius: 0;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       margin-left: -21px;
+
+      &::after {
+        right: 290px;
+      }
     }
 
     @media (min-width: $desktop) {
+      padding-left: 26px;
       border-radius: 20px;
+      flex-basis: 315px;
+
+      &::after {
+        right: 31px;
+      }
     }
   }
 }

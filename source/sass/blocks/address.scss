@@ -12,15 +12,13 @@
   @media (min-width: $tablet) {
     margin-top: -60px;
     margin-bottom: -60px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   @media (min-width: $desktop) {
     margin-top: -50px;
     margin-bottom: -50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
   }
 }
 
@@ -31,14 +29,14 @@
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 102px;
+    padding-top: 108px;
     padding-bottom: 84px;
   }
 
   @media (min-width: $desktop) {
     width: 1020px;
     margin: 0 auto;
-    padding: 114px 135px 56px 283px;
+    padding: 111px 135px 56px 283px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,17 +47,18 @@
   position: relative;
   @include a();
   padding-left: 61px;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   min-height: 45px;
 
   @media (min-width: $tablet) {
-    padding-left: 75px;
-    margin-bottom: 44px;
+    padding-left: 106px;
+    margin-bottom: 43px;
     min-height: 68px;
   }
 
   @media (min-width: $desktop) {
     margin: 0;
+    padding-left: 94px;
   }
 
   &::before {
@@ -67,7 +66,7 @@
     content: "";
     width: 45px;
     height: 45px;
-    top: 0;
+    top: -2px;
     left: 0;
     border-radius: 50%;
     background-color: $basic-blue-icon;
@@ -75,16 +74,28 @@
     @media (min-width: $tablet) {
       width: 68px;
       height: 68px;
+      left: 36px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 90px;
+      height: 90px;
+      left: 0;
+      top: -10px;
     }
   }
 }
 
 .address__text {
+  margin-top: 2px;
   font-style: inherit;
 
   @media (min-width: $tablet) {
     @include font(28px, 68px, 700);
     margin-left: 26px;
+    br {
+      display: none;
+    }
   }
 }
 
@@ -92,7 +103,7 @@
   position: relative;
   @include font(18px, 18px, 700);
   @include a();
-  padding: 22px 50px 22px 22px;
+  padding: 19px 50px 19px 20px;
   text-transform: inherit;
   background-color: $basic-yellow;
   border-radius: 10px;
@@ -103,8 +114,17 @@
 
   @media (min-width: $tablet) {
     @include font(24px, 24px, 700);
-    padding: 29px 60px 27px 37px;
+    padding: 26px 40px 24px 37px;
+    margin-left: 35px;
+    margin-right: 35px;
     border-radius: 20px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    padding-right: 30px;
+    width: 324px;
   }
 
   &::after {
@@ -112,7 +132,7 @@
     content: "";
     top: 50%;
     transform: translateY(-50%);
-    right: 22px;
+    right: 20px;
     width: 1px;
     height: 1px;
     border: 10px solid $basic-blue-h2;
@@ -122,6 +142,10 @@
 
     @media (min-width: $tablet) {
       right: 37px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 32px;
     }
   }
 
