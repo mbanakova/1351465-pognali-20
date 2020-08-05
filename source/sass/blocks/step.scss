@@ -21,14 +21,19 @@
     }
   }
 
-  &--second,
-  &--third {
-    padding-bottom: 10px;
-  }
-
   @media (min-width: $tablet) {
     padding: 48px 43px 56px;
     border-radius: 30px;
+  }
+
+
+  &--second,
+  &--third {
+    padding-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 54px;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -61,7 +66,7 @@
   position: relative;
   @include no-fields();
   margin-bottom: 20px;
-  padding-right: 4px;
+  padding-right: 0;
   font-weight: 400;
   br {
     display: none;
@@ -69,16 +74,18 @@
 
   @media (min-width: $tablet) {
     @include font(20px, 24px, 400);
-    padding-right: 0;
     margin-bottom: 64px;
     max-width: 505px;
+    br {
+      display: inline;
+    }
 
     &::before {
       position: absolute;
       content: "";
       height: 1px;
       width: 532px;
-      bottom: -39px;
+      bottom: -34px;
       left: 0;
       background-color: $basic-grey-line;
     }
@@ -298,6 +305,14 @@
   }
 }
 
+.step__buttons-wrap {
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .step__button {
   padding: 7px 20px 3px;
   display: block;
@@ -307,11 +322,15 @@
   font-family: $the-only-one;
 
   &:first-of-type {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+      padding-right: 72px;
+    }
 
     @media (min-width: $desktop) {
       margin-right: auto;
-      margin-bottom: 0;
       margin-left: 0;
     }
   }
@@ -365,6 +384,10 @@
     &--back {
       padding: 29px 5px 27px 60px;
 
+      @media (min-width: $tablet) {
+        padding-right: 0;
+      }
+
       &::after {
         position: absolute;
         content: "";
@@ -391,6 +414,14 @@
 
 .step__countries-list {
   @include ul();
+
+  @media (min-width: $tablet) {
+    margin-top: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 32px;
+  }
 }
 
 .step__country-picked {
@@ -399,8 +430,8 @@
   justify-content: stretch;
   align-items: stretch;
 
-  @media (min-width: $desktop) {
-    margin-bottom: 15px;
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop) {
@@ -414,11 +445,11 @@
   display: block;
   flex-grow: 1;
   @include no-fields();
-  padding: 13px;
-  padding-right: 40px;
+  padding: 13px 40px 13px 10px;
   color: $basic-blue-h2;
   @include font(14px, 18px, 500);
   text-transform: uppercase;
+  letter-spacing: 0.09em;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
   box-sizing: border-box;
@@ -458,12 +489,12 @@
   @media (min-width: $tablet) {
     max-height: 70px;
     padding: 27px 90px 23px 25px;
-    margin-right: 26px;
+    margin-right: 14px;
     @include font(20px, 20px, 500);
 
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 30px;
+      top: 25px;
       width: 10px;
       height: 10px;
     }
@@ -471,6 +502,11 @@
 
   @media (min-width: $desktop) {
     max-width: 730px;
+    margin-right: 5px;
+
+    &::before {
+      right: 27px;
+    }
   }
 }
 
@@ -513,7 +549,8 @@
   @media (min-width: $tablet) {
     @include no-fields();
     height: 70px;
-    min-width: 130px;
+    min-width: 150px;
+
     border: none;
 
     &::before {
@@ -522,8 +559,8 @@
     }
 
     &::after {
-      top: 25px;
-      left: -5px;
+      top: 26px;
+      left: 5px;
       width: 14px;
       height: 14px;
       border-radius: 50%;
@@ -533,12 +570,12 @@
 
   @media (min-width: $desktop) {
     margin-left: auto;
-    margin-right: 112px;
+    margin-right: 116px;
     justify-content: flex-end;
 
     &::after {
-      top: 28px;
-      left: 7px;
+      top: 26px;
+      left: 32px;
       width: 14px;
       height: 14px;
       border-radius: 50%;
@@ -569,17 +606,23 @@
 }
 
 .step__dropdown-select {
+  margin-bottom: 20px;
   display: flex;
   justify-content: stretch;
+
+  @media (min-width: $tablet) {
+    margin-right: auto;
+    margin-bottom: 13px;
+  }
 }
 
 .step__dropdown-list {
   position: relative;
   @include no-fields();
-  margin-bottom: 22px;
-  padding: 12px 70px 12px 12px;
+  padding: 12px 70px 11px 12px;
   color: $basic-blue-h2;
   @include font(14px, 18px, 500);
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
@@ -623,39 +666,39 @@
   @media (min-width: $tablet) {
     max-height: 70px;
     padding: 27px 90px 23px 25px;
-    margin-right: auto;
     @include font(20px, 20px, 500);
-    width: 376px;
+    width: 368px;
     overflow: visible;
 
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 30px;
+      top: 25px;
       width: 10px;
       height: 10px;
     }
 
     &::after {
-      top: 26px;
-      left: 396px;
+      top: 25px;
+      left: 387px;
       width: 14px;
       height: 14px;
     }
   }
 
   @media (min-width: $desktop) {
+    padding: 25px 90px 25px 25px;
     width: 730px;
 
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 28px;
+      top: 23px;
       width: 10px;
       height: 10px;
     }
 
     &::after {
-      top: 26px;
-      left: 766px;
+      top: 25px;
+      left: 767px;
       width: 14px;
       height: 14px;
     }
@@ -673,9 +716,10 @@
   margin-bottom: 25px;
   @include a();
   @include button();
-  padding: 12px 70px 12px 12px;
+  padding: 14px 70px 10px 12px;
   color: $basic-blue-h2;
   @include font(14px, 18px, 500);
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   text-align: left;
   font-family: $the-only-one;
@@ -711,23 +755,23 @@
 
   @media (min-width: $tablet) {
     max-height: 70px;
-    padding: 27px 90px 23px 25px;
+    padding: 25px 90px 23px 25px;
     margin-right: auto;
     margin-bottom: 50px;
     @include font(20px, 20px, 500);
-    width: 376px;
+    width: 370px;
     overflow: visible;
 
     &::before {
-      top: 26px;
-      left: 396px;
+      top: 25px;
+      left: 388px;
       width: 14px;
       height: 14px;
     }
 
     &::after {
       top: 34px;
-      left: 318px;
+      left: 323px;
       width: 18px;
       height: 3px;
     }
@@ -739,15 +783,15 @@
 
 
     &::before {
-      top: 26px;
-      left: 766px;
+      top: 25px;
+      left: 767px;
       width: 14px;
       height: 14px;
     }
 
     &::after {
-      top: 34px;
-      left: 672px;
+      top: 32px;
+      left: 685px;
       width: 18px;
       height: 3px;
     }
