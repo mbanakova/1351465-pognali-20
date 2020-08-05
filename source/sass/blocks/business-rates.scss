@@ -12,13 +12,29 @@
 .business-rates__wrapper {
   width: 220px;
   margin: 0 auto;
-  padding: 34px 25px;
+  padding: 34px 25px 32px;
+
+  @media (min-width: $tablet) {
+    width: 688px;
+    padding: 54px 80px 52px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    width: 750px;
+    padding: 54px 50px;
+    box-sizing: border-box;
+  }
 }
 
 .business-rates__title {
   @include  no-fields();
   text-align: center;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
+  }
 }
 
 .business-rates__list {
@@ -32,21 +48,41 @@
   &:last-child {
     border-bottom: 1px solid $basic-grey-line;
   }
+
+  @media (min-width: $tablet) {
+    padding: 14px 10px 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
 }
 
 .business-rates__service {
   @include  no-fields();
+
+  @media (min-width: $tablet) {
+    @include font(22px, 28px, 300);
+  }
 }
 
 .business-rates__cost {
   @include  no-fields();
+
+  @media (min-width: $tablet) {
+    @include font(22px, 28px, 300);
+  }
 }
 
 .business-rates__close {
   margin: 0 auto;
   font-family: $the-only-one;
-  @include font(24px, 24px, 700);
-  padding: 21px;
+  @include font(16px, 24px, 700);
+  text-transform: uppercase;
+  padding: 21px 20px 14px;
   width: 100%;
   color: $basic-blue-h2;
   box-sizing: border-box;
@@ -64,5 +100,11 @@
   &:active {
     opacity: 0.3;
     transition: 0.2s ease-in-out;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 41px;
+    text-transform: none;
+    @include font(24px, 24px, 700);
   }
 }

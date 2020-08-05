@@ -10,6 +10,7 @@
 }
 
 .page__body {
+  position: relative;
   @include no-fields();
   overflow-x: hidden;
 }

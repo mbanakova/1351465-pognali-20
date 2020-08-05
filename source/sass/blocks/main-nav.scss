@@ -1,8 +1,12 @@
 .main-nav {
-  padding: 25px;
+  padding: 25px 25px 0;
   display: grid;
   grid-template-columns: 135px 135px;
   background-color: $basic-blue;
+
+  &--scrolled {
+    background-color: $white;
+  }
 
   @media (min-width: $tablet) {
     padding-top: 45px;
@@ -52,6 +56,10 @@
   grid-column-start: 2;
 
   &--opened {
+    background-color: $white;
+  }
+
+  &--scrolled {
     background-color: $white;
   }
 

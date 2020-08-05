@@ -661,10 +661,15 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: stretch;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     margin-right: auto;
     margin-bottom: 13px;
+  }
+
+  &--active {
+    margin-bottom: 0;
   }
 }
 
@@ -713,6 +718,27 @@
   &--active {
     background-color: $basic-blue-h2;
     color: $white;
+
+    &::before {
+      top: 19px;
+      left: 190px;
+      width: 12px;
+      height: 2px;
+      background-color: $white;
+      transform: rotate(45deg);
+      border: none;
+    }
+
+    &::after {
+      top: 14px;
+      left: 195px;
+      width: 2px;
+      height: 13px;
+      background-color: $white;
+      transform: rotate(45deg);
+      border: none;
+      border-radius: 0;
+    }
   }
 
   @media (min-width: $tablet) {
@@ -758,9 +784,18 @@
 }
 
 .step__alphabet {
-  margin-bottom: 22px;
-  // <<<--->>>
+  margin-top: 0;
   display: none;
+
+  &--active {
+    display: grid;
+  }
+}
+
+.step__country-list {
+  margin-top: 16px;
+  margin-left: 16px;
+  @include font(16px, 26px, 300);
 }
 
 .step__submit-country {

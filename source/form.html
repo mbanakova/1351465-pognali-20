@@ -406,25 +406,46 @@
               <input class="alphabet__tab" type="radio" name="tab" id="tab-ya">
               <label class="alphabet__tab-label" for="tab-ya" tabindex="3">Я</label>
 
-
-              <ul class="alphabet__list">
-                <li class="alphabet__list-a">
-                  <ul class="list-a">
-                    <li class="list-a__country"><a class="list-a__link" href="/australia">Австралия</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/europe/austria">Австрия</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/asia/azerbaijan">Азербайджан</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/europe/albania">Албания</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/africa/algeria">Алжир</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/africa/albania">Ангола</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/europe/andorra">Андорра</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/islands/antigua">Антигуа и Барбуда</a>
-                    </li>
-                    <li class="list-a__country"><a class="list-a__link" href="/america/argentina">Аргентина</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/asia/armenia">Армения</a></li>
-                    <li class="list-a__country"><a class="list-a__link" href="/asia/afganistan">Афганистан</a></li>
-                  </ul>
+              <!-- <-- этот кусок из Попутчиков --->
+              <ul class="step__country-list country-filter__letter-group country-filter__letter-group--active"
+                data-letter="А">
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link" href="/australia">Австралия</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link europe" href="/europe/austria">Австрия</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link asia" href="/asia/azerbaijan">Азербайджан</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link europe" href="/europe/albania">Албания</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link" href="/africa/algeria">Алжир</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link" href="/africa/albania">Ангола</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link europe" href="/europe/andorra">Андорра</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link islands" href="/islands/antigua">Антигуа
+                    и Барбуда</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link america" href="/america/argentina">Аргентина</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link asia" href="/asia/armenia">Армения</a>
+                </li>
+                <li class="country-filter__letter-country">
+                  <a class="country-filter__letter-link asia" href="/asia/afganistan">Афганистан</a>
                 </li>
               </ul>
+
+              <!-- ------------- -->
             </div>
 
             <button class="step__submit-country" type="button">Добавить страну</button>
@@ -493,6 +514,7 @@
   <script src="js/navigation.js"></script>
   <script src="js/calendar.js"></script>
   <script src="js/form-numbers.js"></script>
+  <script src="js/dropdown.js"></script>
 </body>
 
 </html>
