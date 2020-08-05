@@ -169,7 +169,7 @@
 
   @media (min-width: $tablet) {
     margin-top: 0;
-    padding:  31px 80px 30px 34px;
+    padding:  31px 80px 61px 34px;
     min-height: 140px;
     box-sizing: border-box;
     flex-basis: 344px;
@@ -191,7 +191,8 @@
 
     @media (min-width: $tablet) {
       @include font(30px, 30px, 700);
-      top: 90px;
+      bottom: 21px;
+      top: auto;
       right: 316px;
     }
 
