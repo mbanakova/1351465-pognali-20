@@ -17,7 +17,7 @@
 
   @media (min-width: $desktop) {
     margin: 0 auto;
-    padding: 110px 125px 84px;
+    padding: 110px 125px 82px;
     background-color: $basic-blue;
   }
 }
@@ -50,15 +50,8 @@
     @include font(60px, 20px, 700);
   }
 
-  @media (min-width: $tablet) {
-    @include font(60px, 20px, 700);
-  }
-
-  &--form {
-
-    @media (min-width: $tablet) {
-      line-height: 60px;
-    }
+  @media (min-width: $desktop) {
+      padding-bottom: 6px;
   }
 
   &::after {
@@ -77,7 +70,8 @@
     }
 
     @media (min-width: $desktop) {
-      bottom: -87px;
+      height: 8px;
+      bottom: -86px;
     }
   }
 }

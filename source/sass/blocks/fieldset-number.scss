@@ -41,6 +41,7 @@
   color: $basic-blue-h2;
   @include font(16px, 16px, 500);
   text-transform: uppercase;
+  letter-spacing: 0.09em;
 
   &--pale {
     opacity: 0.3;
@@ -48,6 +49,11 @@
 
   @media (min-width: $tablet) {
     @include font(20px, 18px, 500);
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 28px;
+    letter-spacing: normal;
   }
 }
 
@@ -62,12 +68,12 @@
   &:last-of-type {
 
     @media (min-width: $tablet) {
-      margin-bottom: 58px;
+      margin-bottom: 0;
     }
   }
 
   @media (min-width: $tablet) {
-    margin-bottom: 34px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
@@ -75,8 +81,8 @@
     margin-bottom: 0;
     max-width: 180px;
     justify-content: center;
-    top: -16px;
-    right: 120px;
+    top:0;
+    right: 72px;
   }
 }
 
@@ -87,9 +93,20 @@
   position: relative;
   padding: 0;
   width: 43px;
-  height: 43px;
+  height: 42px;
   border: none;
+  border-radius: 4px;
   background-color: $white;
+
+  @media (min-width: $tablet) {
+    width: 62px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 70px;
+    height: 68px;
+  }
 }
 
 .fieldset-number__less--mates::before,
@@ -103,6 +120,12 @@
   width: 15px;
   height: 3px;
   background-color: $plus;
+
+  @media (min-width: $tablet) {
+    top: 33px;
+    left: 23px;
+    width: 20px;
+  }
 }
 
 .fieldset-number__more--mates::after,
@@ -114,21 +137,32 @@
   height: 15px;
   width: 3px;
   background-color: $plus;
+
+  @media (min-width: $tablet) {
+    top: 24px;
+    left: 32px;
+    height: 20px;
+  }
 }
 
 .fieldset-number__input {
   padding: 0;
   font-family: $the-only-one;
-  @include font(14px, 14px, 500);
+  @include font(15px, 15px, 500);
   flex-grow: 1;
   border: none;
   box-sizing: border-box;
   text-align: center;
   width: 43px;
-  height: 43px;
+  height: 42px;
   padding-left: 0;
+
+  @media (min-width: $tablet) {
+    height: 68px;
+  }
 
   @media (min-width: $desktop) {
     flex-grow: 0;
+    @include font(20px, 18px, 500);
   }
 }
