@@ -9,7 +9,7 @@
 
   @media (min-width: $tablet) {
     margin: 0 auto;
-    padding: 110px 0 88px 0;
+    padding: 92px 0 66px 0;
     background-color: $basic-tablet;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -32,6 +32,7 @@
     margin: 0 auto;
     padding: 0 74px;
     justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: $desktop) {
@@ -47,7 +48,7 @@
   @include font(36px, 36px, 700);
 
   @media (min-width: $tablet) {
-    @include font(60px, 20px, 700);
+    @include font(60px, 60px, 700);
   }
 
   @media (min-width: $desktop) {
@@ -66,7 +67,7 @@
 
     @media (min-width: $tablet) {
       height: 8px;
-      bottom: -92px;
+      bottom: -70px;
     }
 
     @media (min-width: $desktop) {
