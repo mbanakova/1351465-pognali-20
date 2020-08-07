@@ -6,11 +6,6 @@
   @media (min-width: $tablet) {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    min-height: 146px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 2864px;
   }
 }
 
@@ -18,9 +13,9 @@
   @include wrapper();
   position: relative;
   margin-top: -30px;
-  margin-bottom: 20px;
-  padding-top: 50px;
-  padding-bottom: 17px;
+  margin-bottom: 21px;
+  padding-top: 52px;
+  padding-bottom: 15px;
   z-index: 1;
 
   @media (min-width: $tablet) {
@@ -29,7 +24,7 @@
     margin-top: -60px;
     margin-bottom: 43px;
     padding-top: 122px;
-    padding-bottom: 47px;
+    padding-bottom: 48px;
     display: grid;
     grid-template-columns: 444px 177px;
     grid-template-areas:
@@ -42,10 +37,26 @@
     @include desktop();
     margin-top: -50px;
     padding-top: 106px;
-    padding-bottom: 57px;
-    margin-bottom: 60px;
+    padding-bottom: 56px;
+    margin-bottom: 48px;
+
+    //для пп
+    margin-bottom: 105px;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  &--unwrapped {
+    padding-bottom: 28px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 75px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 102px;
+    }
   }
 }
 
@@ -139,7 +150,6 @@
 
 .country-filter__toggle-sign {
   @include font(20px, 18px, 700);
-  margin-top: 2px;
   letter-spacing: 2px;
 
   @media (min-width: $tablet) {
@@ -152,8 +162,8 @@
 .country-filter__area-list {
   grid-area: list;
   @include ul();
-  padding-top: 35px;
-  padding-left: 25px;
+  margin-top: 35px;
+  margin-left: 25px;
   margin-bottom: 21px;
 
   &--hidden {
@@ -173,21 +183,20 @@
 }
 
 .country-filter__alphabet {
-  margin-bottom: 28px;
+  margin-bottom: 15px;
   padding-left: 25px;
   grid-area: letters;
 
   @media (min-width: $tablet) {
     padding: 0;
-    margin-top: 45px;
-    margin-bottom: 5px;
+    margin-top: 52px;
+    margin-bottom: 66px;
   }
 }
 
 .country-filter__unwrap {
   grid-area: button;
   position: relative;
-  margin-bottom: 33px;
   padding: 12px 10px 10px 30px;
   border: none;
   font-family: $the-only-one;
@@ -207,7 +216,7 @@
     position: absolute;
     content: "";
     top: 20px;
-    left: 78px;
+    left: 81px;
     width: 18px;
     height: 2px;
     background-color: $basic-blue-h2;
@@ -219,7 +228,7 @@
     position: absolute;
     content: "";
     top: 12px;
-    left: 86px;
+    left: 89px;
     width: 2px;
     height: 18px;
     background-color: $basic-blue-h2;
@@ -230,19 +239,20 @@
   @media (min-width: $tablet) {
     height: 100px;
     padding: 42px;
+    padding-left: 76px;
     margin-bottom: 0;
     @include font(20px, 20px, 700);
 
     &::before {
-      top: 49px;
-      left: 222px;
+      top: 47px;
+      left: 244px;
       width: 23px;
       height: 3px;
     }
 
     &::after {
-      top: 39px;
-      left: 232px;
+      top: 37px;
+      left: 254px;
       width: 3px;
       height: 23px;
     }
@@ -273,9 +283,13 @@
 
 .country-filter__large-screen {
   grid-area: countries;
+  margin-left: 27px;
+  margin-bottom: 31px;
 
   @media (min-width: $tablet) {
-    margin-top: 45px;
+    margin-top: 52px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
@@ -296,8 +310,6 @@
   display: none;
   // grid-area: countries;
   @include ul();
-  margin-left: 30px;
-  margin-bottom: 28px;
 
   &--active {
     display: block;
@@ -305,7 +317,6 @@
 
   @media (min-width: $tablet) {
     @include no-fields();
-    @include font(20px, 30px, 400);
   }
 
   @media (min-width: $desktop) {
@@ -329,7 +340,7 @@
 
 .country-filter__letter-link {
   @include a();
-  font-weight: 400;
+  @include font(16px, 22px, 400);
   text-transform: none;
   white-space: nowrap;
 
@@ -345,5 +356,9 @@
   &:active {
     opacity: 0.3;
     transition: 0.3s ease-in-out;
+  }
+
+  @media (min-width: $tablet) {
+    @include font(20px, 30px, 400);
   }
 }

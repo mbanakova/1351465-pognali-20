@@ -756,10 +756,30 @@
     }
 
     &::after {
-      top: 25px;
-      left: 387px;
+      top: 26px;
+      left: 386px;
       width: 14px;
       height: 14px;
+      border-radius: 50%;
+    }
+
+    &--active {
+      &::before {
+        content: "\1F7AB";
+        left: 324px;
+        top: 25px;
+        background-color: $basic-blue-h2;
+      }
+
+      &::after {
+        top: 25px;
+        left: 386px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid $alphabet-table;
+        box-sizing: border-box;
+      }
     }
   }
 
@@ -780,23 +800,127 @@
       width: 14px;
       height: 14px;
     }
+
+    &--active {
+
+      &::before {
+        left: 688px;
+        top: 25px;
+      }
+
+      &::after {
+        top: 25px;
+        left: 766px;
+      }
+    }
   }
 }
 
 .step__alphabet {
   margin-top: 0;
+  padding-bottom: 20px;
   display: none;
 
   &--active {
     display: grid;
   }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 575px;
+    box-sizing: border-box;
+    padding: 35px 27px 33px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px 26px 36px;
+    width: 730px;
+  }
 }
 
-.step__country-list {
-  margin-top: 16px;
-  margin-left: 16px;
+
+
+.step__letter-group {
+  display: none;
+  @include ul();
+  margin-top: 17px;
+  margin-left: 20px;
   @include font(16px, 26px, 300);
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $tablet) {
+    @include no-fields();
+    margin-left: 103px;
+    margin-top: -2px;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 111px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
+.step__letter-country {
+  margin-bottom: 4.5px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.step__letter-link {
+  @include a();
+  @include font(16px, 22px, 400);
+  text-transform: none;
+  white-space: nowrap;
+
+  &--hide {
+    display: none;
+  }
+
+  &:hover {
+    color: $basic-blue-h2;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+
+  @media (min-width: $tablet) {
+    @include font(20px, 30px, 400);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .step__submit-country {
   position: relative;

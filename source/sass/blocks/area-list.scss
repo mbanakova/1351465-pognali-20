@@ -1,6 +1,5 @@
 
 .area-list__link {
-  margin-bottom: 9px;
   @include a();
   @include font(16px, 18px, 700);
   color: $basic-blue-about;
@@ -21,13 +20,19 @@
 }
 
 .area-list__item {
-  margin-right: 25px;
+  margin-right: 0;
+  margin-bottom: 9px;
 
   &:last-of-type {
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: $tablet) {
-    margin-right: 26px;
+    margin-right: 27px;
+
+      &:last-of-type {
+        margin-bottom: 9px;
+    }
   }
 }

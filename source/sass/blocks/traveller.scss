@@ -345,6 +345,7 @@
 
     &:last-of-type {
       margin-bottom: 0;
+      margin-right: 25px;
     }
   }
 
@@ -409,7 +410,7 @@
 
   @media (min-width: $desktop) {
     margin-top: auto;
-    margin-right: 62px;
+    margin-right: auto;
     margin-bottom: 59px;
     flex-direction: row;
     align-items: baseline;
