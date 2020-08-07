@@ -1,6 +1,6 @@
 .rect-button {
-  position: relative;
   @include font(18px, 18px, 700);
+  position: relative;
   padding: 22px 50px 22px 22px;
   color: $basic-blue-h2;
   text-transform: inherit;
@@ -9,15 +9,15 @@
   width: auto;
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     padding: 29px 60px 27px 37px;
     border-radius: 20px;
-    @include font(24px, 24px, 700);
   }
 
   @media (min-width: $desktop) {
+    @include font(24px, 24px, 700);
     padding: 29px 20px 27px 37px;
     border-radius: 20px;
-    @include font(24px, 24px, 700);
   }
 
   &::after {

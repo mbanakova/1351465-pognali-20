@@ -2,7 +2,7 @@
   display: none;
   background-color: $white;
   border-radius: 20px;
-  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+  box-shadow: 0 2px 8px rgba($basic-blue-h2, 0.2);
 
   &--opened {
     display: block;
@@ -28,7 +28,7 @@
 }
 
 .business-rates__title {
-  @include  no-fields();
+  @include no-fields();
   text-align: center;
   margin-bottom: 28px;
 
@@ -38,7 +38,7 @@
 }
 
 .business-rates__list {
-  @include  ul();
+  @include ul();
 }
 
 .business-rates__item {
@@ -55,14 +55,10 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  @media (min-width: $desktop) {
-
-  }
 }
 
 .business-rates__service {
-  @include  no-fields();
+  @include no-fields();
 
   @media (min-width: $tablet) {
     @include font(22px, 28px, 300);
@@ -70,7 +66,7 @@
 }
 
 .business-rates__cost {
-  @include  no-fields();
+  @include no-fields();
 
   @media (min-width: $tablet) {
     @include font(22px, 28px, 300);
@@ -78,9 +74,9 @@
 }
 
 .business-rates__close {
+  @include font(16px, 24px, 700);
   margin: 0 auto;
   font-family: $the-only-one;
-  @include font(16px, 24px, 700);
   text-transform: uppercase;
   padding: 21px 20px 14px;
   width: 100%;
@@ -103,8 +99,8 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     padding: 41px;
     text-transform: none;
-    @include font(24px, 24px, 700);
   }
 }

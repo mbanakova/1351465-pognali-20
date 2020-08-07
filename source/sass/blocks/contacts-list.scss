@@ -45,17 +45,17 @@
 .contacts-list__link {
   font-size: 0;
 
-    &--phone-icon {
-      background-image: url(../../img/topmenu-phone.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
+  &--phone-icon {
+    background-image: url("../../img/topmenu-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 
-    &--mail-icon {
-      background-image: url(../../img/topmenu-mail.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
+  &--mail-icon {
+    background-image: url("../../img/topmenu-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 .contacts-list__auth {

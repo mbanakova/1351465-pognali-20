@@ -159,6 +159,7 @@
 }
 
 .main-nav__auth {
+  @include font(17px, 30px, 700);
   display: none;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -167,7 +168,6 @@
   color: $basic-blue;
   text-decoration: none;
   text-transform: uppercase;
-  @include font(17px, 30px, 700);
   text-align: center;
   border-radius: 25px;
   background-color: $basic-yellow;
@@ -177,6 +177,7 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 700);
     display: block;
     font-weight: 700;
     grid-column-start: 3;
@@ -188,7 +189,6 @@
     margin-left: auto;
     margin-bottom: 45px;
     margin-right: -7px;
-    @include font(20px, 20px, 700);
     max-height: 50px;
   }
 
@@ -210,8 +210,8 @@
 }
 
 .main-nav__list {
-  display: none;
   @include ul();
+  display: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -236,8 +236,8 @@
   }
 
   @media (min-width: $desktop) {
-    display: flex;
     @include no-fields();
+    display: flex;
     margin-top: 6px;
     order: 1;
   }
@@ -288,4 +288,3 @@
     display: none;
   }
 }
-

@@ -23,8 +23,8 @@
 }
 
 .main__wrapper {
-  display: flex;
   @include wrapper();
+  display: flex;
   color: $white;
 
   @media (min-width: $tablet) {
@@ -43,16 +43,16 @@
 }
 
 .main__title {
-  position: relative;
   @include no-fields();
   @include font(36px, 36px, 700);
+  position: relative;
 
   @media (min-width: $tablet) {
     @include font(60px, 60px, 700);
   }
 
   @media (min-width: $desktop) {
-      padding-bottom: 6px;
+    padding-bottom: 6px;
   }
 
   &::after {
@@ -81,10 +81,10 @@
   display: none;
 
   @media (min-width: $tablet) {
-    position: relative;
     @include a();
-    padding-right: 60px;
     @include font(20px, 20px, 700);
+    position: relative;
+    padding-right: 60px;
 
     &::after {
       position: absolute;
@@ -104,27 +104,26 @@
 
 .main__form-submit {
   @include button();
+  @include font(17px, 30px, 700);
   margin: 0;
   padding: 7px 20px;
   max-width: 220px;
   font-family: $the-only-one;
   color: $basic-blue-h2;
-  @include font(17px, 30px, 700);
   box-sizing: border-box;
 }
 
 .main__catalog-page {
-
   @media (min-width: $tablet) {
     margin-bottom: 113px;
   }
+
   @media (min-width: $desktop) {
     margin-bottom: 132px;
   }
 }
 
 .main__catalog-grid {
-
   @media (min-width: $desktop) {
     @include desktop();
     display: grid;
@@ -141,10 +140,10 @@
   @media (min-width: $tablet) {
     min-height: 590px;
     box-sizing: border-box;
-   }
+  }
 
   @media (min-width: $desktop) {
-   grid-column-start: 2;
+    grid-column-start: 2;
   }
 }
 
@@ -153,7 +152,7 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 52px;
-   }
+  }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
@@ -183,19 +182,19 @@
 }
 
 .main__show-link {
+  @include font(17px, 30px, 700);
   margin-bottom: 14px;
   position: relative;
   padding-left: 33px;
-  @include font(17px, 30px, 700);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: $basic-blue-h2;
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 700);
     margin-bottom: 0;
     padding-left: 56px;
-    @include font(20px, 20px, 700);
   }
 
   &:hover::before,

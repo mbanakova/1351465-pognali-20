@@ -25,12 +25,12 @@
 }
 
 .create-plan__top-wrapper {
+  @include font(24px, 24px, 700);
   margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: $basic-blue-h2;
-  @include font(24px, 24px, 700);
 
   @media (min-width: $tablet) {
     margin-bottom: 56px;

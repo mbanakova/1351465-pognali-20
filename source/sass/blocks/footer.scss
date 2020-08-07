@@ -7,7 +7,6 @@
   z-index: 1;
 
   @media (min-width: $tablet) {
-
     margin-top: -50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -60,9 +59,9 @@
 }
 
 .footer__social {
+  @include ul();
   padding-bottom: 37px;
   border-bottom: 1px solid $footer-grey-line;
-  @include ul();
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,13 +133,13 @@
   color: $special-grey;
 
   @media (min-width: $tablet) {
-    margin-right: 20px;
     @include font(20px, 20px, 400);
+    margin-right: 20px;
   }
 
   @media (min-width: $desktop) {
-    margin-right: 19px;
     @include font(20px, 33px, 400);
+    margin-right: 19px;
   }
 }
 
@@ -148,8 +147,7 @@
   @include a();
   width: 27px;
   height: 34px;
-  background-image: url(../../img/htmlacademy.svg);
+  background-image: url("../../img/htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: right 50%;
 }
-

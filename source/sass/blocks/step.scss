@@ -6,18 +6,17 @@
   flex-direction: column;
 
   &--first {
-
     @media (min-width: $desktop) {
       display: grid;
       grid-template-columns: 577px 1fr;
       grid-column-gap: 180px;
       grid-template-areas:
-      "title ."
-      "text ."
-      "people kids"
-      "days ."
-      "calendar calendar"
-      "button .";
+        "title ."
+        "text ."
+        "people kids"
+        "days ."
+        "calendar calendar"
+        "button .";
     }
   }
 
@@ -45,9 +44,9 @@
 
 .step__title {
   @include no-fields();
+  @include font(20px, 20px, 700);
   margin-bottom: 16px;
   color: $basic-blue-h2;
-  @include font(20px, 20px, 700);
 
   @media (min-width: $tablet) {
     @include font(36px, 36px, 700);
@@ -57,6 +56,7 @@
   @media (min-width: $desktop) {
     grid-area: title;
     margin-bottom: 33px;
+
     br {
       display: none;
     }
@@ -65,11 +65,12 @@
 }
 
 .step__text {
-  position: relative;
   @include no-fields();
+  position: relative;
   margin-bottom: 20px;
   padding-right: 0;
   font-weight: 400;
+
   br {
     display: none;
   }
@@ -78,6 +79,7 @@
     @include font(20px, 24px, 400);
     margin-bottom: 64px;
     max-width: 505px;
+
     br {
       display: inline;
     }
@@ -94,9 +96,10 @@
   }
 
   @media (min-width: $desktop) {
-    grid-area: text;
     @include font(20px, 24px, 400);
+    grid-area: text;
     margin-bottom: 85px;
+
     br {
       display: block;
     }
@@ -153,12 +156,12 @@
 }
 
 .step__location-name {
-  position: relative;
   @include no-fields();
+  @include font(18px, 18px, 500);
+  position: relative;
   padding-left: 10px;
   margin-bottom: 16px;
   color: $basic-blue-h2;
-  @include font(18px, 18px, 500);
 
   &::before {
     position: absolute;
@@ -222,13 +225,13 @@
 }
 
 .step__plan-description {
+  @include font(16px, 22px, 400);
   padding: 12px;
   padding-top: 10px;
   width: auto;
   resize: none;
   height: 220px;
   font-family: $the-only-one;
-  @include font(16px, 22px, 400);
   color: $special-grey;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
@@ -241,9 +244,9 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 400);
     padding: 18px;
     padding-right: 60px;
-    @include font(20px, 20px, 400);
     width: 500px;
     height: 140px;
     box-sizing: border-box;
@@ -288,11 +291,10 @@
     &:nth-of-type(2) {
       order: 2;
       margin-bottom: 58px;
-      }
+    }
   }
 
   @media (min-width: $desktop) {
-
     &:first-of-type {
       grid-area: people;
       margin-bottom: 38px;
@@ -312,7 +314,7 @@
       margin-top: 28px;
       margin-bottom: 0;
 
-      &::after{
+      &::after {
         width: 0;
         height: 0;
       }
@@ -336,7 +338,6 @@
 }
 
 .step__buttons-wrap {
-
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
@@ -367,7 +368,6 @@
   }
 
   &:last-of-type {
-
     @media (min-width: $desktop) {
       margin-left: auto;
       margin-right: 5px;
@@ -389,11 +389,11 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     position: relative;
     order: 4;
     padding: 29px 60px 27px 37px;
     border-radius: 20px;
-    @include font(24px, 24px, 700);
     text-transform: none;
     align-self: flex-start;
     width: initial;
@@ -424,7 +424,6 @@
       }
 
       @media (min-width: $desktop) {
-
         &:last-of-type {
           margin-left: auto;
           margin-right: 5px;
@@ -492,14 +491,14 @@
 }
 
 .step__country-choice {
+  @include no-fields();
+  @include font(14px, 18px, 500);
   position: relative;
   max-height: 42px;
   display: block;
   flex-grow: 1;
-  @include no-fields();
   padding: 13px 40px 13px 10px;
   color: $basic-blue-h2;
-  @include font(14px, 18px, 500);
   text-transform: uppercase;
   letter-spacing: 0.09em;
   border: 1px solid $alphabet-table;
@@ -531,18 +530,15 @@
     left: 0;
     border-radius: 4px;
     box-sizing: border-box;
-    background-image: linear-gradient(to right,
-      transparent 65%,
-      $gradient-white 75%,
-      $white 100%
-    );
+    background-image: linear-gradient(to right, transparent 65%, $gradient-white 75%, $white 100%);
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
+
     max-height: 70px;
     padding: 27px 90px 23px 25px;
     margin-right: 14px;
-    @include font(20px, 20px, 500);
 
     &::before {
       right: 30px;
@@ -563,8 +559,8 @@
 }
 
 .step__country-flag {
-  position: relative;
   @include no-fields();
+  position: relative;
   margin: auto;
   margin-left: -1px;
   height: 42px;
@@ -674,11 +670,11 @@
 }
 
 .step__dropdown-list {
-  position: relative;
   @include no-fields();
+  @include font(14px, 18px, 500);
+  position: relative;
   padding: 12px 70px 11px 12px;
   color: $basic-blue-h2;
-  @include font(14px, 18px, 500);
   letter-spacing: 0.09em;
   text-transform: uppercase;
   border: 1px solid $alphabet-table;
@@ -742,9 +738,9 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     max-height: 70px;
     padding: 27px 90px 23px 25px;
-    @include font(20px, 20px, 500);
     width: 368px;
     overflow: visible;
 
@@ -802,7 +798,6 @@
     }
 
     &--active {
-
       &::before {
         left: 688px;
         top: 25px;
@@ -839,14 +834,12 @@
   }
 }
 
-
-
 .step__letter-group {
-  display: none;
   @include ul();
+  @include font(16px, 26px, 300);
+  display: none;
   margin-top: 17px;
   margin-left: 20px;
-  @include font(16px, 26px, 300);
 
   &--active {
     display: block;
@@ -870,6 +863,7 @@
     }
   }
 }
+
 .step__letter-country {
   margin-bottom: 4.5px;
 
@@ -903,33 +897,14 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .step__submit-country {
-  position: relative;
-  margin-bottom: 25px;
   @include a();
   @include button();
+  @include font(14px, 18px, 500);
+  position: relative;
+  margin-bottom: 25px;
   padding: 14px 70px 10px 12px;
   color: $basic-blue-h2;
-  @include font(14px, 18px, 500);
   letter-spacing: 0.09em;
   text-transform: uppercase;
   text-align: left;
@@ -965,11 +940,11 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     max-height: 70px;
     padding: 25px 90px 23px 25px;
     margin-right: auto;
     margin-bottom: 50px;
-    @include font(20px, 20px, 500);
     width: 370px;
     overflow: visible;
 

@@ -46,8 +46,8 @@
 
 .user-list__link {
   @include a();
-  display: flex;
   @include font(16px, 45px, 700);
+  display: flex;
   color: $basic-blue-medium;
 }
 
@@ -61,12 +61,12 @@
   background-position: 50% 50%;
 
   &--phone {
-    background-image: url(../../img/contacts-phone.svg);
+    background-image: url("../../img/contacts-phone.svg");
     background-size: 30px 30px;
   }
 
   &--email {
-    background-image: url(../../img/contacts-mail.svg);
+    background-image: url("../../img/contacts-mail.svg");
     background-size: 30px 30px;
   }
 
@@ -93,7 +93,6 @@
 }
 
 .user-list__contact {
-
   @media (min-width: $tablet) {
     @include font(28px, 68px, 700);
   }

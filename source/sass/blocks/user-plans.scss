@@ -9,15 +9,15 @@
   padding-top: 27px;
   padding-bottom: 60px;
 
-    @media (min-width: $tablet) {
-      width: 618px;
-      padding: 57px 75px 105px 75px;
-    }
+  @media (min-width: $tablet) {
+    width: 618px;
+    padding: 57px 75px 105px 75px;
+  }
 
-    @media (min-width: $desktop) {
-      width: 1258px;
-      padding: 54px 58px 96px 124px;
-    }
+  @media (min-width: $desktop) {
+    width: 1258px;
+    padding: 54px 58px 96px 124px;
+  }
 }
 
 .user-plans__title {

@@ -21,8 +21,8 @@
   display: none;
 
   @media (min-width: $desktop) {
-    display: block;
     @include font(20px, 24px, 400);
+    display: block;
     text-transform: uppercase;
     opacity: 0.6;
     letter-spacing: 0.1em;

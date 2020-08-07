@@ -2,24 +2,24 @@
   display: none;
 
   @media (min-width: $desktop) {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 25%);
-  z-index: 10;
-  opacity: 0;
-  transition: 0.6 ease-in-out;
+    position: absolute;
+    display: block;
+    content: "";
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    z-index: 10;
+    opacity: 0;
+    transition: 0.6 ease-in-out;
   }
 }
 
 .tooltip__content {
+  @include font(20px, 20px, 400);
   position: relative;
   display: block;
   padding: 18px 25px;
   margin: 0 auto;
-  @include font(20px, 20px, 400);
   color: $white;
   text-align: center;
   background-color: $tooltip;

@@ -18,27 +18,27 @@
 
 .tourists-filter__title {
   @include no-fields();
+  @include font(22px, 22px, 700);
   padding: 25px 100px 23px 25px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: $basic-blue-h2;
-  @include font(22px, 22px, 700);
   letter-spacing: 0.02em;
   background-color: $basic-yellow;
 
   @media (min-width: $tablet) {
+    @include font(30px, 30px, 700);
     padding: 35px;
     padding-top: 37px;
     padding-bottom: 76px;
-    @include font(30px, 30px, 700);
     letter-spacing: normal;
   }
 
   @media (min-width: $desktop) {
+    @include font(30px, 30px, 700);
     padding: 45px;
     padding-top: 48px;
     padding-bottom: 33px;
-    @include font(30px, 30px, 700);
   }
 }
 
@@ -81,7 +81,7 @@
         position: absolute;
         content: "";
         left: 0;
-        top: -40px;;
+        top: -40px;
         width: 100%;
         height: 1px;
         background-color: $special-filter-orange;
@@ -123,7 +123,6 @@
     justify-content: stretch;
 
     &:nth-of-type(1) {
-
       &::after {
         display: none;
       }
@@ -148,8 +147,6 @@
 }
 
 .tourists-filter__accordion {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
 
@@ -184,8 +181,8 @@
 }
 
 .tourists-filter__legend {
-  position: relative;
   @include font(16px, 41px, 700);
+  position: relative;
   text-transform: uppercase;
 
   &::after {
@@ -203,10 +200,10 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     width: 120px;
     margin-right: 0;
     margin-bottom: 10px;
-    @include font(20px, 20px, 500);
 
     &::after {
       display: none;
@@ -218,9 +215,9 @@
   }
 
   @media (min-width: $desktop) {
+    @include font(20px, 22px, 500);
     margin-bottom: 20px;
     padding-left: 0;
-    @include font(20px, 22px, 500);
     text-transform: uppercase;
     min-width: 190px;
 
@@ -241,8 +238,20 @@
   transform: rotate(180deg);
 }
 
+
 .tourists-filter__wrap {
+  display: none;
   margin-top: 8px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+  }
 }
 
 .tourists-filter__group {
@@ -251,8 +260,8 @@
   display: none;
 
   &--horizontal {
-  display: none;
-  margin-bottom: 23px;
+    display: none;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $tablet) {
@@ -267,8 +276,8 @@
     margin-top: 6px;
     margin-bottom: 28px;
 
-  &--horizontal {
-    margin-bottom: 35px;
+    &--horizontal {
+      margin-bottom: 35px;
     }
   }
 }
@@ -317,15 +326,13 @@
 }
 
 .tourists-filter__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
 
 .tourists-filter__label {
-  position: relative;
   @include font(15px, 18px, 400);
+  position: relative;
   color: $black;
   padding-left: 27px;
 
@@ -358,8 +365,8 @@
   }
 
   @media (min-width: $tablet) {
-    padding-left: 38px;
     @include font(20px, 20px, 400);
+    padding-left: 38px;
 
     &::before {
       top: -4px;
@@ -425,20 +432,6 @@
   }
 }
 
-.tourists-filter__wrap {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (min-width: $desktop) {
-    flex-direction: column;
-  }
-}
-
 .tourists-filter__range {
   position: relative;
   background-color: $basic-blue-h2-02;
@@ -475,7 +468,6 @@
 }
 
 .tourists-filter__range-bar {
-
   @media (min-width: $tablet) {
     display: block;
   }
@@ -546,7 +538,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 auto ;
+    margin: 0 auto;
     width: 194px;
   }
 
@@ -575,12 +567,12 @@
   }
 
   &:hover {
-    box-shadow: 0px 3px 6px $black-14;
+    box-shadow: 0 3px 6px $black-14;
     transition: 0.2s ease-in-out;
   }
 
   &:active {
-    color: #161C35;
+    color: $basic-blue;
     opacity: 0.3;
     background-color: $special-filter-orange;
     transition: 0.2s ease-in-out;

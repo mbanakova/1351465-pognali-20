@@ -71,20 +71,20 @@
 }
 
 .fellow__desired-countries {
+  @include ul();
   position: absolute;
   top: -11px;
   left: 50%;
-  transform: translatex(-50%);
-  @include  ul();
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   line-height: 0;
 }
 
 .fellow__name {
-  position: relative;
-  @include  no-fields();
+  @include no-fields();
   @include font(21px, 21px, 700);
+  position: relative;
   text-align: left;
   margin: 0 auto 15px 28px;
   color: $basic-blue-h2;
@@ -145,7 +145,7 @@
 }
 
 .fellow__tags-list {
-  @include  ul();
+  @include ul();
   margin-bottom: 14px;
   display: flex;
   justify-content: center;
@@ -158,6 +158,7 @@
     flex-wrap: wrap;
   }
 }
+
 .fellow__transport {
   position: relative;
 
@@ -167,12 +168,12 @@
 }
 
 .fellow__transport-list {
-  @include  ul();
+  @include ul();
   display: flex;
   justify-content: space-between;
   width: 120px;
   max-height: 25px;
-  line-height: 0;;
+  line-height: 0;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;

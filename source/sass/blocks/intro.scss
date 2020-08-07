@@ -1,20 +1,20 @@
 .intro {
   background-color: $basic-blue;
-  background-image: url(../../img/globe-back-mobile@1x.jpg);
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 20px;
   background-size: 320px 384px;
 
   @media (min-width: $tablet) {
     background-color: $basic-tablet;
-    background-image: url(../../img/globe-back-tablet@1x.jpg);
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
     background-size: auto;
     background-position: 50% 248px;
   }
 
   @media (min-width: $desktop) {
     background-color: $basic-blue;
-    background-image: url(../../img/globe-back-desktop@1x.jpg);
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
     background-size: 1440px 750px;
     background-position: 0 bottom;
   }
@@ -24,7 +24,7 @@
   @include wrapper();
   padding-top: 20px;
   padding-bottom: 39px;
-  background-image: url(../../img/traveller-illustration-mobile@1x.png);
+  background-image: url("../../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 80px 150px;
 
@@ -32,7 +32,7 @@
     @include tablet();
     padding-top: 30px;
     padding-bottom: 96px;
-    background-image: url(../../img/traveller-illustration-tablet@1x.png);
+    background-image: url("../../img/traveller-illustration-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 284px 272px;
   }
@@ -40,7 +40,7 @@
   @media (min-width: $desktop) {
     @include desktop();
     padding-bottom: 0;
-    background-image: url(../../img/traveller-illustration-desktop@1x.png);
+    background-image: url("../../img/traveller-illustration-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 604px -18px;
     background-size: 431px 640px;
@@ -53,23 +53,23 @@
 
 .intro__title {
   @include no-fields();
-  margin: 0 auto 244px auto;
   @include font(36px, 40px, 700);
+  margin: 0 auto 244px auto;
   text-align: center;
   color: $white;
   max-width: 238px;
 
   @media (min-width: $tablet) {
+    @include font(60px, 70px, 700);
     margin: 0 auto 86px;
     max-width: 400px;
-    @include font(60px, 70px, 700);
     text-align: center;
   }
 
   @media (min-width: $desktop) {
+    @include font(60px, 70px, 700);
     margin: 77px auto 98px 67px;
     max-width: 400px;
-    @include font(60px, 70px, 700);
     text-align: left;
   }
 }
@@ -108,14 +108,14 @@
   margin-bottom: 19px;
 
   @media (min-width: $tablet) {
+    @include font(28px, 33px, 300);
     margin-bottom: 46px;
     max-width: 264px;
-    @include font(28px, 33px, 300);
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 43px;
     @include font(28px, 32px, 300);
+    margin-bottom: 43px;
   }
 }
 
@@ -124,8 +124,8 @@
   font-style: normal;
 
   @media (min-width: $tablet) {
-    display: block;
     @include font(21px, 25px, 700);
+    display: block;
     max-width: 260px;
   }
 
@@ -142,9 +142,9 @@
   color: $basic-blue;
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     margin: 0 auto;
     width: auto;
-    @include font(24px, 24px, 700);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -161,7 +161,7 @@
 
 .intro__step {
   position: relative;
-  padding:  24px 80px 27px 24px;
+  padding: 24px 80px 27px 24px;
   margin-top: -8px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
@@ -169,7 +169,7 @@
 
   @media (min-width: $tablet) {
     margin-top: 0;
-    padding:  31px 80px 61px 34px;
+    padding: 31px 80px 61px 34px;
     min-height: 140px;
     box-sizing: border-box;
     flex-basis: 344px;
@@ -178,7 +178,7 @@
   @media (min-width: $desktop) {
     min-height: 107px;
     margin-left: -30px;
-    padding:  29px 80px 29px 32px;
+    padding: 29px 80px 29px 32px;
   }
 
   &::after {
@@ -203,7 +203,7 @@
     }
   }
 
-  &:first-child{
+  &:first-child {
     background-color: $special-orange;
 
     @media (min-width: $tablet) {
@@ -264,7 +264,7 @@
     }
   }
 
-  &:last-child{
+  &:last-child {
     padding-top: 27px;
     padding-bottom: 23px;
     background-color: $basic-yellow;
@@ -272,7 +272,7 @@
     border-bottom-right-radius: 9px;
 
     @media (min-width: $tablet) {
-      padding:  31px 80px 30px 34px;
+      padding: 31px 80px 30px 34px;
       border-radius: 0;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;

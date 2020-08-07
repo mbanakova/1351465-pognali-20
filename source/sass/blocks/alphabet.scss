@@ -22,17 +22,15 @@
 }
 
 .alphabet__tab {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
 
 .alphabet__tab-label {
+  @include font(14px, 14px, 500);
   display: flex;
   justify-content: center;
   align-items: center;
-  @include font(14px, 14px, 500);
   color: $basic-blue-h2;
   text-transform: uppercase;
   background-color: $white;

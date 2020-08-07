@@ -11,18 +11,18 @@
   border-radius: 10px;
 
   &::after {
+    @include font(16px, 16px, 500);
     position: absolute;
     content: "1.";
     top: 23px;
     left: 25px;
-    @include font(16px, 16px, 500);
     color: $basic-blue-h2;
 
     @media (min-width: $tablet) {
+      @include font(20px, 20px, 500);
       top: 43px;
       right: 31px;
       left: auto;
-      @include font(20px, 20px, 500);
     }
 
     @media (min-width: $desktop) {
@@ -56,18 +56,18 @@
     margin-bottom: 0;
 
     &::after {
+      @include font(16px, 16px, 500);
       position: absolute;
       content: "2.";
       top: 23px;
       left: 25px;
-      @include font(16px, 16px, 500);
       color: $basic-blue-h2;
 
       @media (min-width: $tablet) {
+        @include font(20px, 20px, 500);
         top: 43px;
         right: 31px;
         left: auto;
-        @include font(20px, 20px, 500);
       }
 
       @media (min-width: $desktop) {
@@ -94,26 +94,25 @@
 
 .trip-card__header {
   @include no-fields();
+  @include font(16px, 16px, 700);
   margin-bottom: 21px;
   padding-left: 18px;
-  @include font(16px, 16px, 700);
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     margin-bottom: 54px;
     padding-left: 3px;
-    @include font(24px, 24px, 700);
     width: 100%;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
-    padding-left: 0px;
+    padding-left: 0;
     max-width: 500px;
   }
 }
 
 .trip-card__bottom {
-
   @media (min-width: $tablet) {
     flex-basis: 630px;
     display: flex;
@@ -127,31 +126,31 @@
 
 .trip-card__travellers {
   @include no-fields();
-  margin-bottom: 5px;
   @include font(14px, 14px, 500);
+  margin-bottom: 5px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     margin-right: 0;
     margin-bottom: 0;
-    @include font(20px, 20px, 500);
     letter-spacing: 0.1em;
   }
 }
 
 .trip-card__dates {
   @include no-fields();
-  margin-bottom: 24px;
   @include font(14px, 14px, 500);
+  margin-bottom: 24px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     margin-left: auto;
     margin-right: 81px;
     margin-bottom: 0;
-    @include font(20px, 20px, 500);
     letter-spacing: 0.1em;
   }
 
