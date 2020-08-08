@@ -2,21 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid $red;
-  box-sizing: border-box;
 }
 
 .logo__white {
+  @include img();
   display: block;
 
   @media (min-width: $tablet) {
     width: 164px;
-    height: 42px;
   }
 
   @media (min-width: $desktop) {
     width: 200px;
-    height: 52px;
   }
 
   &--hidden {
@@ -25,16 +22,16 @@
 }
 
 .logo__blue {
+  @include img();
   display: block;
+  margin: 0 auto;
 
   @media (min-width: $tablet) {
     width: 164px;
-    height: 42px;
   }
 
   @media (min-width: $desktop) {
     width: 200px;
-    height: 52px;
   }
 
   &--hidden {

@@ -16,9 +16,19 @@
 
     <nav class="header__main-nav main-nav main-nav--inner">
       <a href="index.html" class="header__logo logo">
-        <img class="logo__white" src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
-        <img class="logo__blue logo__blue--hidden" src="https://via.placeholder.com/96x15" width="96" height="15"
-          alt="logo">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+          <img class="logo__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+            width="96" height="15" alt="logo">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="logo__blue logo__blue--hidden" src="img/logo-mobile-blue@1x.png"
+            srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="logo">
+        </picture>
       </a>
       <button class="main-nav__burger" type="button" aria-label="Открыть меню">
       </button>
@@ -745,8 +755,13 @@
           <article class="travellers__card traveller traveller--offline">
 
             <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic" src="https://via.placeholder.com/70x70" width="70" height="70"
-                alt="Таня Фирсова">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img class="traveller__profile-pic" src="img/firsova-mobile@1x.jpg"
+                  srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+              </picture>
             </a>
             <a class="traveller__profile-link" href="#">
               <h3 class="traveller__name traveller__name--offline">Таня Фирсова</h3>
@@ -769,37 +784,34 @@
 
             <p class="traveller__choice">хочет посетить:</p>
             <ul class="traveller__countries-list">
-              <li class="traveller__country-item">Шри-ланка</li>
-              <li class="traveller__country-item">Таиланд</li>
-              <li class="traveller__country-item">Сейшелы</li>
+              <li class="traveller__country-item traveller__country-item--sri-lanka">Шри-ланка</li>
+              <li class="traveller__country-item traveller__country-item--thailand">Таиланд</li>
+              <li class="traveller__country-item traveller__country-item--seychelles">Сейшелы</li>
             </ul>
 
             <p class="traveller__choice traveller__choice--large">транспорт:</p>
             <ul class="traveller__transport-list">
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Самолёт">
+                <img class="transport-icon transport-icon--active" src="img/plane.svg" width="14" height="16"
+                  alt="Самолёт">
                 <div class="tooltip">
                   <span class="tooltip__content">Авиаперелёт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="Автобус">
+                <img class="transport-icon" src="img/bus.svg" width="13" height="16" alt="Автобус">
                 <div class="tooltip">
                   <span class="tooltip__content">Автотранспорт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="Велосипед">
+                <img class="transport-icon" src="img/bike.svg" width="15" height="17" alt="Велосипед">
                 <div class="tooltip">
                   <span class="tooltip__content">Велосипед</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="На своих двоих">
+                <img class="transport-icon" src="img/run.svg" width="13" height="17" alt="На своих двоих">
                 <div class="tooltip">
                   <span class="tooltip__content">Пешком</span>
                 </div>
@@ -826,8 +838,12 @@
           <article class="travellers__card traveller traveller--offline">
 
             <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
-                height="70" alt="Петя Демин">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img class="traveller__profile-pic" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
+                  width="70" height="70" alt="Петя Демин">
+              </picture>
             </a>
             <a class="traveller__profile-link" href="#">
               <h3 class="traveller__name traveller__name--offline">Петя Демин</h3>
@@ -849,36 +865,35 @@
 
             <p class="traveller__choice">хочет посетить:</p>
             <ul class="traveller__countries-list">
-              <li class="traveller__country-item">Бельгия</li>
-              <li class="traveller__country-item">Чехия</li>
+              <li class="traveller__country-item traveller__country-item--belgium">Бельгия</li>
+              <li class="traveller__country-item traveller__country-item--czech">Чехия</li>
             </ul>
 
             <p class="traveller__choice traveller__choice--large">транспорт:</p>
             <ul class="traveller__transport-list">
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Самолёт">
+                <img class="transport-icon transport-icon--active" src="img/plane.svg" width="14" height="16"
+                  alt="Самолёт">
                 <div class="tooltip">
                   <span class="tooltip__content">Авиаперелёт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Автобус">
+                <img class="transport-icon transport-icon--active" src="img/bus.svg" width="13" height="16"
+                  alt="Автобус">
                 <div class="tooltip">
                   <span class="tooltip__content">Автотранспорт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="Велосипед">
+                <img class="transport-icon" src="img/bike.svg" width="15" height="17" alt="Велосипед">
                 <div class="tooltip">
                   <span class="tooltip__content">Велосипед</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="На своих двоих">
+                <img class="transport-icon transport-icon--active" src="img/run.svg" width="13" height="17"
+                  alt="На своих двоих">
                 <div class="tooltip">
                   <span class="tooltip__content">Пешком</span>
                 </div>
@@ -905,8 +920,13 @@
           <article class="travellers__card traveller traveller--offline">
 
             <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
-                height="70" alt="Марк Смолов"></a>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <img class="traveller__profile-pic" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x"
+                  width="70" height="70" alt="Марк Смолов">
+              </picture>
+            </a>
             <a class="traveller__profile-link" href="#">
               <h3 class="traveller__name traveller__name--offline">Марк Смолов</h3>
             </a>
@@ -927,37 +947,35 @@
 
             <p class="traveller__choice">хочет посетить:</p>
             <ul class="traveller__countries-list">
-              <li class="traveller__country-item">США</li>
-              <li class="traveller__country-item">Австралия</li>
-              <li class="traveller__country-item">Доминика</li>
+              <li class="traveller__country-item traveller__country-item--usa">США</li>
+              <li class="traveller__country-item traveller__country-item--australia">Австралия</li>
+              <li class="traveller__country-item traveller__country-item--dominica">Доминика</li>
             </ul>
 
             <p class="traveller__choice traveller__choice--large">транспорт:</p>
             <ul class="traveller__transport-list">
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Самолёт">
+                <img class="transport-icon transport-icon--active" src="img/plane.svg" width="14" height="16"
+                  alt="Самолёт">
                 <div class="tooltip">
                   <span class="tooltip__content">Авиаперелёт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="Автобус">
+                <img class="transport-icon" src="img/bus.svg" width="13" height="16" alt="Автобус">
                 <div class="tooltip">
                   <span class="tooltip__content">Автотранспорт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Велосипед">
+                <img class="transport-icon transport-icon--active" src="img/bike.svg" width="15" height="17"
+                  alt="Велосипед">
                 <div class="tooltip">
                   <span class="tooltip__content">Велосипед</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="На своих двоих">
+                <img class="transport-icon" src="img/run.svg" width="13" height="17" alt="На своих двоих">
                 <div class="tooltip">
                   <span class="tooltip__content">Пешком</span>
                 </div>
@@ -984,14 +1002,22 @@
           <article class="travellers__card traveller traveller--online">
 
             <a class="traveller__profile-link" href="#">
-              <img class="traveller__profile-pic profile-pic" src="https://via.placeholder.com/70x70" width="70"
-                height="70" alt="Лариса Роговая"></a>
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img class="traveller__profile-pic" src="img/rogovaya-mobile@1x.jpg"
+                  srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+              </picture>
+            </a>
             <a class="traveller__profile-link" href="#">
               <h3 class="traveller__name traveller__name--online">Лариса Роговая</h3>
             </a>
 
             <div class="traveller__popularity">
               <div class="traveller__heart traveller__heart--dark">
+
               </div>
               <div class="traveller__counter">23</div>
             </div>
@@ -1005,36 +1031,34 @@
 
             <p class="traveller__choice">хочет посетить:</p>
             <ul class="traveller__countries-list">
-              <li class="traveller__country-item">Великобритания</li>
-              <li class="traveller__country-item">Германия</li>
+              <li class="traveller__country-item traveller__country-item--britain">Великобритания</li>
+              <li class="traveller__country-item traveller__country-item--germany">Германия</li>
             </ul>
 
             <p class="traveller__choice traveller__choice--large">транспорт:</p>
             <ul class="traveller__transport-list">
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Самолёт">
+                <img class="transport-icon transport-icon--active" src="img/plane.svg" width="14" height="16"
+                  alt="Самолёт">
                 <div class="tooltip">
                   <span class="tooltip__content">Авиаперелёт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon transport-icon--active" src="https://via.placeholder.com/17x17" width="17"
-                  height="17" alt="Автобус">
+                <img class="transport-icon transport-icon--active" src="img/bus.svg" width="13" height="16"
+                  alt="Автобус">
                 <div class="tooltip">
                   <span class="tooltip__content">Автотранспорт</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="Велосипед">
+                <img class="transport-icon" src="img/bike.svg" width="15" height="17" alt="Велосипед">
                 <div class="tooltip">
                   <span class="tooltip__content">Велосипед</span>
                 </div>
               </li>
               <li class="traveller__transport">
-                <img class="transport-icon" src="https://via.placeholder.com/17x17" width="17" height="17"
-                  alt="На своих двоих">
+                <img class="transport-icon" src="img/run.svg" width="13" height="17" alt="На своих двоих">
                 <div class="tooltip">
                   <span class="tooltip__content">Пешком</span>
                 </div>
@@ -1082,8 +1106,13 @@
 
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo logo logo--blue" href="#">
-        <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="logo">
+      <a class="footer__logo logo" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="logo__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96"
+            height="15" alt="logo">
+        </picture>
       </a>
 
       <ul class="footer__social social">

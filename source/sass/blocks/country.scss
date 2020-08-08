@@ -1,12 +1,13 @@
 .country {
   @media (min-width: $tablet) {
-    margin: 0 36px;
     display: flex;
     flex-direction: row-reverse;
+    height: 140px;
   }
 }
 
 .country__img {
+  @include img();
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 
@@ -16,7 +17,6 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     width: 185px;
-    height: 141px;
   }
 }
 

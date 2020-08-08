@@ -43,18 +43,15 @@
 
 .footer__logo {
   margin: 0 auto 33px;
-  text-align: center;
   display: block;
 
   @media (min-width: $tablet) {
     width: 164px;
-    height: 42px;
     margin: 0;
   }
 
   @media (min-width: $desktop) {
     width: 200px;
-    height: 55px;
   }
 }
 

@@ -49,3 +49,8 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@mixin img() {
+  max-width: 100%;
+  height: auto;
+}

@@ -42,8 +42,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    border-radius: 50%;
-    overflow: visible;
+    z-index: 10;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/rates@2x.png");
+    }
 
     @media (min-width: $tablet) {
       top: 410px;
