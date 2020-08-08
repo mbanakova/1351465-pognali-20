@@ -62,6 +62,32 @@
   border-radius: 4px;
   box-sizing: border-box;
 
+  &:hover {
+    border: 1px solid $filter-range-hover;
+
+    .fieldset-number__less--mates::before,
+    .fieldset-number__more--mates::before,
+    .fieldset-number__less--days::before,
+    .fieldset-number__more--days::before,
+    .fieldset-number__more--mates::after,
+    .fieldset-number__more--days::after {
+      background-color: $filter-range-hover;
+    }
+  }
+
+  &:active {
+    border: 1px solid $basic-blue;
+
+    .fieldset-number__less--mates::before,
+    .fieldset-number__more--mates::before,
+    .fieldset-number__less--days::before,
+    .fieldset-number__more--days::before,
+    .fieldset-number__more--mates::after,
+    .fieldset-number__more--days::after {
+      background-color: $basic-blue;
+    }
+  }
+
   &:last-of-type {
     @media (min-width: $tablet) {
       margin-bottom: 0;
@@ -82,6 +108,13 @@
   }
 }
 
+.fieldset-number__less,
+.fieldset-number__more {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
 .fieldset-number__less--mates,
 .fieldset-number__more--mates,
 .fieldset-number__less--days,
@@ -93,6 +126,7 @@
   border: none;
   border-radius: 4px;
   background-color: $white;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     width: 62px;

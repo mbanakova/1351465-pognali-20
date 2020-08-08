@@ -8,8 +8,8 @@
 }
 
 .contacts-list__item {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
 
   &:first-child {
@@ -43,19 +43,22 @@
 }
 
 .contacts-list__link {
+  display: block;
   font-size: 0;
+  padding: 20px;
 
   &--phone-icon {
-    background-image: url("../../img/topmenu-phone.svg");
+    background-image: url("../img/topmenu-phone.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 16px 16px;
   }
 
   &--mail-icon {
-    background-image: url("../../img/topmenu-mail.svg");
+    background-image: url("../img/topmenu-mail.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 16px 16px;
   }
 }
 

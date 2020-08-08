@@ -205,6 +205,7 @@
   }
 
   &:active {
+    color: rgba($basic-blue, 0.3);
     transition: 0.2s ease-in-out;
   }
 }
