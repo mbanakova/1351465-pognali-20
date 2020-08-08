@@ -1,21 +1,9 @@
 .range-cells {
   position: relative;
-  background-color: $white;
   display: flex;
   justify-content: stretch;
   background-color: $basic-yellow;
   border-radius: 4px;
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   top: 0;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   width: 1px;
-  //   height: 34px;
-  //   background-color: $alphabet-table;
-  // }
 
   &::after {
     position: absolute;
@@ -28,14 +16,19 @@
     border-top: 5px solid $white;
     border-bottom: 5px solid $white;
     background-color: $alphabet-table;
+
+    @media (min-width: $desktop) {
+      top: 17px;
+      left: 94px;
+    }
   }
 }
 
 .range-cells__input-left,
 .range-cells__input-right {
-  padding: 13px 10px 8px 10px;
-  font-family: $the-only-one;
   @include font(14px, 13px, 500);
+  padding: 13px 10px 8px 25px;
+  font-family: $the-only-one;
   color: $basic-blue-h2;
   text-align: center;
   width: 110px;
@@ -44,7 +37,6 @@
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-appearance: none;
 
   &::placeholder {
     color: $basic-blue-h2;
@@ -59,6 +51,8 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
+    padding: 10px;
     width: 74px;
     max-height: 43px;
   }

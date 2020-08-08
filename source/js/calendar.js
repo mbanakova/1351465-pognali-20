@@ -78,4 +78,3 @@ let picks = document.querySelectorAll('.calendar__date, .calendar__today, .calen
 
   });
 });
-

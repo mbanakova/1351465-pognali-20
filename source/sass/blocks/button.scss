@@ -1,36 +1,35 @@
 .button {
-  text-decoration: none;
-  color: inherit;
-  text-transform: uppercase;
   @include font(17px, 30px, 700);
+  text-decoration: none;
+  text-transform: uppercase;
   padding: 2px 33px 0 33px;
   color: $basic-blue;
   text-align: center;
   border-radius: 25px;
 
   @media (min-width: $tablet) {
-    padding: 17px 32px 13px 30px;
     @include font(20px, 20px, 700);
+    padding: 17px 32px 13px 30px;
   }
 
-&--bright {
-  background-color: $basic-yellow;
+  &--bright {
+    background-color: $basic-yellow;
 
-  &:hover {
-    background-color: $special_yellow_dark;
-    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: $special_yellow_dark;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:active {
+      transition: 0.3s ease-in-out;
+    }
   }
 
-  &:active {
-    transition: 0.3s ease-in-out;
+  &--basic {
+    background-color: $basic-blue-button;
   }
-}
 
-&--basic {
-  background-color: $basic-blue-button;
-}
-
-&--pale {
-  background-color: $white;
-}
+  &--pale {
+    background-color: $white;
+  }
 }

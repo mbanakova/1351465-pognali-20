@@ -15,43 +15,40 @@
 }
 
 .about__wrapper {
+  @include wrapper();
   position: relative;
-  @include  wrapper();
   padding: 32px 25px 34px;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/about-mobile@1x.png);
+  background-image: url("../img/about-mobile@1x.png");
   background-size: 292px 100%;
   background-repeat: no-repeat;
   background-position: 50% 0;
   border-bottom-left-radius: 30px;
 
-
   @media (min-width: $tablet) {
-    @include  tablet();
+    @include tablet();
     padding-top: 41px;
     padding-bottom: 89px;
-    background-image: url(../img/about-tablet@1x.png);
+    background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: right 8px top 48px;
     background-size: 376px auto;
   }
 
   @media (min-width: $desktop) {
-    @include  desktop();
+    @include desktop();
     padding-top: 90px;
     padding-bottom: 162px;
     display: grid;
     grid-template-columns: 700px 1fr;
     grid-template-rows: min-content;
-    background-image: url(../img/about-desktop@1x.png);
+    background-image: url("../img/about-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: right 60px bottom 0;
     background-size: 630px 665px;
   }
 
-
-// Эту штуку на мобильном не видно, а надо --->
   &::before {
     position: absolute;
     content: "";
@@ -97,15 +94,17 @@
   margin-left: 0;
   color: $white;
   max-width: 210px;
+
   br {
     display: none;
   }
 
   @media (min-width: $tablet) {
+    @include font(28px, 33px, 300);
     margin-left: 35px;
     margin-bottom: 33px;
-    @include font(28px, 33px, 300);
     max-width: 300px;
+
     br {
       display: inline;
     }
@@ -113,6 +112,7 @@
 
   @media (min-width: $desktop) {
     margin: 0 0 38px 70px;
+
     br {
       display: none;
     }
@@ -128,14 +128,14 @@
     font-weight: 700;
 
     @media (min-width: $tablet) {
+      @include font(21px, 25px, 700);
       margin-left: 35px;
       margin-bottom: 52px;
-      @include font(21px, 25px, 700);
     }
 
     @media (min-width: $desktop) {
-      margin: 0 auto 87px 70px;
       @include font(21px, 24px, 700);
+      margin: 0 auto 87px 70px;
       grid-row-start: 3;
       grid-row-end: 4;
       max-width: 420px;
@@ -151,11 +151,11 @@
   display: none;
 
   @media (min-width: $tablet) {
+    @include font(28px, 35px, 300);
     margin-left: 35px;
     display: flex;
     margin-right: 380px;
     margin-bottom: 0;
-    @include font(28px, 35px, 300);
   }
 
   @media (min-width: $desktop) {

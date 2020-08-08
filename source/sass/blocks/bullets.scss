@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: 6px 1fr;
     grid-column-gap: 36px;
-    grid-row-gap: 20px;
+    grid-row-gap: 17px;
   }
 }
 
@@ -21,10 +21,11 @@
   display: none;
 
   @media (min-width: $desktop) {
-    display: block;
     @include font(20px, 24px, 400);
+    display: block;
     text-transform: uppercase;
     opacity: 0.6;
+    letter-spacing: 0.1em;
     color: $black;
 
     &--progress {

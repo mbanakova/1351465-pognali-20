@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
 
-&--opened {
-  display: flex;
-}
+  &--opened {
+    display: flex;
+  }
+
   @media (min-width: $desktop) {
     display: none;
   }
@@ -16,7 +17,7 @@
   background-color: $white;
 
   &:last-child {
-  margin-right: 0;
+    margin-right: 0;
   }
 
   @media (min-width: $tablet) {
@@ -40,19 +41,19 @@
   }
 
   &--facebook {
-    background-image: url(../../img/facebook.svg);
+    background-image: url("../../img/facebook.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
 
   &--vk {
-    background-image: url(../../img/vk.svg);
+    background-image: url("../../img/vk.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
 
   &--instagram {
-    background-image: url(../../img/instagram.svg);
+    background-image: url("../../img/instagram.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }

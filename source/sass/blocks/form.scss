@@ -57,9 +57,10 @@
   text-align: center;
 
   @media (min-width: $tablet) {
+    @include font(28px, 32px, 300);
     max-width: 638px;
     margin-bottom: 65px;
-    @include font(28px, 32px, 300);
+
     br {
       display: none;
 
@@ -70,9 +71,9 @@
   }
 
   @media (min-width: $desktop) {
+    @include font(28px, 31px, 300);
     max-width: 655px;
     margin-bottom: 60px;
-    @include font(28px, 31px, 300);
   }
 
   &:last-of-type {
@@ -83,6 +84,7 @@
     @media (min-width: $tablet) {
       margin-bottom: 40px;
       max-width: 620px;
+
       br {
         display: none;
       }
@@ -131,9 +133,9 @@
 }
 
 .form__index-input {
+  @include font(18px, 20px, 700);
   margin-bottom: 0;
   padding: 20px 75px 20px 25px;
-  @include font(18px, 20px, 700);
   border-radius: 10px;
   border: none;
   width: 100%;
@@ -141,20 +143,20 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    padding: 28px 90px 28px 36px;
     @include font(24px, 24px, 700);
+    padding: 28px 90px 28px 36px;
     border-radius: 20px;
   }
 
   @media (min-width: $desktop) {
-    padding: 28px 360px 28px 36px;
     @include font(24px, 24px, 700);
+    padding: 28px 360px 28px 36px;
     border-radius: 20px;
   }
 
   &::placeholder {
-    font-family: $the-only-one;
     @include font(18px, 20px, 700);
+    font-family: $the-only-one;
     opacity: 0.3;
 
     @media (min-width: $tablet) {
@@ -203,7 +205,6 @@
 }
 
 .form__link-wrap {
-
   @media (min-width: $tablet) {
     margin-left: 40px;
   }
@@ -219,9 +220,9 @@
 
 .form__link {
   @include a();
+  @include font(16px, 45px, 700);
   display: flex;
   align-items: center;
-  @include font(16px, 45px, 700);
   color: $basic-blue-medium;
 
   @media (min-width: $tablet) {
@@ -235,7 +236,7 @@
   height: 45px;
   border-radius: 50%;
   background-color: $basic-blue-icon;
-  background-image: url(../../img/contacts-phone.svg);
+  background-image: url("../../img/contacts-phone.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 16px 16px;

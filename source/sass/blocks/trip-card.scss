@@ -5,24 +5,24 @@
 .trip-card__item {
   position: relative;
   margin-bottom: 10px;
-  padding: 23px;
+  padding: 24px;
   color: $basic-blue-h2;
   background-color: $white;
   border-radius: 10px;
 
   &::after {
+    @include font(16px, 16px, 500);
     position: absolute;
     content: "1.";
     top: 23px;
     left: 25px;
-    @include font(16px, 16px, 500);
     color: $basic-blue-h2;
 
     @media (min-width: $tablet) {
+      @include font(20px, 20px, 500);
       top: 43px;
       right: 31px;
       left: auto;
-      @include font(20px, 20px, 500);
     }
 
     @media (min-width: $desktop) {
@@ -32,22 +32,42 @@
     }
   }
 
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $alphabet-table;
+    top: 62%;
+    left: 0;
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
   &:last-of-type {
     margin-bottom: 0;
 
     &::after {
+      @include font(16px, 16px, 500);
       position: absolute;
       content: "2.";
       top: 23px;
       left: 25px;
-      @include font(16px, 16px, 500);
       color: $basic-blue-h2;
 
       @media (min-width: $tablet) {
+        @include font(20px, 20px, 500);
         top: 43px;
         right: 31px;
         left: auto;
-        @include font(20px, 20px, 500);
       }
 
       @media (min-width: $desktop) {
@@ -64,7 +84,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 36px 42px 36px 95px;
+    padding: 37px 42px 36px 95px;
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
@@ -74,52 +94,68 @@
 
 .trip-card__header {
   @include no-fields();
-  margin-bottom: 20px;
-  padding-left: 18px;
   @include font(16px, 16px, 700);
+  margin-bottom: 21px;
+  padding-left: 18px;
 
   @media (min-width: $tablet) {
-    padding-left: 3px;
     @include font(24px, 24px, 700);
+    margin-bottom: 54px;
+    padding-left: 3px;
     width: 100%;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
-    padding-left: 0px;
+    padding-left: 0;
+    max-width: 500px;
   }
 }
 
 .trip-card__bottom {
-
   @media (min-width: $tablet) {
     flex-basis: 630px;
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    flex-basis: 590px;
+  }
 }
 
 .trip-card__travellers {
   @include no-fields();
-  margin-bottom: 5px;
   @include font(14px, 14px, 500);
+  margin-bottom: 5px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    margin-right: 45px;
+    @include font(20px, 20px, 500);
+    margin-right: 0;
     margin-bottom: 0;
+    letter-spacing: 0.1em;
   }
 }
 
 .trip-card__dates {
   @include no-fields();
-  margin-bottom: 24px;
   @include font(14px, 14px, 500);
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    margin-right: auto;
+    @include font(20px, 20px, 500);
+    margin-left: auto;
+    margin-right: 81px;
     margin-bottom: 0;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 128px 0 auto;
   }
 }
 
@@ -127,5 +163,11 @@
   @include a();
   @include font(14px, 14px, 500);
   color: $black;
+  letter-spacing: 0.06em;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
+    letter-spacing: 0.1em;
+  }
 }

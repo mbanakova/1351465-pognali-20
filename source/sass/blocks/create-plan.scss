@@ -15,7 +15,7 @@
   @media (min-width: $tablet) {
     @include tablet();
     width: 618px;
-    padding: 53px 75px 123px;
+    padding: 53px 75px 112px;
   }
 
   @media (min-width: $desktop) {
@@ -25,12 +25,12 @@
 }
 
 .create-plan__top-wrapper {
+  @include font(24px, 24px, 700);
   margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: $basic-blue-h2;
-  @include font(24px, 24px, 700);
 
   @media (min-width: $tablet) {
     margin-bottom: 56px;
@@ -44,10 +44,14 @@
 
 .create-plan__title {
   @include no-fields();
+
+  @media (min-width: $desktop) {
+    margin-left: 70px;
+  }
 }
 
 .create-plan__bullets {
-  margin-right: 13px;
+  margin-right: 18px;
 
   @media (min-width: $tablet) {
     margin-right: 0;
@@ -55,7 +59,7 @@
 
   @media (min-width: $desktop) {
     position: absolute;
-    bottom: -266px;
+    bottom: -278px;
     left: 932px;
     z-index: 50;
   }

@@ -4,8 +4,10 @@
   grid-template-rows: repeat(5, 41px);
 
   @media (min-width: $tablet) {
-    grid-template-columns: repeat(5, 80px);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 60px);
+    grid-row-gap: 23px;
+    grid-column-gap: 37px;
     align-items: flex-start;
     justify-items: flex-start;
   }
@@ -20,17 +22,15 @@
 }
 
 .alphabet__tab {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
 
 .alphabet__tab-label {
+  @include font(14px, 14px, 500);
   display: flex;
   justify-content: center;
   align-items: center;
-  @include font(14px, 14px, 500);
   color: $basic-blue-h2;
   text-transform: uppercase;
   background-color: $white;

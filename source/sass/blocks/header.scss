@@ -9,6 +9,17 @@
     background-color: $white;
   }
 
+  &--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 73px;
+    width: 100%;
+    background-color: $white;
+    z-index: 1000;
+  }
+
   @media (min-width: $tablet) {
     height: 132px;
     background-color: $basic-tablet;

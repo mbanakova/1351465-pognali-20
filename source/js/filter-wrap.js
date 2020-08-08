@@ -6,6 +6,7 @@ let button = document.querySelector('.country-filter__unwrap');
 let text = document.querySelector('.country-filter__toggle-text');
 let sign = document.querySelector('.country-filter__toggle-sign');
 let body = document.querySelector('.page__body');
+let wrapper = document.querySelector('.country-filter__wrapper');
 
 toggle.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -29,6 +30,7 @@ toggle.addEventListener('click', function (evt) {
   alphabet.classList.toggle('alphabet--hidden');
   list.classList.toggle('country-filter__large-screen--hidden');
   button.classList.toggle('country-filter__unwrap--hidden');
+  wrapper.classList.toggle('country-filter__wrapper--unwrapped');
 });
 
 button.addEventListener('click', function (evt) {

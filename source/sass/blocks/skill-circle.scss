@@ -15,8 +15,8 @@
 }
 
 .skill-circle__points {
-  display: block;
   @include font(24px, 24px, 700);
+  display: block;
   text-align: center;
 
   &--transparent {
@@ -25,9 +25,9 @@
 }
 
 .skill-circle__lvl {
+  @include font(14px, 14px, 400);
   position: relative;
   display: block;
-  @include font(14px, 14px, 400);
   text-align: center;
 
   &--transparent {

@@ -6,40 +6,47 @@
   flex-direction: column;
 
   &--first {
-
     @media (min-width: $desktop) {
       display: grid;
       grid-template-columns: 577px 1fr;
       grid-column-gap: 180px;
       grid-template-areas:
-      "title ."
-      "text ."
-      "people kids"
-      "days ."
-      "calendar calendar"
-      "button .";
+        "title ."
+        "text ."
+        "people kids"
+        "days ."
+        "calendar calendar"
+        "button .";
     }
-  }
-
-  &--second,
-  &--third {
-    padding-bottom: 10px;
   }
 
   @media (min-width: $tablet) {
     padding: 48px 43px 56px;
+    border-radius: 30px;
+  }
+
+
+  &--second,
+  &--third {
+    padding-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 54px;
+      margin-bottom: 50px;
+    }
   }
 
   @media (min-width: $desktop) {
-    padding: 98px 159px 90px;
+    padding: 100px 159px 104px;
+    border-radius: 60px;
   }
 }
 
 .step__title {
   @include no-fields();
+  @include font(20px, 20px, 700);
   margin-bottom: 16px;
   color: $basic-blue-h2;
-  @include font(20px, 20px, 700);
 
   @media (min-width: $tablet) {
     @include font(36px, 36px, 700);
@@ -48,45 +55,55 @@
 
   @media (min-width: $desktop) {
     grid-area: title;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
+
     br {
       display: none;
     }
+    max-width: 666px;
   }
 }
 
 .step__text {
-  position: relative;
   @include no-fields();
+  position: relative;
   margin-bottom: 20px;
-  padding-right: 4px;
+  padding-right: 0;
   font-weight: 400;
+
   br {
     display: none;
   }
 
   @media (min-width: $tablet) {
     @include font(20px, 24px, 400);
-    margin-bottom: 62px;
+    margin-bottom: 64px;
+    max-width: 505px;
+
+    br {
+      display: inline;
+    }
 
     &::before {
       position: absolute;
       content: "";
       height: 1px;
       width: 532px;
-      bottom: -33px;
+      bottom: -34px;
       left: 0;
       background-color: $basic-grey-line;
     }
   }
 
   @media (min-width: $desktop) {
-    grid-area: text;
     @include font(20px, 24px, 400);
-    margin-bottom: 135px;
+    grid-area: text;
+    margin-bottom: 85px;
+
     br {
       display: block;
     }
+    max-width: 580px;
 
     &::before {
       position: absolute;
@@ -102,8 +119,18 @@
 
 .step__plans-textarea {
   @include wrapper();
+  width: auto;
   padding: 0;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
+
+  &:first-of-type {
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+      margin-top: 47px;
+    }
+  }
 
   @media (min-width: $tablet) {
     @include tablet();
@@ -111,20 +138,30 @@
     width: 500px;
     margin-right: auto;
     margin-left: 0;
+    margin-bottom: 40px;
+
+    &:first-of-type {
+      margin-bottom: 48px;
+    }
   }
 
   @media (min-width: $desktop) {
+    width: 730px;
+    margin-bottom: 48px;
 
+    &:first-of-type {
+      margin-bottom: 46px;
+    }
   }
 }
 
 .step__location-name {
-  position: relative;
   @include no-fields();
-  padding-left: 10px;
-  margin-bottom: 18px;
-  color: $basic-blue-h2;
   @include font(18px, 18px, 500);
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 16px;
+  color: $basic-blue-h2;
 
   &::before {
     position: absolute;
@@ -141,7 +178,7 @@
     position: absolute;
     content: "";
     top: -4px;
-    left: 170px;
+    left: 185px;
     width: 35px;
     height: 24px;
     border-radius: 4px;
@@ -162,11 +199,12 @@
 
     &::after {
       top: -10px;
-      left: 420px;
+      left: 430px;
       width: 70px;
       height: 47px;
     }
   }
+
   @media (min-width: $desktop) {
     margin-bottom: 37px;
 
@@ -178,8 +216,8 @@
     }
 
     &::after {
-      top: -10px;
-      left: 830px;
+      top: -6px;
+      left: 815px;
       width: 70px;
       height: 47px;
     }
@@ -187,34 +225,38 @@
 }
 
 .step__plan-description {
-  padding: 13px;
+  @include font(16px, 22px, 400);
+  padding: 12px;
+  padding-top: 10px;
   width: auto;
   resize: none;
+  height: 220px;
   font-family: $the-only-one;
-  @include font(16px, 22px, 400);
   color: $special-grey;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
   box-sizing: border-box;
 
   &::placeholder {
-    padding: 0 10px;
+    padding: 0 5px;
     color: $special-grey;
     opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
-    margin-bottom: 53px;
     @include font(20px, 20px, 400);
+    padding: 18px;
+    padding-right: 60px;
     width: 500px;
     height: 140px;
     box-sizing: border-box;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 57px;
+    padding: 23px;
+    padding-right: 15px;
     width: 730px;
-    min-height: 140px;
+    min-height: 142px;
   }
 }
 
@@ -223,57 +265,65 @@
   margin-bottom: 21px;
   border: none;
 
-    @media (min-width: $tablet) {
+  &:nth-of-type(3) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 34px;
+
+    &:nth-of-type(3) {
+      position: relative;
+      order: 1;
+      margin-bottom: 59px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 532px;
+        bottom: -34px;
+        left: 0;
+        background-color: $basic-grey-line;
+      }
+    }
+
+    &:nth-of-type(2) {
+      order: 2;
+      margin-bottom: 58px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:first-of-type {
+      grid-area: people;
+      margin-bottom: 38px;
+      max-width: 475px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 56px;
+      grid-area: days;
+      order: 0;
+      max-width: 475px;
+    }
+
+    &:nth-of-type(3) {
+      grid-area: kids;
+      order: 0;
+      margin-top: 28px;
       margin-bottom: 0;
 
-      &:nth-of-type(3) {
-        position: relative;
-        order: 1;
-        margin-bottom: 59px;
-
-        &::after {
-          position: absolute;
-          content: "";
-          height: 1px;
-          width: 532px;
-          bottom: -34px;
-          left: 0;
-          background-color: $basic-grey-line;
-        }
-      }
-
-      &:nth-of-type(2) {
-        order: 2;
-        }
-    }
-
-    @media (min-width: $desktop) {
-
-      &:first-of-type {
-        grid-area: people;
-        margin-bottom: 66px;
-      }
-
-      &:nth-of-type(2) {
-        margin-bottom: 54px;
-        grid-area: days;
-        order: 0;
-      }
-
-      &:nth-of-type(3) {
-        grid-area: kids;
-        order: 0;
-
-        &::after{
-          width: 0;
-          height: 0;
-        }
+      &::after {
+        width: 0;
+        height: 0;
       }
     }
+  }
 }
 
 .step__calendar {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet) {
     order: 3;
@@ -288,14 +338,10 @@
 }
 
 .step__buttons-wrap {
-
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
-  }
-
-  @media (min-width: $desktop) {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -308,17 +354,20 @@
   font-family: $the-only-one;
 
   &:first-of-type {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+      padding-right: 72px;
+    }
 
     @media (min-width: $desktop) {
       margin-right: auto;
-      margin-bottom: 0;
       margin-left: 0;
     }
   }
 
   &:last-of-type {
-
     @media (min-width: $desktop) {
       margin-left: auto;
       margin-right: 5px;
@@ -326,7 +375,11 @@
   }
 
   &:only-of-type {
-    margin-bottom: 8px;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet) {
+      padding-right: 70px;
+    }
 
     @media (min-width: $desktop) {
       margin-right: auto;
@@ -336,11 +389,11 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
     position: relative;
     order: 4;
     padding: 29px 60px 27px 37px;
     border-radius: 20px;
-    @include font(24px, 24px, 700);
     text-transform: none;
     align-self: flex-start;
     width: initial;
@@ -361,6 +414,21 @@
 
     &--back {
       padding: 29px 5px 27px 60px;
+
+      @media (min-width: $tablet) {
+        padding-right: 0;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+
+      @media (min-width: $desktop) {
+        &:last-of-type {
+          margin-left: auto;
+          margin-right: 5px;
+        }
+      }
 
       &::after {
         position: absolute;
@@ -384,10 +452,27 @@
     order: 0;
     margin-right: auto;
   }
+
+  &--submit:only-of-type {
+    margin-bottom: 6px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+      padding-right: 135px;
+    }
+  }
 }
 
 .step__countries-list {
   @include ul();
+
+  @media (min-width: $tablet) {
+    margin-top: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 32px;
+  }
 }
 
 .step__country-picked {
@@ -396,8 +481,8 @@
   justify-content: stretch;
   align-items: stretch;
 
-  @media (min-width: $desktop) {
-    margin-bottom: 15px;
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop) {
@@ -406,16 +491,16 @@
 }
 
 .step__country-choice {
+  @include no-fields();
+  @include font(14px, 18px, 500);
   position: relative;
   max-height: 42px;
   display: block;
   flex-grow: 1;
-  @include no-fields();
-  padding: 13px;
-  padding-right: 40px;
+  padding: 13px 40px 13px 10px;
   color: $basic-blue-h2;
-  @include font(14px, 18px, 500);
   text-transform: uppercase;
+  letter-spacing: 0.09em;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
   box-sizing: border-box;
@@ -445,22 +530,19 @@
     left: 0;
     border-radius: 4px;
     box-sizing: border-box;
-    background-image: linear-gradient(to right,
-      transparent 65%,
-      $gradient-white 75%,
-      $white 100%
-    );
+    background-image: linear-gradient(to right, transparent 65%, $gradient-white 75%, $white 100%);
   }
 
   @media (min-width: $tablet) {
-    max-height: 70px;
-    padding: 27px 90px 23px 25px;
-    margin-right: 26px;
     @include font(20px, 20px, 500);
 
+    max-height: 70px;
+    padding: 27px 90px 23px 25px;
+    margin-right: 14px;
+
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 30px;
+      top: 25px;
       width: 10px;
       height: 10px;
     }
@@ -468,12 +550,17 @@
 
   @media (min-width: $desktop) {
     max-width: 730px;
+    margin-right: 5px;
+
+    &::before {
+      right: 27px;
+    }
   }
 }
 
 .step__country-flag {
-  position: relative;
   @include no-fields();
+  position: relative;
   margin: auto;
   margin-left: -1px;
   height: 42px;
@@ -510,7 +597,8 @@
   @media (min-width: $tablet) {
     @include no-fields();
     height: 70px;
-    min-width: 130px;
+    min-width: 150px;
+
     border: none;
 
     &::before {
@@ -519,8 +607,8 @@
     }
 
     &::after {
-      top: 25px;
-      left: -5px;
+      top: 26px;
+      left: 5px;
       width: 14px;
       height: 14px;
       border-radius: 50%;
@@ -530,12 +618,12 @@
 
   @media (min-width: $desktop) {
     margin-left: auto;
-    margin-right: 112px;
+    margin-right: 116px;
     justify-content: flex-end;
 
     &::after {
-      top: 28px;
-      left: 7px;
+      top: 26px;
+      left: 32px;
       width: 14px;
       height: 14px;
       border-radius: 50%;
@@ -566,17 +654,28 @@
 }
 
 .step__dropdown-select {
+  margin-bottom: 20px;
   display: flex;
   justify-content: stretch;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin-right: auto;
+    margin-bottom: 13px;
+  }
+
+  &--active {
+    margin-bottom: 0;
+  }
 }
 
 .step__dropdown-list {
-  position: relative;
   @include no-fields();
-  margin-bottom: 22px;
-  padding: 12px 70px 12px 12px;
-  color: $basic-blue-h2;
   @include font(14px, 18px, 500);
+  position: relative;
+  padding: 12px 70px 11px 12px;
+  color: $basic-blue-h2;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   border: 1px solid $alphabet-table;
   border-radius: 4px;
@@ -615,64 +714,198 @@
   &--active {
     background-color: $basic-blue-h2;
     color: $white;
+
+    &::before {
+      top: 19px;
+      left: 190px;
+      width: 12px;
+      height: 2px;
+      background-color: $white;
+      transform: rotate(45deg);
+      border: none;
+    }
+
+    &::after {
+      top: 14px;
+      left: 195px;
+      width: 2px;
+      height: 13px;
+      background-color: $white;
+      transform: rotate(45deg);
+      border: none;
+      border-radius: 0;
+    }
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     max-height: 70px;
     padding: 27px 90px 23px 25px;
-    margin-right: auto;
-    @include font(20px, 20px, 500);
-    width: 376px;
+    width: 368px;
     overflow: visible;
 
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 30px;
+      top: 25px;
       width: 10px;
       height: 10px;
     }
 
     &::after {
       top: 26px;
-      left: 396px;
+      left: 386px;
       width: 14px;
       height: 14px;
+      border-radius: 50%;
+    }
+
+    &--active {
+      &::before {
+        content: "\1F7AB";
+        left: 324px;
+        top: 25px;
+        background-color: $basic-blue-h2;
+      }
+
+      &::after {
+        top: 25px;
+        left: 386px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid $alphabet-table;
+        box-sizing: border-box;
+      }
     }
   }
 
   @media (min-width: $desktop) {
+    padding: 25px 90px 25px 25px;
     width: 730px;
 
     &::before {
-      right: 40px;
-      top: 24px;
+      right: 28px;
+      top: 23px;
       width: 10px;
       height: 10px;
     }
 
     &::after {
-      top: 26px;
-      left: 766px;
+      top: 25px;
+      left: 767px;
       width: 14px;
       height: 14px;
+    }
+
+    &--active {
+      &::before {
+        left: 688px;
+        top: 25px;
+      }
+
+      &::after {
+        top: 25px;
+        left: 766px;
+      }
     }
   }
 }
 
 .step__alphabet {
-  margin-bottom: 22px;
-  // <<<--->>>
+  margin-top: 0;
+  padding-bottom: 20px;
   display: none;
+
+  &--active {
+    display: grid;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 575px;
+    box-sizing: border-box;
+    padding: 35px 27px 33px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px 26px 36px;
+    width: 730px;
+  }
+}
+
+.step__letter-group {
+  @include ul();
+  @include font(16px, 26px, 300);
+  display: none;
+  margin-top: 17px;
+  margin-left: 20px;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $tablet) {
+    @include no-fields();
+    margin-left: 103px;
+    margin-top: -2px;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 111px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.step__letter-country {
+  margin-bottom: 4.5px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.step__letter-link {
+  @include a();
+  @include font(16px, 22px, 400);
+  text-transform: none;
+  white-space: nowrap;
+
+  &--hide {
+    display: none;
+  }
+
+  &:hover {
+    color: $basic-blue-h2;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+
+  @media (min-width: $tablet) {
+    @include font(20px, 30px, 400);
+  }
 }
 
 .step__submit-country {
-  position: relative;
-  margin-bottom: 25px;
   @include a();
   @include button();
-  padding: 12px 70px 12px 12px;
-  color: $basic-blue-h2;
   @include font(14px, 18px, 500);
+  position: relative;
+  margin-bottom: 25px;
+  padding: 14px 70px 10px 12px;
+  color: $basic-blue-h2;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   text-align: left;
   font-family: $the-only-one;
@@ -707,24 +940,24 @@
   }
 
   @media (min-width: $tablet) {
+    @include font(20px, 20px, 500);
     max-height: 70px;
-    padding: 27px 90px 23px 25px;
+    padding: 25px 90px 23px 25px;
     margin-right: auto;
     margin-bottom: 50px;
-    @include font(20px, 20px, 500);
-    width: 376px;
+    width: 370px;
     overflow: visible;
 
     &::before {
-      top: 26px;
-      left: 396px;
+      top: 25px;
+      left: 388px;
       width: 14px;
       height: 14px;
     }
 
     &::after {
       top: 34px;
-      left: 318px;
+      left: 323px;
       width: 18px;
       height: 3px;
     }
@@ -736,15 +969,15 @@
 
 
     &::before {
-      top: 26px;
-      left: 766px;
+      top: 25px;
+      left: 767px;
       width: 14px;
       height: 14px;
     }
 
     &::after {
-      top: 34px;
-      left: 672px;
+      top: 32px;
+      left: 685px;
       width: 18px;
       height: 3px;
     }

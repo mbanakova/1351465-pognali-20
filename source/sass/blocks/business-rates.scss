@@ -2,7 +2,7 @@
   display: none;
   background-color: $white;
   border-radius: 20px;
-  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+  box-shadow: 0 2px 8px rgba($basic-blue-h2, 0.2);
 
   &--opened {
     display: block;
@@ -12,17 +12,33 @@
 .business-rates__wrapper {
   width: 220px;
   margin: 0 auto;
-  padding: 34px 25px;
+  padding: 34px 25px 32px;
+
+  @media (min-width: $tablet) {
+    width: 688px;
+    padding: 54px 80px 52px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    width: 750px;
+    padding: 54px 50px;
+    box-sizing: border-box;
+  }
 }
 
 .business-rates__title {
-  @include  no-fields();
+  @include no-fields();
   text-align: center;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
+  }
 }
 
 .business-rates__list {
-  @include  ul();
+  @include ul();
 }
 
 .business-rates__item {
@@ -32,21 +48,37 @@
   &:last-child {
     border-bottom: 1px solid $basic-grey-line;
   }
+
+  @media (min-width: $tablet) {
+    padding: 14px 10px 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .business-rates__service {
-  @include  no-fields();
+  @include no-fields();
+
+  @media (min-width: $tablet) {
+    @include font(22px, 28px, 300);
+  }
 }
 
 .business-rates__cost {
-  @include  no-fields();
+  @include no-fields();
+
+  @media (min-width: $tablet) {
+    @include font(22px, 28px, 300);
+  }
 }
 
 .business-rates__close {
+  @include font(16px, 24px, 700);
   margin: 0 auto;
   font-family: $the-only-one;
-  @include font(24px, 24px, 700);
-  padding: 21px;
+  text-transform: uppercase;
+  padding: 21px 20px 14px;
   width: 100%;
   color: $basic-blue-h2;
   box-sizing: border-box;
@@ -64,5 +96,11 @@
   &:active {
     opacity: 0.3;
     transition: 0.2s ease-in-out;
+  }
+
+  @media (min-width: $tablet) {
+    @include font(24px, 24px, 700);
+    padding: 41px;
+    text-transform: none;
   }
 }

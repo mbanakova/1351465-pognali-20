@@ -1,24 +1,19 @@
-.fieldset-kids {
-  margin-bottom: 27px;
-}
-
 .fieldset-kids__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
 
 .fieldset-kids__label {
+  @include font(15px, 26px, 400);
   position: relative;
   padding-left: 39px;
   color: $basic-blue-h2;
-  @include font(15px, 15px, 400);
 
   @media (min-width: $tablet) {
-    padding-left: 58px;
-    text-transform: uppercase;
     @include font(20px, 20px, 500);
+    padding-left: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   &::before {
@@ -37,12 +32,16 @@
       height: 36px;
       width: 36px;
     }
+
+    @media (min-width: $desktop) {
+      top: -10px;
+    }
   }
 
   &::after {
     position: absolute;
     content: "";
-    top: 2px;
+    top: 0;
     left: 9px;
     height: 6px;
     width: 9px;
@@ -62,6 +61,7 @@
     }
   }
 }
+
 .fieldset-kids__input:checked + .fieldset-kids__label::after {
   display: block;
   transition: 0.2s ease-in-out;

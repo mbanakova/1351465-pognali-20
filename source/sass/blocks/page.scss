@@ -1,9 +1,9 @@
 .page {
+  @include no-fields();
+  @include font();
   position: relative;
   min-width: 320px;
-  @include no-fields();
   font-family: $the-only-one;
-  @include font();
   color: $special-grey;
   background-color: $basic-blue-light;
   overflow-x: hidden;
@@ -11,6 +11,7 @@
 
 .page__body {
   @include no-fields();
+  position: relative;
   overflow-x: hidden;
 }
 

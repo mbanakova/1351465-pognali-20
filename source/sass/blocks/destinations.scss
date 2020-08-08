@@ -12,8 +12,8 @@
 }
 
 .destinations__wrapper {
+  @include wrapper();
   position: relative;
-  @include  wrapper();
   padding-top: 70px;
   padding-bottom: 33px;
 
@@ -51,7 +51,7 @@
       right: 40px;
       width: 287px;
       height: 575px;
-      background-image: url(../../img/flags-back@1x.png);
+      background-image: url("../../img/flags-back@1x.png");
       background-repeat: no-repeat;
       z-index: -1;
     }
@@ -61,7 +61,7 @@
       right: 60px;
       width: 287px;
       height: 575px;
-      background-image: url(../../img/flags-back@1x.png);
+      background-image: url("../../img/flags-back@1x.png");
       background-repeat: no-repeat;
       z-index: -1;
     }
@@ -86,7 +86,7 @@
 }
 
 .destinations__title {
-  @include  no-fields();
+  @include no-fields();
   margin: 0 0 20px 26px;
 
   @media (min-width: $tablet) {
@@ -104,14 +104,14 @@
 }
 
 .destinations__text {
-  @include  no-fields();
+  @include no-fields();
   margin: 0 0 62px 24px;
 
   @media (min-width: $tablet) {
+    @include font(28px, 33px, 300);
     margin-bottom: 104px;
     margin-left: 34px;
     max-width: 345px;
-    @include  font(28px, 33px, 300);
   }
 
   @media (min-width: $desktop) {
@@ -121,7 +121,7 @@
 }
 
 .destinations__list {
-  @include  ul();
+  @include ul();
   margin-bottom: 30px;
 
   @media (min-width: $tablet) {
