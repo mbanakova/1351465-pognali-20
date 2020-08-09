@@ -61,7 +61,7 @@ button.addEventListener('click', function (evt) {
 let container = document.querySelectorAll('.country-filter__letter-group--active .country-filter__letter-link');
 let locations = document.querySelector('.area-list');
 
-locations.addEventListener('click', event => {
+locations.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (event.target.tagName !== 'A') return false;
 

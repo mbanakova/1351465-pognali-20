@@ -55,7 +55,7 @@
       background-repeat: no-repeat;
       z-index: -1;
 
-      @media (min-resolution: 2dppx) {
+      @media (min-resolution: $extra) {
         background-image: url("../img/flags-back@2x.png");
       }
     }
@@ -64,7 +64,7 @@
       top: 90px;
       right: 60px;
 
-      @media (min-resolution: 2dppx) {
+      @media (min-resolution: $extra) {
         background-image: url("../img/flags-back@2x.png");
       }
     }

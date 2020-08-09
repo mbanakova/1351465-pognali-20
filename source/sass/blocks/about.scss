@@ -26,7 +26,7 @@
   background-position: 50% 0;
   border-bottom-left-radius: 30px;
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: $extra) {
     background-image: url("../img/about-mobile@2x.png");
   }
 
@@ -39,7 +39,7 @@
     background-position: right 8px top 48px;
     background-size: 376px 548px;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: $extra) {
       background-image: url("../img/about-tablet@2x.png");
     }
   }
@@ -56,7 +56,7 @@
     background-position: right 60px bottom 0;
     background-size: 630px 665px;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: $extra) {
       background-image: url("../img/about-desktop@2x.png");
     }
   }

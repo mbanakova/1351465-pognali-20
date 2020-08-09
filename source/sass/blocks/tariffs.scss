@@ -44,7 +44,7 @@
     background-position: 50% 50%;
     z-index: 10;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: $extra) {
       background-image: url("../img/rates@2x.png");
     }
 
