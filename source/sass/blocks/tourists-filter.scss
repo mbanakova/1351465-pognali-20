@@ -434,7 +434,7 @@
 
 .tourists-filter__range {
   position: relative;
-  background-color: $basic-blue-h2-02;
+  background-color: rgba($basic-blue-h2, 0.2);
   border-radius: 1px;
   height: 2px;
   width: 220px;
@@ -567,7 +567,7 @@
   }
 
   &:hover {
-    box-shadow: 0 3px 6px $black-14;
+    box-shadow: 0 3px 6px rgba($black, 0.14);
     transition: 0.2s ease-in-out;
   }
 

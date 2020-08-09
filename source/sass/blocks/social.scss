@@ -41,21 +41,24 @@
   }
 
   &--facebook {
-    background-image: url("../../img/facebook.svg");
+    background-image: url("../img/facebook.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 11px 21px;
   }
 
   &--vk {
-    background-image: url("../../img/vk.svg");
+    background-image: url("../img/vk.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 22px 12px;
   }
 
   &--instagram {
-    background-image: url("../../img/instagram.svg");
+    background-image: url("../img/instagram.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 16px 16px;
   }
 
   @media (min-width: $tablet) {

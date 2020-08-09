@@ -61,13 +61,13 @@
   background-position: 50% 50%;
 
   &--phone {
-    background-image: url("../../img/contacts-phone.svg");
-    background-size: 30px 30px;
+    background-image: url("../img/contacts-phone.svg");
+    background-size: 20px 20px;
   }
 
   &--email {
-    background-image: url("../../img/contacts-mail.svg");
-    background-size: 30px 30px;
+    background-image: url("../img/contacts-mail.svg");
+    background-size: 20px 20px;
   }
 
   @media (min-width: $tablet) {
@@ -84,12 +84,28 @@
 
     &--phone {
       background-color: $special_orange;
+      background-image: url("../img/topmenu-phone.svg");
+
+      &:hover {
+        background-color: $special_orange-saturate;
+        transition: 0.2s ease-in-out;
+      }
     }
 
     &--email {
       background-color: $special_yellow_dark;
+
+      &:hover {
+        background-color: $special_orange;
+        transition: 0.2s ease-in-out;
+      }
     }
   }
+}
+
+.user-list__svg {
+  width: 16px;
+  height: 16px;
 }
 
 .user-list__contact {

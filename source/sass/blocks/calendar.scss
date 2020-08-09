@@ -25,9 +25,24 @@
   @include no-fields();
   @include font(20px, 20px, 700);
   margin-right: auto;
-  color: $basic-blue-h2;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/month-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 9px 18px;
   opacity: 0.3;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+    transition: 0.2 ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.1;
+    transition: 0.2 ease-in-out;
+  }
 
   @media (min-width: $tablet) {
     @include font(36px, 36px, 700);
@@ -48,6 +63,10 @@
 .calendar__next {
   margin-right: 0;
   margin-left: auto;
+  background-image: url("../img/month-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 9px 18px;
 }
 
 .calendar__weekdays {

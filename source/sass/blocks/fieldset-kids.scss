@@ -8,6 +8,7 @@
   position: relative;
   padding-left: 39px;
   color: $basic-blue-h2;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     @include font(20px, 20px, 500);
@@ -41,7 +42,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: 2px;
     left: 9px;
     height: 6px;
     width: 9px;
@@ -51,7 +52,6 @@
     box-shadow: 0 2px 0 0 $white, inset 0 -2px 0 0 $white;
     transform: rotate(-45deg);
     display: none;
-    transition: 0.2s ease-in-out;
 
     @media (min-width: $tablet) {
       top: 4px;
@@ -59,6 +59,22 @@
       height: 8px;
       width: 13px;
     }
+  }
+
+  &:hover::before {
+    border: 1px solid $filter-range-hover;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active::before {
+    background-color: $icon-shadow;
+    border: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active::after {
+    box-shadow: 0 2px 0 0 $icon-shadow, inset 0 -2px 0 0 $icon-shadow;
+    transition: 0.2s ease-in-out;
   }
 }
 
