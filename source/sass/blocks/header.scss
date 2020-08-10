@@ -9,14 +9,13 @@
     background-color: $white;
   }
 
-  &--scrolled {
+  &--sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     max-height: 73px;
     width: 100%;
-    background-color: $white;
     z-index: 1000;
   }
 
@@ -38,6 +37,11 @@
 
     &--no-js {
       height: 90px;
+      background-color: $white;
+    }
+
+    &--sticky {
+      padding-top: 0;
       background-color: $white;
     }
   }

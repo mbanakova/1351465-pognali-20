@@ -18,6 +18,10 @@
     color: $white;
     background-color: transparent;
     max-width: 630px;
+
+    &--sticky {
+      color: $basic-blue;
+    }
   }
 }
 
