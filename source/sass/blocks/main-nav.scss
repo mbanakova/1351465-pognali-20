@@ -17,9 +17,8 @@
   @media (min-width: $desktop) {
     @include desktop();
     position: relative;
-    padding-top: 47px;
-    padding-bottom: 0;
-    height: 52px;
+    padding-top: 13px;
+    padding-bottom: 9px;
     display: flex;
     justify-content: space-between;
     align-items: center;

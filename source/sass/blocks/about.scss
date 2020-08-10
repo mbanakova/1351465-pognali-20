@@ -123,7 +123,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 38px 70px;
+    margin: 0 0 40px 70px;
 
     br {
       display: none;
@@ -173,6 +173,7 @@
 
   @media (min-width: $desktop) {
     margin: 0 auto 0 70px;
+    padding-right: 18px;
     min-width: 218px;
     grid-row-start: 4;
     grid-row-end: 5;
