@@ -19,6 +19,10 @@
     margin: 0 auto;
     padding: 90px 125px 63px;
     background-color: $basic-blue;
+
+    &--form {
+      z-index: -1;
+    }
   }
 }
 
