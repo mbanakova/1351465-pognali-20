@@ -6,6 +6,11 @@
   grid-template-columns: 70px 115px 45px;
   grid-template-rows: min-content;
 
+  &:hover {
+    box-shadow: (0px 4px 9px rgba($black, 0.16));
+    transition: 0.2s ease-in-out;
+  }
+
   &--offline::before {
     position: absolute;
     content: "";

@@ -182,7 +182,17 @@
     width: 35px;
     height: 24px;
     border-radius: 4px;
-    background-color: $red;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &--bosnia::after {
+    background-image: url("../img/flag-bosnia.svg");
+  }
+
+  &--czech::after {
+    background-image: url("../img/flag-czech.svg");
   }
 
   @media (min-width: $tablet) {

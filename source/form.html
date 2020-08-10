@@ -99,8 +99,19 @@
             <span class="profile__skill-points">80</span>
             <span class="profile__skill-lvl">level</span>
           </div>
-          <img class="profile__profile-pic" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
-            width="100" height="100" alt="Петя Демин">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+            <img class="profile__profile-pic" src="img/photo-account-mobile@1x.jpg"
+              srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Петя Демин">
+          </picture>
+
+          <!-- Из-за picture круг со скиллом и фото падают вниз на десктопею
+            Если закомментировать picture и оставить img, то ничего не ломается. -->
+
+          <!-- <img class="profile__profile-pic" src="img/photo-account-mobile@1x.jpg"
+            srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Петя Демин"> -->
+
           <a class="profile__change-pic button button--basic" href="#"><span class="profile__span">Сменить</span>
             фото</a>
 
@@ -118,29 +129,25 @@
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="avia" checked>
-                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="16" height="16"
-                    alt="Самолёт">
+                  <img class="transport-icon" src="img/plane.svg" width="18" height="16" alt="Самолёт">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="bus" checked>
-                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
-                    alt="Автобус">
+                  <img class="transport-icon" src="img/bus.svg" width="18" height="17" alt="Автобус">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="bycicle">
-                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
-                    alt="Велосипед">
+                  <img class="transport-icon" src="img/bike.svg" width="18" height="16" alt="Велосипед">
                 </label>
               </li>
               <li class="profile__transport-img">
                 <label class="profile__transport-label">
                   <input class="profile__transport-input" type="checkbox" name="on foot" checked>
-                  <img class="transport-icon" src="https://via.placeholder.com/16x16" width="21" height="21"
-                    alt="На своих двоих">
+                  <img class="transport-icon" src="img/run.svg" width="17" height="17" alt="На своих двоих">
                 </label>
               </li>
             </ul>
@@ -314,13 +321,13 @@
             <ul class="step__countries-list">
               <li class="step__country-picked">
                 <span class="step__country-choice">Босния и Герцеговина</span>
-                <span class="step__country-flag"><img class="step__flag" src="https://via.placeholder.com/35x24"
-                    width="35" height="24" alt="Флаг Боснии и Герцеговины"></span>
+                <span class="step__country-flag"><img class="step__flag" src="/img/flag-bosnia.svg" width="35"
+                    height="24" alt="Флаг Боснии и Герцеговины"></span>
               </li>
               <li class="step__country-picked">
                 <span class="step__country-choice">Чехия</span>
-                <span class="step__country-flag"><img class="step__flag" src="https://via.placeholder.com/35x24"
-                    width="35" height="24" alt="Флаг Чехии"></span>
+                <span class="step__country-flag"><img class="step__flag" src="/img/flag-czech.svg" width="35"
+                    height="24" alt="Флаг Чехии"></span>
               </li>
             </ul>
 
@@ -457,12 +464,12 @@
             </p>
 
             <div class="step__plans-textarea">
-              <p class="step__location-name">Босния и Герцеговина</p>
+              <p class="step__location-name step__location-name--bosnia">Босния и Герцеговина</p>
               <textarea class="step__plan-description" name="1st plan" cols="25" placeholder="План действий"></textarea>
             </div>
 
             <div class="step__plans-textarea">
-              <p class="step__location-name">Чехия</p>
+              <p class="step__location-name step__location-name--czech">Чехия</p>
               <textarea class="step__plan-description" name="2nd plan" cols="25"
                 rows="8">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
