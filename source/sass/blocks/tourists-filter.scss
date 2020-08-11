@@ -410,6 +410,12 @@
   }
 }
 
+
+.tourists-filter__input:checked ~ .transport-icon {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+
 .tourists-filter__transport-label {
   position: relative;
   padding-left: 0;
@@ -429,6 +435,19 @@
   @media (min-width: $desktop) {
     width: 44px;
     height: 44px;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    background-color: $icon-shadow;
+    box-shadow: none;
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
   }
 }
 

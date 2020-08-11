@@ -45,6 +45,7 @@
 
   @media (min-width: $desktop) {
     padding-top: 25px;
+    padding-right: 50px;
   }
 }
 
@@ -115,6 +116,7 @@
   @media (min-width: $tablet) {
     top: 55px;
     left: 30px;
+    max-width: 296px;
   }
 }
 

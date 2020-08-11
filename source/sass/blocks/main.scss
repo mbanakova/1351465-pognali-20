@@ -19,6 +19,15 @@
     margin: 0 auto;
     padding: 90px 125px 63px;
     background-color: $basic-blue;
+
+    &--form {
+      padding-top: 114px;
+      z-index: -1;
+    }
+
+    &--catalog {
+      padding-top: 114px;
+    }
   }
 }
 
@@ -93,7 +102,8 @@
       right: 0;
       width: 35px;
       height: 17px;
-      background-color: $white;
+      background-image: url("../img/return.svg");
+      background-repeat: no-repeat;
     }
 
     &--form {

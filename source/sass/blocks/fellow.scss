@@ -1,6 +1,11 @@
 .fellow {
   width: 270px;
 
+  &:hover {
+    box-shadow: (0 4px 9px rgba($black, 0.16));
+    transition: 0.2s ease-in-out;
+  }
+
   @media (min-width: $tablet) {
     width: 285px;
   }
@@ -12,6 +17,8 @@
 
   @media (min-width: $tablet) {
     max-height: 285px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 }
 

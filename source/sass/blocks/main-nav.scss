@@ -2,50 +2,48 @@
   padding: 25px 25px 0;
   display: grid;
   grid-template-columns: 135px 135px;
+  grid-template-rows: min-content;
   background-color: $basic-blue;
 
-  &--scrolled {
+  &--sticky {
     background-color: $white;
   }
 
   @media (min-width: $tablet) {
-    padding-top: 45px;
-    grid-template-columns: 300px 1fr 300px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 38px;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: min-content;
     background-color: $basic-tablet;
+
+    &--sticky {
+      background-color: $white;
+    }
   }
 
   @media (min-width: $desktop) {
     @include desktop();
     position: relative;
-    padding-top: 47px;
-    padding-bottom: 0;
-    height: 52px;
+    padding-top: 12px;
+    padding-bottom: 9px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $basic-blue;
+
+    &--sticky {
+      background-color: $white;
+    }
   }
 
   &--opened {
     background-color: $white;
   }
-
-  &--inner {
-    padding-top: 18px;
-
-    @media (min-width: $tablet) {
-      padding-top: 45px;
-    }
-
-    @media (min-width: $desktop) {
-      padding-top: 48px;
-    }
-  }
 }
 
 .main-nav__burger {
   margin-left: auto;
-  margin-bottom: 22px;
   position: relative;
   padding: 0;
   border: none;
@@ -59,23 +57,25 @@
     background-color: $white;
   }
 
-  &--scrolled {
+  &--sticky {
     background-color: $white;
   }
 
   @media (min-width: $tablet) {
-    position: absolute;
-    margin-left: 8px;
-    left: 50%;
-    top: 10px;
     margin-bottom: 0;
-    transform: translateX(-50%);
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+    max-height: 25px;
+    align-self: center;
     background-color: $basic-tablet;
 
     &--opened {
+      background-color: $white;
+      width: 100%;
+    }
+
+    &--sticky {
       background-color: $white;
     }
   }
@@ -85,10 +85,14 @@
     content: "";
     width: 25px;
     height: 3px;
-    top: 5px;
+    top: 7px;
     left: 0;
     background-color: $plus;
     border-radius: 1px;
+
+    @media (min-width: $tablet) {
+      top: 7px;
+    }
   }
 
   &::after {
@@ -96,10 +100,14 @@
     content: "";
     width: 25px;
     height: 3px;
-    top: 13px;
+    top: 15px;
     left: 0;
     background-color: $plus;
     border-radius: 1px;
+
+    @media (min-width: $tablet) {
+      top: 15px;
+    }
   }
 
   &--opened::before {
@@ -134,9 +142,9 @@
     display: block;
     position: relative;
     left: -15px;
-    top: 12px;
-    width: 60px;
-    height: 2px;
+    top: 2px;
+    min-width: 60px;
+    min-height: 2px;
     background-color: $basic-blue;
     pointer-events: none;
 
@@ -154,6 +162,14 @@
     &::after {
       width: 0;
       height: 0;
+    }
+
+    &--sticky {
+      background-color: $white;
+
+      &::before {
+        background-color: $basic-blue;
+      }
     }
   }
 }
@@ -185,10 +201,8 @@
     grid-row-start: 1;
     grid-row-end: 2;
     padding: 15px 29px 14px 29px;
-    margin-top: -5px;
     margin-left: auto;
-    margin-bottom: 45px;
-    margin-right: -7px;
+    margin-right: 0;
     max-height: 50px;
   }
 
@@ -216,7 +230,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 46px;
+  padding-top: 70px;
   padding-bottom: 51px;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -227,7 +241,7 @@
 
   @media (min-width: $tablet) {
     padding-left: 0;
-    padding-top: 51px;
+    padding-top: 95px;
     padding-bottom: 130px;
     margin-left: 59px;
     grid-column-start: 1;

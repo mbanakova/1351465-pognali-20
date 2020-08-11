@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 73px;
+  min-height: 73px;
   max-height: 100vh;
   background-color: $basic-blue;
 
@@ -9,33 +9,45 @@
     background-color: $white;
   }
 
-  &--scrolled {
+  &--sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    max-height: 73px;
     width: 100%;
     background-color: $white;
-    z-index: 1000;
+    z-index: 999;
   }
 
   @media (min-width: $tablet) {
-    height: 132px;
+    height: 132;
+    padding-bottom: 59px;
     background-color: $basic-tablet;
 
     &--no-js {
       height: 100vh;
       background-color: $white;
     }
+
+    &--sticky {
+      background-color: $white;
+    }
   }
 
   @media (min-width: $desktop) {
+    max-height: 110px;
     width: auto;
+    padding-top: 35px;
+    padding-bottom: 0;
     background-color: $basic-blue;
 
     &--no-js {
       height: 90px;
+      background-color: $white;
+    }
+
+    &--sticky {
+      padding-top: 0;
       background-color: $white;
     }
   }
@@ -63,14 +75,15 @@
 
 .header__logo {
   margin-right: auto;
-  margin-bottom: 32px;
   grid-column-start: 1;
   grid-column-end: 2;
 
   @media (min-width: $tablet) {
     width: 164px;
     height: 42px;
-    margin: 0 0 45px 10px;
+    margin: 0;
+    margin-right: auto;
+    align-self: center;
   }
 
   @media (min-width: $desktop) {

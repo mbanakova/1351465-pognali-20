@@ -1,12 +1,31 @@
 .map {
+  position: relative;
   height: 322px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: $extra) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet) {
     height: 574px;
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: $extra) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop) {
     height: 500px;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: $extra) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 }
 
@@ -20,5 +39,24 @@
 
   @media (min-width: $desktop) {
     height: 500px;
+  }
+}
+
+.map__marker {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  background-color: $basic-tablet;
+  border-radius: 50%;
+  border: 10px solid $white;
+
+  @media (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
+    border: 11px solid $white;
   }
 }

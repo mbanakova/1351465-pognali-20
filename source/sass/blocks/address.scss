@@ -36,7 +36,7 @@
   @media (min-width: $desktop) {
     width: 1020px;
     margin: 0 auto;
-    padding: 111px 135px 56px 283px;
+    padding: 108px 135px 56px 283px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +80,7 @@
       width: 68px;
       height: 68px;
       left: 36px;
+      background-size: 38px 38px;
     }
 
     @media (min-width: $desktop) {
