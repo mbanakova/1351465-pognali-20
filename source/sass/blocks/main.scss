@@ -21,7 +21,12 @@
     background-color: $basic-blue;
 
     &--form {
+      padding-top: 114px;
       z-index: -1;
+    }
+
+    &--catalog {
+      padding-top: 114px;
     }
   }
 }

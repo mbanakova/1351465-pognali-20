@@ -9,6 +9,15 @@
   &:hover {
     box-shadow: (0 4px 9px rgba($black, 0.16));
     transition: 0.2s ease-in-out;
+
+    & .traveller__profile-pic {
+      transform: scale(1.05);
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  &:nth-of-type(2):hover .traveller__profile-pic {
+    transform: scale(6) translateY(8%);
   }
 
   &--offline::before {

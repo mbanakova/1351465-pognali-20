@@ -2,7 +2,7 @@ let toggle = document.querySelector('.country-filter__toggle');
 let alphabet = document.querySelector('.alphabet');
 let list = document.querySelector('.country-filter__large-screen');
 let areas = document.querySelector('.country-filter__area-list');
-let button = document.querySelector('.country-filter__unwrap');
+let bigButton = document.querySelector('.country-filter__unwrap');
 let text = document.querySelector('.country-filter__toggle-text');
 let sign = document.querySelector('.country-filter__toggle-sign');
 let body = document.querySelector('.page__body');
@@ -29,11 +29,11 @@ toggle.addEventListener('click', function (evt) {
 
   alphabet.classList.toggle('alphabet--hidden');
   list.classList.toggle('country-filter__large-screen--hidden');
-  button.classList.toggle('country-filter__unwrap--hidden');
+  bigButton.classList.toggle('country-filter__unwrap--hidden');
   wrapper.classList.toggle('country-filter__wrapper--unwrapped');
 });
 
-button.addEventListener('click', function (evt) {
+bigButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (text.textContent == 'Показать все') {
     text.textContent = 'Свернуть';
@@ -53,7 +53,7 @@ button.addEventListener('click', function (evt) {
 
   alphabet.classList.toggle('alphabet--hidden');
   list.classList.toggle('country-filter__large-screen--hidden');
-  button.classList.toggle('country-filter__unwrap--hidden');
+  bigButton.classList.toggle('country-filter__unwrap--hidden');
 });
 
 
