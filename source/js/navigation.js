@@ -23,6 +23,9 @@ burger.addEventListener('click', function (evt) {
 
   burger.classList.toggle('main-nav__burger--opened');  // бургер анимация
   header.classList.toggle('header--no-js');  // цвет шапки синий/белый
-  logoWhite.classList.toggle('logo__white--hidden');  // смена логотипа на другой цвет
-  logoBlue.classList.toggle('logo__blue--hidden');  // смена логотипа на другой цвет
+
+  if (!header.classList.contains('header--sticky')) {
+    logoWhite.classList.toggle('logo__white--hidden');  // смена логотипа на другой цвет
+    logoBlue.classList.toggle('logo__blue--hidden');  // смена логотипа на другой цвет
+  }
 });
