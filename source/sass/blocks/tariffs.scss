@@ -198,9 +198,20 @@
 .tariffs__open {
   @include a();
   @include font(16px, 16px, 700);
+  position: relative;
   padding: 10px 0;
   text-transform: none;
   color: $special-blue-link;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
 
   @media (min-width: $tablet) {
     @include font(20px, 68px, 700);
@@ -216,14 +227,23 @@
       height: 68px;
       background-color: $heart-pale;
       border-radius: 50%;
-      background-image: url("../img/user.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 27px 27px;
     }
   }
 
   @media (min-width: $desktop) {
     margin-left: 70px;
+  }
+}
+
+.tariffs__svg {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 19px;
+    left: 22px;
+    z-index: 1;
   }
 }

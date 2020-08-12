@@ -5,7 +5,7 @@ let areas = document.querySelector('.country-filter__area-list');
 let bigButton = document.querySelector('.country-filter__unwrap');
 let text = document.querySelector('.country-filter__toggle-text');
 let sign = document.querySelector('.country-filter__toggle-sign');
-let body = document.querySelector('.page__body');
+let body = document.querySelector('.page');
 let wrapper = document.querySelector('.country-filter__wrapper');
 
 toggle.addEventListener('click', function (evt) {
@@ -74,4 +74,15 @@ locations.addEventListener('click', function (evt) {
       elem.classList.add('country-filter__letter-link--hide');
     }
   });
-});
+
+  let areaLink = document.querySelectorAll('.area-list__link');
+
+  for (let i = 0; i < areaLink.length; i++) {
+    areaLink[i].addEventListener('click', function () {
+      for (let k = 0; k < areaLink.length; k++) {
+        areaLink[k].classList.remove('area-list__link--active');
+      }
+      this.classList.add('area-list__link--active');
+    });
+  }
+})

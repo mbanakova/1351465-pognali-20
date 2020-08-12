@@ -142,9 +142,5 @@
 
 .footer__copyright-link {
   @include a();
-  width: 27px;
-  height: 34px;
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: right 50%;
+  max-height: 34px;
 }

@@ -9,12 +9,6 @@
   overflow-x: hidden;
 }
 
-.page__body {
-  @include no-fields();
-  position: relative;
-  overflow-x: hidden;
-}
-
 ::selection {
   background-color: $basic-yellow;
   color: $basic-blue;

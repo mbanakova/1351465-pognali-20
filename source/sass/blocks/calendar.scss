@@ -23,7 +23,7 @@
 .calendar__previous,
 .calendar__next {
   @include no-fields();
-  @include font(20px, 20px, 700);
+  @include font(0, 0, 0);
   margin-right: auto;
   width: 40px;
   height: 40px;
@@ -42,10 +42,6 @@
   &:active {
     opacity: 0.1;
     transition: 0.2 ease-in-out;
-  }
-
-  @media (min-width: $tablet) {
-    @include font(36px, 36px, 700);
   }
 }
 
@@ -172,7 +168,6 @@
   box-sizing: border-box;
   background-color: $basic-blue-h2;
   color: $white;
-  font-weight: 500;
 
   @media (min-width: $tablet) {
     border: 4px solid $calendar-orange;
@@ -181,7 +176,6 @@
 
 .calendar__next-date {
   color: $basic-blue-h2;
-  font-weight: 500;
   background-color: $modal-close-light;
 }
 
@@ -190,6 +184,26 @@
   box-sizing: border-box;
   background-color: $basic-blue-h2;
   color: $white;
-  font-weight: 500;
   opacity: 1;
+}
+
+.calendar__arrival {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: -20px;
+  }
+}
+
+.calendar__first-day {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    text-transform: lowercase;
+    margin-left: 10px;
+  }
 }

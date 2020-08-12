@@ -40,8 +40,9 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
+
     if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-      days += `<div class="calendar__today">${i}</div>`;
+      days += `<div class="calendar__today">${i}<div class="calendar__arrival">Заезд</div></div>`;
     } else {
       days += `<div class="calendar__date">${i}</div>`;
     }
@@ -51,6 +52,15 @@ const renderCalendar = () => {
     days += `<div class="calendar__next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
+
+  let firstOfNext = document.querySelector('.calendar__next-date');
+  let firstOfCurrent = document.querySelector('.calendar__date');
+  let currentMonthName = months[date.getMonth()].substring(0, 3);
+  let nextMonthName = months[date.getMonth() + 1].substring(0, 3);
+
+  firstOfCurrent.innerHTML += `<div class="calendar__first-day">${currentMonthName}</div>`;
+  firstOfNext.innerHTML += `<div class="calendar__first-day">${nextMonthName}</div>`;
+
 }
 
 document.querySelector('.calendar__previous').addEventListener('click', () => {
@@ -70,11 +80,10 @@ document.getElementById('start-date').value = +document.querySelector('.calendar
 
 
 let picks = document.querySelectorAll('.calendar__date, .calendar__today, .calendar__next-date').forEach(pick => {
-  pick.addEventListener('click', event => {
+  pick.addEventListener('click', () => {
 
     pick.classList.toggle('calendar__picked-date');
-    console.log(pick.textContent);
     document.getElementById('end-date').value = pick.textContent + ' ' + document.querySelector('.js-month').textContent;
-
+    pick.innerHTML += `<div class="calendar__arrival">Выезд</div>`;
   });
 });

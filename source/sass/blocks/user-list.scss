@@ -59,16 +59,9 @@
   background-color: $basic-blue-icon;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-
-  &--phone {
-    background-image: url("../img/contacts-phone.svg");
-    background-size: 20px 20px;
-  }
-
-  &--email {
-    background-image: url("../img/contacts-mail.svg");
-    background-size: 20px 20px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet) {
     margin-right: 23px;
@@ -77,6 +70,7 @@
   }
 
   @media (min-width: $desktop) {
+    position: relative;
     margin-right: 0;
     width: 50px;
     height: 50px;
@@ -84,10 +78,23 @@
 
     &--phone {
       background-color: $special_orange;
-      background-image: url("../img/topmenu-phone.svg");
+
 
       &:hover {
         background-color: $special_orange-saturate;
+        transition: 0.2s ease-in-out;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/topmenu-phone.svg");
+      }
+
+      &:active::after {
+        opacity: 0.3;
         transition: 0.2s ease-in-out;
       }
     }
@@ -99,6 +106,19 @@
         background-color: $special_orange;
         transition: 0.2s ease-in-out;
       }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 16px;
+        background-image: url("../img/topmenu-mail.svg");
+      }
+
+      &:active::after {
+        opacity: 0.3;
+        transition: 0.2s ease-in-out;
+      }
     }
   }
 }
@@ -106,6 +126,16 @@
 .user-list__svg {
   width: 16px;
   height: 16px;
+  fill: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .user-list__contact {

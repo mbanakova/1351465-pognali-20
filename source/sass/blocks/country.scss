@@ -31,8 +31,8 @@
   overflow: visible;
   display: grid;
   grid-template-areas:
-  "country visitors"
-  "slogan slogan";
+    "country visitors"
+    "slogan slogan";
 
   @media (min-width: $tablet) {
     flex-grow: 1;
@@ -44,9 +44,9 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     grid-template-areas:
-    "country"
-    "slogan"
-    "visitors";
+      "country"
+      "slogan"
+      "visitors";
   }
 
   @media (min-width: $desktop) {
@@ -59,7 +59,7 @@
 .country__flag {
   position: absolute;
   top: -12px;
-right: 210px;
+  right: 210px;
   border-radius: 4px;
 
   @media (min-width: $tablet) {
@@ -82,9 +82,9 @@ right: 210px;
 
 .country__name {
   @include no-fields();
+  @include font(21px, 21px, 700);
   padding-right: 15px;
   padding-bottom: 2px;
-  @include font(21px, 21px, 700);
   color: $black;
   grid-area: country;
 

@@ -205,6 +205,8 @@
 }
 
 .form__link-wrap {
+  color: $basic-yellow;
+
   @media (min-width: $tablet) {
     margin-left: 40px;
   }
@@ -223,7 +225,17 @@
   @include font(16px, 45px, 700);
   display: flex;
   align-items: center;
-  color: $basic-blue-medium;
+
+  &:hover {
+    color: $special_yellow_dark;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    color: $basic-yellow;
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
 
   @media (min-width: $tablet) {
     @include font(28px, 68px, 700);
@@ -236,10 +248,9 @@
   height: 45px;
   border-radius: 50%;
   background-color: $basic-blue-icon;
-  background-image: url("../img/contacts-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet) {
     margin-right: 22px;
@@ -256,9 +267,16 @@
   }
 }
 
-.form__contact {
-  color: $basic-yellow;
+.form__svg {
+  fill: currentColor;
 
+  @media (min-width: $tablet) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.form__contact {
   @media (min-width: $desktop) {
     margin-top: 4px;
   }

@@ -321,3 +321,13 @@
     }
   }
 }
+
+.intro__svg {
+  &--phone {
+    margin-bottom: 1px;
+  }
+
+  &--mail {
+    margin-top: 4px;
+  }
+}
