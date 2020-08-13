@@ -53,6 +53,16 @@
   &--active {
     background-color: $basic_yellow;
   }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    background-color: $basic_yellow;
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .pagination__arrows {

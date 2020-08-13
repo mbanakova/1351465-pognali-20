@@ -209,6 +209,16 @@
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    background-color: $heart-hover;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
+
   @media (min-width: $tablet) {
     width: 50px;
     height: 50px;
@@ -217,6 +227,18 @@
 
   &--dark {
     background-color: $heart-pale;
+    color: rgba($basic-blue-about, 0.3);
+
+    &:hover {
+      background-color: $heart-pale;
+      color: $basic-blue-about;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: 0.2s ease-in-out;
+    }
   }
 }
 

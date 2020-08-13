@@ -144,7 +144,7 @@
 .profile__change-pic {
   @include font(20px, 18px, 500);
   grid-area: link;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
   padding: 13px 30px 11px;
   display: block;
   width: 100%;
@@ -189,7 +189,7 @@
 .profile__fieldset {
   @include font(16px, 18px, 700);
   grid-area: tags;
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
   padding: 0;
   text-align: center;
   color: $basic-blue-h2;
@@ -198,20 +198,24 @@
   box-sizing: border-box;
 
   &:first-of-type {
+    &::after {
+      position: absolute;
+      padding: 5px 20px;
+      content: attr(data-field);
+      left: 50%;
+      bottom: 196px;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background-color: $basic-blue-light;
+    }
+
     @media (min-width: $tablet) {
       @include font(20px, 20px, 500);
       margin-bottom: 0;
 
       &::after {
-        position: absolute;
-        padding: 5px 20px;
-        content: attr(data-field);
-        left: 50%;
         bottom: 43px;
-        transform: translateX(-50%);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        background-color: $basic-blue-light;
       }
     }
 
@@ -221,9 +225,6 @@
       &::after {
         left: 186px;
         bottom: 52px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        background-color: $basic-blue-light;
       }
     }
   }
@@ -232,6 +233,18 @@
     grid-area: transport;
     margin-bottom: 0;
     max-width: 308px;
+
+    &::after {
+      position: absolute;
+      padding: 5px 20px;
+      content: attr(data-field);
+      left: 50%;
+      bottom: 82px;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background-color: $basic-blue-light;
+    }
 
     @media (min-width: $tablet) {
       @include font(20px, 20px, 500);
@@ -265,21 +278,20 @@
 }
 
 .profile__legend {
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0 15px;
+  display: none;
+  // text-transform: uppercase;
+  // margin: 0;
+  // padding: 0 15px;
 
-  @media (min-width: $tablet) {
-    display: none;
-  }
+  // @media (min-width: $tablet) {
+  //   display: none;
+  // }
 }
 
 .profile__textarea {
   @include no-fields();
   @include font(16px, 18px, 400);
   padding: 25px;
-  padding-top: 19px;
-  padding-bottom: 20px;
   box-sizing: border-box;
   width: 100%;
   color: $special-grey;
@@ -313,8 +325,7 @@
 
 .profile__transport-list {
   @include ul();
-  padding: 14px;
-  padding-top: 6px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;

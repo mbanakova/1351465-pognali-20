@@ -65,3 +65,22 @@ plusDays.addEventListener('click', function (evt) {
     plusDays.disabled = true;
   }
 });
+
+
+// Textarea invalid
+
+let textareas = document.querySelectorAll('.step__plan-description');
+let form = document.querySelector('.main__form');
+
+form.addEventListener('submit', function (evt) {
+
+  for (let i = 0; i < textareas.length; i++) {
+    if (!textareas[i].value) {
+      evt.preventDefault();
+      textareas[i].classList.remove('step__error');
+      this.offsetWidth = this.offsetWidth;
+      textareas[i].classList.add('step__error');
+      textareas[i].placeholder = 'Это поле должно быть заполнено';
+    }
+  }
+});

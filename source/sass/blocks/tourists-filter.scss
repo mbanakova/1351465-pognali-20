@@ -231,6 +231,16 @@
       transform: translateY(-40%);
       right: 0;
     }
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: 0.2s ease-in-out;
+    }
   }
 }
 
@@ -404,6 +414,16 @@
 
     &::before {
       top: -5px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: 0.2s ease-in-out;
     }
   }
 }
