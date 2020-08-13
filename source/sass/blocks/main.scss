@@ -93,23 +93,25 @@
     @include a();
     @include font(20px, 20px, 700);
     position: relative;
-    padding-right: 60px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: -1px;
-      right: 0;
-      width: 35px;
-      height: 17px;
-      background-image: url("../img/return.svg");
-      background-repeat: no-repeat;
-    }
 
     &--form {
       display: none;
     }
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: 0.2s ease-in-out;
+    }
   }
+}
+
+.main__return {
+  margin-left: 20px;
 }
 
 .main__form-submit {

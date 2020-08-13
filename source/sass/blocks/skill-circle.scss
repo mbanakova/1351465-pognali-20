@@ -45,4 +45,21 @@
     background-color: $white;
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet) {
+    &--transparent {
+      display: block;
+    }
+
+    &::before {
+      background-color: $black;
+      opacity: 0.1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      top: -3px;
+    }
+  }
 }

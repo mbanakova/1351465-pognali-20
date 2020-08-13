@@ -70,11 +70,6 @@
     left: 0;
     border-radius: 50%;
     background-color: $basic-blue-icon;
-    background-image: url("../img/contacts-location.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 25px 25px;
-
 
     @media (min-width: $tablet) {
       width: 68px;
@@ -89,6 +84,29 @@
       left: 0;
       top: -10px;
     }
+  }
+}
+
+.address__svg {
+  position: absolute;
+  content: "";
+  left: 22px;
+  top: 6px;
+  transform: translate(-50%);
+  fill: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    left: 70px;
+    top: 12px;
+    width: 32px;
+    height: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 46px;
+    top: 12px;
+    width: 32px;
+    height: 44px;
   }
 }
 

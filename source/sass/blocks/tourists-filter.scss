@@ -234,6 +234,19 @@
   }
 }
 
+.tourists-filter__colon {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline;
+    margin-left: -5px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
 .tourists-filter__accordion:checked ~ .tourists-filter__legend::after {
   transform: rotate(180deg);
 }

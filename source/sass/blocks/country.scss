@@ -2,7 +2,6 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row-reverse;
-    height: 140px;
   }
 }
 
@@ -17,6 +16,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     width: 185px;
+    height: 100%;
   }
 }
 
@@ -29,36 +29,43 @@
   background-color: $white;
   border-radius: 8px;
   overflow: visible;
+  display: grid;
+  grid-template-areas:
+    "country visitors"
+    "slogan slogan";
 
   @media (min-width: $tablet) {
     flex-grow: 1;
     max-height: 141px;
     margin-top: 0;
-    padding-top: 29px;
-    padding-right: 30px;
-    padding-bottom: 20px;
+    padding: 29px 30px 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    grid-template-areas:
+      "country"
+      "slogan"
+      "visitors";
   }
 
   @media (min-width: $desktop) {
     padding-top: 25px;
     padding-right: 50px;
+    padding-left: 30px;
   }
 }
 
 .country__flag {
   position: absolute;
   top: -12px;
-  left: 25px;
+  right: 210px;
   border-radius: 4px;
 
   @media (min-width: $tablet) {
     position: absolute;
     top: 17px;
-    left: 397px;
+    right: -35px;
     width: 70px;
     height: 47px;
     border-radius: 5px;
@@ -67,37 +74,32 @@
   @media (min-width: $desktop) {
     position: absolute;
     top: 25px;
-    left: 338px;
     width: 70px;
     height: 47px;
     border-radius: 5px;
   }
 }
 
-.country__text-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
-  @media (min-width: $tablet) {
-    position: relative;
-    flex-direction: column;
-  }
-}
-
 .country__name {
   @include no-fields();
   @include font(21px, 21px, 700);
+  padding-right: 15px;
+  padding-bottom: 2px;
   color: $black;
+  grid-area: country;
 
   @media (min-width: $tablet) {
     @include font(24px, 24px, 700);
-    margin-bottom: 47px;
-    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-right: 50px;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 50px;
+    margin-bottom: 4px;
+    margin-right: 20px;
+    margin-left: 0;
   }
 }
 
@@ -105,18 +107,17 @@
   @include no-fields();
   @include font(16px, 18px, 500);
   opacity: 0.3;
+  grid-area: slogan;
 
   @media (min-width: $tablet) {
     @include font(20px, 20px, 500);
-    position: absolute;
-    top: 59px;
-    max-width: 320px;
+    margin-bottom: 17px;
+    margin-right: 50px;
   }
 
-  @media (min-width: $tablet) {
-    top: 55px;
-    left: 30px;
-    max-width: 296px;
+  @media (min-width: $desktop) {
+    margin-bottom: 25px;
+    margin-right: 20px;
   }
 }
 
@@ -124,12 +125,19 @@
   @include font(16px, 20px, 500);
   position: relative;
   padding-left: 19px;
+  margin-left: auto;
   color: $basic-blue;
   opacity: 0.3;
+  grid-area: visitors;
 
   @media (min-width: $tablet) {
     @include font(20px, 20px, 500);
-    padding-left: 32px;
+    @include no-fields();
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
   }
 
   &::before {

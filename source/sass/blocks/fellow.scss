@@ -66,9 +66,16 @@
 
 .fellow__country {
   margin-right: 20px;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+    &:hover > .tooltip {
+      opacity: 1;
+    }
   }
 }
 

@@ -84,7 +84,6 @@
     display: grid;
     grid-template-columns: 630px 520px;
     grid-column-gap: 170px;
-    grid-template-rows: min-content;
   }
 }
 
@@ -98,9 +97,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 6px;
-    margin-left: 0;
-    margin-bottom: 59px;
+    margin: 6px auto 0 0;
     grid-column-start: 2;
     grid-column-end: 3;
   }
@@ -118,6 +115,7 @@
   }
 
   @media (min-width: $desktop) {
+    margin-top: 59px;
     margin-left: 0;
     margin-bottom: 99px;
   }
