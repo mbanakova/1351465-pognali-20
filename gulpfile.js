@@ -1,21 +1,38 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
-const csso = require("gulp-csso");  // В презентации просто csso
-const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
-const imageminJpegtran = require('imagemin-jpegtran');
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-const del = require("del");
+var gulp = require("gulp");
+var plumber = require("gulp-plumber");
+var sourcemap = require("gulp-sourcemaps");
+var sass = require("gulp-sass");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var server = require("browser-sync").create();
+var csso = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var imageminJpegtran = require('imagemin-jpegtran');
+var webp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
+var del = require("del");
 
-// Styles
 
-const styles = () => {
+gulp.task("clean", function () {
+  return del("build");
+});
+
+
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+});
+
+
+gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -24,42 +41,12 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
-}
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
 
-exports.styles = styles;
-
-// Server
-
-const server = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server;
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
-
-// Images
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
@@ -68,12 +55,11 @@ const images = () => {
       imageminJpegtran({ progressive: true }),
       imagemin.svgo()
     ]))
+    .pipe(gulp.dest("source/img"));
 }
 
 exports.images = images;
 
-
-// webP
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
@@ -84,52 +70,41 @@ const createWebp = () => {
 exports.webp = createWebp;
 
 
-// Sprite
-
-const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg") //Иконки сначала переименовать в icon-?
-    .pipe(svgstore())
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
-}
-
-exports.sprite = sprite;
+    .pipe(gulp.dest("build/img"));
+});
 
 
-
-
-
-// И вот ниже уже всё не оч..
-
-
-// Копируем в build
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
     .pipe(gulp.dest("build"));
-};
-exports.copy = copy;
+});
 
-// Очистка build
 
-const clean = () => {
-  return del("build");
-};
+gulp.task("server", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
 
-exports.clean = clean;
+  gulp.watch("source/sass/**/*.scss", gulp.series("css"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+});
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "sprite"
-  // "html" // эту задачу не писали
-);
-exports.build = build;
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
+
+
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("start", gulp.series("build", "server"));
