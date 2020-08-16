@@ -220,11 +220,11 @@
   }
 
   &--bosnia::after {
-    background-image: url("../img/flag-bosnia.svg");
+    background-image: url("../img/icon-flag-bosnia.svg");
   }
 
   &--czech::after {
-    background-image: url("../img/flag-czech.svg");
+    background-image: url("../img/icon-flag-czech.svg");
   }
 
   @media (min-width: $tablet) {
@@ -558,7 +558,7 @@
     height: 12px;
     bottom: -16px;
     left: 162px;
-    background-image: url("../img/small-arrow.svg");
+    background-image: url("../img/icon-small-arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.3;
@@ -680,7 +680,7 @@
     height: 21px;
     border-radius: 50%;
     background-color: $modal-close-light;
-    background-image: url("../img/close.svg");
+    background-image: url("../img/icon-close.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 9px;
@@ -710,7 +710,7 @@
       width: 22px;
       height: 22px;
       background-color: transparent;
-      background-image: url("../img/close.svg");
+      background-image: url("../img/icon-close.svg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 22px;
@@ -786,7 +786,7 @@
     height: 21px;
     border-radius: 50%;
     background-color: $modal-close-light;
-    background-image: url("../img/close.svg");
+    background-image: url("../img/icon-close.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 9px;
@@ -800,7 +800,7 @@
     height: 12px;
     bottom: -16px;
     left: 162px;
-    background-image: url("../img/small-arrow.svg");
+    background-image: url("../img/icon-small-arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.3;
@@ -816,7 +816,7 @@
       width: 22px;
       height: 22px;
       background-color: transparent;
-      background-image: url("../img/close.svg");
+      background-image: url("../img/icon-close.svg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 22px;
@@ -1134,7 +1134,7 @@
     left: 192px;
     width: 21px;
     height: 21px;
-    background-image: url("../img/qty-plus-mobile.svg");
+    background-image: url("../img/icon-qty-plus-mobile.svg");
     background-size: 14px 14px;
     background-repeat: no-repeat;
     color: $black;
