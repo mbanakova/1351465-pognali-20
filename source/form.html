@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -84,7 +86,7 @@
 
   <header class="header header--no-js">
 
-    <nav class="header__main-nav main-nav main-nav--inner">
+    <nav class="header__main-nav main-nav main-nav--opened main-nav--inner">
       <a href="index.html" class="header__logo logo">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
@@ -95,8 +97,8 @@
           <source media="(min-width: 1440px)"
             srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img class="logo__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
-            width="96" height="15" alt="logo">
+          <img class="logo__white logo__white--hidden" src="img/logo-mobile-white@1x.png"
+            srcset="img/logo-mobile-white@2x.png 2x" width="96" height="15" alt="logo">
         </picture>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
@@ -106,16 +108,17 @@
           <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="logo__blue logo__blue--hidden" src="img/logo-mobile-blue@1x.png"
-            srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="logo">
+          <img class="logo__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96"
+            height="15" alt="logo">
         </picture>
       </a>
-      <button class="main-nav__burger" type="button" aria-label="Открыть меню">
+      <button class="main-nav__burger main-nav__burger--opened main-nav__burger--no-js" type="button"
+        aria-label="Открыть меню">
       </button>
 
-      <a class="main-nav__auth js-login" href="#">Авторизация</a>
+      <a class="main-nav__auth main-nav__auth--opened js-login" href="#">Авторизация</a>
 
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list main-nav__list--opened site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html" data-hover="О сервисе">О сервисе</a>
         </li>
@@ -127,7 +130,7 @@
         </li>
       </ul>
 
-      <ul class="main-nav__list user-list">
+      <ul class="main-nav__list main-nav__list--opened user-list">
         <li class="user-list__item">
           <a class="user-list__link" href="tel:88005558628">
             <div class="user-list__icon user-list__icon--phone">
@@ -150,7 +153,7 @@
         </li>
       </ul>
 
-      <ul class="main-nav__list social">
+      <ul class="main-nav__list social social--opened">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" aria-label="facebook">
             <svg class="social__svg social__svg--fb" width="11" height="21">
@@ -410,7 +413,7 @@
 
           <!-- Шаг 2 -->
           <section class="create-plan__step step step--second step--hidden" id="step--second">
-            <h3 class="step__title">Шаг 2. <br>Маршрут</h3>
+            <h3 class="step__title">Шаг 2. <br>&nbspМаршрут</h3>
             <p class="step__text">
               Укажите страны, которые вы хотели посетить.
               <br>Это может быть одна или сразу несколько.</p>
@@ -555,7 +558,7 @@
 
           <!-- Шаг 3 -->
           <section class="create-plan__step step step--third step--hidden" id="step--third">
-            <h3 class="step__title">Шаг 3. <br>Развлечения</h3>
+            <h3 class="step__title">Шаг 3. <br>&nbspРазвлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения.
               <br>Можно писать в свободной форме и ставить тэги.
             </p>
@@ -633,7 +636,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/navigation.js"></script>
   <script src="js/sticky-header.js"></script>
   <script src="js/calendar.js"></script>

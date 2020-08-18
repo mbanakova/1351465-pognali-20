@@ -9,6 +9,15 @@ let logoWhite = document.querySelector('.logo__white');
 let logoBlue = document.querySelector('.logo__blue');
 
 header.classList.remove('header--no-js');
+burger.classList.remove('main-nav__burger--opened');
+burger.classList.remove('main-nav__burger--no-js');
+nav.classList.remove('main-nav--opened');
+auth.classList.remove('main-nav__auth--opened');
+pages.classList.remove('main-nav__list--opened');
+links.classList.remove('main-nav__list--opened');
+socials.classList.remove('social--opened');
+logoWhite.classList.remove('logo__white--hidden');  // смена логотипа на другой цвет
+logoBlue.classList.add('logo__blue--hidden');
 
 
 burger.addEventListener('click', function (evt) {
@@ -28,4 +37,4 @@ burger.addEventListener('click', function (evt) {
     logoWhite.classList.toggle('logo__white--hidden');  // смена логотипа на другой цвет
     logoBlue.classList.toggle('logo__blue--hidden');  // смена логотипа на другой цвет
   }
-});
+})
