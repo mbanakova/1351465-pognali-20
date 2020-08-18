@@ -69,7 +69,7 @@
     min-height: 640px;
     display: grid;
     grid-template-columns: 1fr min-content;
-    grid-template-rows: 410px min-content;
+    grid-template-rows: 412px min-content;
     overflow: visible;
 
     @media (min-resolution: $extra) {
@@ -95,7 +95,7 @@
 
   @media (min-width: $desktop) {
     @include font(60px, 70px, 700);
-    margin: 100px auto auto 67px;
+    margin: auto auto auto 67px;
     max-width: 400px;
     text-align: left;
   }
@@ -114,7 +114,7 @@
 
   @media (min-width: $tablet) {
     padding: 0 0 0 36px;
-    margin: 0 auto 211px 0;
+    margin: 0 auto 212px 0;
     max-width: 264px;
     background-color: transparent;
   }

@@ -104,7 +104,7 @@
 .about__text {
   @include no-fields();
   margin-bottom: 21px;
-  margin-left: 0;
+  margin-left: 24px;
   color: $white;
   max-width: 210px;
 
@@ -169,7 +169,7 @@
     display: flex;
     margin-right: 380px;
     margin-bottom: 0;
-    padding-left: 37px;
+    padding-left: 35px;
   }
 
   @media (min-width: $desktop) {

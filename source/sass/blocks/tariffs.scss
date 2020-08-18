@@ -22,7 +22,7 @@
   @media (min-width: $tablet) {
     @include tablet();
     padding-top: 75px;
-    padding-bottom: 63px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: $desktop) {
@@ -69,7 +69,7 @@
   max-width: 120px;
 
   @media (min-width: $tablet) {
-    margin: 0 auto 70px;
+    margin: 0 auto 71px;
     max-width: 600px;
     text-align: center;
   }
@@ -87,13 +87,13 @@
 
   @media (min-width: $tablet) {
     padding-left: 91px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 
     &::after {
       position: absolute;
       content: "";
-      top: -36px;
-      right: 6px;
+      top: -40px;
+      right: 0;
       width: 198px;
       height: 285px;
       background-color: $heart-pale;
@@ -104,12 +104,12 @@
 
   @media (min-width: $desktop) {
     margin-left: 70px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 
     &::after {
       position: absolute;
       content: "";
-      top: -45px;
+      top: -50px;
       right: 184px;
       width: 446px;
       height: 300px;
@@ -130,15 +130,14 @@
 
   @media (min-width: $tablet) {
     @include font(28px, 28px, 300);
-    padding: 21px 0 17px;
+    padding: 20px 0 11px;
     display: flex;
     justify-content: space-between;
     width: 565px;
-    height: 68px;
   }
 
   @media (min-width: $desktop) {
-    padding: 19px 0 18px;
+    padding: 19px 0 12px;
     width: 812px;
   }
 
@@ -159,9 +158,9 @@
     @media (min-width: $tablet) {
       @include font(28px, 68px, 400);
       top: 0;
-      left: -91px;
-      width: 68px;
-      height: 68px;
+      left: -88px;
+      width: 66px;
+      height: 67px;
     }
   }
 

@@ -14,7 +14,6 @@
     padding-right: 40px;
     padding-left: 38px;
     grid-template-columns: 1fr min-content 1fr;
-    grid-template-rows: min-content;
     background-color: $basic-tablet;
 
     &--sticky {
@@ -141,7 +140,7 @@
     order: 0;
     display: block;
     position: relative;
-    left: -15px;
+    left: -47px;
     top: 2px;
     min-width: 60px;
     min-height: 2px;
@@ -241,7 +240,7 @@
 
   @media (min-width: $tablet) {
     padding-left: 0;
-    padding-top: 95px;
+    padding-top: 97px;
     padding-bottom: 130px;
     margin-left: 59px;
     grid-column-start: 1;
@@ -259,7 +258,7 @@
 }
 
 .main-nav__list:nth-of-type(2) {
-  padding-top: 54px;
+  padding-top: 52px;
   margin-bottom: 0;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -267,7 +266,7 @@
   @media (min-width: $tablet) {
     padding-bottom: 0;
     padding-top: 0;
-    margin-bottom: 127px;
+    margin-bottom: 129px;
     margin-left: 59px;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -290,7 +289,7 @@
   background-color: $white;
 
   @media (min-width: $tablet) {
-    margin-left: 80px;
+    margin-left: 78px;
     padding-top: 0;
     justify-content: start;
     grid-column-start: 1;

@@ -15,7 +15,7 @@
   @include wrapper();
   position: relative;
   padding-top: 70px;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
 
   &::before {
     position: absolute;
@@ -73,7 +73,7 @@
   @media (min-width: $tablet) {
     @include tablet();
     padding-top: 75px;
-    padding-bottom: 80px;
+    padding-bottom: 81px;
   }
 
   @media (min-width: $desktop) {
@@ -92,7 +92,7 @@
   margin: 0 0 20px 26px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 57px;
+    margin-bottom: 56px;
     margin-left: 34px;
   }
 
@@ -110,12 +110,12 @@
   @media (min-width: $tablet) {
     @include font(28px, 33px, 300);
     margin-bottom: 104px;
-    margin-left: 34px;
+    margin-left: 35px;
     max-width: 345px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 59px;
+    margin-top: 57px;
     margin-left: 0;
     margin-bottom: 99px;
   }
@@ -123,10 +123,10 @@
 
 .destinations__list {
   @include ul();
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 44px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $desktop) {
