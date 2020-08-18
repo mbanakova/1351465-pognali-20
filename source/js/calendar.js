@@ -1,21 +1,21 @@
-const date = new Date();
+var date = new Date();
 
-const renderCalendar = () => {
+var renderCalendar = function () {
   date.setDate(1);
 
-  const monthDays = document.querySelector('.calendar__days');
+  var monthDays = document.querySelector('.calendar__days');
 
-  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-  const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+  var prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 
-  const firstDayIndex = date.getDay() - 1;
+  var firstDayIndex = date.getDay() - 1;
 
-  const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay() - 1;
+  var lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay() - 1;
 
-  const nextDays = 7 - lastDayIndex - 1;
+  var nextDays = 7 - lastDayIndex - 1;
 
-  const months = [
+  var months = [
     'Январь',
     'Февраль',
     'Март',

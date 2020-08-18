@@ -286,18 +286,18 @@
           <div class="create-plan__top-wrapper">
             <h2 class="create-plan__title section-title section-title--form">Добавить план:</h2>
             <div class="create-plan__bullets bullets">
-              <span class="bullets__bullet bullets__bullet--progress">&#8226;</span>
-              <span class="bullets__text bullets__text--progress">Даты</span>
-              <span class="bullets__bullet">&#8226;</span>
-              <span class="bullets__text">Маршрут</span>
-              <span class="bullets__bullet">&#8226;</span>
-              <span class="bullets__text">Развлечения</span>
+              <span class="bullets__bullet bullets__one bullets__bullet--progress">&#8226;</span>
+              <span class="bullets__text bullets__1 bullets__text--progress">Даты</span>
+              <span class="bullets__bullet bullets__two">&#8226;</span>
+              <span class="bullets__text bullets__2">Маршрут</span>
+              <span class="bullets__bullet bullets__three">&#8226;</span>
+              <span class="bullets__text bullets__3">Развлечения</span>
             </div>
           </div>
 
           <!-- Шаг 1 -->
           <section class="create-plan__step step step--first" id="step--first">
-            <h3 class="step__title">Шаг 1. <br>Даты пребывания</h3>
+            <h3 class="step__title">Шаг 1. <br>&nbspДаты пребывания</h3>
             <p class="step__text">
               Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы позвать
               в поездку и ее предполагаемую длительность.</p>
@@ -405,11 +405,11 @@
                 </div>
               </div>
             </div>
-            <a class="step__button button button--bright" href="#step--second">Следующий шаг</a>
+            <a class="step__button button button--bright" href="#step--second" id="1-2">Следующий шаг</a>
           </section>
 
           <!-- Шаг 2 -->
-          <section class="create-plan__step step step--second" id="step--second">
+          <section class="create-plan__step step step--second step--hidden" id="step--second">
             <h3 class="step__title">Шаг 2. <br>Маршрут</h3>
             <p class="step__text">
               Укажите страны, которые вы хотели посетить.
@@ -548,13 +548,13 @@
 
             <button class="step__submit-country" type="button">Добавить страну</button>
             <div class="step__buttons-wrap">
-              <a class="step__button button button--bright" href="#step--third">Следующий шаг</a>
-              <a class="step__button step__button--back button" href="#step--first">На шаг назад</a>
+              <a class="step__button button button--bright" href="#step--third" id="2-3">Следующий шаг</a>
+              <a class="step__button step__button--back button" href="#step--first" id="2-1">На шаг назад</a>
             </div>
           </section>
 
           <!-- Шаг 3 -->
-          <section class="create-plan__step step step--third" id="step--third">
+          <section class="create-plan__step step step--third step--hidden" id="step--third">
             <h3 class="step__title">Шаг 3. <br>Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения.
               <br>Можно писать в свободной форме и ставить тэги.
@@ -572,7 +572,7 @@
             </div>
             <div class="step__buttons-wrap">
               <button class="step__button step__button--submit button button--bright" type="submit">Отправить</button>
-              <a class="step__button step__button--back button" href="#step--second">На
+              <a class="step__button step__button--back button" href="#step--second" id="3-2">На
                 шаг назад</a>
             </div>
           </section>
@@ -635,10 +635,11 @@
   </footer>
 
   <script src="js/navigation.js"></script>
-  <!-- <script src="js/sticky-header.js"></script> -->
+  <script src="js/sticky-header.js"></script>
   <script src="js/calendar.js"></script>
   <script src="js/form-numbers.js"></script>
   <script src="js/dropdown.js"></script>
+  <script src="js/form-steps.js"></script>
 </body>
 
 </html>

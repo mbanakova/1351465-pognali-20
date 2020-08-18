@@ -40,6 +40,10 @@
     padding: 100px 159px 104px;
     border-radius: 60px;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .step__title {

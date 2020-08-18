@@ -52,6 +52,7 @@
 
     @media (min-width: $desktop) {
       padding-bottom: 102px;
+      margin-bottom: 47px;
     }
   }
 }
@@ -138,7 +139,7 @@
 
   @media (min-width: $tablet) {
     justify-content: space-between;
-    width: 185px;
+    width: 200px;
   }
 
   @media (min-width: $desktop) {
@@ -187,9 +188,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: $tablet) {
     margin-right: auto;
   }
 }
@@ -305,6 +303,33 @@
       height: 42px;
       top: -8px;
       left: 2px;
+    }
+
+
+    // Выравниваем по макету (((
+    &:nth-of-type(2) {
+      margin-bottom: 55px;
+    }
+
+    &:nth-of-type(9) {
+      margin-bottom: 47px;
+    }
+
+    &:nth-of-type(11) {
+      margin-bottom: 88px;
+    }
+
+    &:nth-of-type(16) {
+      margin-bottom: 45px;
+    }
+
+    &:nth-of-type(21),
+    &:nth-of-type(22),
+    &:nth-of-type(23),
+    &:nth-of-type(24),
+    &:nth-of-type(25) {
+      padding-top: 88px;
+      margin-bottom: 66px;
     }
   }
 }

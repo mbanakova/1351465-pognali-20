@@ -180,7 +180,7 @@
   &--error {
     background-color: $white;
 
-    &::placeholder{
+    &::placeholder {
       color: $error;
       opacity: 1;
     }
