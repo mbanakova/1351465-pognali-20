@@ -1,4 +1,4 @@
-let toggle = document.querySelector('.country-filter__toggle');
+let toggle1 = document.querySelector('.country-filter__toggle');
 let alphabet = document.querySelector('.alphabet');
 let list = document.querySelector('.country-filter__large-screen');
 let areas = document.querySelector('.country-filter__area-list');
@@ -8,7 +8,7 @@ let sign = document.querySelector('.country-filter__toggle-sign');
 let body = document.querySelector('.page');
 let wrapper = document.querySelector('.country-filter__wrapper');
 
-toggle.addEventListener('click', function (evt) {
+toggle1.addEventListener('click', function (evt) {
   evt.preventDefault();
 
   if (text.textContent == 'Показать все') {
