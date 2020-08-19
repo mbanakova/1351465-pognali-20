@@ -28,7 +28,7 @@ function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
       inpt2.value = temp;
     }
 
-    var sliderCoords = getCoords(slider);
+    // var sliderCoords = getCoords(slider);
     var per1 = parseInt(inpt1.value - min) * 100 / (max - min);
     var per2 = parseInt(inpt2.value - min) * 100 / (max - min);
     var left1 = per1 * (slider.offsetWidth - button1.offsetWidth) / 100;
@@ -55,7 +55,7 @@ function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
       inpt2.value = temp;
     }
 
-    var sliderCoords = getCoords(slider);
+    // var sliderCoords = getCoords(slider);
     var per1 = parseInt(inpt1.value - min) * 100 / (max - min);
     var per2 = parseInt(inpt2.value - min) * 100 / (max - min);
     var left1 = per1 * (slider.offsetWidth - button1.offsetWidth) / 100;
@@ -76,7 +76,7 @@ function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
 
   button1.onmousedown = function (evt) {
     var sliderCoords = getCoords(slider);
-    var betweenCoords = getCoords(between);
+    // var betweenCoords = getCoords(between);
     var buttonCoords1 = getCoords(button1);
     var buttonCoords2 = getCoords(button2);
     var shiftX2 = evt.pageX - buttonCoords2.left;
@@ -121,7 +121,7 @@ function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
 
   button2.onmousedown = function (evt) {
     var sliderCoords = getCoords(slider);
-    var betweenCoords = getCoords(between);
+    // var betweenCoords = getCoords(between);
     var buttonCoords1 = getCoords(button1);
     var buttonCoords2 = getCoords(button2);
     var shiftX2 = evt.pageX - buttonCoords2.left;
