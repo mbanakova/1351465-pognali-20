@@ -21,7 +21,7 @@
 .fellows__wrapper {
   @include wrapper();
   position: relative;
-  padding-top: 65px;
+  padding-top: 64px;
   padding-bottom: 31px;
   background-image: url("../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
@@ -79,13 +79,14 @@
   &::after {
     position: absolute;
     content: "";
-    left: -10px;
+    left: 0;
     top: 335px;
     width: 64px;
     height: 71px;
     background-image: url("../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 64px 71px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: -1;
@@ -100,6 +101,7 @@
       width: 285px;
       height: 285px;
       background-image: url("../img/rogovaya-back-desktop@1x.png");
+      background-size: contain;
       border-radius: 20px;
 
       @media (min-resolution: $extra) {
@@ -179,7 +181,7 @@
 
 .fellows__list {
   @include ul();
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet) {
     margin-left: 35px;

@@ -45,7 +45,6 @@
   @media (min-width: $tablet) {
     border-radius: 15px;
     grid-template-columns: 190px 378px 60px;
-    grid-template-rows: 50px 80px 60px min-content min-content;
 
     &--offline::before {
       display: none;
@@ -57,7 +56,6 @@
 
     @media (min-width: $desktop) {
       grid-template-columns: 285px 390px 170px auto;
-      grid-template-rows: min-content;
     }
   }
 }
@@ -86,12 +84,18 @@
       border-radius: 15px;
       width: 285px;
       height: 285px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
   &:last-of-type {
     grid-column-start: 2;
     grid-column-end: 3;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 19px;
+    }
   }
 }
 
@@ -115,6 +119,8 @@
     border-radius: 15px;
     width: 285px;
     height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -144,7 +150,7 @@
       width: 8px;
       height: 8px;
       top: 10px;
-      right: -20px;
+      right: -32px;
       border-radius: 50%;
       background-color: $red;
     }
@@ -155,7 +161,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 46px auto 20px 62px;
+    margin: 47px auto 20px 62px;
 
     &--offline::after,
     &--online::after {
@@ -270,8 +276,9 @@
   flex-wrap: wrap;
 
   @media (min-width: $tablet) {
-    margin-bottom: 46px;
+    margin-bottom: 38px;
     margin-left: 36px;
+    margin-right: 80px;
     color: $black;
     justify-content: flex-start;
     grid-column-start: 2;
@@ -280,7 +287,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: -33px 20px auto 62px;
+    margin: -33px 70px auto 62px;
     align-items: flex-start;
   }
 }
@@ -289,7 +296,7 @@
   @include no-fields();
   @include font(15px, 16px, 400);
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   margin-left: 5px;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -322,6 +329,7 @@
     @media (min-width: $tablet) {
       margin-top: 24px;
       margin-left: 50px;
+      margin-bottom: 19px;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 4;
@@ -379,15 +387,13 @@
 .traveller__countries-list {
   @include ul();
   @include font(15px, 16px, 500);
-  margin-bottom: 3px;
+  margin-bottom: 15px;
   grid-column-start: 1;
   grid-column-end: 4;
   text-transform: uppercase;
   color: $basic-blue-h2;
 
   &:nth-of-type(2) {
-    margin-bottom: 6px;
-
     @media (min-width: $tablet) {
       margin-bottom: 0;
     }
@@ -404,7 +410,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 55px;
+    margin-top: 49px;
     margin-left: 0;
     margin-bottom: 0;
     grid-column-start: 3;
@@ -418,12 +424,16 @@
 .traveller__country-item {
   position: relative;
   padding: 3px 15px 3px 44px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   box-sizing: border-box;
   height: 18px;
   background-repeat: no-repeat;
   background-size: 26px 18px;
   background-position: 5px 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   &--germany {
     background-image: url("../img/icon-flag-germany.svg");
@@ -468,7 +478,7 @@
   @media (min-width: $tablet) {
     padding: 4px 15px 0 48px;
     margin-bottom: 0;
-    margin-right: 25px;
+    margin-right: 12px;
     height: 24px;
     background-size: 35px 24px;
     background-position: 0 0;
@@ -479,37 +489,15 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0 0 0 54px;
-    margin-bottom: 16px;
+    padding: 5px 0 0 54px;
+    margin-bottom: 13px;
+    height: auto;
 
     &:last-of-type {
       margin-bottom: 0;
       margin-right: 25px;
     }
   }
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   top: -3px;
-  //   left: 5px;
-  //   width: 26px;
-  //   height: 18px;
-  //   background-color: $special-grey;
-  //   border-radius: 3px;
-
-  //   @media (min-width: $tablet) {
-  //     width: 36px;
-  //     height: 24px;
-  //     left: 3px;
-  //     top: -4px;
-  //   }
-
-  //   @media (min-width: $desktop) {
-  //     top: -4px;
-  //     left: 0;
-  //   }
-  // }
 }
 
 .traveller__wrapper {
@@ -550,7 +538,7 @@
   @media (min-width: $desktop) {
     margin-top: auto;
     margin-right: auto;
-    margin-bottom: 59px;
+    margin-bottom: 54px;
     flex-direction: row;
     align-items: baseline;
     grid-column-start: 3;
@@ -648,7 +636,7 @@
 
 .traveller__button {
   display: block;
-  padding: 6px 5px 4px;
+  padding: 7px 5px 4px;
 
   @media (min-width: $tablet) {
     padding: 16px 35px 13px;

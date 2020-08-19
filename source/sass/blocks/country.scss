@@ -2,6 +2,8 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row-reverse;
+    height: 140px;
+    box-sizing: border-box;
 
     &:last-of-type {
       position: relative;
@@ -12,7 +14,7 @@
         width: 100%;
         height: 100%;
         border-radius: 20px;
-        background: linear-gradient(to bottom, transparent 50%, rgba($white, 0.5) 60%, $white 100%);
+        background: linear-gradient(to bottom, transparent 50%, rgba($basic-blue-light, 0.5) 60%, $basic-blue-light 100%);
       }
     }
   }
@@ -29,7 +31,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     width: 185px;
-    height: 100%;
+    height: 140px;
   }
 }
 
@@ -43,19 +45,20 @@
   border-radius: 8px;
   overflow: visible;
   display: grid;
+  grid-template-columns: 160px 1fr;
   grid-template-areas:
     "country visitors"
     "slogan slogan";
 
   @media (min-width: $tablet) {
     flex-grow: 1;
-    max-height: 141px;
     margin-top: 0;
-    padding: 29px 30px 20px;
+    padding: 30px 30px 14px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "country"
       "slogan"
@@ -63,7 +66,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 25px;
+    padding-top: 23px;
     padding-right: 50px;
     padding-left: 30px;
   }
@@ -87,6 +90,7 @@
   @media (min-width: $desktop) {
     position: absolute;
     top: 25px;
+    right: -33px;
     width: 70px;
     height: 47px;
     border-radius: 5px;
@@ -103,14 +107,12 @@
 
   @media (min-width: $tablet) {
     @include font(24px, 24px, 700);
-    margin-bottom: 5px;
     margin-right: 50px;
     padding-right: 0;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 4px;
     margin-right: 20px;
     margin-left: 0;
   }
@@ -124,8 +126,8 @@
 
   @media (min-width: $tablet) {
     @include font(20px, 20px, 500);
-    margin-bottom: 17px;
     margin-right: 50px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: $desktop) {
@@ -138,7 +140,8 @@
   @include font(16px, 20px, 500);
   position: relative;
   padding-left: 19px;
-  margin-left: auto;
+  padding-top: 2px;
+  margin-left: 0;
   color: $basic-blue;
   opacity: 0.3;
   grid-area: visitors;
@@ -147,6 +150,7 @@
     @include font(20px, 20px, 500);
     @include no-fields();
     padding-left: 30px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop) {

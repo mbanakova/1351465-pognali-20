@@ -43,7 +43,7 @@
 
     &--no-js {
       height: 90px;
-      background-color: $white;
+      background-color: $basic-blue;
     }
 
     &--sticky {
@@ -79,7 +79,7 @@
   grid-column-end: 2;
 
   @media (min-width: $tablet) {
-    width: 164px;
+    width: 166px;
     height: 42px;
     margin: 0;
     margin-right: auto;

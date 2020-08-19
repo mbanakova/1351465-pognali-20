@@ -160,7 +160,7 @@
 }
 
 .main__travellers {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet) {
     margin-bottom: 52px;
@@ -177,7 +177,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 17px;
 
   @media (min-width: $tablet) {
     margin-bottom: 51px;
@@ -195,7 +195,6 @@
 
 .main__show-link {
   @include font(17px, 30px, 700);
-  margin-bottom: 14px;
   position: relative;
   padding-left: 33px;
   text-align: center;

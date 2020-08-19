@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 47px;
+    padding-top: 45px;
     padding-right: 60px;
     padding-bottom: 43px;
     padding-left: 58px;
@@ -42,7 +42,7 @@
 }
 
 .footer__logo {
-  margin: 0 auto 33px;
+  margin: 0 auto 37px;
   display: block;
 
   @media (min-width: $tablet) {
@@ -57,7 +57,6 @@
 
 .footer__social {
   @include ul();
-  padding-bottom: 37px;
   border-bottom: 1px solid $footer-grey-line;
   display: flex;
   justify-content: center;
@@ -70,7 +69,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-right: 40px;
+    margin-right: 45px;
   }
 }
 

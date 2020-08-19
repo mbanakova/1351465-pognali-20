@@ -24,7 +24,7 @@
 
   @media (min-width: $tablet) {
     @include tablet();
-    padding-top: 135px;
+    padding-top: 136px;
     padding-bottom: 58px;
   }
 
@@ -176,6 +176,15 @@
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
   }
+
+  &--error {
+    background-color: $white;
+
+    &::placeholder {
+      color: $error;
+      opacity: 1;
+    }
+  }
 }
 
 .form__auth-submit {
@@ -256,14 +265,12 @@
     margin-right: 22px;
     width: 68px;
     height: 68px;
-    background-size: 35px 35px;
   }
 
   @media (min-width: $desktop) {
     margin-right: 31px;
     width: 90px;
     height: 90px;
-    background-size: 35px 35px;
   }
 }
 
@@ -272,6 +279,11 @@
 
   @media (min-width: $tablet) {
     width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 35px;
     height: 30px;
   }
 }

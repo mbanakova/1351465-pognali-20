@@ -17,6 +17,14 @@
   }
 }
 
+.bullets__bullet {
+  opacity: 0.6;
+
+  &--progress {
+    opacity: 1;
+  }
+}
+
 .bullets__text {
   display: none;
 
@@ -27,9 +35,9 @@
     opacity: 0.6;
     letter-spacing: 0.1em;
     color: $black;
+  }
 
-    &--progress {
-      opacity: 1;
-    }
+  &--progress {
+    opacity: 1;
   }
 }

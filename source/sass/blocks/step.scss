@@ -40,6 +40,10 @@
     padding: 100px 159px 104px;
     border-radius: 60px;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .step__title {
@@ -61,6 +65,12 @@
       display: none;
     }
     max-width: 666px;
+  }
+}
+
+.step__whitespace {
+  @media (min-width: $desktop) {
+    margin-left: 12px;
   }
 }
 
