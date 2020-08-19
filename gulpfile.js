@@ -13,8 +13,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
 var htmlmin = require('gulp-htmlmin');
-var terser = require('gulp-terser');
-var concat = require('gulp-concat');
+var uglify = require("gulp-uglify");
 
 
 gulp.task("clean", function () {
@@ -91,11 +90,8 @@ gulp.task("html", function () {
 
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
-    .pipe(sourcemap.init())
-    .pipe(concat('total.js'))
-    .pipe(terser())
-    .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest("build/js"));
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
 });
 
 

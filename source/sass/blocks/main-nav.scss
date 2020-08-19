@@ -91,7 +91,7 @@
     }
 
     &--no-js {
-      display: block;
+      display: none;
     }
   }
 
@@ -279,7 +279,6 @@
     display: flex;
     margin-top: 6px;
     order: 1;
-
   }
 }
 
