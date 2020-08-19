@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -300,7 +300,7 @@
 
           <!-- Шаг 1 -->
           <section class="create-plan__step step step--first" id="step--first">
-            <h3 class="step__title">Шаг 1. <br>&nbspДаты пребывания</h3>
+            <h3 class="step__title">Шаг 1.&nbsp;<br>Даты пребывания</h3>
             <p class="step__text">
               Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы позвать
               в поездку и ее предполагаемую длительность.</p>
@@ -343,7 +343,6 @@
 
             <!-- Даты поездки -->
             <fieldset class="step__fieldset fieldset-dates">
-              <!-- Если получится - в идеале в эти инпуты приходят даты поездки из календаря, а самы инпуты всё время скрыты  -->
               <label class="fieldset-dates__label">Начало
                 <input class="fieldset-dates__input" type="text" name="start-date" value="" id="start-date"></label>
               <label class="fieldset-dates__label">Конец
@@ -413,7 +412,7 @@
 
           <!-- Шаг 2 -->
           <section class="create-plan__step step step--second step--hidden" id="step--second">
-            <h3 class="step__title">Шаг 2. <br>&nbspМаршрут</h3>
+            <h3 class="step__title">Шаг 2.&nbsp;<br>Маршрут</h3>
             <p class="step__text">
               Укажите страны, которые вы хотели посетить.
               <br>Это может быть одна или сразу несколько.</p>
@@ -558,7 +557,7 @@
 
           <!-- Шаг 3 -->
           <section class="create-plan__step step step--third step--hidden" id="step--third">
-            <h3 class="step__title">Шаг 3. <br>&nbspРазвлечения</h3>
+            <h3 class="step__title">Шаг 3.&nbsp;<br>Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения.
               <br>Можно писать в свободной форме и ставить тэги.
             </p>

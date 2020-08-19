@@ -68,6 +68,12 @@
   }
 }
 
+.step__whitespace {
+  @media (min-width: $desktop) {
+    margin-left: 12px;
+  }
+}
+
 .step__text {
   @include no-fields();
   position: relative;
