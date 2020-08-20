@@ -16,10 +16,6 @@
     }
   }
 
-  &:nth-of-type(2):hover .traveller__profile-pic {
-    transform: scale(6) translateY(8%);
-  }
-
   &--offline::before {
     position: absolute;
     content: "";
