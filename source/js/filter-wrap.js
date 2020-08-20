@@ -18,10 +18,10 @@ toggle1.addEventListener('click', function (evt) {
 
   ;
 
-  if (sign.textContent == "\u2022\u2022\u2022") {
-    sign.textContent = "\u2716";
+  if (sign.textContent == '\u2022\u2022\u2022') {
+    sign.textContent = '\u2716';
   } else {
-    sign.textContent = "\u2022\u2022\u2022";
+    sign.textContent = '\u2022\u2022\u2022';
   }
 
   ;
@@ -46,10 +46,10 @@ bigButton.addEventListener('click', function (evt) {
 
   ;
 
-  if (sign.textContent == "\u2022\u2022\u2022") {
-    sign.textContent = "\u2716";
+  if (sign.textContent == '\u2022\u2022\u2022') {
+    sign.textContent = '\u2716';
   } else {
-    sign.textContent = "\u2022\u2022\u2022";
+    sign.textContent = '\u2022\u2022\u2022';
   }
 
   ;

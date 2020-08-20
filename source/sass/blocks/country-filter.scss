@@ -137,6 +137,16 @@
   align-items: center;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+  }
+
   @media (min-width: $tablet) {
     justify-content: space-between;
     width: 200px;
@@ -155,7 +165,7 @@
     display: block;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     @include font(20px, 20px, 700);
     margin-left: 15px;
   }
@@ -208,7 +218,7 @@
   @include font(16px, 20px, 700);
   grid-area: button;
   position: relative;
-  padding: 12px 10px 10px 0;
+  padding: 12px 10px 10px 32px;
   border: none;
   font-family: $the-only-one;
   letter-spacing: 0.05em;
@@ -222,10 +232,16 @@
     transition: 0.2s ease-in-out;
   }
 
+  &:active {
+    color: rgba($basic-blue-medium, 0.3);
+    transition: 0.2s ease-in-out;
+  }
+
   @media (min-width: $tablet) {
     @include font(20px, 20px, 700);
     min-height: 100px;
     padding: 30px;
+    padding-left: 62px;
     margin-bottom: 0;
   }
 
@@ -240,14 +256,27 @@
 }
 
 .country-filter__close {
+  position: absolute;
+  content: "";
   width: 14px;
   height: 14px;
-  margin: 0 5px;
+  top: 13px;
+  left: 82px;
 
   @media (min-width: $tablet) {
     width: 20px;
     height: 20px;
-    margin: 0 10px 0 0;
+    top: 38px;
+    left: 245px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 593px;
+  }
+
+  &:active {
+    color: rgba($basic-blue-medium, 0.3);
+    transition: 0.2s ease-in-out;
   }
 }
 
