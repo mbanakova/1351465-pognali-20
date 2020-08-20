@@ -279,13 +279,6 @@
 
 .profile__legend {
   display: none;
-  // text-transform: uppercase;
-  // margin: 0;
-  // padding: 0 15px;
-
-  // @media (min-width: $tablet) {
-  //   display: none;
-  // }
 }
 
 .profile__textarea {
@@ -361,6 +354,7 @@
 }
 
 .profile__transport-label {
+  @include font(0, 0, inherit);
   position: relative;
   padding-left: 0;
   display: flex;
