@@ -454,6 +454,7 @@
 }
 
 .tourists-filter__transport-label {
+  @include font(0, 0, inherit);
   position: relative;
   padding-left: 0;
   display: flex;
