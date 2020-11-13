@@ -1,0 +1,1 @@
+var emailInput=document.querySelector(".form__index-input"),emailSubmit=document.querySelector(".form__auth-submit"),emailForm=document.querySelector(".form__index-form");emailForm.addEventListener("submit",function(e){emailInput.value||(e.preventDefault(),emailInput.classList.add("form__index-input--error"),emailInput.placeholder="Введите e-mail")});
